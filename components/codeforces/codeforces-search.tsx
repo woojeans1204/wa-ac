@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { IconLoader2, IconSearch } from "@tabler/icons-react"
+import { IconDice5, IconLoader2, IconSearch } from "@tabler/icons-react"
 import type { History } from "@/components/ps-types"
 import { ShadcnDashboard } from "@/components/shadcn-dashboard/dashboard"
 import { ShadcnSiteHeader } from "@/components/shadcn-dashboard/shadcn-site-header"
@@ -16,17 +16,15 @@ export function CodeforcesSearch() {
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState("")
 
-  const search = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const query = handle.trim()
-    if (!query) return
+  const loadPlayer = async (url: string) => {
     setLoading(true)
     setError("")
     try {
-      const response = await fetch(`/api/codeforces?handle=${encodeURIComponent(query)}`)
+      const response = await fetch(url)
       const payload = await response.json() as { history?: History; error?: string }
       if (!response.ok || !payload.history) throw new Error(payload.error || "Could not load this handle.")
       setHistory(payload.history)
+      setHandle(payload.history.user)
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Could not load this handle.")
     } finally {
@@ -34,8 +32,18 @@ export function CodeforcesSearch() {
     }
   }
 
+  const search = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const query = handle.trim()
+    if (query) void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`)
+  }
+
+  const randomPlayer = () => {
+    void loadPlayer(`/api/codeforces?random=1&t=${Date.now()}`)
+  }
+
   const searchForm = (
-    <form onSubmit={search} className="flex w-full max-w-sm items-center gap-2">
+    <form onSubmit={search} className="flex w-full max-w-md items-center gap-2">
       <Input
         value={handle}
         onChange={(event) => setHandle(event.target.value)}
@@ -47,6 +55,10 @@ export function CodeforcesSearch() {
       <Button type="submit" size="sm" disabled={loading || !handle.trim()}>
         {loading ? <IconLoader2 className="animate-spin" /> : <IconSearch />}
         <span className="hidden md:inline">Search</span>
+      </Button>
+      <Button type="button" size="sm" variant="outline" onClick={randomPlayer} disabled={loading}>
+        <IconDice5 />
+        <span className="hidden md:inline">Random</span>
       </Button>
     </form>
   )
@@ -63,7 +75,7 @@ export function CodeforcesSearch() {
           <CardHeader>
             <CardTitle>Search Codeforces player</CardTitle>
             <CardDescription>
-              Enter an exact handle. Public profile, rating, actual contests, and virtual contests will be loaded automatically.
+              Enter an exact handle or discover a random recently active rated player.
             </CardDescription>
             <div className="max-w-xl pt-3">{searchForm}</div>
             {error && <p className="pt-2 text-sm text-destructive">{error}</p>}

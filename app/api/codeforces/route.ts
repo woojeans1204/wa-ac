@@ -44,6 +44,7 @@ let catalogCache: {
   problems: CfProblem[]
   contests: CfContest[]
 } | null = null
+let ratedUsersCache: { expiresAt: number; users: CfUser[] } | null = null
 
 async function codeforcesRequest<T>(method: string, params: Record<string, string>) {
   const task = requestQueue.then(async () => {
@@ -74,6 +75,21 @@ async function getCatalog() {
     contests,
   }
   return catalogCache
+}
+
+async function getRandomUser() {
+  if (!ratedUsersCache || ratedUsersCache.expiresAt <= Date.now()) {
+    ratedUsersCache = {
+      expiresAt: Date.now() + 60 * 60 * 1000,
+      users: await codeforcesRequest<CfUser[]>("user.ratedList", {
+        activeOnly: "true",
+        includeRetired: "false",
+      }),
+    }
+  }
+  const candidates = ratedUsersCache.users.filter((user) => user.handle && user.rating != null)
+  if (!candidates.length) throw new Error("No active Codeforces users are available right now.")
+  return candidates[Math.floor(Math.random() * candidates.length)]
 }
 
 function problemColor(rating?: number) {
@@ -215,13 +231,16 @@ function buildHistory(
 }
 
 export async function GET(request: Request) {
-  const handle = new URL(request.url).searchParams.get("handle")?.trim()
-  if (!handle || handle.length > 64) {
+  const searchParams = new URL(request.url).searchParams
+  const handle = searchParams.get("handle")?.trim()
+  const wantsRandom = searchParams.get("random") === "1"
+  if ((!handle && !wantsRandom) || (handle?.length ?? 0) > 64) {
     return Response.json({ error: "Enter a valid Codeforces handle." }, { status: 400 })
   }
   try {
-    const users = await codeforcesRequest<CfUser[]>("user.info", { handles: handle })
-    const user = users[0]
+    const user = wantsRandom
+      ? await getRandomUser()
+      : (await codeforcesRequest<CfUser[]>("user.info", { handles: handle! }))[0]
     if (!user) throw new Error("Codeforces handle not found.")
     const ratings = await codeforcesRequest<CfRating[]>("user.rating", { handle: user.handle })
     const submissions = await codeforcesRequest<CfSubmission[]>("user.status", {
@@ -232,7 +251,7 @@ export async function GET(request: Request) {
     const catalog = await getCatalog()
     return Response.json(
       { history: buildHistory(user, ratings, submissions, catalog) },
-      { headers: { "Cache-Control": "public, max-age=60, s-maxage=300" } }
+      { headers: { "Cache-Control": wantsRandom ? "no-store" : "public, max-age=60, s-maxage=300" } }
     )
   } catch (cause) {
     return Response.json(
