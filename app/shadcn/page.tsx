@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 import history from "@/app/data/history.json"
-import { ShadcnDashboard } from "@/components/shadcn-dashboard/dashboard"
+import { AtCoderSearch } from "@/components/atcoder/atcoder-search"
 import type { History } from "@/components/ps-types"
 
 export const metadata: Metadata = {
-  title: "SSS_PrizeHunter · shadcn dashboard",
-  description: "PS match history connected to the official shadcn dashboard-01 block.",
+  title: "AtCoder player search · PS Matchlog",
+  description: "Search an AtCoder username and turn public submissions into contest match history.",
 }
 
 export default function ShadcnPage() {
-  return <ShadcnDashboard history={history as History} />
+  return <AtCoderSearch initialHistory={history as History} />
 }
