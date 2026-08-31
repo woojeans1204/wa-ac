@@ -3,8 +3,7 @@
 import type { History } from "@/components/ps-types"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ActivityIcon, FlagIcon, TrendingUpIcon, TrophyIcon } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
 function profileMetrics(history: History) {
   const rated = (history.raw?.actualHistory ?? []).filter((item) => item.newRating != null)
@@ -22,48 +21,45 @@ export function SectionCards({ history }: { history: History }) {
   const metrics = profileMetrics(history)
 
   return (
-    <div className="grid gap-4 @3xl/main:grid-cols-2 @7xl/main:grid-cols-4">
-      <Card className="@container/card @3xl/main:col-span-2 bg-gradient-to-br from-card to-blue-50/70 shadow-xs">
-        <CardHeader className="grid grid-cols-[auto_1fr] items-center gap-x-4">
-          <Avatar className="row-span-3 size-14 rounded-lg border">
-            <AvatarFallback className="rounded-lg bg-slate-900 text-base font-semibold text-white">SP</AvatarFallback>
+    <Card className="overflow-hidden border-border/80 bg-gradient-to-br from-card via-card to-blue-50/60 py-0 shadow-xs dark:to-blue-950/20">
+      <CardContent className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[minmax(320px,1.15fr)_minmax(520px,1fr)] lg:items-center lg:p-8">
+        <div className="flex min-w-0 items-center gap-4 sm:gap-5">
+          <Avatar className="size-16 shrink-0 rounded-xl border shadow-sm sm:size-20">
+            <AvatarFallback className="rounded-xl bg-slate-900 text-xl font-semibold text-white">SP</AvatarFallback>
           </Avatar>
-          <CardDescription className="flex items-center gap-2">Competitive programming profile <Badge variant="outline" className="rounded-md bg-background">AtCoder</Badge></CardDescription>
-          <CardTitle className="truncate text-2xl font-semibold tracking-tight">{history.user}</CardTitle>
-          <div className="mt-1 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground">
-            <span><strong className="font-mono text-foreground">{metrics.current}</strong> rating</span>
-            <span><strong className="font-mono text-foreground">{metrics.peak}</strong> peak</span>
-            <span><strong className="font-mono text-foreground">{metrics.latestPerformance}</strong> recent perf.</span>
+          <div className="min-w-0">
+            <div className="mb-1.5 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+              Competitive programming profile
+              <Badge variant="outline" className="rounded-md bg-background">AtCoder</Badge>
+            </div>
+            <h1 className="truncate text-2xl font-semibold tracking-tight sm:text-3xl">{history.user}</h1>
+            <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground">
+              <span><strong className="font-mono text-lg text-foreground">{metrics.current}</strong> rating</span>
+              <span><strong className="font-mono text-lg text-foreground">{metrics.peak}</strong> peak</span>
+              <span><strong className="font-mono text-lg text-foreground">{metrics.latestPerformance}</strong> recent perf.</span>
+            </div>
           </div>
-        </CardHeader>
-        <CardFooter className="flex flex-wrap gap-4 text-xs text-muted-foreground">
-          <span>{history.summary.actualSessions} rated contests</span><span>{history.summary.virtualSessions} virtual contests</span><span>{history.summary.submissions} submissions imported</span>
-        </CardFooter>
-      </Card>
+        </div>
 
-      <Card className="@container/card bg-gradient-to-t from-primary/5 to-card shadow-xs">
-        <CardHeader>
-          <CardDescription>Recent 4 contests</CardDescription>
-          <CardTitle className="text-3xl font-semibold tabular-nums">{metrics.solved} solved</CardTitle>
-          <CardAction><Badge variant="outline"><ActivityIcon /> Active</Badge></CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1 text-sm">
-          <div className="flex items-center gap-2 font-medium">Current training volume <TrendingUpIcon className="size-4" /></div>
-          <div className="text-muted-foreground">Actual + virtual sessions</div>
-        </CardFooter>
-      </Card>
+        <div className="grid grid-cols-2 overflow-hidden rounded-xl border bg-background/80 sm:grid-cols-4">
+          <ProfileStat label="Rated" value={history.summary.actualSessions} />
+          <ProfileStat label="Virtual" value={history.summary.virtualSessions} />
+          <ProfileStat label="Recent solved" value={metrics.solved} />
+          <ProfileStat label="Virtual share" value={`${metrics.virtualShare}%`} />
+        </div>
+      </CardContent>
+      <div className="border-t bg-muted/25 px-5 py-3 text-xs text-muted-foreground sm:px-6 lg:px-8">
+        {history.summary.submissions} submissions imported · practice sessions excluded from full-contest views
+      </div>
+    </Card>
+  )
+}
 
-      <Card className="@container/card bg-gradient-to-t from-primary/5 to-card shadow-xs">
-        <CardHeader>
-          <CardDescription>Training mix</CardDescription>
-          <CardTitle className="text-3xl font-semibold tabular-nums">{metrics.virtualShare}% virtual</CardTitle>
-          <CardAction><Badge variant="outline"><FlagIcon /> {history.summary.actualSessions} actual</Badge></CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1 text-sm">
-          <div className="flex items-center gap-2 font-medium">Contest repetition first <TrophyIcon className="size-4" /></div>
-          <div className="text-muted-foreground">Practice sessions excluded</div>
-        </CardFooter>
-      </Card>
+function ProfileStat({ label, value }: { label: string; value: number | string }) {
+  return (
+    <div className="border-b p-4 last:border-b-0 even:border-l sm:border-b-0 sm:border-l sm:first:border-l-0">
+      <div className="text-xs text-muted-foreground">{label}</div>
+      <div className="mt-1 font-mono text-xl font-semibold tabular-nums">{value}</div>
     </div>
   )
 }
