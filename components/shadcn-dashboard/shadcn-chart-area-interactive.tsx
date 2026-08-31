@@ -1,21 +1,13 @@
 "use client"
 
 import * as React from "react"
-import {
-  PolarAngleAxis,
-  PolarGrid,
-  PolarRadiusAxis,
-  Radar,
-  RadarChart,
-} from "recharts"
-import type { History, Session } from "@/components/ps-types"
-import { Badge } from "@/components/ui/badge"
+import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
+import type { History } from "@/components/ps-types"
 import {
   Card,
   CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -37,28 +29,16 @@ import {
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 
 const chartConfig = {
-  previous: { label: "Period start", color: "var(--chart-2)" },
-  current: { label: "Now", color: "var(--chart-1)" },
+  rating: { label: "Rating", color: "var(--chart-1)" },
+  actualFrontier: {
+    label: "Actual top difficulty",
+    color: "var(--chart-2)",
+  },
+  virtualFrontier: {
+    label: "Virtual top difficulty",
+    color: "var(--chart-3)",
+  },
 } satisfies ChartConfig
-
-const bandSets = {
-  AtCoder: [
-    { label: "0–399", min: 0, max: 400 },
-    { label: "400–799", min: 400, max: 800 },
-    { label: "800–1199", min: 800, max: 1200 },
-    { label: "1200–1599", min: 1200, max: 1600 },
-    { label: "1600–1999", min: 1600, max: 2000 },
-    { label: "2000+", min: 2000, max: Infinity },
-  ],
-  Codeforces: [
-    { label: "800–1199", min: 800, max: 1200 },
-    { label: "1200–1399", min: 1200, max: 1400 },
-    { label: "1400–1599", min: 1400, max: 1600 },
-    { label: "1600–1899", min: 1600, max: 1900 },
-    { label: "1900–2099", min: 1900, max: 2100 },
-    { label: "2100+", min: 2100, max: Infinity },
-  ],
-} as const
 
 type TimeRange = "90d" | "365d" | "all"
 
@@ -68,55 +48,74 @@ const ranges: Array<{ value: TimeRange; label: string; days: number | null }> = 
   { value: "all", label: "All time", days: null },
 ]
 
-function frontierSnapshot(sessions: Session[], bands: ReadonlyArray<{ label: string; min: number; max: number }>) {
-  const problems = sessions.flatMap((session) => session.problems)
-  return bands.map((band) => {
-    const seen = problems.filter((problem) => {
-      const difficulty = problem.difficulty ?? -1
-      return difficulty >= band.min && difficulty < band.max
-    })
-    const solved = seen.filter((problem) => problem.solved).length
-    return seen.length ? Math.round((solved / seen.length) * 100) : 0
-  })
+function shortDate(value: string) {
+  const date = new Date(value)
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+  }).format(date)
 }
 
-export function ShadcnChartAreaInteractive({ history, platform = "AtCoder" }: { history: History; platform?: "AtCoder" | "Codeforces" }) {
+export function ShadcnChartAreaInteractive({
+  history,
+}: {
+  history: History
+  platform?: "AtCoder" | "Codeforces"
+}) {
   const [timeRange, setTimeRange] = React.useState<TimeRange>("90d")
 
-  const { chartData, biggestGain } = React.useMemo(() => {
-    const bands = bandSets[platform]
-    const sessions = history.sessions
+  const chartData = React.useMemo(() => {
+    const ratings = new Map(
+      (history.raw?.actualHistory ?? []).map((item) => [
+        String(item.contestId).toLowerCase(),
+        item.newRating ?? null,
+      ])
+    )
+    let currentRating: number | null = null
+
+    return history.sessions
       .filter((session) => session.type !== "practice")
-      .sort(
+      .toSorted(
         (a, b) =>
           new Date(a.startAt).getTime() - new Date(b.startAt).getTime()
       )
-    const latest = sessions.length
-      ? new Date(sessions.at(-1)!.startAt).getTime()
-      : Date.now()
-    const days = ranges.find((range) => range.value === timeRange)?.days
-    const cutoff = days == null ? -Infinity : latest - days * 86_400_000
-    const previousSessions = sessions.filter(
-      (session) => new Date(session.startAt).getTime() < cutoff
+      .map((session) => {
+        const nextRating = ratings.get(String(session.contestId).toLowerCase())
+        if (nextRating != null) currentRating = nextRating
+
+        return {
+          date: session.startAt,
+          contest: session.contestTitle ?? session.contestId.toUpperCase(),
+          rating: currentRating,
+          actualFrontier:
+            session.type === "actual"
+              ? session.metrics.highestSolvedDifficulty ?? null
+              : null,
+          virtualFrontier:
+            session.type === "virtual"
+              ? session.metrics.highestSolvedDifficulty ?? null
+              : null,
+        }
+      })
+  }, [history])
+
+  const filteredData = React.useMemo(() => {
+    const selected = ranges.find((range) => range.value === timeRange)
+    if (!selected?.days || chartData.length === 0) return chartData
+
+    const latest = new Date(chartData.at(-1)!.date).getTime()
+    const cutoff = latest - selected.days * 86_400_000
+    return chartData.filter(
+      (item) => new Date(item.date).getTime() >= cutoff
     )
-    const current = frontierSnapshot(sessions, bands)
-    const previous = frontierSnapshot(previousSessions, bands)
-    const data = bands.map((band, index) => ({
-      band: band.label,
-      current: current[index],
-      previous: previous[index],
-      gain: current[index] - previous[index],
-    }))
-    const gain = [...data].sort((a, b) => b.gain - a.gain)[0]
-    return { chartData: data, biggestGain: gain }
-  }, [history, platform, timeRange])
+  }, [chartData, timeRange])
 
   return (
     <Card className="@container/card">
       <CardHeader>
-        <CardTitle>Growth Frontier</CardTitle>
+        <CardTitle>Growth History</CardTitle>
         <CardDescription>
-          Actual and virtual full-contest solve coverage by difficulty
+          Rating and full-contest difficulty frontier over time
         </CardDescription>
         <CardAction>
           <ToggleGroup
@@ -154,39 +153,72 @@ export function ShadcnChartAreaInteractive({ history, platform = "AtCoder" }: { 
         </CardAction>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="mx-auto aspect-square h-[420px] max-h-[55vh] w-full">
-          <RadarChart key={timeRange} data={chartData} outerRadius="72%">
-            <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
-            <PolarGrid gridType="polygon" />
-            <PolarAngleAxis dataKey="band" />
-            <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
-            <Radar
-              dataKey="previous"
-              fill="var(--color-previous)"
-              fillOpacity={0.15}
-              stroke="var(--color-previous)"
-              strokeDasharray="4 4"
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-[360px] w-full"
+        >
+          <LineChart
+            key={timeRange}
+            data={filteredData}
+            margin={{ left: 8, right: 16, top: 12 }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="date"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              minTickGap={32}
+              tickFormatter={shortDate}
+            />
+            <YAxis
+              width={44}
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              domain={[0, "auto"]}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={
+                <ChartTooltipContent
+                  indicator="dot"
+                  labelFormatter={(value) => shortDate(String(value))}
+                />
+              }
+            />
+            <Line
+              dataKey="rating"
+              type="monotone"
+              stroke="var(--color-rating)"
+              strokeWidth={2.5}
+              dot={false}
+              connectNulls
               animationDuration={700}
             />
-            <Radar
-              dataKey="current"
-              fill="var(--color-current)"
-              fillOpacity={0.35}
-              stroke="var(--color-current)"
+            <Line
+              dataKey="actualFrontier"
+              type="monotone"
+              stroke="var(--color-actualFrontier)"
+              strokeWidth={2}
+              dot={{ r: 3 }}
+              connectNulls
+              animationDuration={800}
+            />
+            <Line
+              dataKey="virtualFrontier"
+              type="monotone"
+              stroke="var(--color-virtualFrontier)"
+              strokeWidth={2}
+              strokeDasharray="5 5"
+              dot={{ r: 3 }}
+              connectNulls
               animationDuration={900}
             />
             <ChartLegend content={<ChartLegendContent />} />
-          </RadarChart>
+          </LineChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="justify-between gap-2 text-sm">
-        <span className="text-muted-foreground">Coverage change over the selected period</span>
-        {biggestGain && (
-          <Badge variant="outline">
-            Best gain: {biggestGain.band} {biggestGain.gain >= 0 ? "+" : ""}{biggestGain.gain}p
-          </Badge>
-        )}
-      </CardFooter>
     </Card>
   )
 }
