@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export function ShadcnProfileHeader({ history }: { history: History }) {
+export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history: History; platform?: "AtCoder" | "Codeforces" }) {
   const ratedHistory = history.raw?.actualHistory?.filter(
     (contest) => contest.newRating != null
   ) ?? []
@@ -40,7 +40,7 @@ export function ShadcnProfileHeader({ history }: { history: History }) {
         </Avatar>
         <div className="min-w-0 flex-1">
           <CardDescription className="flex items-center gap-2">
-            <Badge variant="outline">AtCoder</Badge>
+            <Badge variant="outline">{platform}</Badge>
             {history.summary.submissions.toLocaleString()} submissions
           </CardDescription>
           <CardTitle className="truncate text-lg">{history.user}</CardTitle>

@@ -20,7 +20,7 @@ const sections: Array<{ id: ShadcnSectionId; label: string }> = [
   { id: "frontier", label: "Frontier" },
 ]
 
-export function ShadcnDashboard({ history }: { history: History }) {
+export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }: { history: History; platform?: "AtCoder" | "Codeforces"; headerContent?: React.ReactNode }) {
   const [activeSection, setActiveSection] = React.useState<ShadcnSectionId>("dashboard")
 
   React.useEffect(() => {
@@ -42,10 +42,10 @@ export function ShadcnDashboard({ history }: { history: History }) {
   return (
     <TooltipProvider>
       <div className="min-h-screen bg-background">
-        <ShadcnSiteHeader />
+        <ShadcnSiteHeader>{headerContent}</ShadcnSiteHeader>
         <main className="@container/main mx-auto flex w-full max-w-[1400px] flex-col">
           <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-            <ShadcnProfileHeader history={history} />
+            <ShadcnProfileHeader history={history} platform={platform} />
             <Tabs
               value={activeSection}
               onValueChange={(value) => navigate(value as ShadcnSectionId)}
@@ -71,7 +71,7 @@ export function ShadcnDashboard({ history }: { history: History }) {
                 <>
                   <ShadcnSectionCards history={history} />
                   <div className="px-4 lg:px-6">
-                    <ShadcnChartAreaInteractive history={history} />
+                    <ShadcnChartAreaInteractive history={history} platform={platform} />
                   </div>
                   <ShadcnDataTable
                     data={history.sessions
@@ -89,11 +89,11 @@ export function ShadcnDashboard({ history }: { history: History }) {
               )}
               {activeSection === "growth" && (
                 <div className="px-4 lg:px-6">
-                  <ShadcnChartAreaInteractive history={history} />
+                  <ShadcnChartAreaInteractive history={history} platform={platform} />
                 </div>
               )}
               {activeSection === "frontier" && (
-                <ShadcnFrontier history={history} />
+                <ShadcnFrontier history={history} platform={platform} />
               )}
             </Tabs>
           </div>

@@ -41,14 +41,24 @@ const chartConfig = {
   current: { label: "Now", color: "var(--chart-1)" },
 } satisfies ChartConfig
 
-const bands = [
-  { label: "0–399", min: 0, max: 400 },
-  { label: "400–799", min: 400, max: 800 },
-  { label: "800–1199", min: 800, max: 1200 },
-  { label: "1200–1599", min: 1200, max: 1600 },
-  { label: "1600–1999", min: 1600, max: 2000 },
-  { label: "2000+", min: 2000, max: Infinity },
-] as const
+const bandSets = {
+  AtCoder: [
+    { label: "0–399", min: 0, max: 400 },
+    { label: "400–799", min: 400, max: 800 },
+    { label: "800–1199", min: 800, max: 1200 },
+    { label: "1200–1599", min: 1200, max: 1600 },
+    { label: "1600–1999", min: 1600, max: 2000 },
+    { label: "2000+", min: 2000, max: Infinity },
+  ],
+  Codeforces: [
+    { label: "800–1199", min: 800, max: 1200 },
+    { label: "1200–1399", min: 1200, max: 1400 },
+    { label: "1400–1599", min: 1400, max: 1600 },
+    { label: "1600–1899", min: 1600, max: 1900 },
+    { label: "1900–2099", min: 1900, max: 2100 },
+    { label: "2100+", min: 2100, max: Infinity },
+  ],
+} as const
 
 type TimeRange = "90d" | "365d" | "all"
 
@@ -58,7 +68,7 @@ const ranges: Array<{ value: TimeRange; label: string; days: number | null }> = 
   { value: "all", label: "All time", days: null },
 ]
 
-function frontierSnapshot(sessions: Session[]) {
+function frontierSnapshot(sessions: Session[], bands: ReadonlyArray<{ label: string; min: number; max: number }>) {
   const problems = sessions.flatMap((session) => session.problems)
   return bands.map((band) => {
     const seen = problems.filter((problem) => {
@@ -70,10 +80,11 @@ function frontierSnapshot(sessions: Session[]) {
   })
 }
 
-export function ShadcnChartAreaInteractive({ history }: { history: History }) {
+export function ShadcnChartAreaInteractive({ history, platform = "AtCoder" }: { history: History; platform?: "AtCoder" | "Codeforces" }) {
   const [timeRange, setTimeRange] = React.useState<TimeRange>("90d")
 
   const { chartData, biggestGain } = React.useMemo(() => {
+    const bands = bandSets[platform]
     const sessions = history.sessions
       .filter((session) => session.type !== "practice")
       .sort(
@@ -88,8 +99,8 @@ export function ShadcnChartAreaInteractive({ history }: { history: History }) {
     const previousSessions = sessions.filter(
       (session) => new Date(session.startAt).getTime() < cutoff
     )
-    const current = frontierSnapshot(sessions)
-    const previous = frontierSnapshot(previousSessions)
+    const current = frontierSnapshot(sessions, bands)
+    const previous = frontierSnapshot(previousSessions, bands)
     const data = bands.map((band, index) => ({
       band: band.label,
       current: current[index],
@@ -98,7 +109,7 @@ export function ShadcnChartAreaInteractive({ history }: { history: History }) {
     }))
     const gain = [...data].sort((a, b) => b.gain - a.gain)[0]
     return { chartData: data, biggestGain: gain }
-  }, [history, timeRange])
+  }, [history, platform, timeRange])
 
   return (
     <Card className="@container/card">

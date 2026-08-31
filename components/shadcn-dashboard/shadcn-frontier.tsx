@@ -3,10 +3,14 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 
-const bands = [[0, 400], [400, 800], [800, 1200], [1200, 1600], [1600, 2000], [2000, Infinity]] as const
+const bandSets = {
+  AtCoder: [[0, 400], [400, 800], [800, 1200], [1200, 1600], [1600, 2000], [2000, Infinity]],
+  Codeforces: [[800, 1200], [1200, 1400], [1400, 1600], [1600, 1900], [1900, 2100], [2100, Infinity]],
+} as const
 
-export function ShadcnFrontier({ history }: { history: History }) {
+export function ShadcnFrontier({ history, platform = "AtCoder" }: { history: History; platform?: "AtCoder" | "Codeforces" }) {
   const problems = history.sessions.filter((session) => session.type !== "practice").flatMap((session) => session.problems)
+  const bands = bandSets[platform]
   return <div className="grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-3">{bands.map(([min, max]) => {
     const seen = problems.filter((problem) => (problem.difficulty ?? -1) >= min && (problem.difficulty ?? -1) < max)
     const solved = seen.filter((problem) => problem.solved).length
