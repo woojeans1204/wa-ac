@@ -45,6 +45,8 @@ let catalogCache: {
   contests: CfContest[]
 } | null = null
 let ratedUsersCache: { expiresAt: number; users: CfUser[] } | null = null
+let catalogPromise: Promise<{ expiresAt: number; problems: CfProblem[]; contests: CfContest[] }> | null = null
+let ratedUsersPromise: Promise<{ expiresAt: number; users: CfUser[] }> | null = null
 
 async function codeforcesRequest<T>(method: string, params: Record<string, string>) {
   const task = requestQueue.then(async () => {
@@ -67,24 +69,42 @@ async function codeforcesRequest<T>(method: string, params: Record<string, strin
 
 async function getCatalog() {
   if (catalogCache && catalogCache.expiresAt > Date.now()) return catalogCache
-  const problemset = await codeforcesRequest<{ problems: CfProblem[] }>("problemset.problems", {})
-  const contests = await codeforcesRequest<CfContest[]>("contest.list", { gym: "false" })
-  catalogCache = {
-    expiresAt: Date.now() + 6 * 60 * 60 * 1000,
-    problems: problemset.problems,
-    contests,
+  if (!catalogPromise) {
+    catalogPromise = (async () => {
+      const problemset = await codeforcesRequest<{ problems: CfProblem[] }>("problemset.problems", {})
+      const contests = await codeforcesRequest<CfContest[]>("contest.list", { gym: "false" })
+      return {
+        expiresAt: Date.now() + 6 * 60 * 60 * 1000,
+        problems: problemset.problems,
+        contests,
+      }
+    })()
   }
-  return catalogCache
+  const pendingCatalog = catalogPromise
+  try {
+    catalogCache = await pendingCatalog
+    return catalogCache
+  } finally {
+    if (catalogPromise === pendingCatalog) catalogPromise = null
+  }
 }
 
 async function getRandomUser() {
   if (!ratedUsersCache || ratedUsersCache.expiresAt <= Date.now()) {
-    ratedUsersCache = {
-      expiresAt: Date.now() + 60 * 60 * 1000,
-      users: await codeforcesRequest<CfUser[]>("user.ratedList", {
-        activeOnly: "true",
-        includeRetired: "false",
-      }),
+    if (!ratedUsersPromise) {
+      ratedUsersPromise = (async () => ({
+        expiresAt: Date.now() + 60 * 60 * 1000,
+        users: await codeforcesRequest<CfUser[]>("user.ratedList", {
+          activeOnly: "true",
+          includeRetired: "false",
+        }),
+      }))()
+    }
+    const pendingUsers = ratedUsersPromise
+    try {
+      ratedUsersCache = await pendingUsers
+    } finally {
+      if (ratedUsersPromise === pendingUsers) ratedUsersPromise = null
     }
   }
   const candidates = ratedUsersCache.users.filter((user) => user.handle && user.rating != null)
@@ -234,6 +254,15 @@ export async function GET(request: Request) {
   const searchParams = new URL(request.url).searchParams
   const handle = searchParams.get("handle")?.trim()
   const wantsRandom = searchParams.get("random") === "1"
+  const wantsWarmup = searchParams.get("warm") === "1"
+  if (wantsWarmup) {
+    try {
+      await Promise.all([getCatalog(), getRandomUser()])
+      return Response.json({ ready: true }, { headers: { "Cache-Control": "no-store" } })
+    } catch {
+      return Response.json({ ready: false }, { status: 502, headers: { "Cache-Control": "no-store" } })
+    }
+  }
   if ((!handle && !wantsRandom) || (handle?.length ?? 0) > 64) {
     return Response.json({ error: "Enter a valid Codeforces handle." }, { status: 400 })
   }

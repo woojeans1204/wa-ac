@@ -16,6 +16,17 @@ export function CodeforcesSearch() {
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState("")
 
+  React.useEffect(() => {
+    const controller = new AbortController()
+    const timer = window.setTimeout(() => {
+      void fetch("/api/codeforces?warm=1", { signal: controller.signal }).catch(() => undefined)
+    }, 250)
+    return () => {
+      window.clearTimeout(timer)
+      controller.abort()
+    }
+  }, [])
+
   const loadPlayer = async (url: string) => {
     setLoading(true)
     setError("")
