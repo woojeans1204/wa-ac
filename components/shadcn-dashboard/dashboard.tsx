@@ -45,7 +45,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }
     <TooltipProvider>
       <div className="min-h-screen bg-background">
         <ShadcnSiteHeader>{headerContent}</ShadcnSiteHeader>
-        <main className="@container/main mx-auto flex w-full max-w-[1400px] flex-col">
+        <main className="@container/main mx-auto flex w-full max-w-[1200px] flex-col">
           <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
             <ShadcnProfileHeader history={history} platform={platform} />
             <Tabs
@@ -72,10 +72,8 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }
               {activeSection === "dashboard" && (
                 <>
                   <ShadcnSectionCards history={history} />
-                  <div className="px-4 lg:px-6">
+                  <div className="grid gap-6 px-4 lg:px-6 @5xl/main:grid-cols-2">
                     <FrontierHistory history={history} platform={platform} />
-                  </div>
-                  <div className="px-4 lg:px-6">
                     <ShadcnChartAreaInteractive history={history} platform={platform} />
                   </div>
                   <ShadcnDataTable
