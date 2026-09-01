@@ -79,7 +79,7 @@ function shortDate(value: string) {
   }).format(new Date(value))
 }
 
-function FrontierHistory({
+export function FrontierHistory({
   history,
   platform,
 }: {

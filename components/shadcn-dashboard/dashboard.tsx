@@ -9,7 +9,7 @@ import { ShadcnChartAreaInteractive } from "@/components/shadcn-dashboard/shadcn
 import { ShadcnDataTable } from "@/components/shadcn-dashboard/shadcn-data-table"
 import { ShadcnSectionCards } from "@/components/shadcn-dashboard/shadcn-section-cards"
 import { ShadcnSiteHeader } from "@/components/shadcn-dashboard/shadcn-site-header"
-import { ShadcnFrontier } from "@/components/shadcn-dashboard/shadcn-frontier"
+import { FrontierHistory, ShadcnFrontier } from "@/components/shadcn-dashboard/shadcn-frontier"
 import { ShadcnProfileHeader } from "@/components/shadcn-dashboard/shadcn-profile-header"
 import { ShadcnUpsolveQueue } from "@/components/shadcn-dashboard/shadcn-upsolve-queue"
 
@@ -72,6 +72,9 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }
               {activeSection === "dashboard" && (
                 <>
                   <ShadcnSectionCards history={history} />
+                  <div className="px-4 lg:px-6">
+                    <FrontierHistory history={history} platform={platform} />
+                  </div>
                   <div className="px-4 lg:px-6">
                     <ShadcnChartAreaInteractive history={history} platform={platform} />
                   </div>
