@@ -104,7 +104,7 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
         <TabsContent key={tab} value={tab} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
           <div className="overflow-hidden rounded-lg border">
             <Table>
-              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead>Type</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Status</TableHead>{visible.problems && <TableHead>Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right">Last AC</TableHead>}</TableRow></TableHeader>
+              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead>Type</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Status</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right">Last AC</TableHead>}</TableRow></TableHeader>
               {rows.map((session) => {
                 const columnCount = 2 + Number(visible.type) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)
                 return (
@@ -131,8 +131,8 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
                         {visible.duration && <TableCell className="whitespace-nowrap font-mono text-muted-foreground">{contestLength(session.durationSecond)}</TableCell>}
                         <TableCell><Badge variant="outline" className="px-1.5 text-muted-foreground"><IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />{session.metrics.solved}/{session.problems.length}</Badge></TableCell>
                         {visible.problems && (
-                          <TableCell>
-                            <div className="flex min-w-max flex-wrap gap-1">
+                          <TableCell className="w-80 max-w-80">
+                            <div className="flex max-w-80 flex-wrap gap-1">
                               {session.problems.map((problem) => {
                                 const firstAc = firstAcSecond(problem)
                                 const wrong = wrongAttempts(problem)
