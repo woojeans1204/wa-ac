@@ -16,22 +16,22 @@ function metrics(history: History) {
 export function ShadcnSectionCards({ history }: { history: History }) {
   const data = metrics(history)
   return (
-    <div className="grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4 dark:*:data-[slot=card]:bg-card">
-      <Card className="@container/card">
+    <div className="grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @3xl/main:grid-cols-4 dark:*:data-[slot=card]:bg-card">
+      <Card size="sm" className="@container/card">
         <CardHeader><CardDescription>Current Rating</CardDescription><CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">{data.current}</CardTitle><CardAction><Badge variant="outline"><IconTrendingUp />AtCoder</Badge></CardAction></CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm"><div className="line-clamp-1 flex gap-2 font-medium">Current algorithm rating <IconTrendingUp className="size-4" /></div><div className="text-muted-foreground">Imported rated history</div></CardFooter>
+        <CardFooter className="text-xs text-muted-foreground">Imported rated history</CardFooter>
       </Card>
-      <Card className="@container/card">
+      <Card size="sm" className="@container/card">
         <CardHeader><CardDescription>Peak Rating</CardDescription><CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">{data.peak}</CardTitle><CardAction><Badge variant="outline"><IconTrendingUp />Peak</Badge></CardAction></CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm"><div className="line-clamp-1 flex gap-2 font-medium">Highest recorded rating <IconTrendingUp className="size-4" /></div><div className="text-muted-foreground">Across rated contests</div></CardFooter>
+        <CardFooter className="text-xs text-muted-foreground">Across rated contests</CardFooter>
       </Card>
-      <Card className="@container/card">
+      <Card size="sm" className="@container/card">
         <CardHeader><CardDescription>Full Contests</CardDescription><CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">{history.summary.actualSessions + history.summary.virtualSessions}</CardTitle><CardAction><Badge variant="outline"><IconTrendingUp />{history.summary.virtualSessions} virtual</Badge></CardAction></CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm"><div className="line-clamp-1 flex gap-2 font-medium">Actual and virtual sessions <IconTrendingUp className="size-4" /></div><div className="text-muted-foreground">Practice sessions excluded</div></CardFooter>
+        <CardFooter className="text-xs text-muted-foreground">Practice excluded</CardFooter>
       </Card>
-      <Card className="@container/card">
+      <Card size="sm" className="@container/card">
         <CardHeader><CardDescription>Problems Solved</CardDescription><CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">{data.solved}</CardTitle><CardAction><Badge variant="outline"><IconTrendingDown />{data.recent} recent</Badge></CardAction></CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm"><div className="line-clamp-1 flex gap-2 font-medium">Solved inside full contests <IconTrendingUp className="size-4" /></div><div className="text-muted-foreground">Recent four contests included</div></CardFooter>
+        <CardFooter className="text-xs text-muted-foreground">Full contests only</CardFooter>
       </Card>
     </div>
   )
