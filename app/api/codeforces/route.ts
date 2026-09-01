@@ -204,6 +204,7 @@ function buildHistory(
       contestId: String(group.contestId),
       contestTitle: ratingMap.get(group.contestId)?.contestName ?? contest?.name ?? `Codeforces Contest ${group.contestId}`,
       startAt: new Date(group.start * 1000).toISOString(),
+      durationSecond: contest?.durationSeconds ?? null,
       sourceUrl: `https://codeforces.com/contest/${group.contestId}`,
       metrics: {
         solved: problems.filter((problem) => problem.solved).length,

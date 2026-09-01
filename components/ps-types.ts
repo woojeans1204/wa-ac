@@ -23,6 +23,7 @@ export type Session = {
   contestId: string
   contestTitle?: string
   startAt: string
+  durationSecond?: number | null
   sourceUrl?: string
   metrics: {
     solved: number

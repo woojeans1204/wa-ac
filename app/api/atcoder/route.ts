@@ -226,6 +226,7 @@ function buildSession(
     contestId: contest.id,
     contestTitle: contest.title,
     startAt: new Date(start * 1000).toISOString(),
+    durationSecond: contest.duration_second,
     sourceUrl: `https://atcoder.jp/contests/${contest.id}/standings${
       type === "virtual" ? "/virtual" : ""
     }`,

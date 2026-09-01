@@ -41,10 +41,18 @@ function wrongAttempts(problem: Problem) {
 
 function compactElapsed(seconds: number) {
   const minutes = Math.floor(seconds / 60)
-  if (minutes < 60) return `${minutes}m`
+  if (minutes < 60) return `${minutes}′`
   const hours = Math.floor(minutes / 60)
   const remainingMinutes = minutes % 60
-  return remainingMinutes ? `${hours}h ${remainingMinutes}m` : `${hours}h`
+  return `${hours}:${String(remainingMinutes).padStart(2, "0")}`
+}
+
+function contestLength(seconds?: number | null) {
+  if (seconds == null) return "—"
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor((seconds % 3600) / 60)
+  if (!hours) return `${minutes}m`
+  return minutes ? `${hours}h ${minutes}m` : `${hours}h`
 }
 
 function exactElapsed(seconds: number | null) {
@@ -68,7 +76,7 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
   const [view, setView] = React.useState("all")
   const [page, setPage] = React.useState(0)
   const [openContest, setOpenContest] = React.useState<string | null>(null)
-  const [visible, setVisible] = React.useState({ type: true, problems: true, difficulty: true, time: true })
+  const [visible, setVisible] = React.useState({ type: true, duration: true, problems: true, difficulty: true, time: true })
   const filtered = data.filter((session) => view === "all" || session.type === view)
   const pageCount = Math.max(1, Math.ceil(filtered.length / 10))
   const rows = filtered.slice(page * 10, page * 10 + 10)
@@ -96,9 +104,9 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
         <TabsContent key={tab} value={tab} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
           <div className="overflow-hidden rounded-lg border">
             <Table>
-              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead>Type</TableHead>}<TableHead>Status</TableHead>{visible.problems && <TableHead>Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right">Last AC</TableHead>}</TableRow></TableHeader>
+              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead>Type</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Status</TableHead>{visible.problems && <TableHead>Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right">Last AC</TableHead>}</TableRow></TableHeader>
               {rows.map((session) => {
-                const columnCount = 2 + Number(visible.type) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)
+                const columnCount = 2 + Number(visible.type) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)
                 return (
                   <Collapsible
                     key={session.sessionId}
@@ -120,6 +128,7 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
                           </CollapsibleTrigger>
                         </TableCell>
                         {visible.type && <TableCell><Badge variant="outline" className="capitalize">{session.type}</Badge></TableCell>}
+                        {visible.duration && <TableCell className="whitespace-nowrap font-mono text-muted-foreground">{contestLength(session.durationSecond)}</TableCell>}
                         <TableCell><Badge variant="outline" className="px-1.5 text-muted-foreground"><IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />{session.metrics.solved}/{session.problems.length}</Badge></TableCell>
                         {visible.problems && (
                           <TableCell>
@@ -133,7 +142,7 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
                                     variant={problem.solved ? "secondary" : problem.attempted ? "destructive" : "outline"}
                                     className="font-mono font-normal tabular-nums"
                                   >
-                                    {problem.index}{" "}
+                                    {problem.index}·
                                     {firstAc != null
                                       ? compactElapsed(firstAc)
                                       : problem.attempted
