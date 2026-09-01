@@ -60,6 +60,7 @@ const colors = [
 ]
 
 type WindowMode = "10" | "20" | "50" | "cumulative"
+type ContestScope = "all" | "actual" | "virtual"
 
 const windows: Array<{ value: WindowMode; label: string; size: number | null }> = [
   { value: "10", label: "Rolling 10", size: 10 },
@@ -96,7 +97,10 @@ export function FrontierHistory({
   platform: "AtCoder" | "Codeforces"
 }) {
   const [windowMode, setWindowMode] = React.useState<WindowMode>("20")
+  const [contestScope, setContestScope] = React.useState<ContestScope>("all")
   const bands = bandSets[platform]
+  const actualCount = history.sessions.filter((session) => session.type === "actual").length
+  const virtualCount = history.sessions.filter((session) => session.type === "virtual").length
   const chartConfig = React.useMemo(
     () => Object.fromEntries(
       bands.map(([min, max], index) => [
@@ -108,7 +112,10 @@ export function FrontierHistory({
   )
   const chartData = React.useMemo(() => {
     const sessions = history.sessions
-      .filter((session) => session.type !== "practice")
+      .filter((session) =>
+        session.type !== "practice" &&
+        (contestScope === "all" || session.type === contestScope)
+      )
       .toSorted(
         (a, b) => new Date(a.startAt).getTime() - new Date(b.startAt).getTime()
       )
@@ -143,7 +150,9 @@ export function FrontierHistory({
           ),
         }
       })
-  }, [history, bands, windowMode])
+  }, [history, bands, windowMode, contestScope])
+
+  const scopeLabel = contestScope === "all" ? "actual + virtual" : contestScope
 
   return (
     <Card className="@container/card">
@@ -151,8 +160,8 @@ export function FrontierHistory({
         <CardTitle>Frontier History</CardTitle>
         <CardDescription>
           {windowMode === "cumulative"
-            ? "Cumulative full-contest solve coverage by difficulty"
-            : `Solve coverage within the latest ${windowMode} full contests at each date`}
+            ? `Cumulative ${scopeLabel} contest solve coverage by difficulty`
+            : `Solve coverage within the latest ${windowMode} ${scopeLabel} contests at each date`}
         </CardDescription>
         <CardAction>
           <ToggleGroup
@@ -182,10 +191,22 @@ export function FrontierHistory({
           </Select>
         </CardAction>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex flex-col gap-4">
+        <ToggleGroup
+          type="single"
+          value={contestScope}
+          onValueChange={(value) => value && setContestScope(value as ContestScope)}
+          variant="outline"
+          className="w-fit"
+          aria-label="Contest type"
+        >
+          <ToggleGroupItem value="all">All</ToggleGroupItem>
+          <ToggleGroupItem value="actual" disabled={!actualCount}>Actual</ToggleGroupItem>
+          <ToggleGroupItem value="virtual" disabled={!virtualCount}>Virtual</ToggleGroupItem>
+        </ToggleGroup>
         <ChartContainer config={chartConfig} className="aspect-auto h-[360px] w-full">
           <LineChart
-            key={windowMode}
+            key={`${contestScope}-${windowMode}`}
             data={chartData}
             margin={{ left: 8, right: 16, top: 12 }}
           >
