@@ -28,7 +28,11 @@ export function AtCoderSearch({ initialHistory }: { initialHistory: History }) {
   const loadPlayer = async (url: string) => {
     setLoading(true)
     try {
-      const response = await fetch(url)
+      const response = await fetch(url, { signal: AbortSignal.timeout(60_000) })
+      const contentType = response.headers.get("content-type") ?? ""
+      if (!contentType.includes("application/json")) {
+        throw new Error("The search server returned an invalid response. Please try again.")
+      }
       const payload = await response.json() as { history?: History; error?: string }
       if (!response.ok || !payload.history) {
         throw new Error(payload.error || "Could not load this username.")
@@ -36,7 +40,16 @@ export function AtCoderSearch({ initialHistory }: { initialHistory: History }) {
       setHistory(payload.history)
       setHandle(payload.history.user)
     } catch (cause) {
-      toast.error(cause instanceof Error ? cause.message : "Could not load this username.")
+      const timedOut = cause instanceof Error && (
+        cause.name === "TimeoutError" || cause.name === "AbortError"
+      )
+      toast.error(
+        timedOut
+          ? "AtCoder search timed out. Please try again."
+          : cause instanceof Error
+            ? cause.message
+            : "Could not load this username."
+      )
     } finally {
       setLoading(false)
     }

@@ -16,28 +16,34 @@ export function CodeforcesSearch() {
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState("")
 
-  React.useEffect(() => {
-    const controller = new AbortController()
-    const timer = window.setTimeout(() => {
-      void fetch("/api/codeforces?warm=1", { signal: controller.signal }).catch(() => undefined)
-    }, 250)
-    return () => {
-      window.clearTimeout(timer)
-      controller.abort()
-    }
-  }, [])
-
   const loadPlayer = async (url: string) => {
     setLoading(true)
     setError("")
     try {
-      const response = await fetch(url)
+      const response = await fetch(url, { signal: AbortSignal.timeout(35_000) })
+      const contentType = response.headers.get("content-type") ?? ""
+      if (!contentType.includes("application/json")) {
+        throw new Error(
+          response.status === 504
+            ? "Codeforces search timed out. Please try again."
+            : "The search server returned an invalid response. Please try again."
+        )
+      }
       const payload = await response.json() as { history?: History; error?: string }
       if (!response.ok || !payload.history) throw new Error(payload.error || "Could not load this handle.")
       setHistory(payload.history)
       setHandle(payload.history.user)
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Could not load this handle.")
+      const timedOut = cause instanceof Error && (
+        cause.name === "TimeoutError" || cause.name === "AbortError"
+      )
+      setError(
+        timedOut
+          ? "Codeforces search timed out. Please try again."
+          : cause instanceof Error
+            ? cause.message
+            : "Could not load this handle."
+      )
     } finally {
       setLoading(false)
     }

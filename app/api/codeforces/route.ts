@@ -57,6 +57,7 @@ async function codeforcesRequest<T>(method: string, params: Record<string, strin
     Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value))
     const response = await fetch(url, {
       headers: { "User-Agent": "PS-Matchlog/1.0" },
+      signal: AbortSignal.timeout(15_000),
     })
     nextAllowedAt = Date.now() + 2100
     if (!response.ok) throw new Error(`Codeforces returned HTTP ${response.status}.`)
@@ -295,9 +296,18 @@ export async function GET(request: Request) {
       { headers: { "Cache-Control": wantsRandom ? "no-store" : "public, max-age=60, s-maxage=300" } }
     )
   } catch (cause) {
+    const timedOut = cause instanceof Error && (
+      cause.name === "TimeoutError" || cause.name === "AbortError"
+    )
     return Response.json(
-      { error: cause instanceof Error ? cause.message : "Could not load Codeforces data." },
-      { status: 502 }
+      {
+        error: timedOut
+          ? "Codeforces took too long to respond. Please try again."
+          : cause instanceof Error
+            ? cause.message
+            : "Could not load Codeforces data.",
+      },
+      { status: timedOut ? 504 : 502 }
     )
   }
 }
