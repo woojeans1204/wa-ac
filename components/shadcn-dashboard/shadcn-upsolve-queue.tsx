@@ -236,6 +236,7 @@ export function ShadcnUpsolveQueue({
                 <TableHead>Contest</TableHead>
                 <TableHead>Index</TableHead>
                 <TableHead>Problem</TableHead>
+                <TableHead>Difficulty</TableHead>
                 <TableHead>At contest</TableHead>
                 <TableHead className="text-right">Status</TableHead>
                 <TableHead className="text-right">Action</TableHead>
@@ -255,6 +256,11 @@ export function ShadcnUpsolveQueue({
                     {item.problemTitle && (
                       <span className="text-muted-foreground">{item.problemTitle}</span>
                     )}
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="outline" className="font-mono tabular-nums">
+                      {item.difficulty ?? "Unrated"}
+                    </Badge>
                   </TableCell>
                   <TableCell>
                     <Badge variant={item.attemptedInContest ? "destructive" : "outline"}>
@@ -277,7 +283,7 @@ export function ShadcnUpsolveQueue({
               ))}
               {rows.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={6} className="h-24 text-center text-muted-foreground">
+                  <TableCell colSpan={7} className="h-24 text-center text-muted-foreground">
                     No problems in this period.
                   </TableCell>
                 </TableRow>
