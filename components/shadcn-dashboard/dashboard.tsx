@@ -11,11 +11,13 @@ import { ShadcnSectionCards } from "@/components/shadcn-dashboard/shadcn-section
 import { ShadcnSiteHeader } from "@/components/shadcn-dashboard/shadcn-site-header"
 import { ShadcnFrontier } from "@/components/shadcn-dashboard/shadcn-frontier"
 import { ShadcnProfileHeader } from "@/components/shadcn-dashboard/shadcn-profile-header"
+import { ShadcnUpsolveQueue } from "@/components/shadcn-dashboard/shadcn-upsolve-queue"
 
-const validSections = new Set<ShadcnSectionId>(["dashboard", "match-history", "growth", "frontier"])
+const validSections = new Set<ShadcnSectionId>(["dashboard", "match-history", "upsolve", "growth", "frontier"])
 const sections: Array<{ id: ShadcnSectionId; label: string }> = [
   { id: "dashboard", label: "Dashboard" },
   { id: "match-history", label: "Match history" },
+  { id: "upsolve", label: "Upsolve" },
   { id: "growth", label: "Growth" },
   { id: "frontier", label: "Frontier" },
 ]
@@ -86,6 +88,9 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }
                     (session) => session.type !== "practice"
                   )}
                 />
+              )}
+              {activeSection === "upsolve" && (
+                <ShadcnUpsolveQueue history={history} platform={platform} />
               )}
               {activeSection === "growth" && (
                 <div className="px-4 lg:px-6">

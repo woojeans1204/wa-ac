@@ -1,4 +1,5 @@
 import type { History, Problem, Session, Submission } from "@/components/ps-types"
+import { buildUpsolveQueue } from "@/lib/upsolve"
 
 type CfResponse<T> = { status: "OK"; result: T } | { status: "FAILED"; comment?: string }
 type CfUser = { handle: string; rating?: number; maxRating?: number }
@@ -224,7 +225,7 @@ function buildHistory(
       .filter((contestId): contestId is number => contestId != null)
   ).size
 
-  return {
+  const history: History = {
     user: user.handle,
     summary: {
       sessions: sessions.length + practiceSessions,
@@ -248,6 +249,17 @@ function buildHistory(
       })),
     },
   }
+  history.upsolves = buildUpsolveQueue(
+    history,
+    "Codeforces",
+    submissions
+      .filter((submission) => submission.verdict === "OK")
+      .map((submission) => ({
+        problemId: `${submission.contestId ?? submission.problem.contestId}_${submission.problem.index}`,
+        epochSecond: submission.creationTimeSeconds,
+      }))
+  )
+  return history
 }
 
 export async function GET(request: Request) {

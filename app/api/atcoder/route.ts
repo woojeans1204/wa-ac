@@ -1,4 +1,5 @@
 import type { History, Problem, Session, Submission } from "@/components/ps-types"
+import { buildUpsolveQueue } from "@/lib/upsolve"
 
 type AtSubmission = {
   id: number
@@ -366,7 +367,7 @@ function buildHistory(
     (a, b) => new Date(b.startAt).getTime() - new Date(a.startAt).getTime()
   )
 
-  return {
+  const history: History = {
     user: handle,
     summary: {
       sessions: sessions.length + practiceSessions,
@@ -388,6 +389,17 @@ function buildHistory(
       })),
     },
   }
+  history.upsolves = buildUpsolveQueue(
+    history,
+    "AtCoder",
+    submissions
+      .filter((submission) => submission.result === "AC")
+      .map((submission) => ({
+        problemId: submission.problem_id,
+        epochSecond: submission.epoch_second,
+      }))
+  )
+  return history
 }
 
 async function loadPlayer(handle: string) {

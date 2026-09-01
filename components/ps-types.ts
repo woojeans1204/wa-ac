@@ -35,6 +35,23 @@ export type Session = {
   problems: Problem[]
 }
 
+export type UpsolveItem = {
+  id: string
+  sourceSessionId: string
+  contestId: string
+  contestTitle?: string
+  contestStartAt: string
+  problemId: string
+  problemIndex: string
+  problemTitle?: string
+  difficulty?: number | null
+  difficultyColor?: string | null
+  attemptedInContest: boolean
+  completed: boolean
+  completedAt?: string | null
+  problemUrl: string
+}
+
 export type History = {
   user: string
   summary: {
@@ -45,6 +62,7 @@ export type History = {
     submissions: number
   }
   sessions: Session[]
+  upsolves?: UpsolveItem[]
   raw?: {
     actualHistory?: Array<{
       contestId: string

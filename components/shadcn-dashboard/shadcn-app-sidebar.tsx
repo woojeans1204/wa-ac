@@ -12,6 +12,7 @@ import {
   IconSettings,
   IconTargetArrow,
   IconTrophy,
+  IconCheckbox,
 } from "@tabler/icons-react"
 import type { History } from "@/components/ps-types"
 import { NavDocuments } from "@/components/nav-documents"
@@ -28,7 +29,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-export type ShadcnSectionId = "dashboard" | "match-history" | "growth" | "frontier"
+export type ShadcnSectionId = "dashboard" | "match-history" | "upsolve" | "growth" | "frontier"
 
 export function ShadcnAppSidebar({ history, activeSection, onNavigate, ...props }: { history: History; activeSection: ShadcnSectionId; onNavigate: (section: ShadcnSectionId) => void } & React.ComponentProps<typeof Sidebar>) {
   const [mounted, setMounted] = React.useState(false)
@@ -37,6 +38,7 @@ export function ShadcnAppSidebar({ history, activeSection, onNavigate, ...props 
   const navMain: Array<{ id: ShadcnSectionId; title: string; url: string; icon: React.ReactNode }> = [
     { id: "dashboard", title: "Dashboard", url: "#dashboard", icon: <IconDashboard /> },
     { id: "match-history", title: "Match history", url: "#match-history", icon: <IconListDetails /> },
+    { id: "upsolve", title: "Upsolve", url: "#upsolve", icon: <IconCheckbox /> },
     { id: "growth", title: "Growth", url: "#growth", icon: <IconChartBar /> },
     { id: "frontier", title: "Frontier", url: "#frontier", icon: <IconTargetArrow /> },
   ]
