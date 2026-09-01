@@ -76,6 +76,15 @@ function shortDate(value: string) {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "numeric",
+    year: "2-digit",
+  }).format(new Date(value))
+}
+
+function fullDate(value: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
   }).format(new Date(value))
 }
 
@@ -200,7 +209,7 @@ export function FrontierHistory({
               content={
                 <ChartTooltipContent
                   indicator="line"
-                  labelFormatter={(value) => shortDate(String(value))}
+                  labelFormatter={(value) => fullDate(String(value))}
                   formatter={(value, name, item) => {
                     const index = Number(String(name).replace("band", ""))
                     const payload = item.payload as Record<string, number>
