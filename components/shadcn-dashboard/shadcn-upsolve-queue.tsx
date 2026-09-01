@@ -32,6 +32,7 @@ import { buildUpsolveQueue } from "@/lib/upsolve"
 
 type QueueStatus = "all" | "pending" | "completed"
 type TimeRange = "latest" | "7d" | "30d" | "all"
+type SortOrder = "latest" | "index-asc" | "index-desc"
 
 const ranges: Array<{ value: TimeRange; label: string; days?: number }> = [
   { value: "latest", label: "Latest" },
@@ -81,6 +82,7 @@ export function ShadcnUpsolveQueue({
   const [range, setRange] = React.useState<TimeRange>("7d")
   const [minimumIndex, setMinimumIndex] = React.useState("any")
   const [maximumIndex, setMaximumIndex] = React.useState("any")
+  const [sortOrder, setSortOrder] = React.useState<SortOrder>("latest")
   const items = React.useMemo(
     () => history.upsolves ?? buildUpsolveQueue(history, platform),
     [history, platform]
@@ -94,14 +96,26 @@ export function ShadcnUpsolveQueue({
   const completionRate = items.length
     ? Math.round((completed / items.length) * 100)
     : 0
-  const rows = filterByRange(items, range, latestSessionId).filter((item) => {
-    const statusMatches =
-      status === "all" || item.completed === (status === "completed")
-    const index = problemIndex(item.problemIndex)
-    const minimumMatches = minimumIndex === "any" || index >= minimumIndex
-    const maximumMatches = maximumIndex === "any" || index <= maximumIndex
-    return statusMatches && minimumMatches && maximumMatches
-  })
+  const rows = filterByRange(items, range, latestSessionId)
+    .filter((item) => {
+      const statusMatches =
+        status === "all" || item.completed === (status === "completed")
+      const index = problemIndex(item.problemIndex)
+      const minimumMatches = minimumIndex === "any" || index >= minimumIndex
+      const maximumMatches = maximumIndex === "any" || index <= maximumIndex
+      return statusMatches && minimumMatches && maximumMatches
+    })
+    .toSorted((a, b) => {
+      if (sortOrder === "index-asc") {
+        return problemIndex(a.problemIndex).localeCompare(problemIndex(b.problemIndex))
+          || new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
+      }
+      if (sortOrder === "index-desc") {
+        return problemIndex(b.problemIndex).localeCompare(problemIndex(a.problemIndex))
+          || new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
+      }
+      return new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
+    })
 
   return (
     <div className="flex flex-col gap-6 px-4 lg:px-6">
@@ -189,6 +203,16 @@ export function ShadcnUpsolveQueue({
                   Index ≤ {index}
                 </SelectItem>
               ))}
+            </SelectContent>
+          </Select>
+          <Select value={sortOrder} onValueChange={(value) => setSortOrder(value as SortOrder)}>
+            <SelectTrigger className="w-40" size="sm" aria-label="Sort upsolve queue">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="latest">Latest first</SelectItem>
+              <SelectItem value="index-asc">Index A → G</SelectItem>
+              <SelectItem value="index-desc">Index G → A</SelectItem>
             </SelectContent>
           </Select>
           {(minimumIndex !== "any" || maximumIndex !== "any") && (
