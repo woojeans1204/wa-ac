@@ -84,11 +84,13 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }
                 </>
               )}
               {activeSection === "match-history" && (
-                <ShadcnDataTable
-                  data={history.sessions.filter(
-                    (session) => session.type !== "practice"
-                  )}
-                />
+                <div className="mx-auto w-full max-w-[1080px]">
+                  <ShadcnDataTable
+                    data={history.sessions.filter(
+                      (session) => session.type !== "practice"
+                    )}
+                  />
+                </div>
               )}
               {activeSection === "upsolve" && (
                 <ShadcnUpsolveQueue history={history} platform={platform} />
