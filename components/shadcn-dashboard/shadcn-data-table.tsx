@@ -15,7 +15,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 function duration(session: Session) {
   if (!session.metrics.lastAcEpochSecond) return "—"
   const seconds = session.metrics.lastAcEpochSecond - Math.floor(new Date(session.startAt).getTime() / 1000)
-  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor((seconds % 3600) / 60)
+  const remainingSeconds = seconds % 60
+  if (!hours) return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`
+  return `${hours}:${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`
 }
 
 function isAccepted(result: string) {
