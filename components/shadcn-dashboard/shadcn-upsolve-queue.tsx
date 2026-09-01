@@ -30,7 +30,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { buildUpsolveQueue } from "@/lib/upsolve"
 
-type QueueStatus = "pending" | "completed"
+type QueueStatus = "all" | "pending" | "completed"
 type TimeRange = "latest" | "7d" | "30d" | "all"
 
 const ranges: Array<{ value: TimeRange; label: string; days?: number }> = [
@@ -39,6 +39,8 @@ const ranges: Array<{ value: TimeRange; label: string; days?: number }> = [
   { value: "30d", label: "30 days", days: 30 },
   { value: "all", label: "All" },
 ]
+
+const problemIndexes = ["A", "B", "C", "D", "E", "F", "G"]
 
 const dateFormatter = new Intl.DateTimeFormat("ko-KR", {
   year: "numeric",
@@ -63,6 +65,11 @@ function filterByRange(
   )
 }
 
+function problemIndex(index: string) {
+  const letter = index.trim().toUpperCase().match(/[A-Z]/)?.[0]
+  return letter ?? index.trim().toUpperCase()
+}
+
 export function ShadcnUpsolveQueue({
   history,
   platform,
@@ -72,6 +79,8 @@ export function ShadcnUpsolveQueue({
 }) {
   const [status, setStatus] = React.useState<QueueStatus>("pending")
   const [range, setRange] = React.useState<TimeRange>("7d")
+  const [minimumIndex, setMinimumIndex] = React.useState("any")
+  const [maximumIndex, setMaximumIndex] = React.useState("any")
   const items = React.useMemo(
     () => history.upsolves ?? buildUpsolveQueue(history, platform),
     [history, platform]
@@ -85,11 +94,14 @@ export function ShadcnUpsolveQueue({
   const completionRate = items.length
     ? Math.round((completed / items.length) * 100)
     : 0
-  const rows = filterByRange(
-    items.filter((item) => item.completed === (status === "completed")),
-    range,
-    latestSessionId
-  )
+  const rows = filterByRange(items, range, latestSessionId).filter((item) => {
+    const statusMatches =
+      status === "all" || item.completed === (status === "completed")
+    const index = problemIndex(item.problemIndex)
+    const minimumMatches = minimumIndex === "any" || index >= minimumIndex
+    const maximumMatches = maximumIndex === "any" || index <= maximumIndex
+    return statusMatches && minimumMatches && maximumMatches
+  })
 
   return (
     <div className="flex flex-col gap-6 px-4 lg:px-6">
@@ -121,6 +133,7 @@ export function ShadcnUpsolveQueue({
       >
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
           <TabsList>
+            <TabsTrigger value="all">All</TabsTrigger>
             <TabsTrigger value="pending">Pending</TabsTrigger>
             <TabsTrigger value="completed">Completed</TabsTrigger>
           </TabsList>
@@ -151,14 +164,55 @@ export function ShadcnUpsolveQueue({
           </Select>
         </div>
 
+        <div className="flex flex-wrap items-center gap-2">
+          <Select value={minimumIndex} onValueChange={setMinimumIndex}>
+            <SelectTrigger className="w-40" size="sm" aria-label="Minimum problem index">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="any">Any minimum index</SelectItem>
+              {problemIndexes.map((index) => (
+                <SelectItem key={index} value={index}>
+                  Index ≥ {index}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={maximumIndex} onValueChange={setMaximumIndex}>
+            <SelectTrigger className="w-40" size="sm" aria-label="Maximum problem index">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="any">Any maximum index</SelectItem>
+              {problemIndexes.map((index) => (
+                <SelectItem key={index} value={index}>
+                  Index ≤ {index}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          {(minimumIndex !== "any" || maximumIndex !== "any") && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                setMinimumIndex("any")
+                setMaximumIndex("any")
+              }}
+            >
+              Reset filters
+            </Button>
+          )}
+        </div>
+
         <div className="overflow-hidden rounded-lg border">
           <Table>
             <TableHeader className="bg-muted">
               <TableRow>
                 <TableHead>Contest</TableHead>
+                <TableHead>Index</TableHead>
                 <TableHead>Problem</TableHead>
                 <TableHead>At contest</TableHead>
-                <TableHead className="text-right">Difficulty</TableHead>
                 <TableHead className="text-right">Status</TableHead>
                 <TableHead className="text-right">Action</TableHead>
               </TableRow>
@@ -172,19 +226,16 @@ export function ShadcnUpsolveQueue({
                       {dateFormatter.format(new Date(item.contestStartAt))}
                     </span>
                   </TableCell>
+                  <TableCell className="font-medium">{item.problemIndex}</TableCell>
                   <TableCell>
-                    <span className="font-medium">{item.problemIndex}</span>
                     {item.problemTitle && (
-                      <span className="ml-2 text-muted-foreground">{item.problemTitle}</span>
+                      <span className="text-muted-foreground">{item.problemTitle}</span>
                     )}
                   </TableCell>
                   <TableCell>
                     <Badge variant={item.attemptedInContest ? "destructive" : "outline"}>
                       {item.attemptedInContest ? "Unsolved" : "Not attempted"}
                     </Badge>
-                  </TableCell>
-                  <TableCell className="text-right tabular-nums">
-                    {item.difficulty ?? "—"}
                   </TableCell>
                   <TableCell className="text-right">
                     <Badge variant={item.completed ? "default" : "secondary"}>
