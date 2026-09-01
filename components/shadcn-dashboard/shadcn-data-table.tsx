@@ -76,11 +76,20 @@ const dateFormatter = new Intl.DateTimeFormat("ko-KR", {
   timeZone: "Asia/Seoul",
 })
 
-export function ShadcnDataTable({ data }: { data: Session[] }) {
+function contestDivision(title?: string) {
+  if (!title) return "—"
+  const divisions = [...title.matchAll(/Div\.?\s*(\d+)/gi)]
+    .map((match) => match[1])
+    .filter((value, index, values) => values.indexOf(value) === index)
+  return divisions.length ? `Div. ${divisions.join(" + ")}` : "—"
+}
+
+export function ShadcnDataTable({ data, platform = "AtCoder" }: { data: Session[]; platform?: "AtCoder" | "Codeforces" }) {
   const [view, setView] = React.useState("all")
   const [page, setPage] = React.useState(0)
   const [openContest, setOpenContest] = React.useState<string | null>(null)
-  const [visible, setVisible] = React.useState({ type: true, duration: true, problems: true, difficulty: true, time: true })
+  const [visible, setVisible] = React.useState({ type: true, division: true, duration: true, problems: true, difficulty: true, time: true })
+  const showDivision = platform === "Codeforces" && visible.division
   const filtered = data.filter((session) => view === "all" || session.type === view)
   const pageCount = Math.max(1, Math.ceil(filtered.length / 10))
   const rows = filtered.slice(page * 10, page * 10 + 10)
@@ -100,7 +109,7 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
         <div className="flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild><Button variant="outline" size="sm"><IconLayoutColumns /><span className="hidden lg:inline">Customize Columns</span><span className="lg:hidden">Columns</span><IconChevronDown /></Button></DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">{Object.entries(visible).map(([key, value]) => <DropdownMenuCheckboxItem key={key} className="capitalize" checked={value} onCheckedChange={(checked) => setVisible((current) => ({ ...current, [key]: !!checked }))}>{key}</DropdownMenuCheckboxItem>)}</DropdownMenuContent>
+            <DropdownMenuContent align="end" className="w-56">{Object.entries(visible).filter(([key]) => key !== "division" || platform === "Codeforces").map(([key, value]) => <DropdownMenuCheckboxItem key={key} className="capitalize" checked={value} onCheckedChange={(checked) => setVisible((current) => ({ ...current, [key]: !!checked }))}>{key}</DropdownMenuCheckboxItem>)}</DropdownMenuContent>
           </DropdownMenu>
         </div>
       </div>
@@ -108,9 +117,9 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
         <TabsContent key={tab} value={tab} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
           <div className="overflow-hidden rounded-lg border">
             <Table>
-              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead>Type</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Status</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right">Last AC</TableHead>}</TableRow></TableHeader>
+              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead>Type</TableHead>}{showDivision && <TableHead>Division</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Status</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right">Last AC</TableHead>}</TableRow></TableHeader>
               {rows.map((session) => {
-                const columnCount = 2 + Number(visible.type) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)
+                const columnCount = 2 + Number(visible.type) + Number(showDivision) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)
                 return (
                   <Collapsible
                     key={session.sessionId}
@@ -132,6 +141,7 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
                           </CollapsibleTrigger>
                         </TableCell>
                         {visible.type && <TableCell><Badge variant="outline" className="capitalize">{session.type}</Badge></TableCell>}
+                        {showDivision && <TableCell className="whitespace-nowrap">{contestDivision(session.contestTitle)}</TableCell>}
                         {visible.duration && <TableCell className="whitespace-nowrap font-mono text-muted-foreground">{contestLength(session.durationSecond)}</TableCell>}
                         <TableCell><Badge variant="outline" className="px-1.5 text-muted-foreground"><IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />{session.metrics.solved}/{session.problems.length}</Badge></TableCell>
                         {visible.problems && (

@@ -80,6 +80,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }
                     data={history.sessions
                       .filter((session) => session.type !== "practice")
                       .slice(0, 10)}
+                    platform={platform}
                   />
                 </>
               )}
@@ -89,6 +90,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent }
                     data={history.sessions.filter(
                       (session) => session.type !== "practice"
                     )}
+                    platform={platform}
                   />
                 </div>
               )}
