@@ -59,12 +59,13 @@ const colors = [
   "var(--foreground)",
 ]
 
-type TimeRange = "90d" | "365d" | "all"
+type WindowMode = "10" | "20" | "50" | "cumulative"
 
-const ranges: Array<{ value: TimeRange; label: string; days: number | null }> = [
-  { value: "90d", label: "Last 90 days", days: 90 },
-  { value: "365d", label: "Last year", days: 365 },
-  { value: "all", label: "All time", days: null },
+const windows: Array<{ value: WindowMode; label: string; size: number | null }> = [
+  { value: "10", label: "Rolling 10", size: 10 },
+  { value: "20", label: "Rolling 20", size: 20 },
+  { value: "50", label: "Rolling 50", size: 50 },
+  { value: "cumulative", label: "Cumulative", size: null },
 ]
 
 function bandLabel(min: number, max: number) {
@@ -85,7 +86,7 @@ function FrontierHistory({
   history: History
   platform: "AtCoder" | "Codeforces"
 }) {
-  const [timeRange, setTimeRange] = React.useState<TimeRange>("90d")
+  const [windowMode, setWindowMode] = React.useState<WindowMode>("20")
   const bands = bandSets[platform]
   const chartConfig = React.useMemo(
     () => Object.fromEntries(
@@ -97,15 +98,21 @@ function FrontierHistory({
     [bands]
   )
   const chartData = React.useMemo(() => {
-    const seen = Array<number>(bands.length).fill(0)
-    const solved = Array<number>(bands.length).fill(0)
-    return history.sessions
+    const sessions = history.sessions
       .filter((session) => session.type !== "practice")
       .toSorted(
         (a, b) => new Date(a.startAt).getTime() - new Date(b.startAt).getTime()
       )
-      .map((session) => {
-        for (const problem of session.problems) {
+    const windowSize = windows.find((item) => item.value === windowMode)?.size
+    return sessions.map((session, sessionIndex) => {
+        const seen = Array<number>(bands.length).fill(0)
+        const solved = Array<number>(bands.length).fill(0)
+        const startIndex = windowSize == null
+          ? 0
+          : Math.max(0, sessionIndex - windowSize + 1)
+        const activeSessions = sessions.slice(startIndex, sessionIndex + 1)
+        for (const activeSession of activeSessions) {
+          for (const problem of activeSession.problems) {
           if (problem.difficulty == null) continue
           const bandIndex = bands.findIndex(
             ([min, max]) => problem.difficulty! >= min && problem.difficulty! < max
@@ -113,56 +120,53 @@ function FrontierHistory({
           if (bandIndex < 0) continue
           seen[bandIndex] += 1
           if (problem.solved) solved[bandIndex] += 1
+          }
         }
         return {
           date: session.startAt,
           contest: session.contestId.toUpperCase(),
           ...Object.fromEntries(
-            bands.map((_, index) => [
-              `band${index}`,
-              seen[index] ? Math.round((solved[index] / seen[index]) * 100) : null,
+            bands.flatMap((_, index) => [
+              [`band${index}`, seen[index] ? Math.round((solved[index] / seen[index]) * 100) : null],
+              [`band${index}Seen`, seen[index]],
+              [`band${index}Solved`, solved[index]],
             ])
           ),
         }
       })
-  }, [history, bands])
-  const filteredData = React.useMemo(() => {
-    const days = ranges.find((range) => range.value === timeRange)?.days
-    if (days == null || chartData.length === 0) return chartData
-    const latest = new Date(chartData.at(-1)!.date).getTime()
-    const cutoff = latest - days * 86_400_000
-    return chartData.filter((item) => new Date(item.date).getTime() >= cutoff)
-  }, [chartData, timeRange])
+  }, [history, bands, windowMode])
 
   return (
     <Card className="@container/card">
       <CardHeader>
         <CardTitle>Frontier History</CardTitle>
         <CardDescription>
-          Cumulative full-contest solve coverage by difficulty and date
+          {windowMode === "cumulative"
+            ? "Cumulative full-contest solve coverage by difficulty"
+            : `Solve coverage within the latest ${windowMode} full contests at each date`}
         </CardDescription>
         <CardAction>
           <ToggleGroup
             type="single"
-            value={timeRange}
-            onValueChange={(value) => value && setTimeRange(value as TimeRange)}
+            value={windowMode}
+            onValueChange={(value) => value && setWindowMode(value as WindowMode)}
             variant="outline"
             className="hidden *:data-[slot=toggle-group-item]:px-4! @[767px]/card:flex"
           >
-            {ranges.map((range) => (
-              <ToggleGroupItem key={range.value} value={range.value}>
-                {range.label}
+            {windows.map((item) => (
+              <ToggleGroupItem key={item.value} value={item.value}>
+                {item.label}
               </ToggleGroupItem>
             ))}
           </ToggleGroup>
-          <Select value={timeRange} onValueChange={(value) => setTimeRange(value as TimeRange)}>
+          <Select value={windowMode} onValueChange={(value) => setWindowMode(value as WindowMode)}>
             <SelectTrigger className="flex w-40 @[767px]/card:hidden" size="sm">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              {ranges.map((range) => (
-                <SelectItem key={range.value} value={range.value}>
-                  {range.label}
+              {windows.map((item) => (
+                <SelectItem key={item.value} value={item.value}>
+                  {item.label}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -172,8 +176,8 @@ function FrontierHistory({
       <CardContent>
         <ChartContainer config={chartConfig} className="aspect-auto h-[360px] w-full">
           <LineChart
-            key={timeRange}
-            data={filteredData}
+            key={windowMode}
+            data={chartData}
             margin={{ left: 8, right: 16, top: 12 }}
           >
             <CartesianGrid vertical={false} />
@@ -197,6 +201,18 @@ function FrontierHistory({
                 <ChartTooltipContent
                   indicator="line"
                   labelFormatter={(value) => shortDate(String(value))}
+                  formatter={(value, name, item) => {
+                    const index = Number(String(name).replace("band", ""))
+                    const payload = item.payload as Record<string, number>
+                    return (
+                      <div className="flex w-full min-w-40 items-center justify-between gap-3">
+                        <span className="text-muted-foreground">{bandLabel(...bands[index])}</span>
+                        <span className="font-mono font-medium tabular-nums">
+                          {String(value)}% · {payload[`band${index}Solved`]}/{payload[`band${index}Seen`]}
+                        </span>
+                      </div>
+                    )
+                  }}
                 />
               }
             />
