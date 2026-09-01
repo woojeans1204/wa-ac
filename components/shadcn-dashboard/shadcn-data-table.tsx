@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { IconChevronDown, IconChevronLeft, IconChevronRight, IconCircleCheckFilled, IconExternalLink, IconLayoutColumns } from "@tabler/icons-react"
-import type { Session } from "@/components/ps-types"
+import type { Problem, Session } from "@/components/ps-types"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -16,6 +16,45 @@ function duration(session: Session) {
   if (!session.metrics.lastAcEpochSecond) return "—"
   const seconds = session.metrics.lastAcEpochSecond - Math.floor(new Date(session.startAt).getTime() / 1000)
   return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`
+}
+
+function isAccepted(result: string) {
+  return result === "AC" || result === "OK"
+}
+
+function firstAcSecond(problem: Problem) {
+  const seconds = problem.submissions
+    .filter((submission) => isAccepted(submission.result))
+    .map((submission) => submission.contestClock?.elapsedSecond)
+    .filter((second): second is number => second != null && second >= 0)
+  return seconds.length ? Math.min(...seconds) : null
+}
+
+function wrongAttempts(problem: Problem) {
+  const firstAc = firstAcSecond(problem)
+  return problem.submissions.filter((submission) => {
+    if (isAccepted(submission.result)) return false
+    const elapsed = submission.contestClock?.elapsedSecond
+    return firstAc == null || elapsed == null || elapsed <= firstAc
+  }).length
+}
+
+function compactElapsed(seconds: number) {
+  const minutes = Math.floor(seconds / 60)
+  if (minutes < 60) return `${minutes}m`
+  const hours = Math.floor(minutes / 60)
+  const remainingMinutes = minutes % 60
+  return remainingMinutes ? `${hours}h ${remainingMinutes}m` : `${hours}h`
+}
+
+function exactElapsed(seconds: number | null) {
+  if (seconds == null) return "—"
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor((seconds % 3600) / 60)
+  const remainingSeconds = seconds % 60
+  return [hours, minutes, remainingSeconds]
+    .map((value) => String(value).padStart(2, "0"))
+    .join(":")
 }
 
 const dateFormatter = new Intl.DateTimeFormat("ko-KR", {
@@ -82,7 +121,30 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
                         </TableCell>
                         {visible.type && <TableCell><Badge variant="outline" className="capitalize">{session.type}</Badge></TableCell>}
                         <TableCell><Badge variant="outline" className="px-1.5 text-muted-foreground"><IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />{session.metrics.solved}/{session.problems.length}</Badge></TableCell>
-                        {visible.problems && <TableCell>{session.problems.map((problem) => problem.solved ? problem.index : "·").join(" ")}</TableCell>}
+                        {visible.problems && (
+                          <TableCell>
+                            <div className="flex min-w-max flex-wrap gap-1">
+                              {session.problems.map((problem) => {
+                                const firstAc = firstAcSecond(problem)
+                                const wrong = wrongAttempts(problem)
+                                return (
+                                  <Badge
+                                    key={problem.problemId}
+                                    variant={problem.solved ? "secondary" : problem.attempted ? "destructive" : "outline"}
+                                    className="font-mono font-normal tabular-nums"
+                                  >
+                                    {problem.index}{" "}
+                                    {firstAc != null
+                                      ? compactElapsed(firstAc)
+                                      : problem.attempted
+                                        ? `${wrong}×`
+                                        : "—"}
+                                  </Badge>
+                                )
+                              })}
+                            </div>
+                          </TableCell>
+                        )}
                         {visible.difficulty && <TableCell className="text-right">{session.metrics.highestSolvedDifficulty ?? "—"}</TableCell>}
                         {visible.time && <TableCell className="text-right">{duration(session)}</TableCell>}
                       </TableRow>
@@ -97,16 +159,21 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
                               {session.sourceUrl && <Button variant="outline" size="sm" asChild><a href={session.sourceUrl} target="_blank" rel="noreferrer">Open contest <IconExternalLink /></a></Button>}
                             </div>
                             <Table>
-                              <TableHeader><TableRow><TableHead>Problem</TableHead><TableHead>Status</TableHead><TableHead className="text-right">Difficulty</TableHead><TableHead className="text-right">Submissions</TableHead></TableRow></TableHeader>
+                              <TableHeader><TableRow><TableHead>Problem</TableHead><TableHead>Status</TableHead><TableHead className="text-right">Difficulty</TableHead><TableHead className="text-right">First AC</TableHead><TableHead className="text-right">Wrong tries</TableHead><TableHead className="text-right">Submissions</TableHead></TableRow></TableHeader>
                               <TableBody>
-                                {session.problems.map((problem) => (
-                                  <TableRow key={problem.problemId}>
-                                    <TableCell><span className="font-medium">{problem.index}</span>{problem.title && <span className="ml-2 text-muted-foreground">{problem.title}</span>}</TableCell>
-                                    <TableCell><Badge variant={problem.solved ? "default" : problem.attempted ? "destructive" : "outline"}>{problem.solved ? "AC" : problem.attempted ? "Unsolved" : "Not attempted"}</Badge></TableCell>
-                                    <TableCell className="text-right">{problem.difficulty ?? "—"}</TableCell>
-                                    <TableCell className="text-right">{problem.submissions.length}</TableCell>
-                                  </TableRow>
-                                ))}
+                                {session.problems.map((problem) => {
+                                  const firstAc = firstAcSecond(problem)
+                                  return (
+                                    <TableRow key={problem.problemId}>
+                                      <TableCell><span className="font-medium">{problem.index}</span>{problem.title && <span className="ml-2 text-muted-foreground">{problem.title}</span>}</TableCell>
+                                      <TableCell><Badge variant={problem.solved ? "default" : problem.attempted ? "destructive" : "outline"}>{problem.solved ? "AC" : problem.attempted ? "Unsolved" : "Not attempted"}</Badge></TableCell>
+                                      <TableCell className="text-right">{problem.difficulty ?? "—"}</TableCell>
+                                      <TableCell className="text-right font-mono tabular-nums">{exactElapsed(firstAc)}</TableCell>
+                                      <TableCell className="text-right tabular-nums">{problem.attempted ? wrongAttempts(problem) : "—"}</TableCell>
+                                      <TableCell className="text-right">{problem.submissions.length}</TableCell>
+                                    </TableRow>
+                                  )
+                                })}
                               </TableBody>
                             </Table>
                           </TableCell>
