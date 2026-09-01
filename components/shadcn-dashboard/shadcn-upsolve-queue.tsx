@@ -70,6 +70,10 @@ function problemIndex(index: string) {
   return index.trim().toUpperCase()
 }
 
+function problemIndexGroup(index: string) {
+  return problemIndex(index).replace(/\d+$/, "")
+}
+
 export function ShadcnUpsolveQueue({
   history,
   platform,
@@ -87,7 +91,7 @@ export function ShadcnUpsolveQueue({
     [history, platform]
   )
   const problemIndexes = React.useMemo(
-    () => [...new Set(items.map((item) => problemIndex(item.problemIndex)))]
+    () => [...new Set(items.map((item) => problemIndexGroup(item.problemIndex)))]
       .toSorted(indexCollator.compare),
     [items]
   )
@@ -104,7 +108,7 @@ export function ShadcnUpsolveQueue({
     .filter((item) => {
       const statusMatches =
         status === "all" || item.completed === (status === "completed")
-      const index = problemIndex(item.problemIndex)
+      const index = problemIndexGroup(item.problemIndex)
       const minimumMatches = minimumIndex === "any" || indexCollator.compare(index, minimumIndex) >= 0
       const maximumMatches = maximumIndex === "any" || indexCollator.compare(index, maximumIndex) <= 0
       return statusMatches && minimumMatches && maximumMatches
