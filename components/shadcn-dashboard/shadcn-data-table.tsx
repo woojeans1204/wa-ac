@@ -41,10 +41,10 @@ function wrongAttempts(problem: Problem) {
 
 function compactElapsed(seconds: number) {
   const minutes = Math.floor(seconds / 60)
-  if (minutes < 60) return `${minutes}′`
+  if (minutes < 60) return `${minutes}m`
   const hours = Math.floor(minutes / 60)
   const remainingMinutes = minutes % 60
-  return `${hours}:${String(remainingMinutes).padStart(2, "0")}`
+  return remainingMinutes ? `${hours}h ${remainingMinutes}m` : `${hours}h`
 }
 
 function contestLength(seconds?: number | null) {
@@ -142,12 +142,14 @@ export function ShadcnDataTable({ data }: { data: Session[] }) {
                                     variant={problem.solved ? "secondary" : problem.attempted ? "destructive" : "outline"}
                                     className="font-mono font-normal tabular-nums"
                                   >
-                                    {problem.index}·
-                                    {firstAc != null
-                                      ? compactElapsed(firstAc)
-                                      : problem.attempted
-                                        ? `${wrong}×`
-                                        : "—"}
+                                    <span>{problem.index}</span>
+                                    <span className="text-[10px] leading-none opacity-75">
+                                      {firstAc != null
+                                        ? compactElapsed(firstAc)
+                                        : problem.attempted
+                                          ? `${wrong}×`
+                                          : "—"}
+                                    </span>
                                   </Badge>
                                 )
                               })}
