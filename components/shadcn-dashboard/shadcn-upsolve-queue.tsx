@@ -32,7 +32,7 @@ import { buildUpsolveQueue } from "@/lib/upsolve"
 
 type QueueStatus = "all" | "pending" | "completed"
 type TimeRange = "latest" | "7d" | "30d" | "all"
-type SortOrder = "latest" | "index-asc" | "index-desc"
+type SortOrder = "latest" | "oldest" | "index-asc" | "index-desc"
 
 const ranges: Array<{ value: TimeRange; label: string; days?: number }> = [
   { value: "latest", label: "Latest" },
@@ -41,7 +41,7 @@ const ranges: Array<{ value: TimeRange; label: string; days?: number }> = [
   { value: "all", label: "All" },
 ]
 
-const problemIndexes = ["A", "B", "C", "D", "E", "F", "G"]
+const indexCollator = new Intl.Collator("en", { numeric: true, sensitivity: "base" })
 
 const dateFormatter = new Intl.DateTimeFormat("ko-KR", {
   year: "numeric",
@@ -67,8 +67,7 @@ function filterByRange(
 }
 
 function problemIndex(index: string) {
-  const letter = index.trim().toUpperCase().match(/[A-Z]/)?.[0]
-  return letter ?? index.trim().toUpperCase()
+  return index.trim().toUpperCase()
 }
 
 export function ShadcnUpsolveQueue({
@@ -87,6 +86,11 @@ export function ShadcnUpsolveQueue({
     () => history.upsolves ?? buildUpsolveQueue(history, platform),
     [history, platform]
   )
+  const problemIndexes = React.useMemo(
+    () => [...new Set(items.map((item) => problemIndex(item.problemIndex)))]
+      .toSorted(indexCollator.compare),
+    [items]
+  )
   const latestSessionId = history.sessions
     .filter((session) => session.type !== "practice")
     .toSorted((a, b) => new Date(b.startAt).getTime() - new Date(a.startAt).getTime())
@@ -101,18 +105,21 @@ export function ShadcnUpsolveQueue({
       const statusMatches =
         status === "all" || item.completed === (status === "completed")
       const index = problemIndex(item.problemIndex)
-      const minimumMatches = minimumIndex === "any" || index >= minimumIndex
-      const maximumMatches = maximumIndex === "any" || index <= maximumIndex
+      const minimumMatches = minimumIndex === "any" || indexCollator.compare(index, minimumIndex) >= 0
+      const maximumMatches = maximumIndex === "any" || indexCollator.compare(index, maximumIndex) <= 0
       return statusMatches && minimumMatches && maximumMatches
     })
     .toSorted((a, b) => {
       if (sortOrder === "index-asc") {
-        return problemIndex(a.problemIndex).localeCompare(problemIndex(b.problemIndex))
+        return indexCollator.compare(problemIndex(a.problemIndex), problemIndex(b.problemIndex))
           || new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
       }
       if (sortOrder === "index-desc") {
-        return problemIndex(b.problemIndex).localeCompare(problemIndex(a.problemIndex))
+        return indexCollator.compare(problemIndex(b.problemIndex), problemIndex(a.problemIndex))
           || new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
+      }
+      if (sortOrder === "oldest") {
+        return new Date(a.contestStartAt).getTime() - new Date(b.contestStartAt).getTime()
       }
       return new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
     })
@@ -211,8 +218,9 @@ export function ShadcnUpsolveQueue({
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="latest">Latest first</SelectItem>
-              <SelectItem value="index-asc">Index A → G</SelectItem>
-              <SelectItem value="index-desc">Index G → A</SelectItem>
+              <SelectItem value="oldest">Oldest first</SelectItem>
+              <SelectItem value="index-asc">Index ascending</SelectItem>
+              <SelectItem value="index-desc">Index descending</SelectItem>
             </SelectContent>
           </Select>
           {(minimumIndex !== "any" || maximumIndex !== "any") && (
