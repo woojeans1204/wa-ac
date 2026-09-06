@@ -136,7 +136,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
   return (
     <div className="min-h-screen bg-background">
       <ShadcnSiteHeader />
-      <main className="mx-auto flex w-full max-w-[1400px] flex-col py-6">
+      <main className="mx-auto flex w-full max-w-[1200px] flex-col px-2 py-6 md:px-3 lg:px-4">
         <Card className="mx-4 lg:mx-6">
           <CardHeader>
             <CardTitle>Search Codeforces player</CardTitle>

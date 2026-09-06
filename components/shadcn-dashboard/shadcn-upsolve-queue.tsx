@@ -36,10 +36,10 @@ const MIN_DIFFICULTY = 800
 const MAX_DIFFICULTY = 3500
 
 const timeRanges: Array<{ value: TimeRange; label: string; days?: number }> = [
+  { value: "all", label: "All time" },
   { value: "latest", label: "Latest contest" },
   { value: "7d", label: "7 days", days: 7 },
   { value: "30d", label: "30 days", days: 30 },
-  { value: "all", label: "All time" },
 ]
 
 const indexCollator = new Intl.Collator("en", { numeric: true, sensitivity: "base" })
@@ -73,7 +73,7 @@ export function ShadcnUpsolveQueue({
   const [status, setStatus] = React.useState<QueueStatus>("pending")
   const [difficultyRange, setDifficultyRange] = React.useState([MIN_DIFFICULTY, MAX_DIFFICULTY])
   const [tagFilter, setTagFilter] = React.useState("any")
-  const [timeRange, setTimeRange] = React.useState<TimeRange>("latest")
+  const [timeRange, setTimeRange] = React.useState<TimeRange>("all")
   const [contestTypeFilter, setContestTypeFilter] = React.useState<ContestTypeFilter>("all")
   const [sortOrder, setSortOrder] = React.useState<SortOrder>("latest")
   const [visibleContestCount, setVisibleContestCount] = React.useState(CONTESTS_PER_LOAD)
@@ -120,14 +120,14 @@ export function ShadcnUpsolveQueue({
   const resetVisibleContests = () => setVisibleContestCount(CONTESTS_PER_LOAD)
   const hasActiveFilters = hasDifficultyFilter
     || tagFilter !== "any"
-    || timeRange !== "latest"
+    || timeRange !== "all"
     || contestTypeFilter !== "all"
     || sortOrder !== "latest"
 
   const resetFilters = () => {
     setDifficultyRange([MIN_DIFFICULTY, MAX_DIFFICULTY])
     setTagFilter("any")
-    setTimeRange("latest")
+    setTimeRange("all")
     setContestTypeFilter("all")
     setSortOrder("latest")
     resetVisibleContests()

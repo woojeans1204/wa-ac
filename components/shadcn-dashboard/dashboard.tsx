@@ -51,7 +51,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent, 
     <TooltipProvider>
       <div className="min-h-screen bg-background">
         <ShadcnSiteHeader>{headerContent}</ShadcnSiteHeader>
-        <main className="@container/main mx-auto flex w-full max-w-[1200px] flex-col">
+        <main className="@container/main mx-auto flex w-full max-w-[1200px] flex-col px-2 md:px-3 lg:px-4">
           <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
             <ShadcnProfileHeader history={history} platform={platform} />
             {error && <p role="alert" className="px-4 text-sm text-destructive lg:px-6">{error}</p>}
