@@ -204,6 +204,7 @@ function buildHistory(
           title: cfProblem.name,
           difficulty: cfProblem.rating ?? null,
           difficultyColor: problemColor(cfProblem.rating),
+          tags: cfProblem.tags ?? [],
           attempted: mappedSubmissions.length > 0,
           solved: mappedSubmissions.some((submission) => submission.result === "OK"),
           submissions: mappedSubmissions,

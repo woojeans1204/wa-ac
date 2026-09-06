@@ -12,6 +12,7 @@ export type Problem = {
   title?: string
   difficulty?: number | null
   difficultyColor?: string | null
+  tags?: string[]
   attempted: boolean
   solved: boolean
   submissions: Submission[]
@@ -47,6 +48,8 @@ export type UpsolveItem = {
   problemTitle?: string
   difficulty?: number | null
   difficultyColor?: string | null
+  tags?: string[]
+  contestType: "actual" | "virtual"
   attemptedInContest: boolean
   completed: boolean
   completedAt?: string | null

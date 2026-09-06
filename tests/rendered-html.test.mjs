@@ -58,3 +58,28 @@ test("match history includes pagination and stale-state guards", async () => {
   assert.equal((source.match(/<TabsContent/g) ?? []).length, 1);
   assert.match(dashboard, /key=\{`\$\{platform\}:\$\{history\.user\}:history`\}/);
 });
+
+test("upsolve supports numeric difficulty, tags, and contest type", async () => {
+  const source = await readFile(
+    new URL(
+      "../components/shadcn-dashboard/shadcn-upsolve-queue.tsx",
+      import.meta.url,
+    ),
+    "utf8",
+  );
+
+  assert.match(source, /const MIN_DIFFICULTY = 800/);
+  assert.match(source, /const MAX_DIFFICULTY = 3500/);
+  assert.match(source, /<Slider/);
+  assert.match(source, /minStepsBetweenThumbs=\{1\}/);
+  assert.match(source, /Any tag/);
+  assert.match(source, /Latest contest/);
+  assert.match(source, /7 days/);
+  assert.match(source, /30 days/);
+  assert.match(source, /All time/);
+  assert.match(source, /Actual \+ virtual/);
+  assert.match(source, /Actual only/);
+  assert.match(source, /Virtual only/);
+  assert.doesNotMatch(source, /<Collapsible defaultOpen/);
+  assert.doesNotMatch(source, /Latest 10 contests|During contest|Attempted or not/);
+});

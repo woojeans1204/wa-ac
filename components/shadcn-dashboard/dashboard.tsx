@@ -4,7 +4,6 @@ import * as React from "react"
 import type { History } from "@/components/ps-types"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TooltipProvider } from "@/components/ui/tooltip"
-import type { ShadcnSectionId } from "@/components/shadcn-dashboard/shadcn-app-sidebar"
 import { ShadcnChartAreaInteractive } from "@/components/shadcn-dashboard/shadcn-chart-area-interactive"
 import { ShadcnDataTable } from "@/components/shadcn-dashboard/shadcn-data-table"
 import { Button } from "@/components/ui/button"
@@ -12,6 +11,8 @@ import { ShadcnSiteHeader } from "@/components/shadcn-dashboard/shadcn-site-head
 import { FrontierHistory } from "@/components/shadcn-dashboard/shadcn-frontier"
 import { ShadcnProfileHeader } from "@/components/shadcn-dashboard/shadcn-profile-header"
 import { ShadcnUpsolveQueue } from "@/components/shadcn-dashboard/shadcn-upsolve-queue"
+
+type ShadcnSectionId = "dashboard" | "match-history" | "upsolve" | "growth"
 
 const validSections = new Set<ShadcnSectionId>(["dashboard", "match-history", "upsolve", "growth"])
 const sections: Array<{ id: ShadcnSectionId; label: string }> = [

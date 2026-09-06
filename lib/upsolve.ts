@@ -62,6 +62,8 @@ export function buildUpsolveQueue(
         problemTitle: problem.title,
         difficulty: problem.difficulty,
         difficultyColor: problem.difficultyColor,
+        tags: problem.tags ?? [],
+        contestType: session.type,
         attemptedInContest: problem.attempted,
         completed: completedSecond != null,
         completedAt: completedSecond == null
