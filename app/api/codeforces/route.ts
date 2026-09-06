@@ -2,7 +2,7 @@ import type { History, Problem, Session, Submission } from "@/components/ps-type
 import { buildUpsolveQueue } from "@/lib/upsolve"
 
 type CfResponse<T> = { status: "OK"; result: T } | { status: "FAILED"; comment?: string }
-type CfUser = { handle: string; rating?: number; maxRating?: number }
+type CfUser = { handle: string; rating?: number; maxRating?: number; avatar?: string; titlePhoto?: string }
 type CfRating = {
   contestId: number
   contestName: string
@@ -33,6 +33,7 @@ type CfSubmission = {
   author: {
     participantType: "CONTESTANT" | "PRACTICE" | "VIRTUAL" | "MANAGER" | "OUT_OF_COMPETITION"
     startTimeSeconds?: number
+    members?: Array<{ handle: string }>
   }
   programmingLanguage?: string
   verdict?: string
@@ -46,6 +47,8 @@ let catalogCache: {
   contests: CfContest[]
 } | null = null
 let ratedUsersCache: { expiresAt: number; users: CfUser[] } | null = null
+let gymCache: { expiresAt: number; contests: CfContest[] } | null = null
+let gymPromise: Promise<CfContest[]> | null = null
 let catalogPromise: Promise<{ expiresAt: number; problems: CfProblem[]; contests: CfContest[] }> | null = null
 let ratedUsersPromise: Promise<{ expiresAt: number; users: CfUser[] }> | null = null
 
@@ -112,6 +115,19 @@ async function getRandomUser() {
   const candidates = ratedUsersCache.users.filter((user) => user.handle && user.rating != null)
   if (!candidates.length) throw new Error("No active Codeforces users are available right now.")
   return candidates[Math.floor(Math.random() * candidates.length)]
+}
+
+async function getGymContests() {
+  if (gymCache && gymCache.expiresAt > Date.now()) return gymCache.contests
+  if (!gymPromise) {
+    gymPromise = codeforcesRequest<CfContest[]>("contest.list", { gym: "true" })
+      .then((contests) => {
+        gymCache = { contests, expiresAt: Date.now() + 6 * 60 * 60 * 1000 }
+        return contests
+      })
+      .finally(() => { gymPromise = null })
+  }
+  return gymPromise
 }
 
 function problemColor(rating?: number) {
@@ -205,7 +221,7 @@ function buildHistory(
       contestTitle: ratingMap.get(group.contestId)?.contestName ?? contest?.name ?? `Codeforces Contest ${group.contestId}`,
       startAt: new Date(group.start * 1000).toISOString(),
       durationSecond: contest?.durationSeconds ?? null,
-      sourceUrl: `https://codeforces.com/contest/${group.contestId}`,
+      sourceUrl: `https://codeforces.com/${group.contestId >= 100000 ? "gym" : "contest"}/${group.contestId}`,
       metrics: {
         solved: problems.filter((problem) => problem.solved).length,
         attempted: problems.filter((problem) => problem.attempted).length,
@@ -229,6 +245,8 @@ function buildHistory(
 
   const history: History = {
     user: user.handle,
+    avatarUrl: (user.avatar || user.titlePhoto || "").replace(/^http:\/\//, "https://") || null,
+    avatarFallbackUrl: (user.titlePhoto || "").replace(/^http:\/\//, "https://") || null,
     summary: {
       sessions: sessions.length + practiceSessions,
       actualSessions,
@@ -267,6 +285,7 @@ function buildHistory(
 export async function GET(request: Request) {
   const searchParams = new URL(request.url).searchParams
   const handle = searchParams.get("handle")?.trim()
+  const wantsProfile = searchParams.get("profile") === "1"
   const wantsRandom = searchParams.get("random") === "1"
   const wantsWarmup = searchParams.get("warm") === "1"
   if (wantsWarmup) {
@@ -281,19 +300,41 @@ export async function GET(request: Request) {
     return Response.json({ error: "Enter a valid Codeforces handle." }, { status: 400 })
   }
   try {
-    const user = wantsRandom
-      ? await getRandomUser()
-      : (await codeforcesRequest<CfUser[]>("user.info", { handles: handle! }))[0]
-    if (!user) throw new Error("Codeforces handle not found.")
-    const ratings = await codeforcesRequest<CfRating[]>("user.rating", { handle: user.handle })
+    if (wantsProfile && handle) {
+      const user = (await codeforcesRequest<CfUser[]>("user.info", { handles: handle }))[0]
+      if (!user) throw new Error("Codeforces handle not found.")
+      return Response.json({
+        profile: {
+          handle: user.handle,
+          avatarUrl: (user.avatar || user.titlePhoto || "").replace(/^http:\/\//, "https://") || null,
+          avatarFallbackUrl: (user.titlePhoto || "").replace(/^http:\/\//, "https://") || null,
+        },
+      }, { headers: { "Cache-Control": "public, max-age=300, s-maxage=86400" } })
+    }
+
+    const requestedUser = wantsRandom ? await getRandomUser() : { handle: handle! }
     const submissions = await codeforcesRequest<CfSubmission[]>("user.status", {
-      handle: user.handle,
+      handle: requestedUser.handle,
       from: "1",
       count: "10000",
     })
+    const canonicalHandle = submissions[0]?.author.members?.[0]?.handle ?? requestedUser.handle
+    const ratings = await codeforcesRequest<CfRating[]>("user.rating", { handle: canonicalHandle })
+    const user: CfUser = {
+      handle: canonicalHandle,
+      rating: ratings.at(-1)?.newRating,
+      maxRating: ratings.length ? Math.max(...ratings.map((rating) => rating.newRating)) : undefined,
+    }
     const catalog = await getCatalog()
+    const hasGym = submissions.some((submission) =>
+      (submission.contestId ?? submission.problem.contestId ?? 0) >= 100000
+    )
+    const gyms = hasGym ? await getGymContests().catch(() => []) : []
     return Response.json(
-      { history: buildHistory(user, ratings, submissions, catalog) },
+      { history: buildHistory(user, ratings, submissions, {
+        ...catalog,
+        contests: [...catalog.contests, ...gyms],
+      }) },
       { headers: { "Cache-Control": wantsRandom ? "no-store" : "public, max-age=60, s-maxage=300" } }
     )
   } catch (cause) {

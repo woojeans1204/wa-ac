@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { BarChart3Icon, ChevronDownIcon, CircleUserRoundIcon, Clock3Icon, SearchIcon, ShieldIcon, SwordsIcon, TrophyIcon } from "lucide-react"
+import { BarChart3Icon, ChevronDownIcon, Clock3Icon, SearchIcon, ShieldIcon, SwordsIcon, TrophyIcon } from "lucide-react"
 
 type Match = {
   id: number

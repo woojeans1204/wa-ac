@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import {
   IconChartBar,
   IconDashboard,
@@ -11,7 +12,6 @@ import {
   IconSearch,
   IconSettings,
   IconTargetArrow,
-  IconTrophy,
   IconCheckbox,
 } from "@tabler/icons-react"
 import type { History } from "@/components/ps-types"
@@ -32,8 +32,11 @@ import {
 export type ShadcnSectionId = "dashboard" | "match-history" | "upsolve" | "growth" | "frontier"
 
 export function ShadcnAppSidebar({ history, activeSection, onNavigate, ...props }: { history: History; activeSection: ShadcnSectionId; onNavigate: (section: ShadcnSectionId) => void } & React.ComponentProps<typeof Sidebar>) {
-  const [mounted, setMounted] = React.useState(false)
-  React.useEffect(() => setMounted(true), [])
+  const mounted = React.useSyncExternalStore(
+    () => () => undefined,
+    () => true,
+    () => false
+  )
 
   const navMain: Array<{ id: ShadcnSectionId; title: string; url: string; icon: React.ReactNode }> = [
     { id: "dashboard", title: "Dashboard", url: "#dashboard", icon: <IconDashboard /> },
@@ -48,7 +51,6 @@ export function ShadcnAppSidebar({ history, activeSection, onNavigate, ...props 
     { title: "Search", url: "#", icon: <IconSearch /> },
   ]
   const documents = [
-    { name: "AtCoder", url: "#", icon: <IconTrophy /> },
     { name: "Contest reports", url: "#", icon: <IconReport /> },
   ]
 
@@ -58,10 +60,10 @@ export function ShadcnAppSidebar({ history, activeSection, onNavigate, ...props 
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:p-1.5!">
-              <a href="#">
+              <Link href="/">
                 <IconInnerShadowTop className="size-5!" />
-                <span className="text-base font-semibold">PS Matchlog</span>
-              </a>
+                <span className="text-base font-semibold">WA:AC</span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

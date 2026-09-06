@@ -55,6 +55,8 @@ export type UpsolveItem = {
 
 export type History = {
   user: string
+  avatarUrl?: string | null
+  avatarFallbackUrl?: string | null
   summary: {
     sessions: number
     actualSessions: number

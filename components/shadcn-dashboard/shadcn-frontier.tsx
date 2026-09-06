@@ -1,15 +1,14 @@
 "use client"
 
 import * as React from "react"
+import { cfBands, cfRatingColor } from "@/lib/codeforces-colors"
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
 import type { History } from "@/components/ps-types"
-import { Badge } from "@/components/ui/badge"
 import {
   Card,
   CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -21,7 +20,6 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/ui/chart"
-import { Progress } from "@/components/ui/progress"
 import {
   Select,
   SelectContent,
@@ -40,14 +38,7 @@ const bandSets = {
     [1600, 2000],
     [2000, Infinity],
   ],
-  Codeforces: [
-    [800, 1200],
-    [1200, 1400],
-    [1400, 1600],
-    [1600, 1900],
-    [1900, 2100],
-    [2100, Infinity],
-  ],
+  Codeforces: cfBands,
 } as const
 
 const colors = [
@@ -92,9 +83,11 @@ function fullDate(value: string) {
 export function FrontierHistory({
   history,
   platform,
+  compact = false,
 }: {
   history: History
   platform: "AtCoder" | "Codeforces"
+  compact?: boolean
 }) {
   const [windowMode, setWindowMode] = React.useState<WindowMode>("20")
   const [contestScope, setContestScope] = React.useState<ContestScope>("all")
@@ -105,10 +98,10 @@ export function FrontierHistory({
     () => Object.fromEntries(
       bands.map(([min, max], index) => [
         `band${index}`,
-        { label: bandLabel(min, max), color: colors[index] },
+        { label: bandLabel(min, max), color: platform === "Codeforces" ? cfRatingColor(min) : colors[index] },
       ])
     ) as ChartConfig,
-    [bands]
+    [bands, platform]
   )
   const chartData = React.useMemo(() => {
     const sessions = history.sessions
@@ -157,13 +150,13 @@ export function FrontierHistory({
   return (
     <Card className="@container/card">
       <CardHeader>
-        <CardTitle>Frontier History</CardTitle>
+        <CardTitle>Solve coverage</CardTitle>
         <CardDescription>
           {windowMode === "cumulative"
             ? `Cumulative ${scopeLabel} contest solve coverage by difficulty`
             : `Solve coverage within the latest ${windowMode} ${scopeLabel} contests at each date`}
         </CardDescription>
-        <CardAction>
+        {!compact && <CardAction>
           <ToggleGroup
             type="single"
             value={windowMode}
@@ -189,10 +182,10 @@ export function FrontierHistory({
               ))}
             </SelectContent>
           </Select>
-        </CardAction>
+        </CardAction>}
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <ToggleGroup
+        {!compact && <ToggleGroup
           type="single"
           value={contestScope}
           onValueChange={(value) => value && setContestScope(value as ContestScope)}
@@ -203,8 +196,9 @@ export function FrontierHistory({
           <ToggleGroupItem value="all">All</ToggleGroupItem>
           <ToggleGroupItem value="actual" disabled={!actualCount}>Actual</ToggleGroupItem>
           <ToggleGroupItem value="virtual" disabled={!virtualCount}>Virtual</ToggleGroupItem>
-        </ToggleGroup>
-        <ChartContainer config={chartConfig} className="aspect-auto h-[360px] w-full">
+        </ToggleGroup>}
+        {chartData.length === 0 && <p className="py-8 text-center text-sm text-muted-foreground">No contests for this selection.</p>}
+        <ChartContainer config={chartConfig} className={compact ? "aspect-auto h-[240px] w-full" : "aspect-auto h-[360px] w-full"}>
           <LineChart
             key={`${contestScope}-${windowMode}`}
             data={chartData}
@@ -236,7 +230,7 @@ export function FrontierHistory({
                     const payload = item.payload as Record<string, number>
                     return (
                       <div className="flex w-full min-w-40 items-center justify-between gap-3">
-                        <span className="text-muted-foreground">{bandLabel(...bands[index])}</span>
+                        <span className="text-muted-foreground">{bandLabel(bands[index][0], bands[index][1])}</span>
                         <span className="font-mono font-medium tabular-nums">
                           {String(value)}% · {payload[`band${index}Solved`]}/{payload[`band${index}Seen`]}
                         </span>
@@ -250,18 +244,19 @@ export function FrontierHistory({
               <Line
                 key={index}
                 dataKey={`band${index}`}
-                type="monotone"
+                type="linear"
                 stroke={`var(--color-band${index})`}
                 strokeWidth={index >= 4 ? 2.5 : 2}
-                strokeDasharray={index === 5 ? "5 5" : undefined}
+                strokeDasharray={platform === "AtCoder" && index === 5 ? "5 5" : undefined}
                 dot={false}
-                connectNulls
+                connectNulls={false}
                 animationDuration={650 + index * 80}
               />
             ))}
             <ChartLegend content={<ChartLegendContent />} />
           </LineChart>
         </ChartContainer>
+        {!compact && <p className="text-sm text-muted-foreground">Solved / problems appearing in the selected contests, including unattempted problems. This measures contest coverage, not a predicted chance of solving. Unrated problems are excluded.</p>}
       </CardContent>
     </Card>
   )
@@ -274,44 +269,9 @@ export function ShadcnFrontier({
   history: History
   platform?: "AtCoder" | "Codeforces"
 }) {
-  const problems = history.sessions
-    .filter((session) => session.type !== "practice")
-    .flatMap((session) => session.problems)
-  const bands = bandSets[platform]
-
   return (
     <div className="flex flex-col gap-6 px-4 lg:px-6">
       <FrontierHistory history={history} platform={platform} />
-      <div className="grid grid-cols-1 gap-4 *:data-[slot=card]:shadow-xs @xl/main:grid-cols-2 @5xl/main:grid-cols-3">
-        {bands.map(([min, max]) => {
-          const seen = problems.filter(
-            (problem) =>
-              (problem.difficulty ?? -1) >= min &&
-              (problem.difficulty ?? -1) < max
-          )
-          const solved = seen.filter((problem) => problem.solved).length
-          const rate = seen.length ? Math.round((solved / seen.length) * 100) : 0
-          return (
-            <Card key={min} className="@container/card">
-              <CardHeader>
-                <CardDescription>{bandLabel(min, max)}</CardDescription>
-                <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-                  {rate}%
-                </CardTitle>
-                <CardAction>
-                  <Badge variant="outline">{solved}/{seen.length}</Badge>
-                </CardAction>
-              </CardHeader>
-              <CardFooter className="flex-col items-start gap-3 text-sm">
-                <Progress value={rate} />
-                <div className="text-muted-foreground">
-                  Problems solved in full contests
-                </div>
-              </CardFooter>
-            </Card>
-          )
-        })}
-      </div>
     </div>
   )
 }

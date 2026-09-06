@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { cfRatingColor } from "@/lib/codeforces-colors"
 import { IconChevronDown, IconChevronLeft, IconChevronRight, IconCircleCheckFilled, IconExternalLink, IconLayoutColumns } from "@tabler/icons-react"
 import type { Problem, Session } from "@/components/ps-types"
 import { Badge } from "@/components/ui/badge"
@@ -12,18 +13,19 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+function isAccepted(result: string) {
+  return result === "AC" || result === "OK"
+}
+
 function duration(session: Session) {
   if (!session.metrics.lastAcEpochSecond) return "—"
   const seconds = session.metrics.lastAcEpochSecond - Math.floor(new Date(session.startAt).getTime() / 1000)
+  if (seconds < 0) return "—"
   const hours = Math.floor(seconds / 3600)
   const minutes = Math.floor((seconds % 3600) / 60)
   const remainingSeconds = seconds % 60
   if (!hours) return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`
   return `${hours}:${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`
-}
-
-function isAccepted(result: string) {
-  return result === "AC" || result === "OK"
 }
 
 function firstAcSecond(problem: Problem) {
@@ -84,22 +86,49 @@ function contestDivision(title?: string) {
   return divisions.length ? `Div. ${divisions.join(" + ")}` : "—"
 }
 
-export function ShadcnDataTable({ data, platform = "AtCoder" }: { data: Session[]; platform?: "AtCoder" | "Codeforces" }) {
+export function ShadcnDataTable({
+  data,
+  platform = "AtCoder",
+  showRowsPerPage = false,
+}: {
+  data: Session[]
+  platform?: "AtCoder" | "Codeforces"
+  showRowsPerPage?: boolean
+}) {
   const [view, setView] = React.useState("all")
   const [page, setPage] = React.useState(0)
+  const [pageSize, setPageSize] = React.useState<5 | 10 | 20>(10)
   const [openContest, setOpenContest] = React.useState<string | null>(null)
   const [visible, setVisible] = React.useState({ type: true, division: true, duration: true, problems: true, difficulty: true, time: true })
   const showDivision = platform === "Codeforces" && visible.division
   const filtered = data.filter((session) => view === "all" || session.type === view)
-  const pageCount = Math.max(1, Math.ceil(filtered.length / 10))
-  const rows = filtered.slice(page * 10, page * 10 + 10)
-  React.useEffect(() => setPage(0), [view])
+    .toSorted((a, b) => Date.parse(b.startAt) - Date.parse(a.startAt))
+  const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
+  const rows = filtered.slice(page * pageSize, page * pageSize + pageSize)
+
+  function changeView(value: string) {
+    setView(value)
+    setPage(0)
+    setOpenContest(null)
+  }
+
+  function changePageSize(value: string) {
+    const next = Number(value) as 5 | 10 | 20
+    setPageSize(next)
+    setPage(0)
+    setOpenContest(null)
+  }
+
+  function changePage(nextPage: number) {
+    setPage(Math.max(0, Math.min(pageCount - 1, nextPage)))
+    setOpenContest(null)
+  }
 
   return (
-    <Tabs value={view} onValueChange={setView} className="w-full flex-col justify-start gap-6">
+    <Tabs value={view} onValueChange={changeView} className="w-full flex-col justify-start gap-6">
       <div className="flex items-center justify-between px-4 lg:px-6">
         <Label htmlFor="view-selector" className="sr-only">View</Label>
-        <Select value={view} onValueChange={setView}>
+        <Select value={view} onValueChange={changeView}>
           <SelectTrigger className="flex w-fit @4xl/main:hidden" size="sm" id="view-selector"><SelectValue placeholder="Select a view" /></SelectTrigger>
           <SelectContent><SelectItem value="all">All contests</SelectItem><SelectItem value="actual">Actual</SelectItem><SelectItem value="virtual">Virtual</SelectItem></SelectContent>
         </Select>
@@ -107,17 +136,28 @@ export function ShadcnDataTable({ data, platform = "AtCoder" }: { data: Session[
           <TabsTrigger value="all">All contests</TabsTrigger><TabsTrigger value="actual">Actual <Badge variant="secondary">{data.filter((item) => item.type === "actual").length}</Badge></TabsTrigger><TabsTrigger value="virtual">Virtual <Badge variant="secondary">{data.filter((item) => item.type === "virtual").length}</Badge></TabsTrigger>
         </TabsList>
         <div className="flex items-center gap-2">
+          {showRowsPerPage && (
+            <Select value={String(pageSize)} onValueChange={changePageSize}>
+              <SelectTrigger className="w-28" size="sm" aria-label="Rows per page">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="5">Rows: 5</SelectItem>
+                <SelectItem value="10">Rows: 10</SelectItem>
+                <SelectItem value="20">Rows: 20</SelectItem>
+              </SelectContent>
+            </Select>
+          )}
           <DropdownMenu>
             <DropdownMenuTrigger asChild><Button variant="outline" size="sm"><IconLayoutColumns /><span className="hidden lg:inline">Customize Columns</span><span className="lg:hidden">Columns</span><IconChevronDown /></Button></DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">{Object.entries(visible).filter(([key]) => key !== "division" || platform === "Codeforces").map(([key, value]) => <DropdownMenuCheckboxItem key={key} className="capitalize" checked={value} onCheckedChange={(checked) => setVisible((current) => ({ ...current, [key]: !!checked }))}>{key}</DropdownMenuCheckboxItem>)}</DropdownMenuContent>
           </DropdownMenu>
         </div>
       </div>
-      {['all','actual','virtual'].map((tab) => (
-        <TabsContent key={tab} value={tab} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
+        <TabsContent value={view} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
           <div className="overflow-hidden rounded-lg border">
             <Table>
-              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead>Type</TableHead>}{showDivision && <TableHead>Division</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Status</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right">Last AC</TableHead>}</TableRow></TableHeader>
+              <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead className="text-center">Type</TableHead>}{showDivision && <TableHead>Division</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Solved</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right" title="Elapsed time from contest start to last accepted submission">Last AC</TableHead>}</TableRow></TableHeader>
               {rows.map((session) => {
                 const columnCount = 2 + Number(visible.type) + Number(showDivision) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)
                 return (
@@ -136,11 +176,11 @@ export function ShadcnDataTable({ data, platform = "AtCoder" }: { data: Session[
                                 <span className="block font-medium">{session.contestId.toUpperCase()}</span>
                                 <span className="block text-muted-foreground">{dateFormatter.format(new Date(session.startAt))}</span>
                               </span>
-                              <IconChevronDown className="transition-transform data-[state=open]:rotate-180" />
+                              <IconChevronDown className={`transition-transform ${openContest === session.sessionId ? "rotate-180" : ""}`} />
                             </Button>
                           </CollapsibleTrigger>
                         </TableCell>
-                        {visible.type && <TableCell><Badge variant="outline" className="capitalize">{session.type}</Badge></TableCell>}
+                        {visible.type && <TableCell className="text-center"><Badge variant="outline" className="capitalize">{session.type}</Badge></TableCell>}
                         {showDivision && <TableCell className="whitespace-nowrap">{contestDivision(session.contestTitle)}</TableCell>}
                         {visible.duration && <TableCell className="whitespace-nowrap font-mono text-muted-foreground">{contestLength(session.durationSecond)}</TableCell>}
                         <TableCell><Badge variant="outline" className="px-1.5 text-muted-foreground"><IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />{session.metrics.solved}/{session.problems.length}</Badge></TableCell>
@@ -170,8 +210,8 @@ export function ShadcnDataTable({ data, platform = "AtCoder" }: { data: Session[
                             </div>
                           </TableCell>
                         )}
-                        {visible.difficulty && <TableCell className="text-right">{session.metrics.highestSolvedDifficulty ?? "—"}</TableCell>}
-                        {visible.time && <TableCell className="text-right">{duration(session)}</TableCell>}
+                        {visible.difficulty && <TableCell className="text-right font-medium" style={{ color: platform === "Codeforces" ? cfRatingColor(session.metrics.highestSolvedDifficulty) : undefined }}>{session.metrics.highestSolvedDifficulty ?? "—"}</TableCell>}
+                        {visible.time && <TableCell className="text-right font-mono tabular-nums">{duration(session)}</TableCell>}
                       </TableRow>
                       <CollapsibleContent asChild>
                         <TableRow className="hover:bg-transparent">
@@ -192,7 +232,7 @@ export function ShadcnDataTable({ data, platform = "AtCoder" }: { data: Session[
                                     <TableRow key={problem.problemId}>
                                       <TableCell><span className="font-medium">{problem.index}</span>{problem.title && <span className="ml-2 text-muted-foreground">{problem.title}</span>}</TableCell>
                                       <TableCell><Badge variant={problem.solved ? "default" : problem.attempted ? "destructive" : "outline"}>{problem.solved ? "AC" : problem.attempted ? "Unsolved" : "Not attempted"}</Badge></TableCell>
-                                      <TableCell className="text-right">{problem.difficulty ?? "—"}</TableCell>
+                                      <TableCell className="text-right font-medium" style={{ color: platform === "Codeforces" ? cfRatingColor(problem.difficulty) : undefined }}>{problem.difficulty ?? "—"}</TableCell>
                                       <TableCell className="text-right font-mono tabular-nums">{exactElapsed(firstAc)}</TableCell>
                                       <TableCell className="text-right tabular-nums">{problem.attempted ? wrongAttempts(problem) : "—"}</TableCell>
                                       <TableCell className="text-right">{problem.submissions.length}</TableCell>
@@ -208,14 +248,24 @@ export function ShadcnDataTable({ data, platform = "AtCoder" }: { data: Session[
                   </Collapsible>
                 )
               })}
+              {rows.length === 0 && (
+                <TableBody>
+                  <TableRow className="hover:bg-transparent">
+                    <TableCell colSpan={2 + Number(visible.type) + Number(showDivision) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)} className="h-24 text-center text-muted-foreground">
+                      No contests match this view.
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              )}
             </Table>
           </div>
-          <div className="flex items-center justify-between px-4">
-            <div className="hidden flex-1 text-sm text-muted-foreground lg:flex">{filtered.length} contest row(s).</div>
-            <div className="flex w-full items-center gap-8 lg:w-fit"><div className="flex w-fit items-center justify-center text-sm font-medium">Page {page + 1} of {pageCount}</div><div className="ml-auto flex items-center gap-2 lg:ml-0"><Button variant="outline" className="size-8" size="icon" onClick={() => setPage((value) => Math.max(0, value - 1))} disabled={page === 0}><span className="sr-only">Go to previous page</span><IconChevronLeft /></Button><Button variant="outline" className="size-8" size="icon" onClick={() => setPage((value) => Math.min(pageCount - 1, value + 1))} disabled={page >= pageCount - 1}><span className="sr-only">Go to next page</span><IconChevronRight /></Button></div></div>
-          </div>
+          {pageCount > 1 && (
+            <div className="flex items-center justify-between px-4">
+              <div className="hidden flex-1 text-sm text-muted-foreground lg:flex">{filtered.length} contest row(s).</div>
+              <div className="flex w-full items-center gap-8 lg:w-fit"><div className="flex w-fit items-center justify-center text-sm font-medium">Page {page + 1} of {pageCount}</div><div className="ml-auto flex items-center gap-2 lg:ml-0"><Button variant="outline" className="size-8" size="icon" onClick={() => changePage(page - 1)} disabled={page === 0}><span className="sr-only">Go to previous page</span><IconChevronLeft /></Button><Button variant="outline" className="size-8" size="icon" onClick={() => changePage(page + 1)} disabled={page >= pageCount - 1}><span className="sr-only">Go to next page</span><IconChevronRight /></Button></div></div>
+            </div>
+          )}
         </TabsContent>
-      ))}
     </Tabs>
   )
 }

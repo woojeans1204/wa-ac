@@ -1,16 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { IconExternalLink } from "@tabler/icons-react"
+import { cfRatingColor } from "@/lib/codeforces-colors"
+import { IconAdjustmentsHorizontal, IconExternalLink } from "@tabler/icons-react"
 import type { History, UpsolveItem } from "@/components/ps-types"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import {
   Select,
   SelectContent,
@@ -32,10 +28,12 @@ import { buildUpsolveQueue } from "@/lib/upsolve"
 
 type QueueStatus = "all" | "pending" | "completed"
 type TimeRange = "latest" | "7d" | "30d" | "all"
-type SortOrder = "latest" | "oldest" | "index-asc" | "index-desc"
+type SortOrder = "latest" | "oldest" | "index-asc" | "index-desc" | "attempted"
+
+const CONTESTS_PER_LOAD = 10
 
 const ranges: Array<{ value: TimeRange; label: string; days?: number }> = [
-  { value: "latest", label: "Latest" },
+  { value: "latest", label: "Latest contest" },
   { value: "7d", label: "7 days", days: 7 },
   { value: "30d", label: "30 days", days: 30 },
   { value: "all", label: "All" },
@@ -82,10 +80,11 @@ export function ShadcnUpsolveQueue({
   platform: "AtCoder" | "Codeforces"
 }) {
   const [status, setStatus] = React.useState<QueueStatus>("pending")
-  const [range, setRange] = React.useState<TimeRange>("7d")
+  const [range, setRange] = React.useState<TimeRange>("latest")
   const [minimumIndex, setMinimumIndex] = React.useState("any")
   const [maximumIndex, setMaximumIndex] = React.useState("any")
   const [sortOrder, setSortOrder] = React.useState<SortOrder>("latest")
+  const [visibleContestCount, setVisibleContestCount] = React.useState(CONTESTS_PER_LOAD)
   const items = React.useMemo(
     () => history.upsolves ?? buildUpsolveQueue(history, platform),
     [history, platform]
@@ -99,21 +98,22 @@ export function ShadcnUpsolveQueue({
     .filter((session) => session.type !== "practice")
     .toSorted((a, b) => new Date(b.startAt).getTime() - new Date(a.startAt).getTime())
     .at(0)?.sessionId
-  const pending = items.filter((item) => !item.completed).length
-  const completed = items.filter((item) => item.completed).length
-  const completionRate = items.length
-    ? Math.round((completed / items.length) * 100)
-    : 0
-  const rows = filterByRange(items, range, latestSessionId)
+  const eligible = filterByRange(items, range, latestSessionId)
     .filter((item) => {
-      const statusMatches =
-        status === "all" || item.completed === (status === "completed")
       const index = problemIndexGroup(item.problemIndex)
       const minimumMatches = minimumIndex === "any" || indexCollator.compare(index, minimumIndex) >= 0
       const maximumMatches = maximumIndex === "any" || indexCollator.compare(index, maximumIndex) <= 0
-      return statusMatches && minimumMatches && maximumMatches
+      return minimumMatches && maximumMatches
     })
+  const pending = eligible.filter((item) => !item.completed).length
+  const completed = eligible.filter((item) => item.completed).length
+  const rows = eligible
+    .filter((item) => status === "all" || item.completed === (status === "completed"))
     .toSorted((a, b) => {
+      if (sortOrder === "attempted") {
+        return Number(b.attemptedInContest) - Number(a.attemptedInContest)
+          || indexCollator.compare(a.problemIndex, b.problemIndex)
+      }
       if (sortOrder === "index-asc") {
         return indexCollator.compare(problemIndex(a.problemIndex), problemIndex(b.problemIndex))
           || new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
@@ -128,44 +128,39 @@ export function ShadcnUpsolveQueue({
       return new Date(b.contestStartAt).getTime() - new Date(a.contestStartAt).getTime()
     })
 
+  const groups = [...Map.groupBy(rows, (item) => item.sourceSessionId).values()]
+    .toSorted((a, b) => {
+      const dateOrder = Date.parse(b[0].contestStartAt) - Date.parse(a[0].contestStartAt)
+      return sortOrder === "oldest" ? -dateOrder : dateOrder
+    })
+  const visibleGroups = groups.slice(0, visibleContestCount)
+
+  const resetVisibleContests = () => setVisibleContestCount(CONTESTS_PER_LOAD)
+
   return (
     <div className="flex flex-col gap-6 px-4 lg:px-6">
-      <div className="grid grid-cols-1 gap-4 @xl/main:grid-cols-3">
-        <Card size="sm">
-          <CardHeader>
-            <CardDescription>Pending</CardDescription>
-            <CardTitle className="text-2xl tabular-nums">{pending}</CardTitle>
-          </CardHeader>
-        </Card>
-        <Card size="sm">
-          <CardHeader>
-            <CardDescription>Completed</CardDescription>
-            <CardTitle className="text-2xl tabular-nums">{completed}</CardTitle>
-          </CardHeader>
-        </Card>
-        <Card size="sm">
-          <CardHeader>
-            <CardDescription>Completion rate</CardDescription>
-            <CardTitle className="text-2xl tabular-nums">{completionRate}%</CardTitle>
-          </CardHeader>
-        </Card>
-      </div>
-
       <Tabs
         value={status}
-        onValueChange={(value) => setStatus(value as QueueStatus)}
+        onValueChange={(value) => {
+          setStatus(value as QueueStatus)
+          resetVisibleContests()
+        }}
         className="gap-4"
       >
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
           <TabsList>
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="pending">Pending</TabsTrigger>
-            <TabsTrigger value="completed">Completed</TabsTrigger>
+            <TabsTrigger value="pending">Pending <Badge variant="secondary">{pending}</Badge></TabsTrigger>
+            <TabsTrigger value="completed">Completed <Badge variant="secondary">{completed}</Badge></TabsTrigger>
+            <TabsTrigger value="all">All <Badge variant="secondary">{eligible.length}</Badge></TabsTrigger>
           </TabsList>
           <ToggleGroup
             type="single"
             value={range}
-            onValueChange={(value) => value && setRange(value as TimeRange)}
+            onValueChange={(value) => {
+              if (!value) return
+              setRange(value as TimeRange)
+              resetVisibleContests()
+            }}
             variant="outline"
             className="hidden sm:flex"
           >
@@ -175,7 +170,10 @@ export function ShadcnUpsolveQueue({
               </ToggleGroupItem>
             ))}
           </ToggleGroup>
-          <Select value={range} onValueChange={(value) => setRange(value as TimeRange)}>
+          <Select value={range} onValueChange={(value) => {
+            setRange(value as TimeRange)
+            resetVisibleContests()
+          }}>
             <SelectTrigger className="sm:hidden" size="sm">
               <SelectValue />
             </SelectTrigger>
@@ -189,120 +187,171 @@ export function ShadcnUpsolveQueue({
           </Select>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
-          <Select value={minimumIndex} onValueChange={setMinimumIndex}>
-            <SelectTrigger className="w-40" size="sm" aria-label="Minimum problem index">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="any">Any minimum index</SelectItem>
-              {problemIndexes.map((index) => (
-                <SelectItem key={index} value={index}>
-                  Index ≥ {index}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <Select value={maximumIndex} onValueChange={setMaximumIndex}>
-            <SelectTrigger className="w-40" size="sm" aria-label="Maximum problem index">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="any">Any maximum index</SelectItem>
-              {problemIndexes.map((index) => (
-                <SelectItem key={index} value={index}>
-                  Index ≤ {index}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <Select value={sortOrder} onValueChange={(value) => setSortOrder(value as SortOrder)}>
-            <SelectTrigger className="w-40" size="sm" aria-label="Sort upsolve queue">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="latest">Latest first</SelectItem>
-              <SelectItem value="oldest">Oldest first</SelectItem>
-              <SelectItem value="index-asc">Index ascending</SelectItem>
-              <SelectItem value="index-desc">Index descending</SelectItem>
-            </SelectContent>
-          </Select>
-          {(minimumIndex !== "any" || maximumIndex !== "any") && (
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                setMinimumIndex("any")
-                setMaximumIndex("any")
-              }}
-            >
-              Reset filters
-            </Button>
-          )}
-        </div>
+        <Collapsible defaultOpen className="w-full overflow-hidden rounded-lg border bg-muted/20">
+          <div className="flex flex-wrap items-center gap-2 p-2.5">
+            <CollapsibleTrigger asChild>
+              <Button variant="ghost" size="sm">
+                <IconAdjustmentsHorizontal />
+                Filters{(minimumIndex !== "any" || maximumIndex !== "any") ? " · Active" : ""}
+              </Button>
+            </CollapsibleTrigger>
+            <div className="ml-auto flex items-center gap-2">
+              <span className="hidden text-xs text-muted-foreground sm:inline">Sort</span>
+              <Select value={sortOrder} onValueChange={(value) => {
+                setSortOrder(value as SortOrder)
+                resetVisibleContests()
+              }}>
+                <SelectTrigger className="w-44" size="sm" aria-label="Sort upsolve queue">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="latest">Latest first</SelectItem>
+                  <SelectItem value="oldest">Oldest first</SelectItem>
+                  <SelectItem value="index-asc">Index ↑ per contest</SelectItem>
+                  <SelectItem value="index-desc">Index ↓ per contest</SelectItem>
+                  <SelectItem value="attempted">Attempted first per contest</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          <CollapsibleContent>
+            <div className="grid gap-2 border-t p-3 sm:grid-cols-[auto_minmax(0,1fr)_minmax(0,1fr)_auto] sm:items-center">
+              <p className="pr-2 text-sm font-medium">Problem index range</p>
+              <Select value={minimumIndex} onValueChange={(value) => {
+                setMinimumIndex(value)
+                resetVisibleContests()
+              }}>
+                <SelectTrigger className="w-full" size="sm" aria-label="Minimum problem index">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="any">Any minimum index</SelectItem>
+                  {problemIndexes.map((index) => (
+                    <SelectItem key={index} value={index}>
+                      Index ≥ {index}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Select value={maximumIndex} onValueChange={(value) => {
+                setMaximumIndex(value)
+                resetVisibleContests()
+              }}>
+                <SelectTrigger className="w-full" size="sm" aria-label="Maximum problem index">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="any">Any maximum index</SelectItem>
+                  {problemIndexes.map((index) => (
+                    <SelectItem key={index} value={index}>
+                      Index ≤ {index}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              {(minimumIndex !== "any" || maximumIndex !== "any") && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    setMinimumIndex("any")
+                    setMaximumIndex("any")
+                  }}
+                >
+                  Reset
+                </Button>
+              )}
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
 
-        <div className="overflow-hidden rounded-lg border">
-          <Table>
+        <p className="text-xs text-muted-foreground">Completion reflects the loaded submission history. Search this handle again to check for new solves.{(range === "7d" || range === "30d") && " Day ranges end today."}</p>
+        {visibleGroups.map((group) => (
+        <section key={group[0].sourceSessionId} className="overflow-hidden rounded-lg border">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b bg-muted/40 px-4 py-3">
+            <div>
+              <h3 className="text-sm font-medium">{group[0].contestTitle || group[0].contestId.toUpperCase()}</h3>
+              <p className="text-xs text-muted-foreground">{dateFormatter.format(new Date(group[0].contestStartAt))} · {history.sessions.find((session) => session.sessionId === group[0].sourceSessionId)?.type}</p>
+            </div>
+            <span className="text-sm text-muted-foreground">
+              {group.length} {group.length === 1 ? "problem" : "problems"}
+            </span>
+          </div>
+          <Table className="table-fixed">
+            <colgroup>
+              <col className="w-20" />
+              <col />
+              <col className="w-28" />
+              <col className="w-36" />
+              <col className="w-28" />
+            </colgroup>
             <TableHeader className="bg-muted">
               <TableRow>
-                <TableHead>Contest</TableHead>
                 <TableHead>Index</TableHead>
                 <TableHead>Problem</TableHead>
-                <TableHead>Difficulty</TableHead>
-                <TableHead>At contest</TableHead>
-                <TableHead className="text-right">Status</TableHead>
-                <TableHead className="text-right">Action</TableHead>
+                <TableHead className="text-right">Difficulty</TableHead>
+                <TableHead className="text-center">At contest</TableHead>
+                <TableHead className="text-center">Status</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {rows.map((item) => (
+              {group.map((item) => (
                 <TableRow key={item.id}>
-                  <TableCell>
-                    <span className="block font-medium">{item.contestId.toUpperCase()}</span>
-                    <span className="block text-muted-foreground">
-                      {dateFormatter.format(new Date(item.contestStartAt))}
-                    </span>
-                  </TableCell>
                   <TableCell className="font-medium">{item.problemIndex}</TableCell>
-                  <TableCell>
-                    {item.problemTitle && (
-                      <span className="text-muted-foreground">{item.problemTitle}</span>
-                    )}
+                  <TableCell className="min-w-0">
+                    <div className="group/problem inline-flex min-w-0 max-w-full items-center gap-1.5">
+                      <span className="min-w-0 truncate text-muted-foreground">
+                        {item.problemTitle || "Untitled problem"}
+                      </span>
+                      <Button
+                        variant="outline"
+                        size="icon-sm"
+                        className="shrink-0 opacity-0 transition-opacity group-hover/problem:opacity-100 group-focus-within/problem:opacity-100"
+                        asChild
+                      >
+                        <a href={item.problemUrl} target="_blank" rel="noreferrer" aria-label={`Open ${item.problemIndex} ${item.problemTitle || "problem"}`} title="Open problem">
+                          <IconExternalLink />
+                        </a>
+                      </Button>
+                    </div>
                   </TableCell>
-                  <TableCell>
-                    <Badge variant="outline" className="font-mono tabular-nums">
-                      {item.difficulty ?? "Unrated"}
-                    </Badge>
+                  <TableCell
+                    className="text-right font-medium"
+                    style={{ color: platform === "Codeforces" && item.difficulty != null ? cfRatingColor(item.difficulty) : undefined }}
+                  >
+                    {item.difficulty ?? "—"}
                   </TableCell>
-                  <TableCell>
+                  <TableCell className="text-center">
                     <Badge variant={item.attemptedInContest ? "destructive" : "outline"}>
-                      {item.attemptedInContest ? "Unsolved" : "Not attempted"}
+                      {item.attemptedInContest ? "Attempted" : "Not attempted"}
                     </Badge>
                   </TableCell>
-                  <TableCell className="text-right">
+                  <TableCell className="text-center">
                     <Badge variant={item.completed ? "default" : "secondary"}>
                       {item.completed ? "Solved" : "Pending"}
                     </Badge>
                   </TableCell>
-                  <TableCell className="text-right">
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={item.problemUrl} target="_blank" rel="noreferrer">
-                        Open <IconExternalLink />
-                      </a>
-                    </Button>
-                  </TableCell>
                 </TableRow>
               ))}
-              {rows.length === 0 && (
-                <TableRow>
-                  <TableCell colSpan={7} className="h-24 text-center text-muted-foreground">
-                    No problems in this period.
-                  </TableCell>
-                </TableRow>
-              )}
             </TableBody>
           </Table>
-        </div>
+        </section>
+        ))}
+        {visibleGroups.length < groups.length && (
+          <div className="flex justify-center pt-1">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setVisibleContestCount((count) => Math.min(count + CONTESTS_PER_LOAD, groups.length))}
+            >
+              Load more contests
+            </Button>
+          </div>
+        )}
+        {rows.length === 0 && <div className="rounded-lg border p-8 text-center">
+          <p className="text-sm text-muted-foreground">{eligible.length > 0 && status === "pending" ? "All problems in this selection are completed." : "No problems match this selection."}</p>
+          <Button variant="ghost" size="sm" className="mt-2" onClick={() => { setRange("all"); setStatus("all"); setMinimumIndex("any"); setMaximumIndex("any") }}>Show all problems</Button>
+        </div>}
       </Tabs>
     </div>
   )

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,24 +16,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ps-matchlog-prizehunter.awj120400.chatgpt.site"),
-  title: "PS Matchlog",
+  metadataBase: new URL(siteUrl),
+  title: "WA:AC",
   description: "Competitive programming match history and growth tracker.",
   openGraph: {
-    title: "PS Matchlog",
+    title: "WA:AC",
     description: "Contest history · Training frontier · Upsolve",
     images: [
       {
-        url: "https://ps-matchlog-prizehunter.awj120400.chatgpt.site/og.png",
-        alt: "PS Matchlog social preview",
+        url: "/og.png",
+        alt: "WA:AC social preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PS Matchlog",
+    title: "WA:AC",
     description: "Contest history · Training frontier · Upsolve",
-    images: ["https://ps-matchlog-prizehunter.awj120400.chatgpt.site/og.png"],
+    images: ["/og.png"],
   },
   icons: {
     icon: "/favicon.svg",
@@ -44,11 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

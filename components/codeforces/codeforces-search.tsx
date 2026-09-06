@@ -10,13 +10,19 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import { Input } from "@/components/ui/input"
 import { Skeleton } from "@/components/ui/skeleton"
 
-export function CodeforcesSearch() {
-  const [handle, setHandle] = React.useState("")
+type CodeforcesProfile = {
+  handle: string
+  avatarUrl?: string | null
+  avatarFallbackUrl?: string | null
+}
+
+export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: string }) {
+  const [handle, setHandle] = React.useState(initialHandle)
   const [history, setHistory] = React.useState<History | null>(null)
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState("")
 
-  const loadPlayer = async (url: string) => {
+  const loadPlayer = React.useCallback(async (url: string) => {
     setLoading(true)
     setError("")
     try {
@@ -33,6 +39,11 @@ export function CodeforcesSearch() {
       if (!response.ok || !payload.history) throw new Error(payload.error || "Could not load this handle.")
       setHistory(payload.history)
       setHandle(payload.history.user)
+      window.history.replaceState(
+        null,
+        "",
+        `/codeforces/${encodeURIComponent(payload.history.user)}${window.location.hash || "#dashboard"}`
+      )
     } catch (cause) {
       const timedOut = cause instanceof Error && (
         cause.name === "TimeoutError" || cause.name === "AbortError"
@@ -47,10 +58,48 @@ export function CodeforcesSearch() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [])
+
+  React.useEffect(() => {
+    const query = initialHandle.trim()
+    if (!query) return
+    const timeout = window.setTimeout(() => {
+      void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`)
+    }, 0)
+    return () => window.clearTimeout(timeout)
+  }, [initialHandle, loadPlayer])
+
+  const profileHandle = history?.user
+  const profileAvatarUrl = history?.avatarUrl
+  React.useEffect(() => {
+    if (!profileHandle || profileAvatarUrl) return
+    const controller = new AbortController()
+    void fetch(`/api/codeforces?profile=1&handle=${encodeURIComponent(profileHandle)}`, {
+      signal: controller.signal,
+    })
+      .then(async (response) => {
+        if (!response.ok) return null
+        return response.json() as Promise<{ profile?: CodeforcesProfile }>
+      })
+      .then((payload) => {
+        const profile = payload?.profile
+        if (!profile) return
+        setHistory((current) => current?.user.toLowerCase() === profile.handle.toLowerCase()
+          ? {
+              ...current,
+              user: profile.handle,
+              avatarUrl: profile.avatarUrl ?? null,
+              avatarFallbackUrl: profile.avatarFallbackUrl ?? null,
+            }
+          : current)
+      })
+      .catch(() => undefined)
+    return () => controller.abort()
+  }, [profileHandle, profileAvatarUrl])
 
   const search = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    if (loading) return
     const query = handle.trim()
     if (query) void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`)
   }
@@ -69,11 +118,11 @@ export function CodeforcesSearch() {
         autoCapitalize="none"
         autoCorrect="off"
       />
-      <Button type="submit" size="sm" disabled={loading || !handle.trim()}>
+      <Button type="submit" size="sm" aria-label="Search" disabled={loading || !handle.trim()}>
         {loading ? <IconLoader2 className="animate-spin" /> : <IconSearch />}
         <span className="hidden md:inline">Search</span>
       </Button>
-      <Button type="button" size="sm" variant="outline" onClick={randomPlayer} disabled={loading}>
+      <Button type="button" size="sm" variant="outline" aria-label="Random player" onClick={randomPlayer} disabled={loading}>
         <IconDice5 />
         <span className="hidden md:inline">Random</span>
       </Button>
@@ -81,7 +130,7 @@ export function CodeforcesSearch() {
   )
 
   if (history) {
-    return <ShadcnDashboard history={history} platform="Codeforces" headerContent={searchForm} />
+    return <ShadcnDashboard history={history} platform="Codeforces" headerContent={searchForm} error={error} />
   }
 
   return (

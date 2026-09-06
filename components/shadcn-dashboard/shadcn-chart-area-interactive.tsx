@@ -28,18 +28,6 @@ import {
 } from "@/components/ui/select"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 
-const chartConfig = {
-  rating: { label: "Rating", color: "var(--chart-1)" },
-  actualFrontier: {
-    label: "Actual top difficulty",
-    color: "var(--chart-2)",
-  },
-  virtualFrontier: {
-    label: "Virtual top difficulty",
-    color: "var(--chart-3)",
-  },
-} satisfies ChartConfig
-
 type TimeRange = "90d" | "365d" | "all"
 
 const ranges: Array<{ value: TimeRange; label: string; days: number | null }> = [
@@ -53,16 +41,30 @@ function shortDate(value: string) {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "numeric",
+    year: "2-digit",
   }).format(date)
 }
 
 export function ShadcnChartAreaInteractive({
   history,
+  platform = "AtCoder",
+  compact = false,
 }: {
   history: History
   platform?: "AtCoder" | "Codeforces"
+  compact?: boolean
 }) {
-  const [timeRange, setTimeRange] = React.useState<TimeRange>("90d")
+  const [timeRange, setTimeRange] = React.useState<TimeRange>("all")
+  const chartConfig = React.useMemo(() => {
+    const colors = platform === "Codeforces"
+      ? { rating: "var(--cf-chart-rating)", actualFrontier: "var(--cf-chart-actual)", virtualFrontier: "var(--cf-chart-virtual)" }
+      : { rating: "var(--chart-1)", actualFrontier: "var(--chart-2)", virtualFrontier: "var(--chart-3)" }
+    return {
+      rating: { label: "Rating", color: colors.rating },
+      actualFrontier: { label: "Actual top difficulty", color: colors.actualFrontier },
+      virtualFrontier: { label: "Virtual top difficulty", color: colors.virtualFrontier },
+    } satisfies ChartConfig
+  }, [platform])
 
   const chartData = React.useMemo(() => {
     const ratings = new Map(
@@ -71,19 +73,23 @@ export function ShadcnChartAreaInteractive({
         item.newRating ?? null,
       ])
     )
-    let currentRating: number | null = null
-
     return history.sessions
       .filter((session) => session.type !== "practice")
       .toSorted(
         (a, b) =>
           new Date(a.startAt).getTime() - new Date(b.startAt).getTime()
       )
-      .map((session) => {
-        const nextRating = ratings.get(String(session.contestId).toLowerCase())
-        if (nextRating != null) currentRating = nextRating
+      .reduce<Array<{
+        date: string
+        contest: string
+        rating: number | null
+        actualFrontier: number | null
+        virtualFrontier: number | null
+      }>>((items, session) => {
+        const nextRating = session.type === "actual" ? ratings.get(String(session.contestId).toLowerCase()) : null
+        const currentRating = nextRating ?? items.at(-1)?.rating ?? null
 
-        return {
+        return [...items, {
           date: session.startAt,
           contest: session.contestTitle ?? session.contestId.toUpperCase(),
           rating: currentRating,
@@ -95,16 +101,16 @@ export function ShadcnChartAreaInteractive({
             session.type === "virtual"
               ? session.metrics.highestSolvedDifficulty ?? null
               : null,
-        }
-      })
+        }]
+      }, [])
   }, [history])
 
   const filteredData = React.useMemo(() => {
     const selected = ranges.find((range) => range.value === timeRange)
     if (!selected?.days || chartData.length === 0) return chartData
 
-    const latest = new Date(chartData.at(-1)!.date).getTime()
-    const cutoff = latest - selected.days * 86_400_000
+    const latestDate = Math.max(...chartData.map((item) => new Date(item.date).getTime()))
+    const cutoff = latestDate - selected.days * 86_400_000
     return chartData.filter(
       (item) => new Date(item.date).getTime() >= cutoff
     )
@@ -113,11 +119,12 @@ export function ShadcnChartAreaInteractive({
   return (
     <Card className="@container/card">
       <CardHeader>
-        <CardTitle>Growth History</CardTitle>
-        <CardDescription>
-          Rating and full-contest difficulty frontier over time
+      <CardTitle>Rating & difficulty history</CardTitle>
+      <CardDescription>
+          Official rating with actual and virtual top difficulty
+          {timeRange !== "all" && " · period ends today"}
         </CardDescription>
-        <CardAction>
+        {!compact && <CardAction>
           <ToggleGroup
             type="single"
             value={timeRange}
@@ -150,12 +157,13 @@ export function ShadcnChartAreaInteractive({
               ))}
             </SelectContent>
           </Select>
-        </CardAction>
+        </CardAction>}
       </CardHeader>
       <CardContent>
+        {filteredData.length === 0 && <p className="py-8 text-center text-sm text-muted-foreground">No contests in this period. Select All time to see earlier records.</p>}
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[360px] w-full"
+          className={compact ? "aspect-auto h-[240px] w-full" : "aspect-auto h-[360px] w-full"}
         >
           <LineChart
             key={timeRange}
@@ -198,20 +206,22 @@ export function ShadcnChartAreaInteractive({
             />
             <Line
               dataKey="actualFrontier"
-              type="monotone"
+              type="linear"
               stroke="var(--color-actualFrontier)"
               strokeWidth={2}
-              dot={{ r: 3 }}
+              dot={false}
+              activeDot={{ r: 4 }}
               connectNulls
               animationDuration={800}
             />
             <Line
               dataKey="virtualFrontier"
-              type="monotone"
+              type="linear"
               stroke="var(--color-virtualFrontier)"
               strokeWidth={2}
               strokeDasharray="5 5"
-              dot={{ r: 3 }}
+              dot={false}
+              activeDot={{ r: 4 }}
               connectNulls
               animationDuration={900}
             />

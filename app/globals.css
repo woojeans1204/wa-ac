@@ -118,6 +118,34 @@
 }
 
 @layer base {
+  :root {
+    --cf-saturation: 1;
+    --cf-brightness: 1;
+    --cf-orange-saturation-scale: 1.35;
+    --cf-gray: #6b7280;
+    --cf-green: #159a62;
+    --cf-cyan: #078c91;
+    --cf-blue: #2563eb;
+    --cf-violet: #9333a3;
+    --cf-orange: #d97706;
+    --cf-red: #dc3b43;
+    --cf-chart-rating: #4f83e8;
+    --cf-chart-actual: #31a86f;
+    --cf-chart-virtual: #d99a4a;
+  }
+  .dark {
+    --cf-orange-saturation-scale: 1.2;
+    --cf-gray: #a1a1aa;
+    --cf-green: #4ade80;
+    --cf-cyan: #2dd4bf;
+    --cf-blue: #60a5fa;
+    --cf-violet: #d084d0;
+    --cf-orange: #f6ad55;
+    --cf-red: #f87171;
+    --cf-chart-rating: #78a9f2;
+    --cf-chart-actual: #61d091;
+    --cf-chart-virtual: #e8b56d;
+  }
   * {
     @apply border-border outline-ring/50;
   }

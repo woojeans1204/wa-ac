@@ -1,14 +1,11 @@
 import type { Metadata } from "next"
-import history from "./data/history.json"
-import { DashboardShell } from "@/components/dashboard-shell"
-import type { History } from "@/components/ps-types"
+import { CodeforcesSearch } from "@/components/codeforces/codeforces-search"
 
 export const metadata: Metadata = {
-  title: "SSS_PrizeHunter · PS Matchlog",
-  description: "Competitive programming match history and training frontier.",
+  title: "Codeforces player search · WA:AC",
+  description: "Search a Codeforces handle and turn public submissions into contest match history.",
 };
 
 export default function Home() {
-  const data = history as History
-  return <DashboardShell history={data} />
+  return <CodeforcesSearch />
 }

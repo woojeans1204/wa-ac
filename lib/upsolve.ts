@@ -48,7 +48,7 @@ export function buildUpsolveQueue(
       const completedSecond =
         acceptedTimes.find((time) => time > sessionStart) ?? acceptedTimes.at(-1) ?? null
       const problemUrl = platform === "Codeforces"
-        ? `https://codeforces.com/contest/${session.contestId}/problem/${problem.index}`
+        ? `https://codeforces.com/${Number(session.contestId) >= 100000 ? "gym" : "contest"}/${session.contestId}/problem/${problem.index}`
         : `https://atcoder.jp/contests/${session.contestId}/tasks/${problem.problemId}`
 
       queue.push({
