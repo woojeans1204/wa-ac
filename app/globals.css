@@ -161,3 +161,21 @@
     cursor: pointer;
   }
 }
+
+[data-hover-actions] [data-hover-action] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-hover-actions]:hover [data-hover-action],
+[data-hover-actions] [data-hover-action]:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (hover: none) {
+  [data-hover-actions] [data-hover-action] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

@@ -27,6 +27,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { ChartShareButton } from "@/components/shadcn-dashboard/chart-share-button"
 
 type TimeRange = "90d" | "365d" | "all"
 
@@ -55,6 +56,7 @@ export function ShadcnChartAreaInteractive({
   compact?: boolean
 }) {
   const [timeRange, setTimeRange] = React.useState<TimeRange>("all")
+  const chartRef = React.useRef<HTMLDivElement>(null)
   const chartConfig = React.useMemo(() => {
     const colors = platform === "Codeforces"
       ? { rating: "var(--cf-chart-rating)", actualFrontier: "var(--cf-chart-actual)", virtualFrontier: "var(--cf-chart-virtual)" }
@@ -117,15 +119,15 @@ export function ShadcnChartAreaInteractive({
   }, [chartData, timeRange])
 
   return (
-    <Card className="@container/card">
+    <Card className="@container/card" data-hover-actions>
       <CardHeader>
       <CardTitle>Rating & difficulty history</CardTitle>
       <CardDescription>
           Official rating with actual and virtual top difficulty
           {timeRange !== "all" && " · period ends today"}
         </CardDescription>
-        {!compact && <CardAction>
-          <ToggleGroup
+        <CardAction className="flex items-center gap-2">
+          {!compact && <><ToggleGroup
             type="single"
             value={timeRange}
             onValueChange={(value) => value && setTimeRange(value as TimeRange)}
@@ -156,12 +158,19 @@ export function ShadcnChartAreaInteractive({
                 </SelectItem>
               ))}
             </SelectContent>
-          </Select>
-        </CardAction>}
+          </Select></>}
+          <ChartShareButton
+            chartRef={chartRef}
+            title="Rating & difficulty history"
+            description={`${history.user} · ${platform} · ${ranges.find((range) => range.value === timeRange)?.label ?? "All time"}`}
+            fileName={`${history.user}-${platform.toLowerCase()}-rating-history.png`}
+          />
+        </CardAction>
       </CardHeader>
       <CardContent>
         {filteredData.length === 0 && <p className="py-8 text-center text-sm text-muted-foreground">No contests in this period. Select All time to see earlier records.</p>}
         <ChartContainer
+          ref={chartRef}
           config={chartConfig}
           className={compact ? "aspect-auto h-[240px] w-full" : "aspect-auto h-[360px] w-full"}
         >

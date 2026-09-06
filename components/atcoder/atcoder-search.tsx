@@ -8,6 +8,7 @@ import { ShadcnDashboard } from "@/components/shadcn-dashboard/dashboard"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Toaster } from "@/components/ui/sonner"
+import { recordSavedAccount } from "@/lib/saved-accounts"
 
 export function AtCoderSearch({ initialHistory }: { initialHistory: History }) {
   const [handle, setHandle] = React.useState(initialHistory.user)
@@ -39,6 +40,12 @@ export function AtCoderSearch({ initialHistory }: { initialHistory: History }) {
       }
       setHistory(payload.history)
       setHandle(payload.history.user)
+      recordSavedAccount("AtCoder", payload.history.user)
+      window.history.replaceState(
+        null,
+        "",
+        `/shadcn?handle=${encodeURIComponent(payload.history.user)}${window.location.hash || "#dashboard"}`
+      )
     } catch (cause) {
       const timedOut = cause instanceof Error && (
         cause.name === "TimeoutError" || cause.name === "AbortError"
@@ -54,6 +61,16 @@ export function AtCoderSearch({ initialHistory }: { initialHistory: History }) {
       setLoading(false)
     }
   }
+
+  React.useEffect(() => {
+    const query = new URLSearchParams(window.location.search).get("handle")?.trim()
+    if (!query || query.toLowerCase() === initialHistory.user.toLowerCase()) return
+    const timeout = window.setTimeout(() => {
+      setHandle(query)
+      void loadPlayer(`/api/atcoder?handle=${encodeURIComponent(query)}`)
+    }, 0)
+    return () => window.clearTimeout(timeout)
+  }, [initialHistory.user])
 
   const search = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()

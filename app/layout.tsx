@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SITE_URL } from "@/lib/site-url";
 import "./globals.css";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: "WA:AC",
   description: "Competitive programming match history and growth tracker.",
+  verification: {
+    google: "5rrYeFhURYKOIoowvkCoNy8HU2-1pw-8RONKU0CvGe4",
+  },
   openGraph: {
+    type: "website",
+    siteName: "WA:AC",
+    url: SITE_URL,
     title: "WA:AC",
     description: "Contest history · Training frontier · Upsolve",
     images: [

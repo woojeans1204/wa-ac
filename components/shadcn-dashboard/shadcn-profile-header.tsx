@@ -2,11 +2,13 @@
 
 import * as React from "react"
 import { Dialog as DialogPrimitive } from "radix-ui"
-import { IconX } from "@tabler/icons-react"
+import { IconPin, IconPinned, IconX } from "@tabler/icons-react"
 import type { History } from "@/components/ps-types"
 import { cfRatingColor } from "@/lib/codeforces-colors"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { toggleSavedAccountPin, useSavedAccounts } from "@/lib/saved-accounts"
 import {
   Card,
   CardDescription,
@@ -87,6 +89,10 @@ function ProfileAvatar({ history, platform }: { history: History; platform: stri
 }
 
 export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history: History; platform?: "AtCoder" | "Codeforces" }) {
+  const savedAccounts = useSavedAccounts()
+  const pinned = savedAccounts.some((account) =>
+    account.platform === platform && account.handle.toLowerCase() === history.user.toLowerCase() && account.pinned
+  )
   const ratedHistory = history.raw?.actualHistory?.filter(
     (contest) => contest.newRating != null
   ) ?? []
@@ -104,7 +110,7 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
   ]
 
   return (
-    <Card size="sm" className="mx-4 lg:mx-6">
+    <Card size="sm" className="mx-4 lg:mx-6" data-hover-actions>
       <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <ProfileAvatar key={`${history.user}:${history.avatarUrl}:${history.avatarFallbackUrl}`} history={history} platform={platform} />
         <div className="min-w-0 flex-1">
@@ -122,6 +128,18 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
             </div>
           ))}
         </div>
+        <Button
+          type="button"
+          variant="outline"
+          size="icon-sm"
+          className="self-start transition-opacity sm:self-center"
+          data-hover-action
+          aria-label={pinned ? `Unpin ${history.user}` : `Pin ${history.user}`}
+          title={pinned ? "Unpin account" : "Pin account"}
+          onClick={() => toggleSavedAccountPin(platform, history.user)}
+        >
+          {pinned ? <IconPinned /> : <IconPin />}
+        </Button>
       </CardHeader>
     </Card>
   )

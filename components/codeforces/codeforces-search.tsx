@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Skeleton } from "@/components/ui/skeleton"
+import { SavedAccounts } from "@/components/saved-accounts"
+import { recordSavedAccount } from "@/lib/saved-accounts"
 
 type CodeforcesProfile = {
   handle: string
@@ -39,6 +41,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
       if (!response.ok || !payload.history) throw new Error(payload.error || "Could not load this handle.")
       setHistory(payload.history)
       setHandle(payload.history.user)
+      recordSavedAccount("Codeforces", payload.history.user)
       window.history.replaceState(
         null,
         "",
@@ -147,6 +150,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
             {error && <p className="pt-2 text-sm text-destructive">{error}</p>}
           </CardHeader>
         </Card>
+        <SavedAccounts />
         {loading && (
           <Card size="sm" className="mx-4 mt-6 lg:mx-6">
             <CardHeader className="flex flex-row items-center gap-3">

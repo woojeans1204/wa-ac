@@ -28,6 +28,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { ChartShareButton } from "@/components/shadcn-dashboard/chart-share-button"
 
 const bandSets = {
   AtCoder: [
@@ -91,6 +92,7 @@ export function FrontierHistory({
 }) {
   const [windowMode, setWindowMode] = React.useState<WindowMode>("20")
   const [contestScope, setContestScope] = React.useState<ContestScope>("all")
+  const chartRef = React.useRef<HTMLDivElement>(null)
   const bands = bandSets[platform]
   const actualCount = history.sessions.filter((session) => session.type === "actual").length
   const virtualCount = history.sessions.filter((session) => session.type === "virtual").length
@@ -148,7 +150,7 @@ export function FrontierHistory({
   const scopeLabel = contestScope === "all" ? "actual + virtual" : contestScope
 
   return (
-    <Card className="@container/card">
+    <Card className="@container/card" data-hover-actions>
       <CardHeader>
         <CardTitle>Solve coverage</CardTitle>
         <CardDescription>
@@ -156,8 +158,8 @@ export function FrontierHistory({
             ? `Cumulative ${scopeLabel} contest solve coverage by difficulty`
             : `Solve coverage within the latest ${windowMode} ${scopeLabel} contests at each date`}
         </CardDescription>
-        {!compact && <CardAction>
-          <ToggleGroup
+        <CardAction className="flex items-center gap-2">
+          {!compact && <><ToggleGroup
             type="single"
             value={windowMode}
             onValueChange={(value) => value && setWindowMode(value as WindowMode)}
@@ -181,8 +183,14 @@ export function FrontierHistory({
                 </SelectItem>
               ))}
             </SelectContent>
-          </Select>
-        </CardAction>}
+          </Select></>}
+          <ChartShareButton
+            chartRef={chartRef}
+            title="Solve coverage"
+            description={`${history.user} · ${platform} · ${windows.find((item) => item.value === windowMode)?.label ?? "Rolling 20"} · ${scopeLabel}`}
+            fileName={`${history.user}-${platform.toLowerCase()}-solve-coverage.png`}
+          />
+        </CardAction>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         {!compact && <ToggleGroup
@@ -198,7 +206,7 @@ export function FrontierHistory({
           <ToggleGroupItem value="virtual" disabled={!virtualCount}>Virtual</ToggleGroupItem>
         </ToggleGroup>}
         {chartData.length === 0 && <p className="py-8 text-center text-sm text-muted-foreground">No contests for this selection.</p>}
-        <ChartContainer config={chartConfig} className={compact ? "aspect-auto h-[240px] w-full" : "aspect-auto h-[360px] w-full"}>
+        <ChartContainer ref={chartRef} config={chartConfig} className={compact ? "aspect-auto h-[240px] w-full" : "aspect-auto h-[360px] w-full"}>
           <LineChart
             key={`${contestScope}-${windowMode}`}
             data={chartData}
