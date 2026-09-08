@@ -69,7 +69,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent, 
                     <TabsTrigger
                       key={section.id}
                       value={section.id}
-                      className="flex-none px-4"
+                      className="min-w-0 flex-1 px-1 text-xs sm:flex-none sm:px-4 sm:text-sm"
                     >
                       {section.label}
                     </TabsTrigger>

@@ -154,8 +154,9 @@ export function ShadcnUpsolveQueue({
           </p>
         </div>
 
-        <Collapsible className="w-full">
+        <Collapsible className="grid grid-cols-1 gap-2 lg:grid-cols-[1fr_auto]">
           <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-muted-foreground">Difficulty</span>
             <div className="flex h-7 w-56 items-center gap-2 rounded-lg border border-input bg-transparent px-2.5 dark:bg-input/30" title="Difficulty range">
               <span
                 className="w-8 text-right text-xs font-medium tabular-nums"
@@ -199,8 +200,8 @@ export function ShadcnUpsolveQueue({
               </Select>
             </div>
           </div>
-          <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-            <div className="flex items-center gap-1">
+          <div className="contents">
+            <div className="order-3 flex items-center gap-1 lg:col-span-2">
               <CollapsibleTrigger asChild>
                 <Button variant="ghost" size="sm">
                   <IconAdjustmentsHorizontal />
@@ -211,7 +212,7 @@ export function ShadcnUpsolveQueue({
                 <Button variant="ghost" size="sm" onClick={resetFilters}>Reset</Button>
               )}
             </div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="order-2 flex flex-wrap items-center gap-2">
               <div>
                 <Select value={timeRange} onValueChange={(value) => {
                   setTimeRange(value as TimeRange)
@@ -243,7 +244,7 @@ export function ShadcnUpsolveQueue({
               </div>
             </div>
           </div>
-          <CollapsibleContent>
+          <CollapsibleContent className="order-4 lg:col-span-2">
             <div className="mt-2 rounded-lg border bg-muted/20 p-3">
               <div className="min-w-0 space-y-1.5">
                 <p className="text-xs font-medium text-muted-foreground">Contest type</p>
@@ -276,7 +277,24 @@ export function ShadcnUpsolveQueue({
               {group.length} {group.length === 1 ? "problem" : "problems"}
             </span>
           </div>
-          <Table className="table-fixed">
+          <div className="divide-y sm:hidden">
+            {group.map((item) => (
+              <div key={item.id} className="space-y-2 px-4 py-3">
+                <a href={item.problemUrl} target="_blank" rel="noreferrer" className="flex items-start gap-2 text-sm font-medium">
+                  <span className="shrink-0 text-muted-foreground">{item.problemIndex}</span>
+                  <span className="min-w-0 break-words">{item.problemTitle || "Untitled problem"}</span>
+                  <IconExternalLink className="ml-auto size-4 shrink-0 text-muted-foreground" />
+                </a>
+                <div className="flex flex-wrap items-center gap-2 text-sm">
+                  <span className="font-medium tabular-nums" style={{ color: platform === "Codeforces" && item.difficulty != null ? cfRatingColor(item.difficulty) : undefined }}>{item.difficulty ?? "Unrated"}</span>
+                  <Badge variant={item.attemptedInContest ? "destructive" : "outline"}>{item.attemptedInContest ? "Attempted" : "Not attempted"}</Badge>
+                  <Badge variant={item.completed ? "default" : "secondary"}>{item.completed ? "Solved" : "Pending"}</Badge>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="hidden sm:block">
+          <Table className="min-w-[720px] table-fixed">
             <colgroup>
               <col className="w-20" />
               <col />
@@ -334,6 +352,7 @@ export function ShadcnUpsolveQueue({
               ))}
             </TableBody>
           </Table>
+          </div>
         </section>
         ))}
         {visibleGroups.length < groups.length && (

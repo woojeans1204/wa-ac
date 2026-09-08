@@ -156,7 +156,7 @@ export function ShadcnDataTable({
       </div>
         <TabsContent value={view} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
           <div className="overflow-hidden rounded-lg border">
-            <Table>
+            <Table className="min-w-[900px]">
               <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead className="text-center">Type</TableHead>}{showDivision && <TableHead>Division</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Solved</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right" title="Elapsed time from contest start to last accepted submission">Last AC</TableHead>}</TableRow></TableHeader>
               {rows.map((session) => {
                 const columnCount = 2 + Number(visible.type) + Number(showDivision) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)

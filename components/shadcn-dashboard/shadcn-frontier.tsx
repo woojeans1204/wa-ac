@@ -151,7 +151,7 @@ export function FrontierHistory({
 
   return (
     <Card className="@container/card" data-hover-actions>
-      <CardHeader>
+      <CardHeader className={compact ? "flex flex-col gap-3" : "flex min-h-36 flex-col gap-3"}>
         <CardTitle>Solve coverage</CardTitle>
         <CardDescription>
           {windowMode === "cumulative"
@@ -198,15 +198,14 @@ export function FrontierHistory({
           value={contestScope}
           onValueChange={(value) => value && setContestScope(value as ContestScope)}
           variant="outline"
-          className="w-fit"
+          className="order-2 w-fit"
           aria-label="Contest type"
         >
           <ToggleGroupItem value="all">All</ToggleGroupItem>
           <ToggleGroupItem value="actual" disabled={!actualCount}>Actual</ToggleGroupItem>
           <ToggleGroupItem value="virtual" disabled={!virtualCount}>Virtual</ToggleGroupItem>
         </ToggleGroup>}
-        {chartData.length === 0 && <p className="py-8 text-center text-sm text-muted-foreground">No contests for this selection.</p>}
-        <ChartContainer ref={chartRef} config={chartConfig} className={compact ? "aspect-auto h-[240px] w-full" : "aspect-auto h-[360px] w-full"}>
+        {chartData.length === 0 ? <p className="py-12 text-center text-sm text-muted-foreground">No contests for this selection.</p> : <ChartContainer ref={chartRef} config={chartConfig} className={compact ? "aspect-auto h-[280px] w-full" : "aspect-auto h-[360px] w-full"}>
           <LineChart
             key={`${contestScope}-${windowMode}`}
             data={chartData}
@@ -256,15 +255,18 @@ export function FrontierHistory({
                 stroke={`var(--color-band${index})`}
                 strokeWidth={index >= 4 ? 2.5 : 2}
                 strokeDasharray={platform === "AtCoder" && index === 5 ? "5 5" : undefined}
-                dot={false}
+                dot={chartData.length === 1 ? { r: 3, fill: `var(--color-band${index})`, strokeWidth: 0 } : false}
                 connectNulls={false}
                 animationDuration={650 + index * 80}
               />
             ))}
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend
+              height={compact ? 84 : 64}
+              content={<ChartLegendContent className="flex-wrap gap-x-4 gap-y-2 [&>div]:whitespace-nowrap" />}
+            />
           </LineChart>
-        </ChartContainer>
-        {!compact && <p className="text-sm text-muted-foreground">Solved / problems appearing in the selected contests, including unattempted problems. This measures contest coverage, not a predicted chance of solving. Unrated problems are excluded.</p>}
+        </ChartContainer>}
+        {!compact && <p className="order-3 text-sm text-muted-foreground">Solved / problems appearing in the selected contests, including unattempted problems. This measures contest coverage, not a predicted chance of solving. Unrated problems are excluded.</p>}
       </CardContent>
     </Card>
   )

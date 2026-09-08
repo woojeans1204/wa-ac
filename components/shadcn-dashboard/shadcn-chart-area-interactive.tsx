@@ -120,11 +120,11 @@ export function ShadcnChartAreaInteractive({
 
   return (
     <Card className="@container/card" data-hover-actions>
-      <CardHeader>
+      <CardHeader className={compact ? "flex flex-col gap-3" : "flex min-h-36 flex-col gap-3"}>
       <CardTitle>Rating & difficulty history</CardTitle>
       <CardDescription>
           Official rating with actual and virtual top difficulty
-          {timeRange !== "all" && " · period ends today"}
+          {timeRange !== "all" && " · relative to latest contest"}
         </CardDescription>
         <CardAction className="flex items-center gap-2">
           {!compact && <><ToggleGroup
@@ -168,11 +168,10 @@ export function ShadcnChartAreaInteractive({
         </CardAction>
       </CardHeader>
       <CardContent>
-        {filteredData.length === 0 && <p className="py-8 text-center text-sm text-muted-foreground">No contests in this period. Select All time to see earlier records.</p>}
-        <ChartContainer
+        {filteredData.length === 0 ? <p className="py-12 text-center text-sm text-muted-foreground">No contests in this period. Select All time to see earlier records.</p> : <ChartContainer
           ref={chartRef}
           config={chartConfig}
-          className={compact ? "aspect-auto h-[240px] w-full" : "aspect-auto h-[360px] w-full"}
+          className={compact ? "aspect-auto h-[280px] w-full" : "aspect-auto h-[360px] w-full"}
         >
           <LineChart
             key={timeRange}
@@ -209,7 +208,7 @@ export function ShadcnChartAreaInteractive({
               type="monotone"
               stroke="var(--color-rating)"
               strokeWidth={2.5}
-              dot={false}
+              dot={filteredData.filter((item) => item.rating != null).length === 1 ? { r: 3, fill: "var(--color-rating)", strokeWidth: 0 } : false}
               connectNulls
               animationDuration={700}
             />
@@ -217,8 +216,8 @@ export function ShadcnChartAreaInteractive({
               dataKey="actualFrontier"
               type="linear"
               stroke="var(--color-actualFrontier)"
-              strokeWidth={2}
-              dot={false}
+              strokeWidth={1.5}
+              dot={filteredData.filter((item) => item.actualFrontier != null).length === 1 ? { r: 3, fill: "var(--color-actualFrontier)", strokeWidth: 0 } : false}
               activeDot={{ r: 4 }}
               connectNulls
               animationDuration={800}
@@ -227,16 +226,19 @@ export function ShadcnChartAreaInteractive({
               dataKey="virtualFrontier"
               type="linear"
               stroke="var(--color-virtualFrontier)"
-              strokeWidth={2}
+              strokeWidth={1.5}
               strokeDasharray="5 5"
-              dot={false}
+              dot={filteredData.filter((item) => item.virtualFrontier != null).length === 1 ? { r: 3, fill: "var(--color-virtualFrontier)", strokeWidth: 0 } : false}
               activeDot={{ r: 4 }}
               connectNulls
               animationDuration={900}
             />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend
+              height={compact ? 60 : 48}
+              content={<ChartLegendContent className="flex-wrap gap-x-4 gap-y-2 [&>div]:whitespace-nowrap" />}
+            />
           </LineChart>
-        </ChartContainer>
+        </ChartContainer>}
       </CardContent>
     </Card>
   )

@@ -144,7 +144,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
           <CardHeader>
             <CardTitle>Search Codeforces player</CardTitle>
             <CardDescription>
-              Enter an exact handle or discover a random recently active rated player.
+              Explore contest-by-contest results, rating history, and solve coverage. Enter a Codeforces handle to get started.
             </CardDescription>
             <div className="max-w-xl pt-3">{searchForm}</div>
             {error && <p className="pt-2 text-sm text-destructive">{error}</p>}

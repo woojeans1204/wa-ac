@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import type { ReactNode } from "react"
-import Link from "next/link"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export function ShadcnSiteHeader({ children }: { children?: ReactNode }) {
@@ -27,7 +26,9 @@ export function ShadcnSiteHeader({ children }: { children?: ReactNode }) {
   return (
     <header className={`sticky top-0 z-40 flex h-12 shrink-0 items-center gap-2 border-b bg-background/95 backdrop-blur transition-transform duration-200 supports-[backdrop-filter]:bg-background/75 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="flex w-full items-center gap-1 px-4 lg:gap-2 lg:px-6">
-        <Link href="/" className="text-base font-medium">WA:AC</Link>
+        {/* A native navigation avoids vinext appending "/" to the active hash. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a href="/" className="text-base font-medium" aria-label="WA:AC home">WA:AC</a>
         <div className="ml-auto flex items-center gap-2">
           {children}
           <ThemeToggle />

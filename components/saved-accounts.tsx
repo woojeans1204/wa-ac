@@ -58,15 +58,15 @@ export function SavedAccounts() {
 
   return (
     <Card size="sm" className="mx-4 mt-6 lg:mx-6">
-      <CardContent className="grid gap-5 md:grid-cols-2">
-        <section className="min-w-0 space-y-1">
+      <CardContent className={pinned.length && recent.length ? "grid gap-5 md:grid-cols-2" : "grid gap-5"}>
+        {pinned.length > 0 && <section className="min-w-0 space-y-1">
           <div className="flex h-7 items-center justify-between px-2">
             <h2 className="text-sm font-medium">Pinned</h2>
           </div>
           {pinned.length
             ? pinned.map((account) => <AccountRow key={`${account.platform}:${account.handle.toLowerCase()}`} account={account} />)
             : <p className="px-2 py-1.5 text-sm text-muted-foreground">Pin an account for quick access.</p>}
-        </section>
+        </section>}
         <section className="min-w-0 space-y-1">
           <div className="flex h-7 items-center justify-between px-2">
             <h2 className="text-sm font-medium">Recent searches</h2>
