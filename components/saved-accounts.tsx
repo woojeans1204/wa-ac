@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { IconPin, IconPinned, IconX } from "@tabler/icons-react"
 import {
   clearRecentAccounts,
@@ -22,9 +21,9 @@ function accountHref(account: SavedAccount) {
 function AccountRow({ account }: { account: SavedAccount }) {
   return (
     <div className="flex min-w-0 items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-muted/60">
-      <Link href={accountHref(account)} className="min-w-0 flex-1 truncate font-medium">
+      <a href={accountHref(account)} className="min-w-0 flex-1 truncate font-medium">
         {account.handle}
-      </Link>
+      </a>
       <Badge variant="outline" className="font-normal">{account.platform}</Badge>
       <Button
         type="button"

@@ -1,0 +1,10 @@
+Cabinet Grotesk is distributed by Fontshare / Indian Type Foundry under the
+ITF Free Font License (FFL). It is permitted for personal and commercial web
+use. The original font file used by this project is served by Fontshare's
+official CDN without modification.
+
+Official license terms:
+https://www.fontshare.com/licenses/itf-ffl
+
+Official font page:
+https://www.fontshare.com/fonts/cabinet-grotesk

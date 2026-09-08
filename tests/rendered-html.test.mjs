@@ -37,6 +37,18 @@ test("server-renders the WA:AC application from the public home", async () => {
   assert.doesNotMatch(html, /Your site is taking shape|Building your site/);
 });
 
+test("uses the locally hosted Cabinet Grotesk font", async () => {
+  const source = await readFile(
+    new URL("../app/globals.css", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(source, /font-family: "Cabinet Grotesk Local"/);
+  assert.match(source, /url\("\/fonts\/CabinetGrotesk-Variable\.woff2"\)/);
+  assert.match(source, /--font-sans: var\(--font-cabinet-grotesk\)/);
+  assert.match(source, /"Apple SD Gothic Neo"/);
+});
+
 test("match history includes pagination and stale-state guards", async () => {
   const [source, dashboard] = await Promise.all([
     readFile(
@@ -55,11 +67,14 @@ test("match history includes pagination and stale-state guards", async () => {
   assert.match(source, /function changePage/);
   assert.match(source, /setOpenContest\(null\)/);
   assert.match(source, /No contests match this view\./);
+  assert.match(source, /space-y-2 lg:hidden/);
+  assert.match(source, /hidden overflow-hidden rounded-lg border lg:block/);
+  assert.match(source, /Last AC \{duration\(session\)\}/);
   assert.equal((source.match(/<TabsContent/g) ?? []).length, 1);
   assert.match(dashboard, /key=\{`\$\{platform\}:\$\{history\.user\}:history`\}/);
 });
 
-test("upsolve supports numeric difficulty, tags, and contest type", async () => {
+test("upsolve supports numeric difficulty, tags, attempt state, and contest type", async () => {
   const source = await readFile(
     new URL(
       "../components/shadcn-dashboard/shadcn-upsolve-queue.tsx",
@@ -73,6 +88,9 @@ test("upsolve supports numeric difficulty, tags, and contest type", async () => 
   assert.match(source, /<Slider/);
   assert.match(source, /minStepsBetweenThumbs=\{1\}/);
   assert.match(source, /Any tag/);
+  assert.match(source, /Any attempt/);
+  assert.match(source, /Only attempted/);
+  assert.match(source, /useState<AttemptFilter>\("attempted"\)/);
   assert.match(source, /Latest contest/);
   assert.match(source, /7 days/);
   assert.match(source, /30 days/);
@@ -82,4 +100,15 @@ test("upsolve supports numeric difficulty, tags, and contest type", async () => 
   assert.match(source, /Virtual only/);
   assert.doesNotMatch(source, /<Collapsible defaultOpen/);
   assert.doesNotMatch(source, /Latest 10 contests|During contest|Attempted or not/);
+});
+
+test("Codeforces refreshes a catalog captured before a contest finished", async () => {
+  const source = await readFile(
+    new URL("../app/api/codeforces/route.ts", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(source, /fetchedAt: number/);
+  assert.match(source, /function catalogPredatesFinishedContest/);
+  assert.match(source, /catalog = await getCatalog\(true\)/);
 });

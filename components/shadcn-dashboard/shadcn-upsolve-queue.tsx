@@ -30,6 +30,7 @@ type QueueStatus = "all" | "pending" | "completed"
 type TimeRange = "latest" | "7d" | "30d" | "all"
 type SortOrder = "latest" | "oldest"
 type ContestTypeFilter = "all" | "actual" | "virtual"
+type AttemptFilter = "all" | "attempted"
 
 const CONTESTS_PER_LOAD = 10
 const MIN_DIFFICULTY = 800
@@ -73,6 +74,7 @@ export function ShadcnUpsolveQueue({
   const [status, setStatus] = React.useState<QueueStatus>("pending")
   const [difficultyRange, setDifficultyRange] = React.useState([MIN_DIFFICULTY, MAX_DIFFICULTY])
   const [tagFilter, setTagFilter] = React.useState("any")
+  const [attemptFilter, setAttemptFilter] = React.useState<AttemptFilter>("attempted")
   const [timeRange, setTimeRange] = React.useState<TimeRange>("all")
   const [contestTypeFilter, setContestTypeFilter] = React.useState<ContestTypeFilter>("all")
   const [sortOrder, setSortOrder] = React.useState<SortOrder>("latest")
@@ -100,6 +102,7 @@ export function ShadcnUpsolveQueue({
       || item.difficulty > difficultyRange[1]
     )) return false
     if (tagFilter !== "any" && !item.tags?.includes(tagFilter)) return false
+    if (attemptFilter === "attempted" && !item.attemptedInContest) return false
     if (contestTypeFilter !== "all" && item.contestType !== contestTypeFilter) return false
     return true
   })
@@ -120,6 +123,7 @@ export function ShadcnUpsolveQueue({
   const resetVisibleContests = () => setVisibleContestCount(CONTESTS_PER_LOAD)
   const hasActiveFilters = hasDifficultyFilter
     || tagFilter !== "any"
+    || attemptFilter !== "all"
     || timeRange !== "all"
     || contestTypeFilter !== "all"
     || sortOrder !== "latest"
@@ -127,6 +131,7 @@ export function ShadcnUpsolveQueue({
   const resetFilters = () => {
     setDifficultyRange([MIN_DIFFICULTY, MAX_DIFFICULTY])
     setTagFilter("any")
+    setAttemptFilter("attempted")
     setTimeRange("all")
     setContestTypeFilter("all")
     setSortOrder("latest")
@@ -199,6 +204,18 @@ export function ShadcnUpsolveQueue({
                 </SelectContent>
               </Select>
             </div>
+            <Select value={attemptFilter} onValueChange={(value) => {
+                setAttemptFilter(value as AttemptFilter)
+                resetVisibleContests()
+              }}>
+              <SelectTrigger className="w-36" size="sm" aria-label="Attempt filter">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Any attempt</SelectItem>
+                <SelectItem value="attempted">Only attempted</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div className="contents">
             <div className="order-3 flex items-center gap-1 lg:col-span-2">
@@ -233,7 +250,7 @@ export function ShadcnUpsolveQueue({
                   setSortOrder(value as SortOrder)
                   resetVisibleContests()
                 }}>
-                  <SelectTrigger className="w-28" size="sm" aria-label="Sort upsolve queue">
+                  <SelectTrigger className="w-32" size="sm" aria-label="Sort upsolve queue">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>

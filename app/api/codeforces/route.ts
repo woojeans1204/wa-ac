@@ -42,6 +42,7 @@ type CfSubmission = {
 let requestQueue: Promise<void> = Promise.resolve()
 let nextAllowedAt = 0
 let catalogCache: {
+  fetchedAt: number
   expiresAt: number
   problems: CfProblem[]
   contests: CfContest[]
@@ -49,7 +50,12 @@ let catalogCache: {
 let ratedUsersCache: { expiresAt: number; users: CfUser[] } | null = null
 let gymCache: { expiresAt: number; contests: CfContest[] } | null = null
 let gymPromise: Promise<CfContest[]> | null = null
-let catalogPromise: Promise<{ expiresAt: number; problems: CfProblem[]; contests: CfContest[] }> | null = null
+let catalogPromise: Promise<{
+  fetchedAt: number
+  expiresAt: number
+  problems: CfProblem[]
+  contests: CfContest[]
+}> | null = null
 let ratedUsersPromise: Promise<{ expiresAt: number; users: CfUser[] }> | null = null
 
 async function codeforcesRequest<T>(method: string, params: Record<string, string>) {
@@ -63,23 +69,31 @@ async function codeforcesRequest<T>(method: string, params: Record<string, strin
       signal: AbortSignal.timeout(15_000),
     })
     nextAllowedAt = Date.now() + 2100
-    if (!response.ok) throw new Error(`Codeforces returned HTTP ${response.status}.`)
-    const payload = await response.json() as CfResponse<T>
-    if (payload.status !== "OK") throw new Error(payload.comment || "Codeforces API request failed.")
+    const payload = await response.json().catch(() => null) as CfResponse<T> | null
+    if (!payload || payload.status !== "OK") {
+      const comment = payload?.status === "FAILED" ? payload.comment : undefined
+      if (comment && /user with handle .* not found/i.test(comment)) {
+        throw new Error("User not found.")
+      }
+      throw new Error(comment || `Codeforces returned HTTP ${response.status}.`)
+    }
     return payload.result
   })
   requestQueue = task.then(() => undefined, () => undefined)
   return task
 }
 
-async function getCatalog() {
-  if (catalogCache && catalogCache.expiresAt > Date.now()) return catalogCache
+async function getCatalog(forceRefresh = false) {
+  if (!forceRefresh && catalogCache && catalogCache.expiresAt > Date.now()) return catalogCache
+  if (forceRefresh) catalogCache = null
   if (!catalogPromise) {
     catalogPromise = (async () => {
       const problemset = await codeforcesRequest<{ problems: CfProblem[] }>("problemset.problems", {})
       const contests = await codeforcesRequest<CfContest[]>("contest.list", { gym: "false" })
+      const fetchedAt = Date.now()
       return {
-        expiresAt: Date.now() + 6 * 60 * 60 * 1000,
+        fetchedAt,
+        expiresAt: fetchedAt + 6 * 60 * 60 * 1000,
         problems: problemset.problems,
         contests,
       }
@@ -92,6 +106,18 @@ async function getCatalog() {
   } finally {
     if (catalogPromise === pendingCatalog) catalogPromise = null
   }
+}
+
+function catalogPredatesFinishedContest(
+  catalog: { fetchedAt: number; contests: CfContest[] },
+  contestIds: Set<number>
+) {
+  const now = Date.now()
+  return catalog.contests.some((contest) => {
+    if (!contestIds.has(contest.id) || contest.startTimeSeconds == null) return false
+    const contestEndAt = (contest.startTimeSeconds + contest.durationSeconds) * 1000
+    return catalog.fetchedAt < contestEndAt && contestEndAt <= now
+  })
 }
 
 async function getRandomUser() {
@@ -326,7 +352,15 @@ export async function GET(request: Request) {
       rating: ratings.at(-1)?.newRating,
       maxRating: ratings.length ? Math.max(...ratings.map((rating) => rating.newRating)) : undefined,
     }
-    const catalog = await getCatalog()
+    let catalog = await getCatalog()
+    const submissionContestIds = new Set(
+      submissions
+        .map((submission) => submission.contestId ?? submission.problem.contestId)
+        .filter((contestId): contestId is number => contestId != null && contestId < 100000)
+    )
+    if (catalogPredatesFinishedContest(catalog, submissionContestIds)) {
+      catalog = await getCatalog(true)
+    }
     const hasGym = submissions.some((submission) =>
       (submission.contestId ?? submission.problem.contestId ?? 0) >= 100000
     )
@@ -342,6 +376,7 @@ export async function GET(request: Request) {
     const timedOut = cause instanceof Error && (
       cause.name === "TimeoutError" || cause.name === "AbortError"
     )
+    const notFound = cause instanceof Error && cause.message === "User not found."
     return Response.json(
       {
         error: timedOut
@@ -350,7 +385,7 @@ export async function GET(request: Request) {
             ? cause.message
             : "Could not load Codeforces data.",
       },
-      { status: timedOut ? 504 : 502 }
+      { status: notFound ? 404 : timedOut ? 504 : 502 }
     )
   }
 }

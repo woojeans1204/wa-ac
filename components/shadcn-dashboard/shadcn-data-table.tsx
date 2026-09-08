@@ -78,12 +78,24 @@ const dateFormatter = new Intl.DateTimeFormat("ko-KR", {
   timeZone: "Asia/Seoul",
 })
 
+const mobileDateFormatter = new Intl.DateTimeFormat("ko-KR", {
+  year: "2-digit",
+  month: "numeric",
+  day: "numeric",
+  timeZone: "Asia/Seoul",
+})
+
 function contestDivision(title?: string) {
   if (!title) return "—"
   const divisions = [...title.matchAll(/Div\.?\s*(\d+)/gi)]
     .map((match) => match[1])
     .filter((value, index, values) => values.indexOf(value) === index)
   return divisions.length ? `Div. ${divisions.join(" + ")}` : "—"
+}
+
+function compactContestDivision(title?: string) {
+  const division = contestDivision(title)
+  return division === "—" ? division : division.replace("Div. ", "D").replaceAll(" ", "")
 }
 
 export function ShadcnDataTable({
@@ -149,13 +161,111 @@ export function ShadcnDataTable({
             </Select>
           )}
           <DropdownMenu>
-            <DropdownMenuTrigger asChild><Button variant="outline" size="sm"><IconLayoutColumns /><span className="hidden lg:inline">Customize Columns</span><span className="lg:hidden">Columns</span><IconChevronDown /></Button></DropdownMenuTrigger>
+            <DropdownMenuTrigger asChild><Button variant="outline" size="sm"><IconLayoutColumns /><span className="hidden lg:inline">Customize Columns</span><span className="hidden min-[360px]:inline lg:hidden">Columns</span><IconChevronDown /></Button></DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">{Object.entries(visible).filter(([key]) => key !== "division" || platform === "Codeforces").map(([key, value]) => <DropdownMenuCheckboxItem key={key} className="capitalize" checked={value} onCheckedChange={(checked) => setVisible((current) => ({ ...current, [key]: !!checked }))}>{key}</DropdownMenuCheckboxItem>)}</DropdownMenuContent>
           </DropdownMenu>
-        </div>
       </div>
+        </div>
         <TabsContent value={view} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
-          <div className="overflow-hidden rounded-lg border">
+          <div className="space-y-2 lg:hidden">
+              {rows.map((session) => {
+                const isOpen = openContest === session.sessionId
+                return (
+                  <Collapsible
+                    key={session.sessionId}
+                    open={isOpen}
+                    onOpenChange={(open) => setOpenContest(open ? session.sessionId : null)}
+                    className="overflow-hidden rounded-lg border bg-card"
+                  >
+                    <CollapsibleTrigger asChild>
+                      <button
+                        type="button"
+                        className="w-full px-3 py-3 text-left transition-colors hover:bg-muted/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+                        aria-label={`${session.contestId.toUpperCase()} contest details`}
+                      >
+                        <span className="flex min-w-0 items-center gap-2">
+                          <span className="flex min-w-0 flex-1 items-center gap-1.5 font-medium">
+                            <span className="truncate">{session.contestId.toUpperCase()}</span>
+                            <IconChevronDown className={`size-4 shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                          </span>
+                          {visible.type && <Badge variant="outline" className="shrink-0 capitalize">{session.type}</Badge>}
+                          <Badge variant="outline" className="shrink-0 px-1.5 text-muted-foreground">
+                            <IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />
+                            {session.metrics.solved}/{session.problems.length}
+                          </Badge>
+                          {visible.difficulty && (
+                            <span
+                              className="shrink-0 font-medium tabular-nums"
+                              style={{ color: platform === "Codeforces" ? cfRatingColor(session.metrics.highestSolvedDifficulty) : undefined }}
+                            >
+                              {session.metrics.highestSolvedDifficulty ?? "—"}
+                            </span>
+                          )}
+                        </span>
+                        <span className="mt-1.5 flex min-w-0 items-center gap-1 whitespace-nowrap text-xs text-muted-foreground">
+                          <span>{mobileDateFormatter.format(new Date(session.startAt))}</span>
+                          {showDivision && <><span aria-hidden="true">·</span><span>{compactContestDivision(session.contestTitle)}</span></>}
+                          {visible.duration && <><span aria-hidden="true">·</span><span className="font-mono">{contestLength(session.durationSecond).replaceAll(" ", "")}</span></>}
+                          {visible.time && <><span aria-hidden="true">·</span><span className="ml-auto font-mono tabular-nums">Last AC {duration(session)}</span></>}
+                        </span>
+                      </button>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <div className="border-t bg-muted/20">
+                        <div className="flex items-start justify-between gap-3 px-3 py-2.5">
+                          <div className="min-w-0">
+                            <div className="truncate text-sm font-medium">{session.contestTitle || session.contestId.toUpperCase()}</div>
+                            <div className="text-xs text-muted-foreground">{session.metrics.submissionCount} submissions · {session.metrics.failedSubmissions} failed</div>
+                          </div>
+                          {session.sourceUrl && (
+                            <Button variant="outline" size="icon-sm" className="shrink-0" asChild>
+                              <a href={session.sourceUrl} target="_blank" rel="noreferrer" aria-label="Open contest">
+                                <IconExternalLink />
+                              </a>
+                            </Button>
+                          )}
+                        </div>
+                        {visible.problems && (
+                          <div className="divide-y border-t">
+                            {session.problems.map((problem) => {
+                              const firstAc = firstAcSecond(problem)
+                              return (
+                                <div key={problem.problemId} className="space-y-1.5 px-3 py-2.5">
+                                  <div className="flex min-w-0 items-baseline gap-2 text-sm">
+                                    <span className="shrink-0 font-medium">{problem.index}</span>
+                                    {problem.title && <span className="min-w-0 truncate text-muted-foreground">{problem.title}</span>}
+                                    <span
+                                      className="ml-auto shrink-0 font-medium tabular-nums"
+                                      style={{ color: platform === "Codeforces" ? cfRatingColor(problem.difficulty) : undefined }}
+                                    >
+                                      {problem.difficulty ?? "—"}
+                                    </span>
+                                  </div>
+                                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+                                    <Badge variant={problem.solved ? "default" : problem.attempted ? "destructive" : "outline"}>
+                                      {problem.solved ? "AC" : problem.attempted ? "Unsolved" : "Not attempted"}
+                                    </Badge>
+                                    <span>First AC <span className="font-mono tabular-nums">{exactElapsed(firstAc)}</span></span>
+                                    <span>Wrong {problem.attempted ? wrongAttempts(problem) : "—"}</span>
+                                    <span>{problem.submissions.length} submissions</span>
+                                  </div>
+                                </div>
+                              )
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
+                )
+              })}
+              {rows.length === 0 && (
+                <div className="rounded-lg border px-4 py-12 text-center text-sm text-muted-foreground">
+                  No contests match this view.
+                </div>
+              )}
+            </div>
+          <div className="hidden overflow-hidden rounded-lg border lg:block">
             <Table className="min-w-[900px]">
               <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead className="text-center">Type</TableHead>}{showDivision && <TableHead>Division</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Solved</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right" title="Elapsed time from contest start to last accepted submission">Last AC</TableHead>}</TableRow></TableHeader>
               {rows.map((session) => {
