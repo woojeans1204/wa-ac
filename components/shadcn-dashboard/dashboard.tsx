@@ -112,7 +112,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent, 
                 <ShadcnUpsolveQueue history={history} platform={platform} />
               )}
               {activeSection === "growth" && (
-                <div className="grid gap-6 px-4 lg:px-6 @5xl/main:grid-cols-2">
+                <div className="grid gap-6 px-4 lg:px-6">
                   <ShadcnChartAreaInteractive history={history} platform={platform} />
                   <FrontierHistory history={history} platform={platform} />
                 </div>
