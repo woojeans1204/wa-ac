@@ -290,6 +290,7 @@ function ChartLegendContent({
 
   return (
     <div
+      data-slot="chart-legend"
       className={cn(
         "flex items-center justify-center gap-4",
         verticalAlign === "top" ? "pb-3" : "pt-3",
@@ -305,6 +306,7 @@ function ChartLegendContent({
           return (
             <div
               key={index}
+              data-slot="chart-legend-item"
               className={cn(
                 "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground"
               )}
@@ -313,13 +315,14 @@ function ChartLegendContent({
                 <itemConfig.icon />
               ) : (
                 <div
+                  data-slot="chart-legend-swatch"
                   className="h-2 w-2 shrink-0 rounded-[2px]"
                   style={{
                     backgroundColor: item.color,
                   }}
                 />
               )}
-              {itemConfig?.label}
+              <span data-slot="chart-legend-label">{itemConfig?.label}</span>
             </div>
           )
         })}

@@ -309,11 +309,61 @@ function buildHistory(
   return history
 }
 
+async function buildHistoryWithCatalog(
+  user: CfUser,
+  ratings: CfRating[],
+  submissions: CfSubmission[]
+) {
+  let catalog = await getCatalog()
+  const submissionContestIds = new Set(
+    submissions
+      .map((submission) => submission.contestId ?? submission.problem.contestId)
+      .filter((contestId): contestId is number => contestId != null && contestId < 100000)
+  )
+  if (catalogPredatesFinishedContest(catalog, submissionContestIds)) {
+    catalog = await getCatalog(true)
+  }
+  const hasGym = submissions.some((submission) =>
+    (submission.contestId ?? submission.problem.contestId ?? 0) >= 100000
+  )
+  const gyms = hasGym ? await getGymContests().catch(() => []) : []
+  return buildHistory(user, ratings, submissions, {
+    ...catalog,
+    contests: [...catalog.contests, ...gyms],
+  })
+}
+
+export async function POST(request: Request) {
+  try {
+    const payload = await request.json() as {
+      user?: CfUser
+      ratings?: CfRating[]
+      submissions?: CfSubmission[]
+    }
+    if (!payload.user?.handle || !Array.isArray(payload.ratings) || !Array.isArray(payload.submissions)) {
+      return Response.json({ error: "Invalid Codeforces data." }, { status: 400 })
+    }
+    const history = await buildHistoryWithCatalog(payload.user, payload.ratings, payload.submissions)
+    return Response.json({ history }, { headers: { "Cache-Control": "no-store" } })
+  } catch (cause) {
+    const timedOut = cause instanceof Error && (
+      cause.name === "TimeoutError" || cause.name === "AbortError"
+    )
+    return Response.json(
+      {
+        error: timedOut
+          ? "Codeforces catalog took too long to respond. Please try again."
+          : cause instanceof Error
+            ? cause.message
+            : "Could not prepare Codeforces history.",
+      },
+      { status: timedOut ? 504 : 502 }
+    )
+  }
+}
+
 export async function GET(request: Request) {
   const searchParams = new URL(request.url).searchParams
-  const handle = searchParams.get("handle")?.trim()
-  const wantsProfile = searchParams.get("profile") === "1"
-  const wantsRandom = searchParams.get("random") === "1"
   const wantsRandomHandle = searchParams.get("randomHandle") === "1"
   const wantsWarmup = searchParams.get("warm") === "1"
   if (wantsWarmup) {
@@ -324,62 +374,12 @@ export async function GET(request: Request) {
       return Response.json({ ready: false }, { status: 502, headers: { "Cache-Control": "no-store" } })
     }
   }
-  if ((!handle && !wantsRandom && !wantsRandomHandle) || (handle?.length ?? 0) > 64) {
-    return Response.json({ error: "Enter a valid Codeforces handle." }, { status: 400 })
-  }
+  if (!wantsRandomHandle) return Response.json({ error: "Unsupported request." }, { status: 400 })
   try {
-    if (wantsRandomHandle) {
-      const user = await getRandomUser()
-      return Response.json(
-        { handle: user.handle },
-        { headers: { "Cache-Control": "no-store" } }
-      )
-    }
-
-    if (wantsProfile && handle) {
-      const user = (await codeforcesRequest<CfUser[]>("user.info", { handles: handle }))[0]
-      if (!user) throw new Error("Codeforces handle not found.")
-      return Response.json({
-        profile: {
-          handle: user.handle,
-          avatarUrl: (user.avatar || user.titlePhoto || "").replace(/^http:\/\//, "https://") || null,
-          avatarFallbackUrl: (user.titlePhoto || "").replace(/^http:\/\//, "https://") || null,
-        },
-      }, { headers: { "Cache-Control": "public, max-age=300, s-maxage=86400" } })
-    }
-
-    const requestedUser = wantsRandom ? await getRandomUser() : { handle: handle! }
-    const submissions = await codeforcesRequest<CfSubmission[]>("user.status", {
-      handle: requestedUser.handle,
-      from: "1",
-      count: "10000",
-    })
-    const canonicalHandle = submissions[0]?.author.members?.[0]?.handle ?? requestedUser.handle
-    const ratings = await codeforcesRequest<CfRating[]>("user.rating", { handle: canonicalHandle })
-    const user: CfUser = {
-      handle: canonicalHandle,
-      rating: ratings.at(-1)?.newRating,
-      maxRating: ratings.length ? Math.max(...ratings.map((rating) => rating.newRating)) : undefined,
-    }
-    let catalog = await getCatalog()
-    const submissionContestIds = new Set(
-      submissions
-        .map((submission) => submission.contestId ?? submission.problem.contestId)
-        .filter((contestId): contestId is number => contestId != null && contestId < 100000)
-    )
-    if (catalogPredatesFinishedContest(catalog, submissionContestIds)) {
-      catalog = await getCatalog(true)
-    }
-    const hasGym = submissions.some((submission) =>
-      (submission.contestId ?? submission.problem.contestId ?? 0) >= 100000
-    )
-    const gyms = hasGym ? await getGymContests().catch(() => []) : []
+    const user = await getRandomUser()
     return Response.json(
-      { history: buildHistory(user, ratings, submissions, {
-        ...catalog,
-        contests: [...catalog.contests, ...gyms],
-      }) },
-      { headers: { "Cache-Control": wantsRandom ? "no-store" : "public, max-age=60, s-maxage=300" } }
+      { handle: user.handle },
+      { headers: { "Cache-Control": "no-store" } }
     )
   } catch (cause) {
     const timedOut = cause instanceof Error && (

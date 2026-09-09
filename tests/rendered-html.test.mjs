@@ -85,6 +85,19 @@ test("profile header keeps its compact layout through medium-width screens", asy
   assert.doesNotMatch(source, /sm:flex sm:flex-row/);
 });
 
+test("chart image export includes the rendered legend labels", async () => {
+  const [chart, exporter] = await Promise.all([
+    readFile(new URL("../components/ui/chart.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../lib/share-chart.ts", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(chart, /data-slot="chart-legend-item"/);
+  assert.match(chart, /data-slot="chart-legend-swatch"/);
+  assert.match(chart, /data-slot="chart-legend-label"/);
+  assert.match(exporter, /function appendChartLegend/);
+  assert.match(exporter, /appendChartLegend\(exportSvg, chart, bounds/);
+});
+
 test("upsolve supports numeric difficulty, tags, attempt state, and contest type", async () => {
   const source = await readFile(
     new URL(
@@ -99,6 +112,8 @@ test("upsolve supports numeric difficulty, tags, attempt state, and contest type
   assert.match(source, /<Slider/);
   assert.match(source, /minStepsBetweenThumbs=\{1\}/);
   assert.match(source, /Any tag/);
+  assert.match(source, /<CollapsibleContent[\s\S]*Problem tag[\s\S]*Any tag/);
+  assert.match(source, /moreFilterCount/);
   assert.match(source, /Any attempt/);
   assert.match(source, /Only attempted/);
   assert.match(source, /useState<AttemptFilter>\("attempted"\)/);
@@ -136,5 +151,22 @@ test("random search resolves the handle before loading its history", async () =>
   assert.match(route, /\{ handle: user\.handle \}/);
   assert.match(search, /Choosing a random player…/);
   assert.match(search, /setHandle\(nextHandle\)/);
-  assert.match(search, /loadPlayer\(`\/api\/codeforces\?handle=/);
+  assert.match(search, /loadPlayer\(nextHandle\)/);
+});
+
+test("Codeforces user-specific APIs run in the browser", async () => {
+  const [route, search] = await Promise.all([
+    readFile(new URL("../app/api/codeforces/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../components/codeforces/codeforces-search.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(search, /https:\/\/codeforces\.com\/api\/\$\{method\}/);
+  assert.match(search, /directCodeforcesRequest<CfUser\[]>\("user\.info"/);
+  assert.match(search, /directCodeforcesRequest<unknown\[]>\("user\.status"/);
+  assert.match(search, /directCodeforcesRequest<unknown\[]>\("user\.rating"/);
+  assert.match(search, /method: "POST"/);
+  assert.match(route, /export async function POST/);
+  assert.match(route, /buildHistoryWithCatalog/);
+  assert.doesNotMatch(route, /codeforcesRequest<CfSubmission\[]>\("user\.status"/);
+  assert.doesNotMatch(route, /codeforcesRequest<CfRating\[]>\("user\.rating"/);
 });

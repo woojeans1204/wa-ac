@@ -12,10 +12,39 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { SavedAccounts } from "@/components/saved-accounts"
 import { recordSavedAccount } from "@/lib/saved-accounts"
 
-type CodeforcesProfile = {
+type CfResponse<T> = { status: "OK"; result: T } | { status: "FAILED"; comment?: string }
+type CfUser = {
   handle: string
-  avatarUrl?: string | null
-  avatarFallbackUrl?: string | null
+  rating?: number
+  maxRating?: number
+  avatar?: string
+  titlePhoto?: string
+}
+
+let directRequestQueue: Promise<void> = Promise.resolve()
+let directNextAllowedAt = 0
+
+async function directCodeforcesRequest<T>(method: string, params: Record<string, string>) {
+  const task = directRequestQueue.then(async () => {
+    const wait = Math.max(0, directNextAllowedAt - Date.now())
+    if (wait) await new Promise((resolve) => window.setTimeout(resolve, wait))
+
+    const url = new URL(`https://codeforces.com/api/${method}`)
+    Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value))
+    const response = await fetch(url, { signal: AbortSignal.timeout(15_000) })
+    directNextAllowedAt = Date.now() + 2_100
+    const payload = await response.json().catch(() => null) as CfResponse<T> | null
+    if (!payload || payload.status !== "OK") {
+      const comment = payload?.status === "FAILED" ? payload.comment : undefined
+      if (comment && /user with handle .* not found/i.test(comment)) {
+        throw new Error("User not found.")
+      }
+      throw new Error(comment || `Codeforces returned HTTP ${response.status}.`)
+    }
+    return payload.result
+  })
+  directRequestQueue = task.then(() => undefined, () => undefined)
+  return task
 }
 
 export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: string }) {
@@ -25,13 +54,30 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
   const [loadingHandle, setLoadingHandle] = React.useState<string | null>(null)
   const [error, setError] = React.useState("")
 
-  const loadPlayer = React.useCallback(async (url: string, requestedHandle?: string) => {
+  const loadPlayer = React.useCallback(async (requestedHandle: string) => {
     setHistory(null)
     setLoading(true)
-    setLoadingHandle(requestedHandle?.trim() || null)
+    setLoadingHandle(requestedHandle.trim() || null)
     setError("")
     try {
-      const response = await fetch(url, { signal: AbortSignal.timeout(35_000) })
+      const users = await directCodeforcesRequest<CfUser[]>("user.info", { handles: requestedHandle })
+      const user = users[0]
+      if (!user) throw new Error("User not found.")
+      setHandle(user.handle)
+      setLoadingHandle(user.handle)
+
+      const submissions = await directCodeforcesRequest<unknown[]>("user.status", {
+        handle: user.handle,
+        from: "1",
+        count: "10000",
+      })
+      const ratings = await directCodeforcesRequest<unknown[]>("user.rating", { handle: user.handle })
+      const response = await fetch("/api/codeforces", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user, ratings, submissions }),
+        signal: AbortSignal.timeout(30_000),
+      })
       const contentType = response.headers.get("content-type") ?? ""
       if (!contentType.includes("application/json")) {
         throw new Error(
@@ -71,38 +117,10 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
     const query = initialHandle.trim()
     if (!query) return
     const timeout = window.setTimeout(() => {
-      void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`, query)
+      void loadPlayer(query)
     }, 0)
     return () => window.clearTimeout(timeout)
   }, [initialHandle, loadPlayer])
-
-  const profileHandle = history?.user
-  const profileAvatarUrl = history?.avatarUrl
-  React.useEffect(() => {
-    if (!profileHandle || profileAvatarUrl) return
-    const controller = new AbortController()
-    void fetch(`/api/codeforces?profile=1&handle=${encodeURIComponent(profileHandle)}`, {
-      signal: controller.signal,
-    })
-      .then(async (response) => {
-        if (!response.ok) return null
-        return response.json() as Promise<{ profile?: CodeforcesProfile }>
-      })
-      .then((payload) => {
-        const profile = payload?.profile
-        if (!profile) return
-        setHistory((current) => current?.user.toLowerCase() === profile.handle.toLowerCase()
-          ? {
-              ...current,
-              user: profile.handle,
-              avatarUrl: profile.avatarUrl ?? null,
-              avatarFallbackUrl: profile.avatarFallbackUrl ?? null,
-            }
-          : current)
-      })
-      .catch(() => undefined)
-    return () => controller.abort()
-  }, [profileHandle, profileAvatarUrl])
 
   const search = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -114,7 +132,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
         "",
         `/codeforces/${encodeURIComponent(query)}${window.location.hash || "#dashboard"}`
       )
-      void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`, query)
+      void loadPlayer(query)
     }
   }
 
@@ -141,7 +159,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
         "",
         `/codeforces/${encodeURIComponent(nextHandle)}${window.location.hash || "#dashboard"}`
       )
-      await loadPlayer(`/api/codeforces?handle=${encodeURIComponent(nextHandle)}`, nextHandle)
+      await loadPlayer(nextHandle)
     } catch (cause) {
       const timedOut = cause instanceof Error && (
         cause.name === "TimeoutError" || cause.name === "AbortError"

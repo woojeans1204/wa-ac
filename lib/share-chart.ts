@@ -45,6 +45,49 @@ function textNode(value: string, x: number, y: number, size: number, color: stri
   return text
 }
 
+function appendChartLegend(
+  exportSvg: SVGSVGElement,
+  chart: HTMLElement,
+  sourceBounds: DOMRect,
+  offsetX: number,
+  offsetY: number,
+  scale: number
+) {
+  const items = chart.querySelectorAll<HTMLElement>("[data-slot=chart-legend-item]")
+  items.forEach((item) => {
+    const swatch = item.querySelector<HTMLElement>("[data-slot=chart-legend-swatch]")
+    const label = item.querySelector<HTMLElement>("[data-slot=chart-legend-label]")
+    if (!label) return
+
+    if (swatch) {
+      const bounds = swatch.getBoundingClientRect()
+      const style = getComputedStyle(swatch)
+      const rect = document.createElementNS(SVG_NS, "rect")
+      rect.setAttribute("x", String(offsetX + (bounds.left - sourceBounds.left) * scale))
+      rect.setAttribute("y", String(offsetY + (bounds.top - sourceBounds.top) * scale))
+      rect.setAttribute("width", String(bounds.width * scale))
+      rect.setAttribute("height", String(bounds.height * scale))
+      rect.setAttribute("rx", String(2 * scale))
+      rect.setAttribute("fill", style.backgroundColor)
+      exportSvg.append(rect)
+    }
+
+    const bounds = label.getBoundingClientRect()
+    const style = getComputedStyle(label)
+    const fontSize = Number.parseFloat(style.fontSize) * scale
+    const text = textNode(
+      label.textContent ?? "",
+      offsetX + (bounds.left - sourceBounds.left) * scale,
+      offsetY + (bounds.top - sourceBounds.top) * scale + fontSize,
+      fontSize,
+      style.color,
+      style.fontWeight
+    )
+    text.setAttribute("font-family", style.fontFamily)
+    exportSvg.append(text)
+  })
+}
+
 async function chartPng(chart: HTMLElement, title: string, description: string) {
   const source = chart.querySelector<SVGSVGElement>("svg.recharts-surface")
   if (!source) throw new Error("Chart is not ready.")
@@ -86,6 +129,7 @@ async function chartPng(chart: HTMLElement, title: string, description: string) 
   clone.setAttribute("width", String(chartWidth))
   clone.setAttribute("height", String(chartHeight))
   exportSvg.append(clone)
+  appendChartLegend(exportSvg, chart, bounds, 40, 112, chartWidth / bounds.width)
 
   const svgBlob = new Blob([new XMLSerializer().serializeToString(exportSvg)], {
     type: "image/svg+xml;charset=utf-8",

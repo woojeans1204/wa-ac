@@ -127,6 +127,7 @@ export function ShadcnUpsolveQueue({
     || timeRange !== "all"
     || contestTypeFilter !== "all"
     || sortOrder !== "latest"
+  const moreFilterCount = Number(tagFilter !== "any") + Number(contestTypeFilter !== "all")
 
   const resetFilters = () => {
     setDifficultyRange([MIN_DIFFICULTY, MAX_DIFFICULTY])
@@ -188,22 +189,6 @@ export function ShadcnUpsolveQueue({
                 {difficultyRange[1]}
               </span>
             </div>
-            <div>
-              <Select value={tagFilter} onValueChange={(value) => {
-                setTagFilter(value)
-                resetVisibleContests()
-              }}>
-                <SelectTrigger className="w-32" size="sm" aria-label="Problem tag">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="any">Any tag</SelectItem>
-                  {problemTags.map((tag) => (
-                    <SelectItem key={tag} value={tag}>{tag}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
             <Select value={attemptFilter} onValueChange={(value) => {
                 setAttemptFilter(value as AttemptFilter)
                 resetVisibleContests()
@@ -222,7 +207,7 @@ export function ShadcnUpsolveQueue({
               <CollapsibleTrigger asChild>
                 <Button variant="ghost" size="sm">
                   <IconAdjustmentsHorizontal />
-                  More filters{contestTypeFilter !== "all" ? " · 1" : ""}
+                  More filters{moreFilterCount > 0 ? ` · ${moreFilterCount}` : ""}
                 </Button>
               </CollapsibleTrigger>
               {hasActiveFilters && (
@@ -262,7 +247,24 @@ export function ShadcnUpsolveQueue({
             </div>
           </div>
           <CollapsibleContent className="order-4 lg:col-span-2">
-            <div className="mt-2 rounded-lg border bg-muted/20 p-3">
+            <div className="mt-2 grid grid-cols-1 gap-3 rounded-lg border bg-muted/20 p-3 sm:grid-cols-2">
+              <div className="min-w-0 space-y-1.5">
+                <p className="text-[13px] font-medium text-muted-foreground">Problem tag</p>
+                <Select value={tagFilter} onValueChange={(value) => {
+                  setTagFilter(value)
+                  resetVisibleContests()
+                }}>
+                  <SelectTrigger className="w-full sm:w-48" size="sm" aria-label="Problem tag">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="any">Any tag</SelectItem>
+                    {problemTags.map((tag) => (
+                      <SelectItem key={tag} value={tag}>{tag}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
               <div className="min-w-0 space-y-1.5">
                 <p className="text-[13px] font-medium text-muted-foreground">Contest type</p>
                 <Select value={contestTypeFilter} onValueChange={(value) => {
