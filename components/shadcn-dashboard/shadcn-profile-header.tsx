@@ -114,7 +114,7 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
       <CardHeader className="relative grid grid-cols-[auto_1fr] items-center gap-3 md:flex md:flex-row">
         <ProfileAvatar key={`${history.user}:${history.avatarUrl}:${history.avatarFallbackUrl}`} history={history} platform={platform} />
         <div className="min-w-0 flex-1">
-          <CardDescription className="flex items-center gap-2">
+          <CardDescription className="flex items-center gap-2 text-[15px]">
             <Badge variant="outline">{platform}</Badge>
             {history.summary.submissions.toLocaleString()} submissions
           </CardDescription>
@@ -123,8 +123,8 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
         <div className="col-span-2 grid w-full grid-cols-4 gap-3 md:w-auto">
           {metrics.map((metric) => (
             <div key={metric.label} className="min-w-16">
-              <p className="text-xs text-muted-foreground">{metric.label}</p>
-              <p className="font-medium tabular-nums" style={{ color: platform === "Codeforces" && (metric.label === "Rating" || metric.label === "Peak") ? cfRatingColor(metric.label === "Rating" ? currentRating : peakRating) : undefined }}>{metric.value}</p>
+              <p className="text-[13px] text-muted-foreground">{metric.label}</p>
+              <p className="text-base font-medium tabular-nums" style={{ color: platform === "Codeforces" && (metric.label === "Rating" || metric.label === "Peak") ? cfRatingColor(metric.label === "Rating" ? currentRating : peakRating) : undefined }}>{metric.value}</p>
             </div>
           ))}
         </div>

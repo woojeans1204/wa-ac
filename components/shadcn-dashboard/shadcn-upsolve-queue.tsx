@@ -154,17 +154,17 @@ export function ShadcnUpsolveQueue({
             <TabsTrigger value="completed">Completed <Badge variant="secondary">{completed}</Badge></TabsTrigger>
             <TabsTrigger value="all">All <Badge variant="secondary">{eligible.length}</Badge></TabsTrigger>
           </TabsList>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-[15px] text-muted-foreground">
             {rows.length} {rows.length === 1 ? "problem" : "problems"} in {groups.length} {groups.length === 1 ? "contest" : "contests"}
           </p>
         </div>
 
         <Collapsible className="grid grid-cols-1 gap-2 lg:grid-cols-[1fr_auto]">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-muted-foreground">Difficulty</span>
+            <span className="text-[15px] text-muted-foreground">Difficulty</span>
             <div className="flex h-7 w-56 items-center gap-2 rounded-lg border border-input bg-transparent px-2.5 dark:bg-input/30" title="Difficulty range">
               <span
-                className="w-8 text-right text-xs font-medium tabular-nums"
+                className="w-8 text-right text-[13px] font-medium tabular-nums"
                 style={{ color: cfRatingColor(difficultyRange[0]) }}
               >
                 {difficultyRange[0]}
@@ -182,7 +182,7 @@ export function ShadcnUpsolveQueue({
                 className="min-w-24"
               />
               <span
-                className="w-8 text-xs font-medium tabular-nums"
+                className="w-8 text-[13px] font-medium tabular-nums"
                 style={{ color: cfRatingColor(difficultyRange[1]) }}
               >
                 {difficultyRange[1]}
@@ -264,7 +264,7 @@ export function ShadcnUpsolveQueue({
           <CollapsibleContent className="order-4 lg:col-span-2">
             <div className="mt-2 rounded-lg border bg-muted/20 p-3">
               <div className="min-w-0 space-y-1.5">
-                <p className="text-xs font-medium text-muted-foreground">Contest type</p>
+                <p className="text-[13px] font-medium text-muted-foreground">Contest type</p>
                 <Select value={contestTypeFilter} onValueChange={(value) => {
                   setContestTypeFilter(value as ContestTypeFilter)
                   resetVisibleContests()
@@ -287,22 +287,22 @@ export function ShadcnUpsolveQueue({
         <section key={group[0].sourceSessionId} className="overflow-hidden rounded-lg border">
           <div className="flex flex-wrap items-center justify-between gap-2 border-b bg-muted/40 px-4 py-3">
             <div>
-              <h3 className="text-sm font-medium">{group[0].contestTitle || group[0].contestId.toUpperCase()}</h3>
-              <p className="text-xs text-muted-foreground">{dateFormatter.format(new Date(group[0].contestStartAt))} · {history.sessions.find((session) => session.sessionId === group[0].sourceSessionId)?.type}</p>
+              <h3 className="text-[15px] font-medium">{group[0].contestTitle || group[0].contestId.toUpperCase()}</h3>
+              <p className="text-[13px] text-muted-foreground">{dateFormatter.format(new Date(group[0].contestStartAt))} · {history.sessions.find((session) => session.sessionId === group[0].sourceSessionId)?.type}</p>
             </div>
-            <span className="text-sm text-muted-foreground">
+            <span className="text-[15px] text-muted-foreground">
               {group.length} {group.length === 1 ? "problem" : "problems"}
             </span>
           </div>
           <div className="divide-y lg:hidden">
             {group.map((item) => (
               <div key={item.id} className="space-y-2 px-4 py-3">
-                <a href={item.problemUrl} target="_blank" rel="noreferrer" className="flex items-start gap-2 text-sm font-medium">
+                <a href={item.problemUrl} target="_blank" rel="noreferrer" className="flex items-start gap-2 text-[15px] font-medium">
                   <span className="shrink-0 text-muted-foreground">{item.problemIndex}</span>
                   <span className="min-w-0 break-words">{item.problemTitle || "Untitled problem"}</span>
                   <IconExternalLink className="ml-auto size-4 shrink-0 text-muted-foreground" />
                 </a>
-                <div className="flex flex-wrap items-center gap-2 text-sm">
+                <div className="flex flex-wrap items-center gap-2 text-[15px]">
                   <span className="font-medium tabular-nums" style={{ color: platform === "Codeforces" && item.difficulty != null ? cfRatingColor(item.difficulty) : undefined }}>{item.difficulty ?? "Unrated"}</span>
                   <Badge variant={item.attemptedInContest ? "destructive" : "outline"}>{item.attemptedInContest ? "Attempted" : "Not attempted"}</Badge>
                   <Badge variant={item.completed ? "default" : "secondary"}>{item.completed ? "Solved" : "Pending"}</Badge>
@@ -332,8 +332,8 @@ export function ShadcnUpsolveQueue({
               {group.map((item) => (
                 <TableRow key={item.id}>
                   <TableCell className="font-medium">{item.problemIndex}</TableCell>
-                  <TableCell className="min-w-0">
-                    <div className="group/problem inline-flex min-w-0 max-w-full items-center gap-1.5">
+                  <TableCell className="group/problem min-w-0">
+                    <div className="inline-flex min-w-0 max-w-full items-center gap-1.5">
                       <span className="min-w-0 truncate text-muted-foreground">
                         {item.problemTitle || "Untitled problem"}
                       </span>

@@ -69,7 +69,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent, 
                     <TabsTrigger
                       key={section.id}
                       value={section.id}
-                      className="min-w-0 flex-1 px-1 text-xs sm:flex-none sm:px-4 sm:text-sm"
+                      className="min-w-0 flex-1 px-1 text-sm sm:flex-none sm:px-4 sm:text-[15px]"
                     >
                       {section.label}
                     </TabsTrigger>
@@ -97,7 +97,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent, 
                 </>
               )}
               {activeSection === "match-history" && (
-                <div className="mx-auto w-full max-w-[1080px]">
+                <div className="w-full">
                   <ShadcnDataTable
                     key={`${platform}:${history.user}:history`}
                     data={history.sessions.filter(

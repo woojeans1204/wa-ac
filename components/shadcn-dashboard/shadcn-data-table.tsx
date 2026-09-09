@@ -202,7 +202,7 @@ export function ShadcnDataTable({
                             </span>
                           )}
                         </span>
-                        <span className="mt-1.5 flex min-w-0 items-center gap-1 whitespace-nowrap text-xs text-muted-foreground">
+                        <span className="mt-1.5 flex min-w-0 items-center gap-1 whitespace-nowrap text-[13px] text-muted-foreground">
                           <span>{mobileDateFormatter.format(new Date(session.startAt))}</span>
                           {showDivision && <><span aria-hidden="true">·</span><span>{compactContestDivision(session.contestTitle)}</span></>}
                           {visible.duration && <><span aria-hidden="true">·</span><span className="font-mono">{contestLength(session.durationSecond).replaceAll(" ", "")}</span></>}
@@ -214,8 +214,8 @@ export function ShadcnDataTable({
                       <div className="border-t bg-muted/20">
                         <div className="flex items-start justify-between gap-3 px-3 py-2.5">
                           <div className="min-w-0">
-                            <div className="truncate text-sm font-medium">{session.contestTitle || session.contestId.toUpperCase()}</div>
-                            <div className="text-xs text-muted-foreground">{session.metrics.submissionCount} submissions · {session.metrics.failedSubmissions} failed</div>
+                            <div className="truncate text-[15px] font-medium">{session.contestTitle || session.contestId.toUpperCase()}</div>
+                            <div className="text-[13px] text-muted-foreground">{session.metrics.submissionCount} submissions · {session.metrics.failedSubmissions} failed</div>
                           </div>
                           {session.sourceUrl && (
                             <Button variant="outline" size="icon-sm" className="shrink-0" asChild>
@@ -231,7 +231,7 @@ export function ShadcnDataTable({
                               const firstAc = firstAcSecond(problem)
                               return (
                                 <div key={problem.problemId} className="space-y-1.5 px-3 py-2.5">
-                                  <div className="flex min-w-0 items-baseline gap-2 text-sm">
+                                  <div className="flex min-w-0 items-baseline gap-2 text-[15px]">
                                     <span className="shrink-0 font-medium">{problem.index}</span>
                                     {problem.title && <span className="min-w-0 truncate text-muted-foreground">{problem.title}</span>}
                                     <span
@@ -241,7 +241,7 @@ export function ShadcnDataTable({
                                       {problem.difficulty ?? "—"}
                                     </span>
                                   </div>
-                                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+                                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-muted-foreground">
                                     <Badge variant={problem.solved ? "default" : problem.attempted ? "destructive" : "outline"}>
                                       {problem.solved ? "AC" : problem.attempted ? "Unsolved" : "Not attempted"}
                                     </Badge>
@@ -307,7 +307,7 @@ export function ShadcnDataTable({
                                     className="font-mono font-normal tabular-nums"
                                   >
                                     <span>{problem.index}</span>
-                                    <span className="text-[10px] leading-none opacity-75">
+                                    <span className="text-xs leading-none opacity-75">
                                       {firstAc != null
                                         ? compactElapsed(firstAc)
                                         : problem.attempted
