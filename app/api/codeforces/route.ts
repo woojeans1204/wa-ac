@@ -314,6 +314,7 @@ export async function GET(request: Request) {
   const handle = searchParams.get("handle")?.trim()
   const wantsProfile = searchParams.get("profile") === "1"
   const wantsRandom = searchParams.get("random") === "1"
+  const wantsRandomHandle = searchParams.get("randomHandle") === "1"
   const wantsWarmup = searchParams.get("warm") === "1"
   if (wantsWarmup) {
     try {
@@ -323,10 +324,18 @@ export async function GET(request: Request) {
       return Response.json({ ready: false }, { status: 502, headers: { "Cache-Control": "no-store" } })
     }
   }
-  if ((!handle && !wantsRandom) || (handle?.length ?? 0) > 64) {
+  if ((!handle && !wantsRandom && !wantsRandomHandle) || (handle?.length ?? 0) > 64) {
     return Response.json({ error: "Enter a valid Codeforces handle." }, { status: 400 })
   }
   try {
+    if (wantsRandomHandle) {
+      const user = await getRandomUser()
+      return Response.json(
+        { handle: user.handle },
+        { headers: { "Cache-Control": "no-store" } }
+      )
+    }
+
     if (wantsProfile && handle) {
       const user = (await codeforcesRequest<CfUser[]>("user.info", { handles: handle }))[0]
       if (!user) throw new Error("Codeforces handle not found.")

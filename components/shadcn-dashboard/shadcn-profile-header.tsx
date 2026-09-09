@@ -111,7 +111,7 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
 
   return (
     <Card size="sm" className="mx-4 lg:mx-6" data-hover-actions>
-      <CardHeader className="relative grid grid-cols-[auto_1fr] items-center gap-3 sm:flex sm:flex-row">
+      <CardHeader className="relative grid grid-cols-[auto_1fr] items-center gap-3 md:flex md:flex-row">
         <ProfileAvatar key={`${history.user}:${history.avatarUrl}:${history.avatarFallbackUrl}`} history={history} platform={platform} />
         <div className="min-w-0 flex-1">
           <CardDescription className="flex items-center gap-2">
@@ -120,7 +120,7 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
           </CardDescription>
           <CardTitle className="truncate text-lg">{history.user}</CardTitle>
         </div>
-        <div className="col-span-2 grid w-full grid-cols-4 gap-3 sm:w-auto">
+        <div className="col-span-2 grid w-full grid-cols-4 gap-3 md:w-auto">
           {metrics.map((metric) => (
             <div key={metric.label} className="min-w-16">
               <p className="text-xs text-muted-foreground">{metric.label}</p>
@@ -132,7 +132,7 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
           type="button"
           variant="outline"
           size="icon-sm"
-          className="absolute right-3 top-0 transition-opacity sm:static sm:self-center"
+          className="absolute right-3 top-0 transition-opacity md:static md:self-center"
           data-hover-action
           aria-label={pinned ? `Unpin ${history.user}` : `Pin ${history.user}`}
           title={pinned ? "Unpin account" : "Pin account"}

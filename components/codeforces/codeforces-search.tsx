@@ -22,11 +22,13 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
   const [handle, setHandle] = React.useState(initialHandle)
   const [history, setHistory] = React.useState<History | null>(null)
   const [loading, setLoading] = React.useState(false)
+  const [loadingHandle, setLoadingHandle] = React.useState<string | null>(null)
   const [error, setError] = React.useState("")
 
-  const loadPlayer = React.useCallback(async (url: string) => {
+  const loadPlayer = React.useCallback(async (url: string, requestedHandle?: string) => {
     setHistory(null)
     setLoading(true)
+    setLoadingHandle(requestedHandle?.trim() || null)
     setError("")
     try {
       const response = await fetch(url, { signal: AbortSignal.timeout(35_000) })
@@ -42,6 +44,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
       if (!response.ok || !payload.history) throw new Error(payload.error || "Could not load this handle.")
       setHistory(payload.history)
       setHandle(payload.history.user)
+      setLoadingHandle(payload.history.user)
       recordSavedAccount("Codeforces", payload.history.user)
       window.history.replaceState(
         null,
@@ -68,7 +71,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
     const query = initialHandle.trim()
     if (!query) return
     const timeout = window.setTimeout(() => {
-      void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`)
+      void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`, query)
     }, 0)
     return () => window.clearTimeout(timeout)
   }, [initialHandle, loadPlayer])
@@ -111,12 +114,47 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
         "",
         `/codeforces/${encodeURIComponent(query)}${window.location.hash || "#dashboard"}`
       )
-      void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`)
+      void loadPlayer(`/api/codeforces?handle=${encodeURIComponent(query)}`, query)
     }
   }
 
-  const randomPlayer = () => {
-    void loadPlayer(`/api/codeforces?random=1&t=${Date.now()}`)
+  const randomPlayer = async () => {
+    if (loading) return
+    setHistory(null)
+    setHandle("")
+    setLoadingHandle(null)
+    setLoading(true)
+    setError("")
+    try {
+      const response = await fetch(`/api/codeforces?randomHandle=1&t=${Date.now()}`, {
+        signal: AbortSignal.timeout(20_000),
+      })
+      const payload = await response.json() as { handle?: string; error?: string }
+      const nextHandle = payload.handle?.trim()
+      if (!response.ok || !nextHandle) {
+        throw new Error(payload.error || "Could not choose a random player.")
+      }
+      setHandle(nextHandle)
+      setLoadingHandle(nextHandle)
+      window.history.replaceState(
+        null,
+        "",
+        `/codeforces/${encodeURIComponent(nextHandle)}${window.location.hash || "#dashboard"}`
+      )
+      await loadPlayer(`/api/codeforces?handle=${encodeURIComponent(nextHandle)}`, nextHandle)
+    } catch (cause) {
+      const timedOut = cause instanceof Error && (
+        cause.name === "TimeoutError" || cause.name === "AbortError"
+      )
+      setError(
+        timedOut
+          ? "Choosing a random player took too long. Please try again."
+          : cause instanceof Error
+            ? cause.message
+            : "Could not choose a random player."
+      )
+      setLoading(false)
+    }
   }
 
   const searchForm = (
@@ -145,7 +183,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
   }
 
   if (loading) {
-    const loadingHandle = handle.trim() || "player"
+    const pendingHandle = loadingHandle || handle.trim()
     return (
       <div className="min-h-screen bg-background">
         <ShadcnSiteHeader>{searchForm}</ShadcnSiteHeader>
@@ -157,9 +195,13 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
                 <div className="min-w-0 space-y-2">
                   <CardTitle className="flex items-center gap-2">
                     <IconLoader2 className="size-4 animate-spin" />
-                    <span className="truncate">Loading {loadingHandle}…</span>
+                    <span className="truncate">
+                      {pendingHandle ? `Loading ${pendingHandle}…` : "Choosing a random player…"}
+                    </span>
                   </CardTitle>
-                  <CardDescription>Fetching public Codeforces history.</CardDescription>
+                  <CardDescription>
+                    {pendingHandle ? "Fetching public Codeforces history." : "Picking an active Codeforces handle."}
+                  </CardDescription>
                 </div>
               </div>
               <div className="grid grid-cols-4 gap-4">

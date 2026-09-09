@@ -294,7 +294,7 @@ export function ShadcnUpsolveQueue({
               {group.length} {group.length === 1 ? "problem" : "problems"}
             </span>
           </div>
-          <div className="divide-y sm:hidden">
+          <div className="divide-y lg:hidden">
             {group.map((item) => (
               <div key={item.id} className="space-y-2 px-4 py-3">
                 <a href={item.problemUrl} target="_blank" rel="noreferrer" className="flex items-start gap-2 text-sm font-medium">
@@ -310,7 +310,7 @@ export function ShadcnUpsolveQueue({
               </div>
             ))}
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden lg:block">
           <Table className="min-w-[720px] table-fixed">
             <colgroup>
               <col className="w-20" />

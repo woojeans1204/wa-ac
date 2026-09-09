@@ -74,6 +74,17 @@ test("match history includes pagination and stale-state guards", async () => {
   assert.match(dashboard, /key=\{`\$\{platform\}:\$\{history\.user\}:history`\}/);
 });
 
+test("profile header keeps its compact layout through medium-width screens", async () => {
+  const source = await readFile(
+    new URL("../components/shadcn-dashboard/shadcn-profile-header.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(source, /md:flex md:flex-row/);
+  assert.match(source, /grid-cols-4 gap-3 md:w-auto/);
+  assert.doesNotMatch(source, /sm:flex sm:flex-row/);
+});
+
 test("upsolve supports numeric difficulty, tags, attempt state, and contest type", async () => {
   const source = await readFile(
     new URL(
@@ -91,6 +102,8 @@ test("upsolve supports numeric difficulty, tags, attempt state, and contest type
   assert.match(source, /Any attempt/);
   assert.match(source, /Only attempted/);
   assert.match(source, /useState<AttemptFilter>\("attempted"\)/);
+  assert.match(source, /divide-y lg:hidden/);
+  assert.match(source, /hidden lg:block/);
   assert.match(source, /Latest contest/);
   assert.match(source, /7 days/);
   assert.match(source, /30 days/);
@@ -111,4 +124,17 @@ test("Codeforces refreshes a catalog captured before a contest finished", async 
   assert.match(source, /fetchedAt: number/);
   assert.match(source, /function catalogPredatesFinishedContest/);
   assert.match(source, /catalog = await getCatalog\(true\)/);
+});
+
+test("random search resolves the handle before loading its history", async () => {
+  const [route, search] = await Promise.all([
+    readFile(new URL("../app/api/codeforces/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../components/codeforces/codeforces-search.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(route, /searchParams\.get\("randomHandle"\)/);
+  assert.match(route, /\{ handle: user\.handle \}/);
+  assert.match(search, /Choosing a random player…/);
+  assert.match(search, /setHandle\(nextHandle\)/);
+  assert.match(search, /loadPlayer\(`\/api\/codeforces\?handle=/);
 });
