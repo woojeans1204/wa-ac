@@ -170,3 +170,34 @@ test("Codeforces user-specific APIs run in the browser", async () => {
   assert.doesNotMatch(route, /codeforcesRequest<CfSubmission\[]>\("user\.status"/);
   assert.doesNotMatch(route, /codeforcesRequest<CfRating\[]>\("user\.rating"/);
 });
+
+test("feedback stays minimal and saves through the Worker", async () => {
+  const [dialog, worker, migration] = await Promise.all([
+    readFile(new URL("../components/feedback-dialog.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../worker/index.ts", import.meta.url), "utf8"),
+    readFile(new URL("../migrations/0001_feedback.sql", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(dialog, /<textarea/);
+  assert.doesNotMatch(dialog, /placeholder=/);
+  assert.doesNotMatch(dialog, /feedback-contact|feedback-type/);
+  assert.match(worker, /url\.pathname === "\/api\/feedback"/);
+  assert.match(worker, /INSERT INTO feedback \(message, section, country, fingerprint\)/);
+  assert.match(migration, /CREATE TABLE IF NOT EXISTS feedback/);
+});
+
+test("analytics distinguishes anonymous new and returning visitors", async () => {
+  const [analytics, siteAnalytics, worker] = await Promise.all([
+    readFile(new URL("../lib/analytics.ts", import.meta.url), "utf8"),
+    readFile(new URL("../components/site-analytics.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../worker/index.ts", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(analytics, /waac_analytics_visitor_id/);
+  assert.match(analytics, /waac_analytics_session_id/);
+  assert.match(analytics, /visitor_new/);
+  assert.match(analytics, /visitor_returning/);
+  assert.match(siteAnalytics, /recordVisitorSession\(section, platform\)/);
+  assert.match(worker, /cleanId\(payload\?\.visitorId\)/);
+  assert.match(worker, /cleanId\(payload\?\.sessionId\)/);
+});

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { trackEvent } from "@/lib/analytics"
+import { recordVisitorSession, trackEvent } from "@/lib/analytics"
 
 const ANALYTICS_HOST = "wa-ac.awj1204.workers.dev"
 const BEACON_TOKEN = "578e242460c74134b10b4349c4b644e9"
@@ -29,6 +29,7 @@ export function SiteAnalytics() {
     let visibleMilliseconds = 0
     const platform = currentPlatform()
 
+    recordVisitorSession(section, platform)
     trackEvent("page_view", { section, platform })
 
     const flushDuration = (reason: string) => {

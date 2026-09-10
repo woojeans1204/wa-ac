@@ -3,6 +3,7 @@
 import * as React from "react"
 import type { ReactNode } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { FeedbackDialog } from "@/components/feedback-dialog"
 
 export function ShadcnSiteHeader({ children }: { children?: ReactNode }) {
   const [visible, setVisible] = React.useState(true)
@@ -31,6 +32,7 @@ export function ShadcnSiteHeader({ children }: { children?: ReactNode }) {
         <a href="/" className="text-base font-medium" aria-label="WA:AC home">WA:AC</a>
         <div className="ml-auto flex items-center gap-2">
           {children}
+          <FeedbackDialog />
           <ThemeToggle />
         </div>
       </div>
