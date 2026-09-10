@@ -49,6 +49,25 @@ test("uses the locally hosted Cabinet Grotesk font", async () => {
   assert.match(source, /"Apple SD Gothic Neo"/);
 });
 
+test("the site header exposes a locally read changelog", async () => {
+  const [header, dialog, entries] = await Promise.all([
+    readFile(
+      new URL("../components/shadcn-dashboard/shadcn-site-header.tsx", import.meta.url),
+      "utf8",
+    ),
+    readFile(new URL("../components/whats-new-dialog.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../lib/changelog.ts", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(header, /<WhatsNewDialog \/>/);
+  assert.match(dialog, /waac:last-seen-update/);
+  assert.match(dialog, /window\.localStorage\.setItem/);
+  assert.match(dialog, /What&apos;s new/);
+  assert.match(entries, /Corrected incomplete problem lists\./);
+  assert.match(entries, /Added a feedback form\./);
+  assert.doesNotMatch(entries, /Sep 9, 2026/);
+});
+
 test("match history includes pagination and stale-state guards", async () => {
   const [source, dashboard] = await Promise.all([
     readFile(
@@ -67,8 +86,8 @@ test("match history includes pagination and stale-state guards", async () => {
   assert.match(source, /function changePage/);
   assert.match(source, /setOpenContest\(null\)/);
   assert.match(source, /No contests match this view\./);
-  assert.match(source, /space-y-2 lg:hidden/);
-  assert.match(source, /hidden overflow-hidden rounded-lg border lg:block/);
+  assert.match(source, /space-y-2 md:hidden/);
+  assert.match(source, /hidden overflow-hidden rounded-lg border md:block/);
   assert.match(source, /Last AC \{duration\(session\)\}/);
   assert.equal((source.match(/<TabsContent/g) ?? []).length, 1);
   assert.match(dashboard, /key=\{`\$\{platform\}:\$\{history\.user\}:history`\}/);
@@ -83,6 +102,25 @@ test("profile header keeps its compact layout through medium-width screens", asy
   assert.match(source, /md:flex md:flex-row/);
   assert.match(source, /grid-cols-4 gap-3 md:w-auto/);
   assert.doesNotMatch(source, /sm:flex sm:flex-row/);
+});
+
+test("site search moves to a full-width second header row on narrow screens", async () => {
+  const [header, codeforces, atcoder] = await Promise.all([
+    readFile(
+      new URL("../components/shadcn-dashboard/shadcn-site-header.tsx", import.meta.url),
+      "utf8",
+    ),
+    readFile(new URL("../components/codeforces/codeforces-search.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../components/atcoder/atcoder-search.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(header, /grid-cols-\[auto_1fr\]/);
+  assert.match(header, /<div className="ml-auto w-full max-w-md min-w-0">/);
+  assert.match(header, /sm:flex/);
+  assert.match(header, /order-3 col-span-2 ml-auto flex items-center gap-2 sm:order-none sm:col-auto/);
+  assert.doesNotMatch(header, /min-\[800px\]/);
+  assert.match(codeforces, /flex w-full min-w-0 items-center/);
+  assert.match(atcoder, /flex w-full min-w-0 items-center/);
 });
 
 test("chart image export includes the rendered legend labels", async () => {
@@ -117,8 +155,8 @@ test("upsolve supports numeric difficulty, tags, attempt state, and contest type
   assert.match(source, /Any attempt/);
   assert.match(source, /Only attempted/);
   assert.match(source, /useState<AttemptFilter>\("attempted"\)/);
-  assert.match(source, /divide-y lg:hidden/);
-  assert.match(source, /hidden lg:block/);
+  assert.match(source, /divide-y md:hidden/);
+  assert.match(source, /hidden md:block/);
   assert.match(source, /Latest contest/);
   assert.match(source, /7 days/);
   assert.match(source, /30 days/);
@@ -139,6 +177,37 @@ test("Codeforces refreshes a catalog captured before a contest finished", async 
   assert.match(source, /fetchedAt: number/);
   assert.match(source, /function catalogPredatesFinishedContest/);
   assert.match(source, /catalog = await getCatalog\(true\)/);
+});
+
+test("Codeforces fills known gaps in the global problem catalog", async () => {
+  const [source, script, analytics] = await Promise.all([
+    readFile(new URL("../app/api/codeforces/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/backfill-codeforces-contests.mjs", import.meta.url), "utf8"),
+    readFile(new URL("../components/site-analytics.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(source, /contestProblemOverrides/);
+  assert.match(source, /backfilledContestCatalog/);
+  assert.match(source, /completeContestProblems\(/);
+  assert.match(script, /contest\.standings/);
+  assert.match(script, /problemset\.problems/);
+  assert.match(script, /readProblemsBeforeStandingsRows/);
+  assert.doesNotMatch(script, /showUnofficial/);
+  assert.match(script, /ratingDisagreements/);
+  assert.match(script, /Run the same command to resume/);
+  assert.match(analytics, /return "Home"/);
+});
+
+test("Codeforces backfill skips access-restricted legacy contests", async () => {
+  const source = await readFile(
+    new URL("../scripts/backfill-codeforces-contests.mjs", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(source, /PERMANENTLY_UNAVAILABLE_CONTEST_IDS/);
+  assert.match(source, /1597, 1596, 1595/);
+  assert.match(source, /826, 728, 726, 693/);
+  assert.match(source, /!PERMANENTLY_UNAVAILABLE_CONTEST_IDS\.has\(contest\.id\)/);
 });
 
 test("random search resolves the handle before loading its history", async () => {

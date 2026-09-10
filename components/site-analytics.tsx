@@ -11,7 +11,9 @@ function currentSection() {
 }
 
 function currentPlatform() {
-  return window.location.pathname.startsWith("/codeforces") ? "Codeforces" : "AtCoder"
+  if (window.location.pathname.startsWith("/codeforces")) return "Codeforces"
+  if (window.location.pathname.startsWith("/shadcn")) return "AtCoder"
+  return "Home"
 }
 
 export function SiteAnalytics() {

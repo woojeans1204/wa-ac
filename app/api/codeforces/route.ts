@@ -1,5 +1,6 @@
 import type { History, Problem, Session, Submission } from "@/components/ps-types"
 import { buildUpsolveQueue } from "@/lib/upsolve"
+import backfilledContestCatalog from "@/app/data/codeforces-contest-problems.json"
 
 type CfResponse<T> = { status: "OK"; result: T } | { status: "FAILED"; comment?: string }
 type CfUser = { handle: string; rating?: number; maxRating?: number; avatar?: string; titlePhoto?: string }
@@ -37,6 +38,23 @@ type CfSubmission = {
   }
   programmingLanguage?: string
   verdict?: string
+}
+
+type BackfilledContest = { problems: Array<CfProblem & { standingsRating?: number | null }> }
+const backfilledContests = backfilledContestCatalog.contests as Record<string, BackfilledContest>
+const contestProblemOverrides = new Map<number, CfProblem[]>(
+  Object.entries(backfilledContests).map(([contestId, contest]) => [Number(contestId), contest.problems]),
+)
+
+function completeContestProblems(contestId: number, catalogProblems: CfProblem[] | undefined) {
+  const confirmedProblems = contestProblemOverrides.get(contestId)
+  if (!confirmedProblems) return catalogProblems
+
+  const merged = new Map(confirmedProblems.map((problem) => [problem.index, problem]))
+  for (const problem of catalogProblems ?? []) {
+    merged.set(problem.index, { ...merged.get(problem.index), ...problem })
+  }
+  return [...merged.values()]
 }
 
 let requestQueue: Promise<void> = Promise.resolve()
@@ -207,7 +225,10 @@ function buildHistory(
       items.push(submission)
       submittedByProblem.set(key, items)
     }
-    const catalogProblems = problemsByContest.get(group.contestId)
+    const catalogProblems = completeContestProblems(
+      group.contestId,
+      problemsByContest.get(group.contestId)
+    )
       ?? [...new Map(group.submissions.map((item) => [item.problem.index, item.problem])).values()]
     const problems: Problem[] = [...catalogProblems]
       .sort((a, b) => a.index.localeCompare(b.index, undefined, { numeric: true }))

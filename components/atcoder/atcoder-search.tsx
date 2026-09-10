@@ -83,7 +83,7 @@ export function AtCoderSearch({ initialHistory }: { initialHistory: History }) {
   }
 
   const searchForm = (
-    <form onSubmit={search} className="flex w-full max-w-md items-center gap-2">
+    <form onSubmit={search} className="flex w-full min-w-0 items-center gap-2">
       <Input
         value={handle}
         onChange={(event) => setHandle(event.target.value)}

@@ -167,7 +167,7 @@ export function ShadcnDataTable({
       </div>
         </div>
         <TabsContent value={view} className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6">
-          <div className="space-y-2 lg:hidden">
+          <div className="space-y-2 md:hidden">
               {rows.map((session) => {
                 const isOpen = openContest === session.sessionId
                 return (
@@ -265,8 +265,8 @@ export function ShadcnDataTable({
                 </div>
               )}
             </div>
-          <div className="hidden overflow-hidden rounded-lg border lg:block">
-            <Table className="min-w-[900px]">
+          <div className="hidden overflow-hidden rounded-lg border md:block">
+            <Table>
               <TableHeader className="sticky top-0 z-10 bg-muted"><TableRow><TableHead>Contest</TableHead>{visible.type && <TableHead className="text-center">Type</TableHead>}{showDivision && <TableHead>Division</TableHead>}{visible.duration && <TableHead>Length</TableHead>}<TableHead>Solved</TableHead>{visible.problems && <TableHead className="w-80 max-w-80">Problems</TableHead>}{visible.difficulty && <TableHead className="text-right">Top difficulty</TableHead>}{visible.time && <TableHead className="text-right" title="Elapsed time from contest start to last accepted submission">Last AC</TableHead>}</TableRow></TableHeader>
               {rows.map((session) => {
                 const columnCount = 2 + Number(visible.type) + Number(showDivision) + Number(visible.duration) + Number(visible.problems) + Number(visible.difficulty) + Number(visible.time)
@@ -325,7 +325,7 @@ export function ShadcnDataTable({
                       </TableRow>
                       <CollapsibleContent asChild>
                         <TableRow className="hover:bg-transparent">
-                          <TableCell colSpan={columnCount} className="bg-muted/30 p-4">
+                          <TableCell colSpan={columnCount} className="whitespace-normal bg-muted/30 p-4">
                             <div className="mb-3 flex items-center justify-between gap-2">
                               <div>
                                 <div className="font-medium">{session.contestTitle || session.contestId.toUpperCase()}</div>
@@ -333,8 +333,8 @@ export function ShadcnDataTable({
                               </div>
                               {session.sourceUrl && <Button variant="outline" size="sm" asChild><a href={session.sourceUrl} target="_blank" rel="noreferrer">Open contest <IconExternalLink /></a></Button>}
                             </div>
-                            <Table>
-                              <TableHeader><TableRow><TableHead>Problem</TableHead><TableHead>Status</TableHead><TableHead className="text-right">Difficulty</TableHead><TableHead className="text-right">First AC</TableHead><TableHead className="text-right">Wrong tries</TableHead><TableHead className="text-right">Submissions</TableHead></TableRow></TableHeader>
+                            <Table className="table-fixed [&_td]:whitespace-normal [&_th]:whitespace-normal">
+                              <TableHeader><TableRow><TableHead className="w-[30%]">Problem</TableHead><TableHead className="w-[10%]">Status</TableHead><TableHead className="text-right">Difficulty</TableHead><TableHead className="text-right">First AC</TableHead><TableHead className="text-right">Wrong tries</TableHead><TableHead className="text-right">Submissions</TableHead></TableRow></TableHeader>
                               <TableBody>
                                 {session.problems.map((problem) => {
                                   const firstAc = firstAcSecond(problem)
