@@ -83,7 +83,7 @@ const worker = {
       if (request.method !== "POST") return new Response(null, { status: 405 });
       if (request.headers.get("Origin") !== url.origin) return new Response(null, { status: 403 });
       const allowedEvents = new Set([
-        "page_view", "visitor_new", "visitor_returning", "tab_view", "tab_duration", "search_start", "search_success", "search_failure",
+        "page_view", "visitor_new", "visitor_returning", "return_visit", "tab_view", "tab_duration", "search_start", "search_success", "search_failure",
         "random_player", "filter_change", "problem_open", "account_pin",
         "saved_account_open", "saved_account_remove", "recent_clear", "chart_export",
         "feedback_success", "feedback_failure",

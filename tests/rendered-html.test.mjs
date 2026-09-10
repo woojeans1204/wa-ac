@@ -195,6 +195,9 @@ test("analytics distinguishes anonymous new and returning visitors", async () =>
 
   assert.match(analytics, /waac_analytics_visitor_id/);
   assert.match(analytics, /waac_analytics_session_id/);
+  assert.match(analytics, /waac_analytics_last_activity/);
+  assert.match(analytics, /30 \* 60 \* 1_000/);
+  assert.match(analytics, /return_visit/);
   assert.match(analytics, /visitor_new/);
   assert.match(analytics, /visitor_returning/);
   assert.match(siteAnalytics, /recordVisitorSession\(section, platform\)/);
