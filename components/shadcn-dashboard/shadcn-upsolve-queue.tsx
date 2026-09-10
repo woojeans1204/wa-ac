@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/table"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { buildUpsolveQueue } from "@/lib/upsolve"
+import { trackEvent } from "@/lib/analytics"
 
 type QueueStatus = "all" | "pending" | "completed"
 type TimeRange = "latest" | "7d" | "30d" | "all"
@@ -146,6 +147,7 @@ export function ShadcnUpsolveQueue({
         onValueChange={(value) => {
           setStatus(value as QueueStatus)
           resetVisibleContests()
+          trackEvent("filter_change", { section: "upsolve", platform, value: `status:${value}` })
         }}
         className="gap-4"
       >
@@ -180,6 +182,7 @@ export function ShadcnUpsolveQueue({
                   setDifficultyRange(value)
                   resetVisibleContests()
                 }}
+                onValueCommit={(value) => trackEvent("filter_change", { section: "upsolve", platform, value: `difficulty:${value[0]}-${value[1]}` })}
                 className="min-w-24"
               />
               <span
@@ -192,6 +195,7 @@ export function ShadcnUpsolveQueue({
             <Select value={attemptFilter} onValueChange={(value) => {
                 setAttemptFilter(value as AttemptFilter)
                 resetVisibleContests()
+                trackEvent("filter_change", { section: "upsolve", platform, value: `attempt:${value}` })
               }}>
               <SelectTrigger className="w-36" size="sm" aria-label="Attempt filter">
                 <SelectValue />
@@ -219,6 +223,7 @@ export function ShadcnUpsolveQueue({
                 <Select value={timeRange} onValueChange={(value) => {
                   setTimeRange(value as TimeRange)
                   resetVisibleContests()
+                  trackEvent("filter_change", { section: "upsolve", platform, value: `period:${value}` })
                 }}>
                   <SelectTrigger className="w-32" size="sm" aria-label="Upsolve period">
                     <SelectValue />
@@ -234,6 +239,7 @@ export function ShadcnUpsolveQueue({
                 <Select value={sortOrder} onValueChange={(value) => {
                   setSortOrder(value as SortOrder)
                   resetVisibleContests()
+                  trackEvent("filter_change", { section: "upsolve", platform, value: `sort:${value}` })
                 }}>
                   <SelectTrigger className="w-32" size="sm" aria-label="Sort upsolve queue">
                   <SelectValue />
@@ -253,6 +259,7 @@ export function ShadcnUpsolveQueue({
                 <Select value={tagFilter} onValueChange={(value) => {
                   setTagFilter(value)
                   resetVisibleContests()
+                  trackEvent("filter_change", { section: "upsolve", platform, value: `tag:${value}` })
                 }}>
                   <SelectTrigger className="w-full sm:w-48" size="sm" aria-label="Problem tag">
                     <SelectValue />
@@ -270,6 +277,7 @@ export function ShadcnUpsolveQueue({
                 <Select value={contestTypeFilter} onValueChange={(value) => {
                   setContestTypeFilter(value as ContestTypeFilter)
                   resetVisibleContests()
+                  trackEvent("filter_change", { section: "upsolve", platform, value: `contest_type:${value}` })
                 }}>
                   <SelectTrigger className="w-full sm:w-48" size="sm" aria-label="Contest type">
                     <SelectValue />
@@ -299,7 +307,7 @@ export function ShadcnUpsolveQueue({
           <div className="divide-y lg:hidden">
             {group.map((item) => (
               <div key={item.id} className="space-y-2 px-4 py-3">
-                <a href={item.problemUrl} target="_blank" rel="noreferrer" className="flex items-start gap-2 text-[15px] font-medium">
+                <a href={item.problemUrl} target="_blank" rel="noreferrer" onClick={() => trackEvent("problem_open", { section: "upsolve", platform, value: "mobile" })} className="flex items-start gap-2 text-[15px] font-medium">
                   <span className="shrink-0 text-muted-foreground">{item.problemIndex}</span>
                   <span className="min-w-0 break-words">{item.problemTitle || "Untitled problem"}</span>
                   <IconExternalLink className="ml-auto size-4 shrink-0 text-muted-foreground" />
@@ -345,7 +353,7 @@ export function ShadcnUpsolveQueue({
                         className="shrink-0 opacity-0 transition-opacity group-hover/problem:opacity-100 group-focus-within/problem:opacity-100"
                         asChild
                       >
-                        <a href={item.problemUrl} target="_blank" rel="noreferrer" aria-label={`Open ${item.problemIndex} ${item.problemTitle || "problem"}`} title="Open problem">
+                        <a href={item.problemUrl} target="_blank" rel="noreferrer" onClick={() => trackEvent("problem_open", { section: "upsolve", platform, value: "desktop" })} aria-label={`Open ${item.problemIndex} ${item.problemTitle || "problem"}`} title="Open problem">
                           <IconExternalLink />
                         </a>
                       </Button>

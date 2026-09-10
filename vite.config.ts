@@ -31,6 +31,12 @@ const localBindingConfig = {
         },
       ]
     : [],
+  analytics_engine_datasets: [
+    {
+      binding: "WA_ANALYTICS",
+      dataset: "wa_ac_events",
+    },
+  ],
 };
 
 export default defineConfig(async () => {

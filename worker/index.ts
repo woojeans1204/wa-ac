@@ -11,6 +11,13 @@ interface Env {
       };
     };
   };
+  WA_ANALYTICS?: {
+    writeDataPoint(data: {
+      blobs?: string[];
+      doubles?: number[];
+      indexes?: string[];
+    }): void;
+  };
 }
 
 interface ExecutionContext {
@@ -27,6 +34,28 @@ interface ExecutionContext {
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+
+    if (url.pathname === "/api/analytics") {
+      if (request.method !== "POST") return new Response(null, { status: 405 });
+      if (request.headers.get("Origin") !== url.origin) return new Response(null, { status: 403 });
+      const allowedEvents = new Set([
+        "page_view", "tab_view", "search_start", "search_success", "search_failure",
+        "random_player", "filter_change", "problem_open", "account_pin",
+        "saved_account_open", "saved_account_remove", "recent_clear", "chart_export",
+      ]);
+      const payload = await request.json().catch(() => null) as Record<string, unknown> | null;
+      const event = typeof payload?.event === "string" ? payload.event : "";
+      if (!allowedEvents.has(event)) return new Response(null, { status: 400 });
+
+      const clean = (value: unknown) => typeof value === "string" ? value.slice(0, 64) : "";
+      const cf = (request as Request & { cf?: { country?: string } }).cf;
+      env.WA_ANALYTICS?.writeDataPoint({
+        blobs: [event, clean(payload?.section), clean(payload?.value), clean(payload?.platform), cf?.country ?? ""],
+        doubles: [1],
+        indexes: [event],
+      });
+      return new Response(null, { status: 204 });
+    }
 
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];

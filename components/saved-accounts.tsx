@@ -11,6 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { trackEvent } from "@/lib/analytics"
 
 function accountHref(account: SavedAccount) {
   return account.platform === "Codeforces"
@@ -21,7 +22,7 @@ function accountHref(account: SavedAccount) {
 function AccountRow({ account }: { account: SavedAccount }) {
   return (
     <div className="flex min-w-0 items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-muted/60">
-      <a href={accountHref(account)} className="min-w-0 flex-1 truncate font-medium">
+      <a href={accountHref(account)} onClick={() => trackEvent("saved_account_open", { platform: account.platform })} className="min-w-0 flex-1 truncate font-medium">
         {account.handle}
       </a>
       <Badge variant="outline" className="font-normal">{account.platform}</Badge>
@@ -31,7 +32,10 @@ function AccountRow({ account }: { account: SavedAccount }) {
         size="icon-sm"
         aria-label={account.pinned ? `Unpin ${account.handle}` : `Pin ${account.handle}`}
         title={account.pinned ? "Unpin" : "Pin"}
-        onClick={() => toggleSavedAccountPin(account.platform, account.handle)}
+        onClick={() => {
+          toggleSavedAccountPin(account.platform, account.handle)
+          trackEvent("account_pin", { platform: account.platform, value: account.pinned ? "unpin" : "pin" })
+        }}
       >
         {account.pinned ? <IconPinned /> : <IconPin />}
       </Button>
@@ -41,7 +45,10 @@ function AccountRow({ account }: { account: SavedAccount }) {
         size="icon-sm"
         aria-label={`Remove ${account.handle}`}
         title="Remove"
-        onClick={() => removeSavedAccount(account.platform, account.handle)}
+        onClick={() => {
+          removeSavedAccount(account.platform, account.handle)
+          trackEvent("saved_account_remove", { platform: account.platform })
+        }}
       >
         <IconX />
       </Button>
@@ -69,7 +76,7 @@ export function SavedAccounts() {
         <section className="min-w-0 space-y-1">
           <div className="flex h-7 items-center justify-between px-2">
             <h2 className="text-sm font-medium">Recent searches</h2>
-            {recent.length > 0 && <Button type="button" variant="ghost" size="xs" onClick={clearRecentAccounts}>Clear</Button>}
+            {recent.length > 0 && <Button type="button" variant="ghost" size="xs" onClick={() => { clearRecentAccounts(); trackEvent("recent_clear") }}>Clear</Button>}
           </div>
           {recent.length
             ? recent.map((account) => <AccountRow key={`${account.platform}:${account.handle.toLowerCase()}`} account={account} />)

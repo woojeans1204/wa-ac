@@ -11,6 +11,7 @@ import { ShadcnSiteHeader } from "@/components/shadcn-dashboard/shadcn-site-head
 import { FrontierHistory } from "@/components/shadcn-dashboard/shadcn-frontier"
 import { ShadcnProfileHeader } from "@/components/shadcn-dashboard/shadcn-profile-header"
 import { ShadcnUpsolveQueue } from "@/components/shadcn-dashboard/shadcn-upsolve-queue"
+import { trackEvent } from "@/lib/analytics"
 
 type ShadcnSectionId = "dashboard" | "match-history" | "upsolve" | "growth"
 
@@ -44,6 +45,7 @@ export function ShadcnDashboard({ history, platform = "AtCoder", headerContent, 
   const navigate = (section: ShadcnSectionId) => {
     setActiveSection(section)
     window.history.pushState(null, "", `#${section}`)
+    trackEvent("tab_view", { section, platform })
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 

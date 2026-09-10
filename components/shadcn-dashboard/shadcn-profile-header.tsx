@@ -9,6 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { toggleSavedAccountPin, useSavedAccounts } from "@/lib/saved-accounts"
+import { trackEvent } from "@/lib/analytics"
 import {
   Card,
   CardDescription,
@@ -136,7 +137,10 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
           data-hover-action
           aria-label={pinned ? `Unpin ${history.user}` : `Pin ${history.user}`}
           title={pinned ? "Unpin account" : "Pin account"}
-          onClick={() => toggleSavedAccountPin(platform, history.user)}
+          onClick={() => {
+            toggleSavedAccountPin(platform, history.user)
+            trackEvent("account_pin", { platform, value: pinned ? "unpin" : "pin" })
+          }}
         >
           {pinned ? <IconPinned /> : <IconPin />}
         </Button>

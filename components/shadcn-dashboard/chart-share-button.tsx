@@ -4,6 +4,7 @@ import * as React from "react"
 import { IconCheck, IconCopy, IconDownload, IconLoader2 } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { copyChartImage, type ChartCopyResult } from "@/lib/share-chart"
+import { trackEvent } from "@/lib/analytics"
 
 export function ChartShareButton({
   chartRef,
@@ -28,6 +29,7 @@ export function ChartShareButton({
     setStatus("working")
     try {
       const result = await copyChartImage({ chart: chartRef.current, title, description, fileName })
+      trackEvent("chart_export", { section: "growth", value: result })
       setStatus(result)
       if (resetTimer.current) clearTimeout(resetTimer.current)
       resetTimer.current = setTimeout(() => setStatus("idle"), 2200)

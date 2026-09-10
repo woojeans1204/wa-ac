@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SiteAnalytics } from "@/components/site-analytics";
 import { SITE_URL } from "@/lib/site-url";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <body className="antialiased">
         <ThemeProvider>{children}</ThemeProvider>
+        <SiteAnalytics />
       </body>
     </html>
   );

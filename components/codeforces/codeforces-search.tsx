@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Skeleton } from "@/components/ui/skeleton"
 import { SavedAccounts } from "@/components/saved-accounts"
 import { recordSavedAccount } from "@/lib/saved-accounts"
+import { trackEvent } from "@/lib/analytics"
 
 type CfResponse<T> = { status: "OK"; result: T } | { status: "FAILED"; comment?: string }
 type CfUser = {
@@ -59,6 +60,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
     setLoading(true)
     setLoadingHandle(requestedHandle.trim() || null)
     setError("")
+    trackEvent("search_start", { platform: "Codeforces" })
     try {
       const users = await directCodeforcesRequest<CfUser[]>("user.info", { handles: requestedHandle })
       const user = users[0]
@@ -97,6 +99,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
         "",
         `/codeforces/${encodeURIComponent(payload.history.user)}${window.location.hash || "#dashboard"}`
       )
+      trackEvent("search_success", { platform: "Codeforces" })
     } catch (cause) {
       const timedOut = cause instanceof Error && (
         cause.name === "TimeoutError" || cause.name === "AbortError"
@@ -108,6 +111,10 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
             ? cause.message
             : "Could not load this handle."
       )
+      trackEvent("search_failure", {
+        platform: "Codeforces",
+        value: timedOut ? "timeout" : cause instanceof Error && cause.message === "User not found." ? "not_found" : "other",
+      })
     } finally {
       setLoading(false)
     }
@@ -143,6 +150,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
     setLoadingHandle(null)
     setLoading(true)
     setError("")
+    trackEvent("random_player", { platform: "Codeforces" })
     try {
       const response = await fetch(`/api/codeforces?randomHandle=1&t=${Date.now()}`, {
         signal: AbortSignal.timeout(20_000),
