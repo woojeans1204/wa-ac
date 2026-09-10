@@ -43,6 +43,14 @@ const localBindingConfig = {
       binding: "WA_ANALYTICS",
       dataset: "wa_ac_events",
     },
+    {
+      binding: "WA_NEW_VISITORS",
+      dataset: "wa_ac_new_visitors",
+    },
+    {
+      binding: "WA_RETURNING_SESSIONS",
+      dataset: "wa_ac_returning_sessions",
+    },
   ],
 };
 

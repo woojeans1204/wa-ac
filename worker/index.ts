@@ -2,6 +2,14 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
+interface AnalyticsEngineDataset {
+  writeDataPoint(data: {
+    blobs?: string[];
+    doubles?: number[];
+    indexes?: string[];
+  }): void;
+}
+
 interface Env {
   ASSETS: Fetcher;
   IMAGES: {
@@ -11,13 +19,9 @@ interface Env {
       };
     };
   };
-  WA_ANALYTICS?: {
-    writeDataPoint(data: {
-      blobs?: string[];
-      doubles?: number[];
-      indexes?: string[];
-    }): void;
-  };
+  WA_ANALYTICS?: AnalyticsEngineDataset;
+  WA_NEW_VISITORS?: AnalyticsEngineDataset;
+  WA_RETURNING_SESSIONS?: AnalyticsEngineDataset;
   FEEDBACK_DB: {
     prepare(query: string): {
       bind(...values: unknown[]): {
@@ -107,6 +111,12 @@ const worker = {
         doubles: [1, duration],
         indexes: [event],
       });
+      const visitorPoint = {
+        blobs: [clean(payload?.section), clean(payload?.platform), cf?.country ?? "", cleanId(payload?.visitorId)],
+        doubles: [1],
+      };
+      if (event === "visitor_new") env.WA_NEW_VISITORS?.writeDataPoint(visitorPoint);
+      if (event === "visitor_returning") env.WA_RETURNING_SESSIONS?.writeDataPoint(visitorPoint);
       return new Response(null, { status: 204 });
     }
 

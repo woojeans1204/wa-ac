@@ -200,4 +200,6 @@ test("analytics distinguishes anonymous new and returning visitors", async () =>
   assert.match(siteAnalytics, /recordVisitorSession\(section, platform\)/);
   assert.match(worker, /cleanId\(payload\?\.visitorId\)/);
   assert.match(worker, /cleanId\(payload\?\.sessionId\)/);
+  assert.match(worker, /WA_NEW_VISITORS/);
+  assert.match(worker, /WA_RETURNING_SESSIONS/);
 });
