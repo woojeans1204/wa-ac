@@ -24,19 +24,54 @@ export function SiteAnalytics() {
     script.dataset.cfBeacon = JSON.stringify({ token: BEACON_TOKEN })
     document.body.appendChild(script)
 
-    trackEvent("page_view", {
-      section: currentSection(),
-      platform: currentPlatform(),
-    })
+    let section = currentSection()
+    let visibleStartedAt = document.visibilityState === "visible" ? performance.now() : null
+    let visibleMilliseconds = 0
+    const platform = currentPlatform()
 
-    const trackHash = () => trackEvent("tab_view", {
-      section: currentSection(),
-      platform: currentPlatform(),
-    })
-    window.addEventListener("hashchange", trackHash)
+    trackEvent("page_view", { section, platform })
+
+    const flushDuration = (reason: string) => {
+      if (visibleStartedAt != null) {
+        visibleMilliseconds += performance.now() - visibleStartedAt
+        visibleStartedAt = null
+      }
+      if (visibleMilliseconds < 1_000) return
+      trackEvent("tab_duration", {
+        section,
+        platform,
+        value: reason,
+        duration: Math.round(visibleMilliseconds / 100) / 10,
+      })
+      visibleMilliseconds = 0
+    }
+
+    const trackNavigation = () => {
+      flushDuration("tab_change")
+      section = currentSection()
+      if (document.visibilityState === "visible") visibleStartedAt = performance.now()
+      trackEvent("tab_view", { section, platform })
+    }
+
+    const trackVisibility = () => {
+      if (document.visibilityState === "hidden") {
+        flushDuration("hidden")
+      } else if (visibleStartedAt == null) {
+        visibleStartedAt = performance.now()
+      }
+    }
+
+    const trackPageExit = () => flushDuration("page_exit")
+    window.addEventListener("hashchange", trackNavigation)
+    window.addEventListener("waac:navigation", trackNavigation)
+    window.addEventListener("pagehide", trackPageExit)
+    document.addEventListener("visibilitychange", trackVisibility)
 
     return () => {
-      window.removeEventListener("hashchange", trackHash)
+      window.removeEventListener("hashchange", trackNavigation)
+      window.removeEventListener("waac:navigation", trackNavigation)
+      window.removeEventListener("pagehide", trackPageExit)
+      document.removeEventListener("visibilitychange", trackVisibility)
       script.remove()
     }
   }, [])
@@ -44,3 +79,8 @@ export function SiteAnalytics() {
   return null
 }
 
+declare global {
+  interface WindowEventMap {
+    "waac:navigation": Event
+  }
+}

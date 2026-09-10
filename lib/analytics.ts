@@ -3,6 +3,7 @@
 export type AnalyticsEvent =
   | "page_view"
   | "tab_view"
+  | "tab_duration"
   | "search_start"
   | "search_success"
   | "search_failure"
@@ -19,6 +20,7 @@ type AnalyticsDimensions = {
   section?: string
   value?: string
   platform?: string
+  duration?: number
 }
 
 const ANALYTICS_HOST = "wa-ac.awj1204.workers.dev"
@@ -26,11 +28,16 @@ const ANALYTICS_HOST = "wa-ac.awj1204.workers.dev"
 export function trackEvent(event: AnalyticsEvent, dimensions: AnalyticsDimensions = {}) {
   if (typeof window === "undefined" || window.location.hostname !== ANALYTICS_HOST) return
 
+  const body = JSON.stringify({ event, ...dimensions })
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon("/api/analytics", new Blob([body], { type: "application/json" }))
+    return
+  }
+
   void fetch("/api/analytics", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event, ...dimensions }),
+    body,
     keepalive: true,
   }).catch(() => undefined)
 }
-

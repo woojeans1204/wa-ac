@@ -39,7 +39,7 @@ const worker = {
       if (request.method !== "POST") return new Response(null, { status: 405 });
       if (request.headers.get("Origin") !== url.origin) return new Response(null, { status: 403 });
       const allowedEvents = new Set([
-        "page_view", "tab_view", "search_start", "search_success", "search_failure",
+        "page_view", "tab_view", "tab_duration", "search_start", "search_success", "search_failure",
         "random_player", "filter_change", "problem_open", "account_pin",
         "saved_account_open", "saved_account_remove", "recent_clear", "chart_export",
       ]);
@@ -48,10 +48,13 @@ const worker = {
       if (!allowedEvents.has(event)) return new Response(null, { status: 400 });
 
       const clean = (value: unknown) => typeof value === "string" ? value.slice(0, 64) : "";
+      const duration = typeof payload?.duration === "number" && Number.isFinite(payload.duration)
+        ? Math.min(Math.max(payload.duration, 0), 21_600)
+        : 0;
       const cf = (request as Request & { cf?: { country?: string } }).cf;
       env.WA_ANALYTICS?.writeDataPoint({
         blobs: [event, clean(payload?.section), clean(payload?.value), clean(payload?.platform), cf?.country ?? ""],
-        doubles: [1],
+        doubles: [1, duration],
         indexes: [event],
       });
       return new Response(null, { status: 204 });
