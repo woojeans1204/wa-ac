@@ -1,8 +1,8 @@
 import type { History, Problem, Session, Submission } from "@/components/ps-types"
 import { buildUpsolveQueue } from "@/lib/upsolve"
 import backfilledContestCatalog from "@/app/data/codeforces-contest-problems.json"
+import randomHandleCatalog from "@/app/data/codeforces-random-handles.json"
 
-type CfResponse<T> = { status: "OK"; result: T } | { status: "FAILED"; comment?: string }
 type CfUser = { handle: string; rating?: number; maxRating?: number; avatar?: string; titlePhoto?: string }
 type CfRating = {
   contestId: number
@@ -41,10 +41,29 @@ type CfSubmission = {
 }
 
 type BackfilledContest = { problems: Array<CfProblem & { standingsRating?: number | null }> }
-const backfilledContests = backfilledContestCatalog.contests as Record<string, BackfilledContest>
+type BackfilledCatalog = {
+  contests: Record<string, BackfilledContest>
+  contestMetadata?: Record<string, {
+    id: number
+    name: string
+    startTimeSeconds?: number | null
+    durationSeconds: number
+  }>
+}
+const storedCatalog = backfilledContestCatalog as BackfilledCatalog
+const backfilledContests = storedCatalog.contests
 const contestProblemOverrides = new Map<number, CfProblem[]>(
   Object.entries(backfilledContests).map(([contestId, contest]) => [Number(contestId), contest.problems]),
 )
+const storedContests: CfContest[] = Object.entries(storedCatalog.contestMetadata ?? {}).map(
+  ([contestId, contest]) => ({
+    id: Number(contestId),
+    name: contest.name,
+    startTimeSeconds: contest.startTimeSeconds ?? undefined,
+    durationSeconds: contest.durationSeconds,
+  }),
+)
+const randomHandles = (randomHandleCatalog as { handles: string[] }).handles
 
 function completeContestProblems(contestId: number, catalogProblems: CfProblem[] | undefined) {
   const confirmedProblems = contestProblemOverrides.get(contestId)
@@ -57,121 +76,9 @@ function completeContestProblems(contestId: number, catalogProblems: CfProblem[]
   return [...merged.values()]
 }
 
-let requestQueue: Promise<void> = Promise.resolve()
-let nextAllowedAt = 0
-let catalogCache: {
-  fetchedAt: number
-  expiresAt: number
-  problems: CfProblem[]
-  contests: CfContest[]
-} | null = null
-let ratedUsersCache: { expiresAt: number; users: CfUser[] } | null = null
-let gymCache: { expiresAt: number; contests: CfContest[] } | null = null
-let gymPromise: Promise<CfContest[]> | null = null
-let catalogPromise: Promise<{
-  fetchedAt: number
-  expiresAt: number
-  problems: CfProblem[]
-  contests: CfContest[]
-}> | null = null
-let ratedUsersPromise: Promise<{ expiresAt: number; users: CfUser[] }> | null = null
-
-async function codeforcesRequest<T>(method: string, params: Record<string, string>) {
-  const task = requestQueue.then(async () => {
-    const wait = Math.max(0, nextAllowedAt - Date.now())
-    if (wait) await new Promise((resolve) => setTimeout(resolve, wait))
-    const url = new URL(`https://codeforces.com/api/${method}`)
-    Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value))
-    const response = await fetch(url, {
-      headers: { "User-Agent": "PS-Matchlog/1.0" },
-      signal: AbortSignal.timeout(15_000),
-    })
-    nextAllowedAt = Date.now() + 2100
-    const payload = await response.json().catch(() => null) as CfResponse<T> | null
-    if (!payload || payload.status !== "OK") {
-      const comment = payload?.status === "FAILED" ? payload.comment : undefined
-      if (comment && /user with handle .* not found/i.test(comment)) {
-        throw new Error("User not found.")
-      }
-      throw new Error(comment || `Codeforces returned HTTP ${response.status}.`)
-    }
-    return payload.result
-  })
-  requestQueue = task.then(() => undefined, () => undefined)
-  return task
-}
-
-async function getCatalog(forceRefresh = false) {
-  if (!forceRefresh && catalogCache && catalogCache.expiresAt > Date.now()) return catalogCache
-  if (forceRefresh) catalogCache = null
-  if (!catalogPromise) {
-    catalogPromise = (async () => {
-      const problemset = await codeforcesRequest<{ problems: CfProblem[] }>("problemset.problems", {})
-      const contests = await codeforcesRequest<CfContest[]>("contest.list", { gym: "false" })
-      const fetchedAt = Date.now()
-      return {
-        fetchedAt,
-        expiresAt: fetchedAt + 6 * 60 * 60 * 1000,
-        problems: problemset.problems,
-        contests,
-      }
-    })()
-  }
-  const pendingCatalog = catalogPromise
-  try {
-    catalogCache = await pendingCatalog
-    return catalogCache
-  } finally {
-    if (catalogPromise === pendingCatalog) catalogPromise = null
-  }
-}
-
-function catalogPredatesFinishedContest(
-  catalog: { fetchedAt: number; contests: CfContest[] },
-  contestIds: Set<number>
-) {
-  const now = Date.now()
-  return catalog.contests.some((contest) => {
-    if (!contestIds.has(contest.id) || contest.startTimeSeconds == null) return false
-    const contestEndAt = (contest.startTimeSeconds + contest.durationSeconds) * 1000
-    return catalog.fetchedAt < contestEndAt && contestEndAt <= now
-  })
-}
-
-async function getRandomUser() {
-  if (!ratedUsersCache || ratedUsersCache.expiresAt <= Date.now()) {
-    if (!ratedUsersPromise) {
-      ratedUsersPromise = (async () => ({
-        expiresAt: Date.now() + 60 * 60 * 1000,
-        users: await codeforcesRequest<CfUser[]>("user.ratedList", {
-          activeOnly: "true",
-          includeRetired: "false",
-        }),
-      }))()
-    }
-    const pendingUsers = ratedUsersPromise
-    try {
-      ratedUsersCache = await pendingUsers
-    } finally {
-      if (ratedUsersPromise === pendingUsers) ratedUsersPromise = null
-    }
-  }
-  const candidates = ratedUsersCache.users.filter((user) => user.handle && user.rating != null)
-  if (!candidates.length) throw new Error("No active Codeforces users are available right now.")
-  return candidates[Math.floor(Math.random() * candidates.length)]
-}
-
-async function getGymContests() {
-  if (gymCache && gymCache.expiresAt > Date.now()) return gymCache.contests
-  if (!gymPromise) {
-    gymPromise = codeforcesRequest<CfContest[]>("contest.list", { gym: "true" })
-      .then((contests) => {
-        gymCache = { contests, expiresAt: Date.now() + 6 * 60 * 60 * 1000 }
-        return contests
-      })
-      .finally(() => { gymPromise = null })
-  }
-  return gymPromise
+function getRandomUser() {
+  if (!randomHandles.length) throw new Error("No active Codeforces users are available right now.")
+  return { handle: randomHandles[Math.floor(Math.random() * randomHandles.length)] }
 }
 
 function problemColor(rating?: number) {
@@ -189,16 +96,9 @@ function buildHistory(
   user: CfUser,
   ratings: CfRating[],
   submissions: CfSubmission[],
-  catalog: { problems: CfProblem[]; contests: CfContest[] }
+  contests: CfContest[]
 ): History {
-  const contestMap = new Map(catalog.contests.map((contest) => [contest.id, contest]))
-  const problemsByContest = new Map<number, CfProblem[]>()
-  for (const problem of catalog.problems) {
-    if (problem.contestId == null) continue
-    const items = problemsByContest.get(problem.contestId) ?? []
-    items.push(problem)
-    problemsByContest.set(problem.contestId, items)
-  }
+  const contestMap = new Map(contests.map((contest) => [contest.id, contest]))
   const ratingMap = new Map(ratings.map((rating) => [rating.contestId, rating]))
   const grouped = new Map<string, { type: "actual" | "virtual"; contestId: number; start: number; submissions: CfSubmission[] }>()
 
@@ -225,11 +125,11 @@ function buildHistory(
       items.push(submission)
       submittedByProblem.set(key, items)
     }
-    const catalogProblems = completeContestProblems(
-      group.contestId,
-      problemsByContest.get(group.contestId)
-    )
-      ?? [...new Map(group.submissions.map((item) => [item.problem.index, item.problem])).values()]
+    const submittedProblems = [...new Map(
+      group.submissions.map((item) => [item.problem.index, item.problem]),
+    ).values()]
+    const catalogProblems = completeContestProblems(group.contestId, submittedProblems)
+      ?? submittedProblems
     const problems: Problem[] = [...catalogProblems]
       .sort((a, b) => a.index.localeCompare(b.index, undefined, { numeric: true }))
       .map((cfProblem) => {
@@ -330,28 +230,12 @@ function buildHistory(
   return history
 }
 
-async function buildHistoryWithCatalog(
+function buildHistoryWithCatalog(
   user: CfUser,
   ratings: CfRating[],
   submissions: CfSubmission[]
 ) {
-  let catalog = await getCatalog()
-  const submissionContestIds = new Set(
-    submissions
-      .map((submission) => submission.contestId ?? submission.problem.contestId)
-      .filter((contestId): contestId is number => contestId != null && contestId < 100000)
-  )
-  if (catalogPredatesFinishedContest(catalog, submissionContestIds)) {
-    catalog = await getCatalog(true)
-  }
-  const hasGym = submissions.some((submission) =>
-    (submission.contestId ?? submission.problem.contestId ?? 0) >= 100000
-  )
-  const gyms = hasGym ? await getGymContests().catch(() => []) : []
-  return buildHistory(user, ratings, submissions, {
-    ...catalog,
-    contests: [...catalog.contests, ...gyms],
-  })
+  return buildHistory(user, ratings, submissions, storedContests)
 }
 
 export async function POST(request: Request) {
@@ -389,7 +273,7 @@ export async function GET(request: Request) {
   const wantsWarmup = searchParams.get("warm") === "1"
   if (wantsWarmup) {
     try {
-      await Promise.all([getCatalog(), getRandomUser()])
+      await getRandomUser()
       return Response.json({ ready: true }, { headers: { "Cache-Control": "no-store" } })
     } catch {
       return Response.json({ ready: false }, { status: 502, headers: { "Cache-Control": "no-store" } })

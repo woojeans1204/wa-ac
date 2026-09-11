@@ -7,6 +7,12 @@ export type ChangelogEntry = {
 
 export const changelog: ChangelogEntry[] = [
   {
+    id: "2026-09-11-loading-speed",
+    date: "Sep 11, 2026",
+    title: "Latest updates",
+    changes: ["Made profile loading much faster."],
+  },
+  {
     id: "2026-09-10-contest-records",
     date: "Sep 10, 2026",
     title: "Latest updates",

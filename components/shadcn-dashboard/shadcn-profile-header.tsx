@@ -104,8 +104,8 @@ export function ShadcnProfileHeader({ history, platform = "AtCoder" }: { history
   )
 
   const metrics = [
-    { label: "Rating", value: currentRating.toLocaleString() },
-    { label: "Peak", value: peakRating.toLocaleString() },
+    { label: "Rating", value: history.ratingPending ? "…" : currentRating.toLocaleString() },
+    { label: "Peak", value: history.ratingPending ? "…" : peakRating.toLocaleString() },
     { label: "Actual", value: history.summary.actualSessions.toLocaleString() },
     { label: "Virtual", value: history.summary.virtualSessions.toLocaleString() },
   ]

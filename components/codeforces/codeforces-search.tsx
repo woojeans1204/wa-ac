@@ -21,6 +21,58 @@ type CfUser = {
   avatar?: string
   titlePhoto?: string
 }
+type CfSubmissionIdentity = {
+  author?: { members?: Array<{ handle?: string }> }
+}
+type CfRatingIdentity = {
+  handle?: string
+  contestId: number
+  contestName: string
+  rank: number
+  ratingUpdateTimeSeconds: number
+  oldRating: number
+  newRating: number
+}
+
+function canonicalHandle(
+  requestedHandle: string,
+  submissions: CfSubmissionIdentity[],
+  ratings: CfRatingIdentity[],
+) {
+  const requested = requestedHandle.trim()
+  for (const submission of submissions) {
+    const member = submission.author?.members?.find(
+      (item) => item.handle?.toLowerCase() === requested.toLowerCase(),
+    )
+    if (member?.handle) return member.handle
+  }
+  return ratings.find((rating) => rating.handle)?.handle || requested
+}
+
+function withProfilePhoto(history: History, user: CfUser): History {
+  const avatarUrl = (user.avatar || user.titlePhoto || "").replace(/^http:\/\//, "https://") || null
+  const avatarFallbackUrl = (user.titlePhoto || "").replace(/^http:\/\//, "https://") || null
+  return { ...history, avatarUrl, avatarFallbackUrl }
+}
+
+function withRatingHistory(history: History, ratings: CfRatingIdentity[]): History {
+  return {
+    ...history,
+    ratingPending: false,
+    raw: {
+      ...history.raw,
+      actualHistory: ratings.map((rating) => ({
+        contestId: String(rating.contestId),
+        title: rating.contestName,
+        dateText: new Date(rating.ratingUpdateTimeSeconds * 1000).toISOString(),
+        rank: rating.rank,
+        performance: null,
+        newRating: rating.newRating,
+        ratingDiff: rating.newRating - rating.oldRating,
+      })),
+    },
+  }
+}
 
 let directRequestQueue: Promise<void> = Promise.resolve()
 let directNextAllowedAt = 0
@@ -62,22 +114,20 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
     setError("")
     trackEvent("search_start", { platform: "Codeforces" })
     try {
-      const users = await directCodeforcesRequest<CfUser[]>("user.info", { handles: requestedHandle })
-      const user = users[0]
-      if (!user) throw new Error("User not found.")
-      setHandle(user.handle)
-      setLoadingHandle(user.handle)
-
-      const submissions = await directCodeforcesRequest<unknown[]>("user.status", {
-        handle: user.handle,
+      const submissions = await directCodeforcesRequest<CfSubmissionIdentity[]>("user.status", {
+        handle: requestedHandle,
         from: "1",
         count: "10000",
       })
-      const ratings = await directCodeforcesRequest<unknown[]>("user.rating", { handle: user.handle })
+      const ratingsPromise = directCodeforcesRequest<CfRatingIdentity[]>("user.rating", { handle: requestedHandle })
+      const resolvedHandle = canonicalHandle(requestedHandle, submissions, [])
+      const user: CfUser = { handle: resolvedHandle }
+      setHandle(resolvedHandle)
+      setLoadingHandle(resolvedHandle)
       const response = await fetch("/api/codeforces", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user, ratings, submissions }),
+        body: JSON.stringify({ user, ratings: [], submissions }),
         signal: AbortSignal.timeout(30_000),
       })
       const contentType = response.headers.get("content-type") ?? ""
@@ -90,7 +140,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
       }
       const payload = await response.json() as { history?: History; error?: string }
       if (!response.ok || !payload.history) throw new Error(payload.error || "Could not load this handle.")
-      setHistory(payload.history)
+      setHistory({ ...payload.history, ratingPending: true })
       setHandle(payload.history.user)
       setLoadingHandle(payload.history.user)
       recordSavedAccount("Codeforces", payload.history.user)
@@ -100,6 +150,24 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
         `/codeforces/${encodeURIComponent(payload.history.user)}${window.location.hash || "#dashboard"}`
       )
       trackEvent("search_success", { platform: "Codeforces" })
+
+      // Rating history is small but Codeforces requires it to start 2.1s after
+      // the submissions request. Let the contest dashboard render during that wait.
+      void ratingsPromise
+        .then((ratings) => {
+          setHistory((current) => current?.user === resolvedHandle ? withRatingHistory(current, ratings) : current)
+        })
+        .catch(() => {
+          setHistory((current) => current?.user === resolvedHandle ? { ...current, ratingPending: false } : current)
+        })
+
+      // Profile imagery is cosmetic: load it only after the statistics are visible.
+      void directCodeforcesRequest<CfUser[]>("user.info", { handles: payload.history.user })
+        .then(([profile]) => {
+          if (!profile) return
+          setHistory((current) => current?.user === profile.handle ? withProfilePhoto(current, profile) : current)
+        })
+        .catch(() => undefined)
     } catch (cause) {
       const timedOut = cause instanceof Error && (
         cause.name === "TimeoutError" || cause.name === "AbortError"

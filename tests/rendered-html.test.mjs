@@ -168,15 +168,13 @@ test("upsolve supports numeric difficulty, tags, attempt state, and contest type
   assert.doesNotMatch(source, /Latest 10 contests|During contest|Attempted or not/);
 });
 
-test("Codeforces refreshes a catalog captured before a contest finished", async () => {
-  const source = await readFile(
-    new URL("../app/api/codeforces/route.ts", import.meta.url),
-    "utf8",
-  );
+test("Codeforces builds histories without runtime catalog requests", async () => {
+  const source = await readFile(new URL("../app/api/codeforces/route.ts", import.meta.url), "utf8");
 
-  assert.match(source, /fetchedAt: number/);
-  assert.match(source, /function catalogPredatesFinishedContest/);
-  assert.match(source, /catalog = await getCatalog\(true\)/);
+  assert.match(source, /storedCatalog\.contestMetadata/);
+  assert.match(source, /return buildHistory\(user, ratings, submissions, storedContests\)/);
+  assert.doesNotMatch(source, /"problemset\.problems"/);
+  assert.doesNotMatch(source, /"contest\.list"/);
 });
 
 test("Codeforces fills known gaps in the global problem catalog", async () => {
@@ -194,6 +192,9 @@ test("Codeforces fills known gaps in the global problem catalog", async () => {
   assert.match(script, /readProblemsBeforeStandingsRows/);
   assert.doesNotMatch(script, /showUnofficial/);
   assert.match(script, /ratingDisagreements/);
+  assert.match(script, /syncContestMetadata/);
+  assert.match(script, /startTimeSeconds/);
+  assert.match(script, /durationSeconds/);
   assert.match(script, /Run the same command to resume/);
   assert.match(analytics, /return "Home"/);
 });
@@ -211,13 +212,17 @@ test("Codeforces backfill skips access-restricted legacy contests", async () => 
 });
 
 test("random search resolves the handle before loading its history", async () => {
-  const [route, search] = await Promise.all([
+  const [route, search, randomCatalog] = await Promise.all([
     readFile(new URL("../app/api/codeforces/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../components/codeforces/codeforces-search.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/data/codeforces-random-handles.json", import.meta.url), "utf8"),
   ]);
 
   assert.match(route, /searchParams\.get\("randomHandle"\)/);
+  assert.match(route, /codeforces-random-handles\.json/);
+  assert.doesNotMatch(route, /user\.ratedList/);
   assert.match(route, /\{ handle: user\.handle \}/);
+  assert.ok(JSON.parse(randomCatalog).handles.length >= 1_000);
   assert.match(search, /Choosing a random player…/);
   assert.match(search, /setHandle\(nextHandle\)/);
   assert.match(search, /loadPlayer\(nextHandle\)/);
@@ -230,9 +235,13 @@ test("Codeforces user-specific APIs run in the browser", async () => {
   ]);
 
   assert.match(search, /https:\/\/codeforces\.com\/api\/\$\{method\}/);
-  assert.match(search, /directCodeforcesRequest<CfUser\[]>\("user\.info"/);
-  assert.match(search, /directCodeforcesRequest<unknown\[]>\("user\.status"/);
-  assert.match(search, /directCodeforcesRequest<unknown\[]>\("user\.rating"/);
+  assert.match(search, /directCodeforcesRequest<CfSubmissionIdentity\[]>\("user\.status"/);
+  assert.match(search, /directCodeforcesRequest<CfRatingIdentity\[]>\("user\.rating"/);
+  assert.match(search, /ratingsPromise/);
+  assert.match(search, /ratingPending: true/);
+  assert.match(search, /body: JSON\.stringify\(\{ user, ratings: \[\], submissions \}\)/);
+  assert.match(search, /statistics are visible/);
+  assert.match(search, /void directCodeforcesRequest<CfUser\[]>\("user\.info"/);
   assert.match(search, /method: "POST"/);
   assert.match(route, /export async function POST/);
   assert.match(route, /buildHistoryWithCatalog/);

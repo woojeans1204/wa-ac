@@ -58,6 +58,7 @@ export type UpsolveItem = {
 
 export type History = {
   user: string
+  ratingPending?: boolean
   avatarUrl?: string | null
   avatarFallbackUrl?: string | null
   summary: {

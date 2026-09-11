@@ -87,6 +87,7 @@ async function readCheckpoint(path) {
       updatedAt: null,
       problemsetFetchedAt: null,
       ratingDisagreements: [],
+      contestMetadata: {},
       contests: {},
     }
   }
@@ -242,6 +243,18 @@ function crossValidateStoredContests(checkpoint, globalProblems) {
   return { globalMap, disagreements, updatedRatings }
 }
 
+function syncContestMetadata(checkpoint, contests) {
+  checkpoint.contestMetadata ??= {}
+  for (const contest of contests) {
+    checkpoint.contestMetadata[String(contest.id)] = {
+      id: contest.id,
+      name: contest.name,
+      startTimeSeconds: contest.startTimeSeconds ?? null,
+      durationSeconds: contest.durationSeconds,
+    }
+  }
+}
+
 let stopping = false
 for (const signal of ["SIGINT", "SIGTERM"]) {
   process.on(signal, () => {
@@ -271,6 +284,9 @@ async function main() {
   console.log(`Checked ${Object.keys(checkpoint.contests).length} stored contests: ${updatedRatings} rating updates, ${disagreements.length} disagreements.`)
 
   const contests = await request("contest.list", { gym: "false" })
+  const gymContests = await request("contest.list", { gym: "true" })
+  syncContestMetadata(checkpoint, [...contests, ...gymContests])
+  console.log(`Stored metadata for ${Object.keys(checkpoint.contestMetadata).length} regular and gym contests.`)
   const selectedIds = new Set(options.contestIds)
   const targets = contests
     .filter((contest) => contest.phase === "FINISHED")
