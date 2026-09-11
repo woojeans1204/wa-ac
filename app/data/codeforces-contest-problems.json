@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T11:21:07.557Z",
+  "updatedAt": "2026-09-11T19:38:07.043Z",
   "problemsetFetchedAt": "2026-09-11T11:21:07.497Z",
   "ratingDisagreements": [],
   "contests": {
@@ -198274,6 +198274,12 @@
       "name": "The 7th Guangxi Collegiate Programming Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106700": {
+      "id": 106700,
+      "name": "Bangladesh Olympiad in Informatics Discord Server Monthly Round 2",
+      "startTimeSeconds": null,
+      "durationSeconds": 12600
     }
   }
 }
