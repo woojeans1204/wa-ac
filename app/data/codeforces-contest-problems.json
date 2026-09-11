@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T01:36:03.700Z",
-  "problemsetFetchedAt": "2026-09-11T01:35:58.937Z",
+  "updatedAt": "2026-09-11T11:21:07.557Z",
+  "problemsetFetchedAt": "2026-09-11T11:21:07.497Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169600,7 +169600,8 @@
             "brute force",
             "constructive algorithms",
             "dfs and similar",
-            "dp"
+            "dp",
+            "implementation"
           ]
         },
         {
