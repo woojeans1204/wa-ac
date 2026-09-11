@@ -196,7 +196,25 @@ test("Codeforces fills known gaps in the global problem catalog", async () => {
   assert.match(script, /startTimeSeconds/);
   assert.match(script, /durationSeconds/);
   assert.match(script, /Run the same command to resume/);
+  assert.match(script, /--skip-ratings/);
+  assert.match(script, /--ratings-only/);
   assert.match(analytics, /return "Home"/);
+});
+
+test("GitHub Actions refreshes Codeforces catalogs on separate schedules", async () => {
+  const workflow = await readFile(
+    new URL("../.github/workflows/refresh-codeforces-data.yml", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(workflow, /7,37 \* \* \* \*/);
+  assert.match(workflow, /17 \*\/6 \* \* \*/);
+  assert.match(workflow, /27 3 \* \* \*/);
+  assert.match(workflow, /--skip-ratings --limit 20/);
+  assert.match(workflow, /--ratings-only/);
+  assert.match(workflow, /refresh-codeforces-random-handles/);
+  assert.match(workflow, /git diff --cached --quiet/);
+  assert.match(workflow, /codeforces-data-refresh/);
 });
 
 test("Codeforces backfill skips access-restricted legacy contests", async () => {

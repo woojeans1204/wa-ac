@@ -27,6 +27,16 @@ const candidates = payload.result
 
 if (!candidates.length) throw new Error("No active rated Codeforces handles were returned.")
 
+try {
+  const previous = JSON.parse(await readFile(OUTPUT_URL, "utf8"))
+  if (JSON.stringify(previous?.handles) === JSON.stringify(candidates)) {
+    console.log(`Active rated handle list is unchanged (${candidates.length.toLocaleString()} handles).`)
+    process.exit(0)
+  }
+} catch (error) {
+  if (error?.code !== "ENOENT") throw error
+}
+
 await writeFile(OUTPUT_URL, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
   sourceCount: candidates.length,

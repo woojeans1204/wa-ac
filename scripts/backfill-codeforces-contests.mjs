@@ -23,6 +23,8 @@ Options:
   --delay <ms>            Delay between API requests (default: 2100)
   --checkpoint <count>    Save after this many contests (default: 5)
   --refresh               Fetch contests already in the checkpoint again
+  --skip-ratings          Skip problem rating cross-validation
+  --ratings-only          Only cross-validate stored problem ratings
   --output <path>         Checkpoint path
   --help                  Show this help
 `)
@@ -45,6 +47,8 @@ function parseArguments(argv) {
     delay: 2100,
     checkpoint: 5,
     refresh: false,
+    skipRatings: false,
+    ratingsOnly: false,
     output: DEFAULT_OUTPUT,
   }
 
@@ -67,7 +71,13 @@ function parseArguments(argv) {
     else if (argument === "--checkpoint") options.checkpoint = positiveInteger(next(), "--checkpoint")
     else if (argument === "--output") options.output = next()
     else if (argument === "--refresh") options.refresh = true
+    else if (argument === "--skip-ratings") options.skipRatings = true
+    else if (argument === "--ratings-only") options.ratingsOnly = true
     else throw new Error(`Unknown option: ${argument}`)
+  }
+
+  if (options.skipRatings && options.ratingsOnly) {
+    throw new Error("--skip-ratings and --ratings-only cannot be used together.")
   }
 
   return options
@@ -99,14 +109,31 @@ function sortedRecord(record) {
   )
 }
 
+function meaningfulCheckpoint(checkpoint) {
+  const data = { ...checkpoint }
+  delete data.updatedAt
+  delete data.problemsetFetchedAt
+  return data
+}
+
 async function saveCheckpoint(path, checkpoint) {
-  checkpoint.updatedAt = new Date().toISOString()
   checkpoint.contests = sortedRecord(checkpoint.contests)
   const absolutePath = resolve(path)
+  try {
+    const previous = JSON.parse(await readFile(absolutePath, "utf8"))
+    if (JSON.stringify(meaningfulCheckpoint(previous)) === JSON.stringify(meaningfulCheckpoint(checkpoint))) {
+      return false
+    }
+  } catch (error) {
+    if (error?.code !== "ENOENT") throw error
+  }
+
+  checkpoint.updatedAt = new Date().toISOString()
   const temporaryPath = `${absolutePath}.tmp`
   await mkdir(dirname(absolutePath), { recursive: true })
   await writeFile(temporaryPath, `${JSON.stringify(checkpoint, null, 2)}\n`)
   await rename(temporaryPath, absolutePath)
+  return true
 }
 
 function sleep(milliseconds) {
@@ -275,13 +302,20 @@ async function main() {
   const checkpoint = await readCheckpoint(outputPath)
   const request = createCodeforcesClient(options.delay)
 
-  console.log("Fetching the current Codeforces problemset for rating cross-validation...")
-  const problemset = await request("problemset.problems")
-  const { globalMap, disagreements, updatedRatings } = crossValidateStoredContests(
-    checkpoint,
-    problemset.problems,
-  )
-  console.log(`Checked ${Object.keys(checkpoint.contests).length} stored contests: ${updatedRatings} rating updates, ${disagreements.length} disagreements.`)
+  let globalMap = new Map()
+  if (!options.skipRatings) {
+    console.log("Fetching the current Codeforces problemset for rating cross-validation...")
+    const problemset = await request("problemset.problems")
+    const result = crossValidateStoredContests(checkpoint, problemset.problems)
+    globalMap = result.globalMap
+    console.log(`Checked ${Object.keys(checkpoint.contests).length} stored contests: ${result.updatedRatings} rating updates, ${result.disagreements.length} disagreements.`)
+  }
+
+  if (options.ratingsOnly) {
+    const changed = await saveCheckpoint(outputPath, checkpoint)
+    console.log(changed ? "Saved updated problem ratings." : "Problem ratings are unchanged.")
+    return
+  }
 
   const contests = await request("contest.list", { gym: "false" })
   const gymContests = await request("contest.list", { gym: "true" })
