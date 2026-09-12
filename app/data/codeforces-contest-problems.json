@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12T16:18:55.523Z",
+  "updatedAt": "2026-09-12T18:43:29.435Z",
   "problemsetFetchedAt": "2026-09-12T10:46:30.922Z",
   "ratingDisagreements": [],
   "contests": {
@@ -169642,6 +169642,89 @@
             "combinatorics",
             "math",
             "number theory"
+          ]
+        }
+      ]
+    },
+    "2262": {
+      "name": "Codeforces Round 1120 (Div. 1)",
+      "fetchedAt": "2026-09-12T18:43:29.374Z",
+      "problems": [
+        {
+          "contestId": 2262,
+          "index": "A1",
+          "name": "Floor of MEX (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2262,
+          "index": "A2",
+          "name": "Floor of MEX (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp"
+          ]
+        },
+        {
+          "contestId": 2262,
+          "index": "B",
+          "name": "Culling Game",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "data structures",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2262,
+          "index": "C",
+          "name": "Traveling the World",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "graphs",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2262,
+          "index": "D",
+          "name": "PLUSworld",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "graphs"
+          ]
+        },
+        {
+          "contestId": 2262,
+          "index": "E",
+          "name": "Paired Bracket Sequences",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2262,
+          "index": "F",
+          "name": "Rank Removal",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "math"
           ]
         }
       ]
