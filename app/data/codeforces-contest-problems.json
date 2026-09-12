@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T19:38:07.043Z",
-  "problemsetFetchedAt": "2026-09-11T11:21:07.497Z",
+  "updatedAt": "2026-09-12T10:46:30.982Z",
+  "problemsetFetchedAt": "2026-09-12T10:46:30.922Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169574,6 +169574,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "brute force",
             "math",
             "number theory"
           ]
@@ -169596,7 +169597,6 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "binary search",
             "brute force",
             "constructive algorithms",
             "dfs and similar",
@@ -169624,7 +169624,6 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "bitmasks",
             "brute force",
             "dfs and similar",
             "dsu",
