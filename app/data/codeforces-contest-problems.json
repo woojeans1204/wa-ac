@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12T18:43:29.435Z",
-  "problemsetFetchedAt": "2026-09-12T10:46:30.922Z",
+  "updatedAt": "2026-09-12T20:33:13.261Z",
+  "problemsetFetchedAt": "2026-09-12T20:33:13.198Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169668,7 +169668,8 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "dp"
+            "dp",
+            "implementation"
           ]
         },
         {
