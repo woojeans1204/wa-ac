@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12T20:33:13.261Z",
+  "updatedAt": "2026-09-12T23:18:08.268Z",
   "problemsetFetchedAt": "2026-09-12T20:33:13.198Z",
   "ratingDisagreements": [],
   "contests": {
@@ -169726,6 +169726,83 @@
           "standingsRating": null,
           "tags": [
             "math"
+          ]
+        }
+      ]
+    },
+    "2263": {
+      "name": "Codeforces Round 1120 (Div. 2)",
+      "fetchedAt": "2026-09-12T23:18:08.203Z",
+      "problems": [
+        {
+          "contestId": 2263,
+          "index": "A",
+          "name": "Min Max Game",
+          "rating": null,
+          "standingsRating": null,
+          "tags": []
+        },
+        {
+          "contestId": 2263,
+          "index": "B",
+          "name": "Min Matrices",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "contestId": 2263,
+          "index": "C1",
+          "name": "Floor of MEX (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2263,
+          "index": "C2",
+          "name": "Floor of MEX (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2263,
+          "index": "D",
+          "name": "Culling Game",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures"
+          ]
+        },
+        {
+          "contestId": 2263,
+          "index": "E",
+          "name": "Traveling the World",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "graphs"
+          ]
+        },
+        {
+          "contestId": 2263,
+          "index": "F",
+          "name": "PLUSworld",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "graphs",
+            "greedy"
           ]
         }
       ]
