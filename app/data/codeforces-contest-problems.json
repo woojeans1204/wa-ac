@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12T10:46:30.982Z",
+  "updatedAt": "2026-09-12T16:18:55.523Z",
   "problemsetFetchedAt": "2026-09-12T10:46:30.922Z",
   "ratingDisagreements": [],
   "contests": {
@@ -198279,6 +198279,12 @@
       "name": "Bangladesh Olympiad in Informatics Discord Server Monthly Round 2",
       "startTimeSeconds": null,
       "durationSeconds": 12600
+    },
+    "106701": {
+      "id": 106701,
+      "name": "The 2026 ICPC Asia EC Regionals Online Contest (II)",
+      "startTimeSeconds": 1789189200,
+      "durationSeconds": 18000
     }
   }
 }
