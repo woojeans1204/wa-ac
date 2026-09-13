@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-13T16:17:02.140Z",
+  "updatedAt": "2026-09-13T19:25:21.684Z",
   "problemsetFetchedAt": "2026-09-13T16:17:02.074Z",
   "ratingDisagreements": [],
   "contests": {
@@ -198446,6 +198446,12 @@
       "id": 106701,
       "name": "The 2026 ICPC Asia EC Regionals Online Contest (II)",
       "startTimeSeconds": 1789189200,
+      "durationSeconds": 18000
+    },
+    "106705": {
+      "id": 106705,
+      "name": "The 2026 ICPC China Guizhou Provincial Contest",
+      "startTimeSeconds": 1789268400,
       "durationSeconds": 18000
     }
   }
