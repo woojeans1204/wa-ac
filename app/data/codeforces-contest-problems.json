@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-14T04:56:06.147Z",
+  "updatedAt": "2026-09-14T10:57:35.604Z",
   "problemsetFetchedAt": "2026-09-14T04:56:06.093Z",
   "ratingDisagreements": [],
   "contests": {
@@ -198549,6 +198549,12 @@
       "id": 106706,
       "name": "Aleppo Collegiate Programming Contest 2026",
       "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106707": {
+      "id": 106707,
+      "name": "The 8th Guangxi Collegiate Programming Contest",
+      "startTimeSeconds": 1748134800,
       "durationSeconds": 18000
     }
   }
