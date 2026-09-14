@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-14T12:46:54.447Z",
+  "updatedAt": "2026-09-14T20:55:27.735Z",
   "problemsetFetchedAt": "2026-09-14T12:46:54.385Z",
   "ratingDisagreements": [],
   "contests": {
@@ -182777,6 +182777,12 @@
       "name": "Codeforces Round 1121 (Div. 2)",
       "startTimeSeconds": 1789319100,
       "durationSeconds": 7200
+    },
+    "2266": {
+      "id": 2266,
+      "name": "Codeforces Round (Div. 3)",
+      "startTimeSeconds": 1790001300,
+      "durationSeconds": 9000
     },
     "100001": {
       "id": 100001,
