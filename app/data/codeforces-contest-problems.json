@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-14T10:57:35.604Z",
-  "problemsetFetchedAt": "2026-09-14T04:56:06.093Z",
+  "updatedAt": "2026-09-14T12:46:54.447Z",
+  "problemsetFetchedAt": "2026-09-14T12:46:54.385Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169706,7 +169706,8 @@
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
-            "graphs"
+            "graphs",
+            "greedy"
           ]
         },
         {
