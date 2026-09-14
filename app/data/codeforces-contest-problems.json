@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-13T21:39:39.195Z",
-  "problemsetFetchedAt": "2026-09-13T16:17:02.074Z",
+  "updatedAt": "2026-09-14T04:56:06.147Z",
+  "problemsetFetchedAt": "2026-09-14T04:56:06.093Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169694,7 +169694,8 @@
           "tags": [
             "combinatorics",
             "graphs",
-            "math"
+            "math",
+            "schedules"
           ]
         },
         {
@@ -169891,6 +169892,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "constructive algorithms",
             "implementation",
             "math"
           ]
