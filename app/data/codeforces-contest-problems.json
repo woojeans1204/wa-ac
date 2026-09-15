@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-15T10:01:16.472Z",
+  "updatedAt": "2026-09-15T14:56:40.347Z",
   "problemsetFetchedAt": "2026-09-14T12:46:54.385Z",
   "ratingDisagreements": [],
   "contests": {
@@ -169922,7 +169922,7 @@
     },
     "4": {
       "id": 4,
-      "name": "Codeforces Beta Round 4 (Div. 2 Only)",
+      "name": "Codeforces Beta Round 4 (Дивизион 2)",
       "startTimeSeconds": 1268395200,
       "durationSeconds": 7200
     },
@@ -169934,7 +169934,7 @@
     },
     "6": {
       "id": 6,
-      "name": "Codeforces Beta Round 6 (Div. 2 Only)",
+      "name": "Codeforces Beta Round 6 (Дивизион 2)",
       "startTimeSeconds": 1269673200,
       "durationSeconds": 7200
     },
@@ -169952,7 +169952,7 @@
     },
     "9": {
       "id": 9,
-      "name": "Codeforces Beta Round 9 (Div. 2 Only)",
+      "name": "Codeforces Beta Round 9 (Дивизион 2)",
       "startTimeSeconds": 1270983600,
       "durationSeconds": 7200
     },
@@ -169970,7 +169970,7 @@
     },
     "12": {
       "id": 12,
-      "name": "Codeforces Beta Round 12 (Div 2 Only)",
+      "name": "Codeforces Beta Round 12 (Див. 2)",
       "startTimeSeconds": 1272538800,
       "durationSeconds": 7200
     },
@@ -169982,7 +169982,7 @@
     },
     "14": {
       "id": 14,
-      "name": "Codeforces Beta Round 14 (Div. 2)",
+      "name": "Codeforces Beta Round 14 (Див. 2)",
       "startTimeSeconds": 1274283000,
       "durationSeconds": 7200
     },
@@ -169994,7 +169994,7 @@
     },
     "16": {
       "id": 16,
-      "name": "Codeforces Beta Round 16 (Div. 2 Only)",
+      "name": "Codeforces Beta Round 16 (Див. 2)",
       "startTimeSeconds": 1275570000,
       "durationSeconds": 7200
     },
@@ -170006,7 +170006,7 @@
     },
     "18": {
       "id": 18,
-      "name": "Codeforces Beta Round 18 (Div. 2 Only)",
+      "name": "Codeforces Beta Round 18 (Див. 2)",
       "startTimeSeconds": 1276700400,
       "durationSeconds": 7200
     },
@@ -170030,7 +170030,7 @@
     },
     "22": {
       "id": 22,
-      "name": "Codeforces Beta Round 22 (Div. 2 Only)",
+      "name": "Codeforces Beta Round 22 (Див. 2)",
       "startTimeSeconds": 1277823600,
       "durationSeconds": 7200
     },
@@ -170048,7 +170048,7 @@
     },
     "25": {
       "id": 25,
-      "name": "Codeforces Beta Round 25 (Div. 2 Only)",
+      "name": "Codeforces Beta Round 25 (Див. 2)",
       "startTimeSeconds": 1280761200,
       "durationSeconds": 7200
     },
@@ -170060,7 +170060,7 @@
     },
     "27": {
       "id": 27,
-      "name": "Codeforces Beta Round 27 (Codeforces format, Div. 2)",
+      "name": "Codeforces Beta Round 27 (Codeforces format, Див. 2)",
       "startTimeSeconds": 1284130800,
       "durationSeconds": 7200
     },
@@ -170072,7 +170072,7 @@
     },
     "29": {
       "id": 29,
-      "name": "Codeforces Beta Round 29 (Div. 2, Codeforces format)",
+      "name": "Codeforces Beta Round 29 (Див. 2, Codeforces format)",
       "startTimeSeconds": 1284994800,
       "durationSeconds": 7200
     },
@@ -170084,13 +170084,13 @@
     },
     "31": {
       "id": 31,
-      "name": "Codeforces Beta Round 31 (Div. 2, Codeforces format)",
+      "name": "Codeforces Beta Round 31 (Див. 2, Codeforces format)",
       "startTimeSeconds": 1285599600,
       "durationSeconds": 7200
     },
     "32": {
       "id": 32,
-      "name": "Codeforces Beta Round 32 (Div. 2, Codeforces format)",
+      "name": "Codeforces Beta Round 32 (Див. 2, Codeforces format)",
       "startTimeSeconds": 1286002800,
       "durationSeconds": 7200
     },
@@ -170126,13 +170126,13 @@
     },
     "38": {
       "id": 38,
-      "name": "School Personal Contest #1 (Winter Computer School 2010/11) - Codeforces Beta Round 38 (ACM-ICPC Rules)",
+      "name": "Школьная индивидуальная олимпиада #1 (ЗКШ 2010/11) - Codeforces Beta Round 38 (ACM-ICPC Rules)",
       "startTimeSeconds": 1288440000,
       "durationSeconds": 14400
     },
     "39": {
       "id": 39,
-      "name": "School Team Contest 1 (Winter Computer School 2010/11)",
+      "name": "Школьная командная олимпиада 1 (ЗКШ 2010/11)",
       "startTimeSeconds": 1287904200,
       "durationSeconds": 18000
     },
@@ -170162,19 +170162,19 @@
     },
     "44": {
       "id": 44,
-      "name": "School Team Contest 2 (Winter Computer School 2010/11)",
+      "name": "Школьная командная олимпиада 2 (ЗКШ 2010/11)",
       "startTimeSeconds": 1289041200,
       "durationSeconds": 18000
     },
     "45": {
       "id": 45,
-      "name": "School Team Contest 3 (Winter Computer School 2010/11)",
+      "name": "Школьная командная олимпиада 3 (ЗКШ 2010/11)",
       "startTimeSeconds": 1289646000,
       "durationSeconds": 18000
     },
     "46": {
       "id": 46,
-      "name": "School Personal Contest #2 (Winter Computer School 2010/11) - Codeforces Beta Round 43 (ACM-ICPC Rules)",
+      "name": "Школьная индивидуальная олимпиада #2 (ЗКШ 2010/11) - Codeforces Beta Round 43 (ACM-ICPC Rules)",
       "startTimeSeconds": 1291536000,
       "durationSeconds": 10800
     },
@@ -170186,7 +170186,7 @@
     },
     "48": {
       "id": 48,
-      "name": "School Personal Contest #3 (Winter Computer School 2010/11) - Codeforces Beta Round 45 (ACM-ICPC Rules)",
+      "name": "Школьная индивидуальная олимпиада #3 (ЗКШ 2010/11) - Codeforces Beta Round 45 (ACM-ICPC Rules)",
       "startTimeSeconds": 1292140800,
       "durationSeconds": 10800
     },
@@ -170354,7 +170354,7 @@
     },
     "76": {
       "id": 76,
-      "name": "All-Ukrainian School Olympiad in Informatics",
+      "name": "Всеукраинская олимпиада школьников по информатике",
       "startTimeSeconds": 1302609600,
       "durationSeconds": 18000
     },
@@ -170384,13 +170384,13 @@
     },
     "81": {
       "id": 81,
-      "name": "Yandex.Algorithm Open 2011: Qualification 1",
+      "name": "Яндекс.Алгоритм 2011: Квалификация 1",
       "startTimeSeconds": 1304485200,
       "durationSeconds": 7200
     },
     "82": {
       "id": 82,
-      "name": "Yandex.Algorithm 2011: Qualification 2",
+      "name": "Яндекс.Алгоритм 2011: Квалификация 2",
       "startTimeSeconds": 1304694000,
       "durationSeconds": 7200
     },
@@ -170408,13 +170408,13 @@
     },
     "85": {
       "id": 85,
-      "name": "Yandex.Algorithm 2011: Round 1",
+      "name": "Яндекс.Алгоритм 2011: Раунд 1",
       "startTimeSeconds": 1305903600,
       "durationSeconds": 7200
     },
     "86": {
       "id": 86,
-      "name": "Yandex.Algorithm 2011: Round 2",
+      "name": "Яндекс.Алгоритм 2011: Раунд 2",
       "startTimeSeconds": 1306077000,
       "durationSeconds": 7200
     },
@@ -170480,7 +170480,7 @@
     },
     "97": {
       "id": 97,
-      "name": "Yandex.Algorithm 2011: Finals",
+      "name": "Яндекс.Алгоритм 2011: Финал",
       "startTimeSeconds": 1310731200,
       "durationSeconds": 7200
     },
@@ -170618,7 +170618,7 @@
     },
     "120": {
       "id": 120,
-      "name": "School Regional Team Contest, Saratov, 2011",
+      "name": "Командная олимпиада школьников, Саратов, 2011",
       "startTimeSeconds": 1318919400,
       "durationSeconds": 18000
     },
@@ -170846,13 +170846,13 @@
     },
     "158": {
       "id": 158,
-      "name": "VK Cup 2012 Qualification Round 1",
+      "name": "VK Cup 2012 Квалификационный раунд 1",
       "startTimeSeconds": 1330804800,
       "durationSeconds": 86400
     },
     "159": {
       "id": 159,
-      "name": "VK Cup 2012 Qualification Round 2",
+      "name": "VK Cup 2012 Квалификационный раунд 2",
       "startTimeSeconds": 1331280000,
       "durationSeconds": 86400
     },
@@ -170864,25 +170864,25 @@
     },
     "161": {
       "id": 161,
-      "name": "VK Cup 2012 Round 1",
+      "name": "VK Cup 2012 Раунд 1",
       "startTimeSeconds": 1331478300,
       "durationSeconds": 7200
     },
     "162": {
       "id": 162,
-      "name": "VK Cup 2012 Wild-card Round 1",
+      "name": "VK Cup 2012 Уайлд-кард раунд 1",
       "startTimeSeconds": 1332083400,
       "durationSeconds": 7200
     },
     "163": {
       "id": 163,
-      "name": "VK Cup 2012 Round 2",
+      "name": "VK Cup 2012 Раунд 2",
       "startTimeSeconds": 1332687900,
       "durationSeconds": 7200
     },
     "164": {
       "id": 164,
-      "name": "VK Cup 2012 Round 3",
+      "name": "VK Cup 2012 Раунд 3",
       "startTimeSeconds": 1333897500,
       "durationSeconds": 7200
     },
@@ -170912,37 +170912,37 @@
     },
     "169": {
       "id": 169,
-      "name": "VK Cup 2012 Round 2 (Unofficial Div. 2 Edition)",
+      "name": "VK Cup 2012 Раунд 2 (неофициальная редакция для Div. 2)",
       "startTimeSeconds": 1332687900,
       "durationSeconds": 7200
     },
     "170": {
       "id": 170,
-      "name": "VK Cup 2012 Wild-card Round 2",
+      "name": "VK Cup 2012 Уайлд-кард раунд 2",
       "startTimeSeconds": 1332954000,
       "durationSeconds": 604800
     },
     "171": {
       "id": 171,
-      "name": "April Fools Day Contest",
+      "name": "Первоапрельский контест",
       "startTimeSeconds": 1333292400,
       "durationSeconds": 7200
     },
     "172": {
       "id": 172,
-      "name": "Croc Champ 2012 - Qualification Round",
+      "name": "Чемпионат КРОК 2012 - Квалификационный раунд",
       "startTimeSeconds": 1333440000,
       "durationSeconds": 86400
     },
     "173": {
       "id": 173,
-      "name": "Croc Champ 2012 - Round 1",
+      "name": "Чемпионат КРОК 2012 - Раунд 1",
       "startTimeSeconds": 1333724400,
       "durationSeconds": 7200
     },
     "174": {
       "id": 174,
-      "name": "VK Cup 2012 Round 3 (Unofficial Div. 2 Edition)",
+      "name": "VK Cup 2012 Раунд 3 (неофициальная редакция для Div. 2)",
       "startTimeSeconds": 1333897500,
       "durationSeconds": 7200
     },
@@ -170954,7 +170954,7 @@
     },
     "176": {
       "id": 176,
-      "name": "Croc Champ 2012 - Round 2",
+      "name": "Чемпионат КРОК 2012 - Раунд 2",
       "startTimeSeconds": 1334934300,
       "durationSeconds": 7200
     },
@@ -170972,13 +170972,13 @@
     },
     "180": {
       "id": 180,
-      "name": "Codeforces Round 116 (Div. 2, ACM-ICPC Rules)",
+      "name": "Codeforces Round 116 (Div. 2, правила ACM-ICPC)",
       "startTimeSeconds": 1335078000,
       "durationSeconds": 7200
     },
     "181": {
       "id": 181,
-      "name": "Croc Champ 2012 - Round 2 (Unofficial Div. 2 Edition)",
+      "name": "Чемпионат КРОК 2012 - Раунд 2 (неофиц. редакция для Div. 2)",
       "startTimeSeconds": 1334934300,
       "durationSeconds": 7200
     },
@@ -170990,7 +170990,7 @@
     },
     "183": {
       "id": 183,
-      "name": "Croc Champ 2012 - Final",
+      "name": "Чемпионат КРОК 2012 - Финал",
       "startTimeSeconds": 1335532800,
       "durationSeconds": 7200
     },
@@ -171122,13 +171122,13 @@
     },
     "206": {
       "id": 206,
-      "name": "Abbyy Cup 2.0 - Final",
+      "name": "Abbyy Cup 2.0 - Финал",
       "startTimeSeconds": 1341576900,
       "durationSeconds": 10800
     },
     "207": {
       "id": 207,
-      "name": "Abbyy Cup 2.0 - Final (unofficial)",
+      "name": "Abbyy Cup 2.0 - Финал (неоф. трансляция)",
       "startTimeSeconds": 1341730800,
       "durationSeconds": 10800
     },
@@ -171140,19 +171140,19 @@
     },
     "209": {
       "id": 209,
-      "name": "VK Cup 2012 Finals, Practice Session",
+      "name": "VK Cup 2012 Финал, пробный тур",
       "startTimeSeconds": 1342252500,
       "durationSeconds": 5400
     },
     "211": {
       "id": 211,
-      "name": "VK Cup 2012 Finals",
+      "name": "VK Cup 2012, Финал",
       "startTimeSeconds": 1342335600,
       "durationSeconds": 9000
     },
     "212": {
       "id": 212,
-      "name": "VK Cup 2012 Finals (unofficial online-version)",
+      "name": "VK Cup 2012, Финал (неофициальная онлайн-версия)",
       "startTimeSeconds": 1342450800,
       "durationSeconds": 9000
     },
@@ -171284,7 +171284,7 @@
     },
     "234": {
       "id": 234,
-      "name": "Codeforces Round 145 (Div. 2, ACM-ICPC Rules)",
+      "name": "Codeforces Round 145 (Div. 2, правила ACM-ICPC)",
       "startTimeSeconds": 1350370800,
       "durationSeconds": 12600
     },
@@ -171320,7 +171320,7 @@
     },
     "240": {
       "id": 240,
-      "name": "Codeforces Round 145 (Div. 1, ACM-ICPC Rules)",
+      "name": "Codeforces Round 145 (Div. 1, правила ACM-ICPC)",
       "startTimeSeconds": 1350370800,
       "durationSeconds": 7200
     },
@@ -171350,7 +171350,7 @@
     },
     "245": {
       "id": 245,
-      "name": "CROC-MBTU 2012, Elimination Round (ACM-ICPC)",
+      "name": "КРОК-МВТУ 2012, Отборочный раунд (ACM-ICPC)",
       "startTimeSeconds": 1353339000,
       "durationSeconds": 7800
     },
@@ -171362,7 +171362,7 @@
     },
     "247": {
       "id": 247,
-      "name": "CROC-MBTU 2012, Final Round",
+      "name": "КРОК-МВТУ 2012, Финальный раунд",
       "startTimeSeconds": 1353927300,
       "durationSeconds": 7200
     },
@@ -171380,7 +171380,7 @@
     },
     "250": {
       "id": 250,
-      "name": "CROC-MBTU 2012, Final Round (Online version, Div. 2)",
+      "name": "КРОК-МВТУ 2012, Финальный раунд (Online версия, Div. 2)",
       "startTimeSeconds": 1353938400,
       "durationSeconds": 7200
     },
@@ -171620,25 +171620,25 @@
     },
     "290": {
       "id": 290,
-      "name": "April Fools Day Contest 2013",
+      "name": "Первоапрельский контест 2013",
       "startTimeSeconds": 1364830200,
       "durationSeconds": 7200
     },
     "291": {
       "id": 291,
-      "name": "Croc Champ 2013 - Qualification Round",
+      "name": "Чемпионат КРОК 2013 - Квалификационный раунд",
       "startTimeSeconds": 1365796800,
       "durationSeconds": 172800
     },
     "292": {
       "id": 292,
-      "name": "Croc Champ 2013 - Round 1",
+      "name": "Чемпионат КРОК 2013 - Раунд 1",
       "startTimeSeconds": 1366040100,
       "durationSeconds": 7200
     },
     "293": {
       "id": 293,
-      "name": "Croc Champ 2013 - Round 2",
+      "name": "Чемпионат КРОК 2013 - Раунд 2",
       "startTimeSeconds": 1366644900,
       "durationSeconds": 7800
     },
@@ -171674,7 +171674,7 @@
     },
     "299": {
       "id": 299,
-      "name": "Croc Champ 2013 - Round 2 (Div. 2 Edition)",
+      "name": "Чемпионат КРОК 2013 - Раунд 2 (редакция для Div. 2)",
       "startTimeSeconds": 1366644600,
       "durationSeconds": 7800
     },
@@ -171722,13 +171722,13 @@
     },
     "308": {
       "id": 308,
-      "name": "Croc Champ 2013 - Finals",
+      "name": "Чемпионат КРОК 2013 - Финал",
       "startTimeSeconds": 1368784800,
       "durationSeconds": 9000
     },
     "309": {
       "id": 309,
-      "name": "Croc Champ 2013 - Finals (online version, Div. 1)",
+      "name": "Чемпионат КРОК 2013 - Финал (онлайн-трансляция, для Div. 1)",
       "startTimeSeconds": 1368803400,
       "durationSeconds": 9000
     },
@@ -171854,7 +171854,7 @@
     },
     "331": {
       "id": 331,
-      "name": "ABBYY Cup 3.0 - Finals (online version)",
+      "name": "ABBYY Cup 3.0 - Finals (онлайн-трансляция)",
       "startTimeSeconds": 1374075000,
       "durationSeconds": 8100
     },
@@ -171878,7 +171878,7 @@
     },
     "335": {
       "id": 335,
-      "name": "MemSQL start[c]up Round 2 - online version",
+      "name": "MemSQL start[c]up Round 2 - онлайн-версия",
       "startTimeSeconds": 1375549200,
       "durationSeconds": 10800
     },
@@ -171938,7 +171938,7 @@
     },
     "345": {
       "id": 345,
-      "name": "Friday the 13th, Programmers Day",
+      "name": "Пятница, 13-ое, День Программиста",
       "startTimeSeconds": 1379086800,
       "durationSeconds": 7200
     },
@@ -172316,25 +172316,25 @@
     },
     "409": {
       "id": 409,
-      "name": "April Fools Day Contest 2014",
+      "name": "Первоапрельский контест 2014",
       "startTimeSeconds": 1396366200,
       "durationSeconds": 7200
     },
     "411": {
       "id": 411,
-      "name": "Coder-Strike 2014 - Qualification Round",
+      "name": "Coder-Strike 2014 - Квалификационный раунд",
       "startTimeSeconds": 1397505600,
       "durationSeconds": 86400
     },
     "412": {
       "id": 412,
-      "name": "Coder-Strike 2014 - Round 1",
+      "name": "Coder-Strike 2014 - Раунд 1",
       "startTimeSeconds": 1397837400,
       "durationSeconds": 7200
     },
     "413": {
       "id": 413,
-      "name": "Coder-Strike 2014 - Round 2",
+      "name": "Coder-Strike 2014 - Раунд 2",
       "startTimeSeconds": 1397977200,
       "durationSeconds": 7200
     },
@@ -172370,19 +172370,19 @@
     },
     "419": {
       "id": 419,
-      "name": "Coder-Strike 2014 - Finals",
+      "name": "Coder-Strike 2014 - Финал",
       "startTimeSeconds": 1398169200,
       "durationSeconds": 7200
     },
     "420": {
       "id": 420,
-      "name": "Coder-Strike 2014 - Finals (online edition, Div. 1)",
+      "name": "Coder-Strike 2014 - Финал (трансляция, Div. 1)",
       "startTimeSeconds": 1398169140,
       "durationSeconds": 7200
     },
     "421": {
       "id": 421,
-      "name": "Coder-Strike 2014 - Finals (online edition, Div. 2)",
+      "name": "Coder-Strike 2014 - Финал (трансляция, Div. 2)",
       "startTimeSeconds": 1398168900,
       "durationSeconds": 7200
     },
@@ -172586,7 +172586,7 @@
     },
     "458": {
       "id": 458,
-      "name": "MemSQL Start[c]UP 2.0 - Round 2 - Online Round",
+      "name": "MemSQL Start[c]UP 2.0 - Round 2 - Онлайн трансляция",
       "startTimeSeconds": 1407690000,
       "durationSeconds": 10800
     },
@@ -172934,19 +172934,19 @@
     },
     "522": {
       "id": 522,
-      "name": "VK Cup 2015 - Qualification Round 1",
+      "name": "VK Cup 2015 - Квалификация 1",
       "startTimeSeconds": 1425740400,
       "durationSeconds": 86400
     },
     "523": {
       "id": 523,
-      "name": "VK Cup 2015 - Qualification Round 2",
+      "name": "VK Cup 2015 - Квалификация 2",
       "startTimeSeconds": 1426345200,
       "durationSeconds": 86400
     },
     "524": {
       "id": 524,
-      "name": "VK Cup 2015 - Round 1",
+      "name": "VK Cup 2015 - Раунд 1",
       "startTimeSeconds": 1426946400,
       "durationSeconds": 7200
     },
@@ -172976,31 +172976,31 @@
     },
     "529": {
       "id": 529,
-      "name": "VK Cup 2015 - Round 1 (unofficial online mirror, Div. 1 only)",
+      "name": "VK Cup 2015 - Раунд 1 (неофиц. интернет-трансляция, только Div. 1)",
       "startTimeSeconds": 1426956300,
       "durationSeconds": 7200
     },
     "530": {
       "id": 530,
-      "name": "VK Cup 2015 - Wild Card Round 1",
+      "name": "VK Cup 2015 - Уайлд-кард раунд 1",
       "startTimeSeconds": 1427562000,
       "durationSeconds": 9000
     },
     "531": {
       "id": 531,
-      "name": "VK Cup 2015 - Wild Card Round 1 (Online Mirror)",
+      "name": "VK Cup 2015 - Уайлд-кард раунд 1 (интернет-трансляция)",
       "startTimeSeconds": 1427562000,
       "durationSeconds": 9000
     },
     "532": {
       "id": 532,
-      "name": "VK Cup 2015 - Round 2",
+      "name": "VK Cup 2015 - Раунд 2",
       "startTimeSeconds": 1429286400,
       "durationSeconds": 9000
     },
     "533": {
       "id": 533,
-      "name": "VK Cup 2015 - Round 2 (unofficial online mirror, Div. 1 only)",
+      "name": "VK Cup 2015 - Раунд 2 (неофиц. интернет-трансляция, только Div. 1)",
       "startTimeSeconds": 1429286400,
       "durationSeconds": 9000
     },
@@ -173024,7 +173024,7 @@
     },
     "537": {
       "id": 537,
-      "name": "VK Cup 2015 - Wild Card Round 2",
+      "name": "VK Cup 2015 - Уайлд-кард раунд 2",
       "startTimeSeconds": 1429381800,
       "durationSeconds": 604800
     },
@@ -173048,7 +173048,7 @@
     },
     "542": {
       "id": 542,
-      "name": "VK Cup 2015 - Round 3 (unofficial online mirror, Div. 1 only)",
+      "name": "VK Cup 2015 - Раунд 3 (неофиц. интернет-трансляция, только Div. 1)",
       "startTimeSeconds": 1430668800,
       "durationSeconds": 9000
     },
@@ -173168,7 +173168,7 @@
     },
     "566": {
       "id": 566,
-      "name": "VK Cup 2015 - Finals, online mirror",
+      "name": "VK Cup 2015 - Финал (интернет-трансляция)",
       "startTimeSeconds": 1438273200,
       "durationSeconds": 10800
     },
@@ -173582,55 +173582,55 @@
     },
     "637": {
       "id": 637,
-      "name": "VK Cup 2016 - Qualification Round 1",
+      "name": "VK Cup 2016 - Квалификация 1",
       "startTimeSeconds": 1457870400,
       "durationSeconds": 86400
     },
     "638": {
       "id": 638,
-      "name": "VK Cup 2016 - Qualification Round 2",
+      "name": "VK Cup 2016 - Квалификация 2",
       "startTimeSeconds": 1458475200,
       "durationSeconds": 86400
     },
     "639": {
       "id": 639,
-      "name": "VK Cup 2016 - Round 1",
+      "name": "VK Cup 2016 - Раунд 1",
       "startTimeSeconds": 1459182900,
       "durationSeconds": 7200
     },
     "640": {
       "id": 640,
-      "name": "VK Cup 2016 - Wild Card Round 1",
+      "name": "VK Cup 2016 - Уайлд-кард раунд 1",
       "startTimeSeconds": 1460306100,
       "durationSeconds": 9000
     },
     "641": {
       "id": 641,
-      "name": "VK Cup 2016 - Round 2",
+      "name": "VK Cup 2016 - Раунд 2",
       "startTimeSeconds": 1461515700,
       "durationSeconds": 7200
     },
     "642": {
       "id": 642,
-      "name": "VK Cup 2016 - Wild Card Round 2",
+      "name": "VK Cup 2016 - Уайлд-кард раунд 2",
       "startTimeSeconds": 1461596400,
       "durationSeconds": 604800
     },
     "643": {
       "id": 643,
-      "name": "VK Cup 2016 - Round 3",
+      "name": "VK Cup 2016 - Раунд 3",
       "startTimeSeconds": 1462633500,
       "durationSeconds": 10800
     },
     "644": {
       "id": 644,
-      "name": "CROC 2016 - Qualification",
+      "name": "Чемпионат КРОК 2016 - Квалификация",
       "startTimeSeconds": 1458118800,
       "durationSeconds": 172800
     },
     "645": {
       "id": 645,
-      "name": "CROC 2016 - Elimination Round",
+      "name": "Чемпионат КРОК 2016 - Отборочный Раунд",
       "startTimeSeconds": 1458318900,
       "durationSeconds": 7200
     },
@@ -173684,25 +173684,25 @@
     },
     "655": {
       "id": 655,
-      "name": "CROC 2016 - Elimination Round  (Rated Unofficial Edition)",
+      "name": "КРОК 2016 - Отборочный Раунд (рейтинговая неофиц. редакция)",
       "startTimeSeconds": 1458318900,
       "durationSeconds": 7200
     },
     "656": {
       "id": 656,
-      "name": "April Fools Day Contest 2016",
+      "name": "Первоапрельский контест 2016",
       "startTimeSeconds": 1459526400,
       "durationSeconds": 7200
     },
     "657": {
       "id": 657,
-      "name": "VK Cup 2016 - Round 1 (Div.1 Edition)",
+      "name": "VK Cup 2016 - Round 1 (редакция для Div. 1)",
       "startTimeSeconds": 1459182900,
       "durationSeconds": 7200
     },
     "658": {
       "id": 658,
-      "name": "VK Cup 2016 - Round 1 (Div. 2 Edition)",
+      "name": "VK Cup 2016 - Round 1 (редакция для Div. 2)",
       "startTimeSeconds": 1459182900,
       "durationSeconds": 7200
     },
@@ -173720,13 +173720,13 @@
     },
     "661": {
       "id": 661,
-      "name": "VK Cup 2016 - Wild Card Round 1 (Unofficial Open Online Mirror)",
+      "name": "VK Cup 2016 - Уайлд-кард раунд 1 (интернет-трансляция)",
       "startTimeSeconds": 1460306100,
       "durationSeconds": 9000
     },
     "662": {
       "id": 662,
-      "name": "CROC 2016 - Final Round [Private, For Onsite Finalists Only]",
+      "name": "КРОК 2016 - Финальный Раунд [только для онсайт-финалистов]",
       "startTimeSeconds": 1460729700,
       "durationSeconds": 7200
     },
@@ -173906,13 +173906,13 @@
     },
     "693": {
       "id": 693,
-      "name": "VK Cup 2016 - Finals (trial contest)",
+      "name": "VK Cup 2016 - Финал (пробный тур)",
       "startTimeSeconds": 1467447900,
       "durationSeconds": 3600
     },
     "695": {
       "id": 695,
-      "name": "VK Cup 2016 - Finals",
+      "name": "VK Cup 2016 - Финал",
       "startTimeSeconds": 1467534000,
       "durationSeconds": 12600
     },
@@ -174062,7 +174062,7 @@
     },
     "720": {
       "id": 720,
-      "name": "Russian Code Cup 2016 - Finals [Unofficial Mirror, Div. 1 Only Recommended]",
+      "name": "Russian Code Cup 2016 - Финал [неофициальная интернет-трансляция, рекомендуется для Div. 1]",
       "startTimeSeconds": 1474196700,
       "durationSeconds": 7200
     },
@@ -174104,7 +174104,7 @@
     },
     "727": {
       "id": 727,
-      "name": "Technocup 2017 - Elimination Round 1 (Unofficially Open for Everyone, Rated for Div. 2)",
+      "name": "Технокубок 2017 - Отборочный Раунд 1",
       "startTimeSeconds": 1476522300,
       "durationSeconds": 7200
     },
@@ -174116,13 +174116,13 @@
     },
     "729": {
       "id": 729,
-      "name": "Technocup 2017 - Elimination Round 2",
+      "name": "Технокубок 2017 - Отборочный Раунд 2",
       "startTimeSeconds": 1479632700,
       "durationSeconds": 7200
     },
     "730": {
       "id": 730,
-      "name": "2016-2017 ACM-ICPC, NEERC, Southern Subregional Contest (Online Mirror, ACM-ICPC Rules, Teams Preferred)",
+      "name": "2016-2017 ACM-ICPC, NEERC, Южный четвертьфинал (онлайн-трансляция, правила ACM-ICPC, предпочтительно команды)",
       "startTimeSeconds": 1477209600,
       "durationSeconds": 18000
     },
@@ -174164,13 +174164,13 @@
     },
     "737": {
       "id": 737,
-      "name": "Codeforces Round 380 (Div. 1, Rated, Based on Technocup 2017 - Elimination Round 2)",
+      "name": "Codeforces Round 380 (Div. 1, рейтинговый, по мотивам Технокубок 2017 - Отборочный Раунд 2)",
       "startTimeSeconds": 1479632700,
       "durationSeconds": 7200
     },
     "738": {
       "id": 738,
-      "name": "Codeforces Round 380 (Div. 2, Rated, Based on Technocup 2017 - Elimination Round 2)",
+      "name": "Codeforces Round 380 (Div. 2, рейтинговый, по мотивам Технокубок 2017 - Отборочный Раунд 2)",
       "startTimeSeconds": 1479632700,
       "durationSeconds": 7200
     },
@@ -174230,7 +174230,7 @@
     },
     "748": {
       "id": 748,
-      "name": "Technocup 2017 - Elimination Round 3",
+      "name": "Технокубок 2017 - Отборочный Раунд 3",
       "startTimeSeconds": 1482656700,
       "durationSeconds": 7200
     },
@@ -174254,7 +174254,7 @@
     },
     "752": {
       "id": 752,
-      "name": "Codeforces Round 389 (Div. 2, Rated, Based on Technocup 2017 - Elimination Round 3)",
+      "name": "Codeforces Round 389 (Div. 2, рейтинговый, по мотивам Технокубок 2017 - Отборочный Раунд 3)",
       "startTimeSeconds": 1482656700,
       "durationSeconds": 7200
     },
@@ -174356,43 +174356,43 @@
     },
     "769": {
       "id": 769,
-      "name": "VK Cup 2017 - Qualification 1",
+      "name": "VK Cup 2017 - Квалификация 1",
       "startTimeSeconds": 1488628800,
       "durationSeconds": 86400
     },
     "770": {
       "id": 770,
-      "name": "VK Cup 2017 - Qualification 2",
+      "name": "VK Cup 2017 - Квалификация 2",
       "startTimeSeconds": 1489233600,
       "durationSeconds": 86400
     },
     "771": {
       "id": 771,
-      "name": "VK Cup 2017 - Round 1",
+      "name": "VK Cup 2017 - Раунд 1",
       "startTimeSeconds": 1489851300,
       "durationSeconds": 7200
     },
     "772": {
       "id": 772,
-      "name": "VK Cup 2017 - Round 2",
+      "name": "VK Cup 2017 - Раунд 2",
       "startTimeSeconds": 1492356900,
       "durationSeconds": 7200
     },
     "773": {
       "id": 773,
-      "name": "VK Cup 2017 - Round 3",
+      "name": "VK Cup 2017 - Раунд 3",
       "startTimeSeconds": 1494171900,
       "durationSeconds": 10800
     },
     "774": {
       "id": 774,
-      "name": "VK Cup 2017 - Wild Card Round 1",
+      "name": "VK Cup 2017 - Уайлд-кард раунд 1",
       "startTimeSeconds": 1491406500,
       "durationSeconds": 7200
     },
     "775": {
       "id": 775,
-      "name": "VK Cup 2017 - Wild Card Round 2",
+      "name": "VK Cup 2017 - Уайлд-кард раунд 2",
       "startTimeSeconds": 1493220900,
       "durationSeconds": 604800
     },
@@ -174428,19 +174428,19 @@
     },
     "781": {
       "id": 781,
-      "name": "Codeforces Round 403 (Div. 1, based on Technocup 2017 Finals)",
+      "name": "Codeforces Round 403 (Div. 1, по мотивам финала Технокубка 2017)",
       "startTimeSeconds": 1488719100,
       "durationSeconds": 7200
     },
     "782": {
       "id": 782,
-      "name": "Codeforces Round 403 (Div. 2, based on Technocup 2017 Finals)",
+      "name": "Codeforces Round 403 (Div. 2, по мотивам финала Технокубка 2017)",
       "startTimeSeconds": 1488719100,
       "durationSeconds": 7200
     },
     "784": {
       "id": 784,
-      "name": "April Fools Contest 2017",
+      "name": "Первоапрельский контест 2017",
       "startTimeSeconds": 1490972400,
       "durationSeconds": 7200
     },
@@ -174476,13 +174476,13 @@
     },
     "790": {
       "id": 790,
-      "name": "Codeforces Round 405 (rated, Div. 1, based on VK Cup 2017 Round 1)",
+      "name": "Codeforces Round 405 (рейтинговый, Div. 1, по задачам VK Cup 2017 Раунд 1)",
       "startTimeSeconds": 1489851300,
       "durationSeconds": 7200
     },
     "791": {
       "id": 791,
-      "name": "Codeforces Round 405 (rated, Div. 2, based on VK Cup 2017 Round 1)",
+      "name": "Codeforces Round 405 (рейтинговый, Div. 2, по задачам VK Cup 2017 Раунд 1)",
       "startTimeSeconds": 1489851300,
       "durationSeconds": 7200
     },
@@ -174500,13 +174500,13 @@
     },
     "794": {
       "id": 794,
-      "name": "Tinkoff Challenge - Final Round (Codeforces Round 414, rated, Div. 1 + Div. 2)",
+      "name": "Tinkoff Challenge - Финал (Codeforces Round 414, рейтинговый, Div. 1 + Div. 2)",
       "startTimeSeconds": 1494668100,
       "durationSeconds": 7200
     },
     "795": {
       "id": 795,
-      "name": "VK Cup 2017 - Wild Card Round 1 (Unofficial Public Mirror)",
+      "name": "VK Cup 2017 - Уайлд-кард раунд 1 (неофициальное зеркало)",
       "startTimeSeconds": 1491406500,
       "durationSeconds": 7200
     },
@@ -174530,25 +174530,25 @@
     },
     "799": {
       "id": 799,
-      "name": "Playrix Codescapes Cup (Codeforces Round 413, rated, Div. 1 + Div. 2)",
+      "name": "Playrix Codescapes Cup (Codeforces Round 413, рейтинговый, Div. 1 + Div. 2)",
       "startTimeSeconds": 1494516900,
       "durationSeconds": 7200
     },
     "800": {
       "id": 800,
-      "name": "Codeforces Round 409 (rated, Div. 1, based on VK Cup 2017 Round 2)",
+      "name": "Codeforces Round 409 (рейтинговый, Div. 1, по задачам VK Cup 2017 Раунд 2)",
       "startTimeSeconds": 1492356900,
       "durationSeconds": 7200
     },
     "801": {
       "id": 801,
-      "name": "Codeforces Round 409 (rated, Div. 2, based on VK Cup 2017 Round 2)",
+      "name": "Codeforces Round 409 (рейтинговый, Div. 2, по задачам VK Cup 2017 Раунд 2)",
       "startTimeSeconds": 1492356900,
       "durationSeconds": 7200
     },
     "802": {
       "id": 802,
-      "name": "Helvetic Coding Contest 2017 online mirror (teams allowed, unrated)",
+      "name": "Helvetic Coding Contest 2017, зеркало (нерейтинговый, возможно командное участие)",
       "startTimeSeconds": 1495958700,
       "durationSeconds": 16200
     },
@@ -174572,13 +174572,13 @@
     },
     "806": {
       "id": 806,
-      "name": "Codeforces Round 412 (rated, Div. 1, based on VK Cup 2017 Round 3)",
+      "name": "Codeforces Round 412 (рейтинговый, Div. 1, по задачам VK Cup 2017 Раунд 3)",
       "startTimeSeconds": 1494171900,
       "durationSeconds": 10800
     },
     "807": {
       "id": 807,
-      "name": "Codeforces Round 412 (rated, Div. 2, base on VK Cup 2017 Round 3)",
+      "name": "Codeforces Round 412 (рейтинговый, Div. 2, по задачам VK Cup 2017 Раунд 3)",
       "startTimeSeconds": 1494171900,
       "durationSeconds": 10800
     },
@@ -174674,7 +174674,7 @@
     },
     "823": {
       "id": 823,
-      "name": "VK Cup 2017 - Finals",
+      "name": "VK Cup 2017 - Финал",
       "startTimeSeconds": 1499587500,
       "durationSeconds": 10800
     },
@@ -174686,31 +174686,31 @@
     },
     "826": {
       "id": 826,
-      "name": "VK Cup 2017 - Finals (practice session)",
+      "name": "VK Cup 2017 - Финал (пробный тур)",
       "startTimeSeconds": 1499502000,
       "durationSeconds": 4800
     },
     "827": {
       "id": 827,
-      "name": "Codeforces Round 423 (Div. 1, rated, based on VK Cup Finals)",
+      "name": "Codeforces Round 423 (Div. 1, рейтинговый, основан на Финале VK Cup)",
       "startTimeSeconds": 1499791500,
       "durationSeconds": 7200
     },
     "828": {
       "id": 828,
-      "name": "Codeforces Round 423 (Div. 2, rated, based on VK Cup Finals)",
+      "name": "Codeforces Round 423 (Div. 2, рейтинговый, основан на Финале VK Cup)",
       "startTimeSeconds": 1499791500,
       "durationSeconds": 7200
     },
     "830": {
       "id": 830,
-      "name": "Codeforces Round 424 (Div. 1, rated, based on VK Cup Finals)",
+      "name": "Codeforces Round 424 (Div. 1, рейтинговый, основан на Финале VK Cup)",
       "startTimeSeconds": 1499958300,
       "durationSeconds": 7200
     },
     "831": {
       "id": 831,
-      "name": "Codeforces Round 424 (Div. 2, rated, based on VK Cup Finals)",
+      "name": "Codeforces Round 424 (Div. 2, рейтинговый, основан на Финале VK Cup)",
       "startTimeSeconds": 1499958300,
       "durationSeconds": 7200
     },
@@ -174746,7 +174746,7 @@
     },
     "838": {
       "id": 838,
-      "name": "IndiaHacks 2nd Elimination 2017 (unofficial, unrated mirror, ICPC rules)",
+      "name": "IndiaHacks 2nd Elimination 2017 (неофициальное, нерейтинговое зеркало, правила ICPC)",
       "startTimeSeconds": 1502085900,
       "durationSeconds": 10800
     },
@@ -174800,7 +174800,7 @@
     },
     "847": {
       "id": 847,
-      "name": "2017-2018 ACM-ICPC, NEERC, Southern Subregional Contest, qualification stage (Online Mirror, ACM-ICPC Rules, Teams Preferred)",
+      "name": "2017-2018 ACM-ICPC, NEERC, Южный четвертьфинал, квалификационный этап (онлайн-трансляция, правила ACM-ICPC, предпочтительно команды)",
       "startTimeSeconds": 1505739900,
       "durationSeconds": 14400
     },
@@ -174818,13 +174818,13 @@
     },
     "850": {
       "id": 850,
-      "name": "Codeforces Round 432 (Div. 1, based on IndiaHacks Final Round 2017)",
+      "name": "Codeforces Round 432 (Div. 1, основан на IndiaHacks Final Round 2017)",
       "startTimeSeconds": 1504535700,
       "durationSeconds": 9000
     },
     "851": {
       "id": 851,
-      "name": "Codeforces Round 432 (Div. 2, based on IndiaHacks Final Round 2017)",
+      "name": "Codeforces Round 432 (Div. 2, основан на IndiaHacks Final Round 2017)",
       "startTimeSeconds": 1504535700,
       "durationSeconds": 9000
     },
@@ -174836,13 +174836,13 @@
     },
     "853": {
       "id": 853,
-      "name": "Codeforces Round 433 (Div. 1, based on Olympiad of Metropolises)",
+      "name": "Codeforces Round 433 (Div. 1, по задачам Олимпиады Мегаполисов)",
       "startTimeSeconds": 1504702500,
       "durationSeconds": 7200
     },
     "854": {
       "id": 854,
-      "name": "Codeforces Round 433 (Div. 2, based on Olympiad of Metropolises)",
+      "name": "Codeforces Round 433 (Div. 2, по задачам Олимпиады Мегаполисов)",
       "startTimeSeconds": 1504702500,
       "durationSeconds": 7200
     },
@@ -174854,7 +174854,7 @@
     },
     "856": {
       "id": 856,
-      "name": "Russian Code Cup 2017 - Finals [Unofficial Mirror, Div. 1 Only Recommended, Teams Allowed]",
+      "name": "Russian Code Cup 2017 - Финал [неофициальная интернет-трансляция, рекомендуется для Div. 1, допускаются команды]",
       "startTimeSeconds": 1505050500,
       "durationSeconds": 10800
     },
@@ -174878,13 +174878,13 @@
     },
     "860": {
       "id": 860,
-      "name": "Codeforces Round 434 (Div. 1, based on Technocup 2018 Elimination Round 1)",
+      "name": "Codeforces Round 434 (Div. 1, основан на Отборочном раунде 1 Технокубка 2018)",
       "startTimeSeconds": 1505653500,
       "durationSeconds": 8400
     },
     "861": {
       "id": 861,
-      "name": "Codeforces Round 434 (Div. 2, based on Technocup 2018 Elimination Round 1)",
+      "name": "Codeforces Round 434 (Div. 2, основан на Отборочном раунде 1 Технокубка 2018)",
       "startTimeSeconds": 1505653500,
       "durationSeconds": 8400
     },
@@ -174938,19 +174938,19 @@
     },
     "870": {
       "id": 870,
-      "name": "Technocup 2018 - Elimination Round 2",
+      "name": "Технокубок 2018 - Отборочный Раунд 2",
       "startTimeSeconds": 1508054700,
       "durationSeconds": 7200
     },
     "871": {
       "id": 871,
-      "name": "Codeforces Round 440 (Div. 1, based on Technocup 2018 Elimination Round 2)",
+      "name": "Codeforces Round 440 (Div. 1, основан на Отборочном раунде 2 Технокубка 2018)",
       "startTimeSeconds": 1508054700,
       "durationSeconds": 7200
     },
     "872": {
       "id": 872,
-      "name": "Codeforces Round 440 (Div. 2, based on Technocup 2018 Elimination Round 2)",
+      "name": "Codeforces Round 440 (Div. 2, основан на Отборочном раунде 2 Технокубка 2018)",
       "startTimeSeconds": 1508054700,
       "durationSeconds": 7200
     },
@@ -174962,19 +174962,19 @@
     },
     "874": {
       "id": 874,
-      "name": "Technocup 2018 - Practice Round 2",
+      "name": "Технокубок 2018 - Ознакомительный Раунд 2",
       "startTimeSeconds": 1507791600,
       "durationSeconds": 259200
     },
     "875": {
       "id": 875,
-      "name": "Codeforces Round 441 (Div. 1, by Moscow Team Olympiad)",
+      "name": "Codeforces Round 441 (Div. 1, по задачам МКОШП)",
       "startTimeSeconds": 1508151900,
       "durationSeconds": 7200
     },
     "876": {
       "id": 876,
-      "name": "Codeforces Round 441 (Div. 2, by Moscow Team Olympiad)",
+      "name": "Codeforces Round 441 (Div. 2, по задачам МКОШП)",
       "startTimeSeconds": 1508151900,
       "durationSeconds": 7200
     },
@@ -174998,7 +174998,7 @@
     },
     "883": {
       "id": 883,
-      "name": "2017-2018 ACM-ICPC, NEERC, Southern Subregional Contest (Online Mirror, ACM-ICPC Rules, Teams Preferred)",
+      "name": "2017-2018 ACM-ICPC, NEERC, Южный четвертьфинал (онлайн-трансляция, правила ACM-ICPC, предпочтительно команды)",
       "startTimeSeconds": 1508573100,
       "durationSeconds": 18000
     },
@@ -175034,13 +175034,13 @@
     },
     "889": {
       "id": 889,
-      "name": "Codeforces Round 445 (Div. 1, based on Technocup 2018 Elimination Round 3)",
+      "name": "Codeforces Round 445 (Div. 1, основан на Отборочном раунде 3 Технокубка 2018)",
       "startTimeSeconds": 1510502700,
       "durationSeconds": 9000
     },
     "890": {
       "id": 890,
-      "name": "Codeforces Round 445 (Div. 2, based on Technocup 2018 Elimination Round 3)",
+      "name": "Codeforces Round 445 (Div. 2, основан на Отборочном раунде 3 Технокубка 2018)",
       "startTimeSeconds": 1510502700,
       "durationSeconds": 9000
     },
@@ -175058,7 +175058,7 @@
     },
     "893": {
       "id": 893,
-      "name": "Educational Codeforces Round 33 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 33 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1511449500,
       "durationSeconds": 7200
     },
@@ -175118,7 +175118,7 @@
     },
     "903": {
       "id": 903,
-      "name": "Educational Codeforces Round 34 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 34 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1513091100,
       "durationSeconds": 7200
     },
@@ -175136,13 +175136,13 @@
     },
     "906": {
       "id": 906,
-      "name": "Codeforces Round 454 (Div. 1, based on Technocup 2018 Elimination Round 4)",
+      "name": "Codeforces Round 454 (Div. 1, основан на Отборочном раунде 4 Технокубка 2018)",
       "startTimeSeconds": 1514037900,
       "durationSeconds": 7200
     },
     "907": {
       "id": 907,
-      "name": "Codeforces Round 454 (Div. 2, based on Technocup 2018 Elimination Round 4)",
+      "name": "Codeforces Round 454 (Div. 2, основан на Отборочном раунде 4 Технокубка 2018)",
       "startTimeSeconds": 1514037900,
       "durationSeconds": 7200
     },
@@ -175166,7 +175166,7 @@
     },
     "911": {
       "id": 911,
-      "name": "Educational Codeforces Round 35 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 35 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1514469900,
       "durationSeconds": 7200
     },
@@ -175190,7 +175190,7 @@
     },
     "915": {
       "id": 915,
-      "name": "Educational Codeforces Round 36 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 36 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1515848700,
       "durationSeconds": 7200
     },
@@ -175220,7 +175220,7 @@
     },
     "920": {
       "id": 920,
-      "name": "Educational Codeforces Round 37 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 37 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1517582100,
       "durationSeconds": 7200
     },
@@ -175238,25 +175238,25 @@
     },
     "923": {
       "id": 923,
-      "name": "VK Cup 2018 - Round 1",
+      "name": "VK Cup 2018 - Раунд 1",
       "startTimeSeconds": 1520696100,
       "durationSeconds": 7200
     },
     "924": {
       "id": 924,
-      "name": "VK Cup 2018 - Round 2",
+      "name": "VK Cup 2018 - Раунд 2",
       "startTimeSeconds": 1521905700,
       "durationSeconds": 8100
     },
     "925": {
       "id": 925,
-      "name": "VK Cup 2018 - Round 3",
+      "name": "VK Cup 2018 - Раунд 3",
       "startTimeSeconds": 1525007700,
       "durationSeconds": 9000
     },
     "926": {
       "id": 926,
-      "name": "VK Cup 2018 - Wild-card Round 1",
+      "name": "VK Cup 2018 - Уайлд-кард Раунд 1",
       "startTimeSeconds": 1521300900,
       "durationSeconds": 7200
     },
@@ -175280,13 +175280,13 @@
     },
     "930": {
       "id": 930,
-      "name": "Codeforces Round 468 (Div. 1, based on Technocup 2018 Final Round)",
+      "name": "Codeforces Round 468 (Div. 1, основан на Финальном раунде Технокубка 2018)",
       "startTimeSeconds": 1520177700,
       "durationSeconds": 7200
     },
     "931": {
       "id": 931,
-      "name": "Codeforces Round 468 (Div. 2, based on Technocup 2018 Final Round)",
+      "name": "Codeforces Round 468 (Div. 2, основан на Финальном раунде Технокубка 2018)",
       "startTimeSeconds": 1520177700,
       "durationSeconds": 7200
     },
@@ -175328,7 +175328,7 @@
     },
     "938": {
       "id": 938,
-      "name": "Educational Codeforces Round 38 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 38 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1518793500,
       "durationSeconds": 7200
     },
@@ -175352,19 +175352,19 @@
     },
     "946": {
       "id": 946,
-      "name": "Educational Codeforces Round 39 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 39 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1520348700,
       "durationSeconds": 7200
     },
     "947": {
       "id": 947,
-      "name": "Codeforces Round 470 (rated, Div. 1, based on VK Cup 2018 Round 1)",
+      "name": "Codeforces Round 470 (рейтинговый, Div. 1, по задачам VK Cup 2018 Раунд 1)",
       "startTimeSeconds": 1520696100,
       "durationSeconds": 7200
     },
     "948": {
       "id": 948,
-      "name": "Codeforces Round 470 (rated, Div. 2, based on VK Cup 2018 Round 1)",
+      "name": "Codeforces Round 470 (рейтинговый, Div. 2, по задачам VK Cup 2018 Раунд 1)",
       "startTimeSeconds": 1520696100,
       "durationSeconds": 7200
     },
@@ -175382,25 +175382,25 @@
     },
     "951": {
       "id": 951,
-      "name": "VK Cup 2018 - Final",
+      "name": "VK Cup 2018 - Финал",
       "startTimeSeconds": 1534059600,
       "durationSeconds": 10800
     },
     "952": {
       "id": 952,
-      "name": "April Fools Contest 2018",
+      "name": "Первоапрельский контест 2018",
       "startTimeSeconds": 1522596900,
       "durationSeconds": 7200
     },
     "953": {
       "id": 953,
-      "name": "VK Cup 2018 - Wild-card Round 1 (unofficial unrated mirror)",
+      "name": "VK Cup 2018 - Уайлд-кард Раунд 1 (неофициальное нерейтинговое зеркало)",
       "startTimeSeconds": 1521300900,
       "durationSeconds": 7200
     },
     "954": {
       "id": 954,
-      "name": "Educational Codeforces Round 40 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 40 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1521698700,
       "durationSeconds": 10800
     },
@@ -175412,19 +175412,19 @@
     },
     "956": {
       "id": 956,
-      "name": "Codeforces Round 472 (rated, Div. 1, based on VK Cup 2018 Round 2)",
+      "name": "Codeforces Round 472 (рейтинговый, Div. 1, по задачам VK Cup 2018 Раунд 2)",
       "startTimeSeconds": 1521905700,
       "durationSeconds": 8100
     },
     "957": {
       "id": 957,
-      "name": "Codeforces Round 472 (rated, Div. 2, based on VK Cup 2018 Round 2)",
+      "name": "Codeforces Round 472 (рейтинговый, Div. 2, по задачам VK Cup 2018 Раунд 2)",
       "startTimeSeconds": 1521905700,
       "durationSeconds": 8100
     },
     "958": {
       "id": 958,
-      "name": "Helvetic Coding Contest 2018 online mirror (teams allowed, unrated)",
+      "name": "Helvetic Coding Contest 2018, зеркало (нерейтинговый, возможно командное участие)",
       "startTimeSeconds": 1523689500,
       "durationSeconds": 18000
     },
@@ -175442,43 +175442,43 @@
     },
     "961": {
       "id": 961,
-      "name": "Educational Codeforces Round 41 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 41 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1522850700,
       "durationSeconds": 7200
     },
     "962": {
       "id": 962,
-      "name": "Educational Codeforces Round 42 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 42 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1523370900,
       "durationSeconds": 7200
     },
     "963": {
       "id": 963,
-      "name": "Tinkoff Internship Warmup Round 2018 and Codeforces Round 475 (Div. 1)",
+      "name": "Tinkoff Internship Warmup Round 2018 и Codeforces Round 475 (Div. 1)",
       "startTimeSeconds": 1523973900,
       "durationSeconds": 7200
     },
     "964": {
       "id": 964,
-      "name": "Tinkoff Internship Warmup Round 2018 and Codeforces Round 475 (Div. 2)",
+      "name": "Tinkoff Internship Warmup Round 2018 и Codeforces Round 475 (Div. 2)",
       "startTimeSeconds": 1523973900,
       "durationSeconds": 7200
     },
     "965": {
       "id": 965,
-      "name": "Codeforces Round 476 (Div. 2) [Thanks, Telegram!]",
+      "name": "Codeforces Round 476 (Div. 2) [спасибо, Telegram!]",
       "startTimeSeconds": 1524677700,
       "durationSeconds": 7200
     },
     "966": {
       "id": 966,
-      "name": "Codeforces Round 477 (rated, Div. 1, based on VK Cup 2018 Round 3)",
+      "name": "Codeforces Round 477 (рейтинговый, Div. 1, по задачам VK Cup 2018 Раунд 3)",
       "startTimeSeconds": 1525007700,
       "durationSeconds": 9000
     },
     "967": {
       "id": 967,
-      "name": "Codeforces Round 477 (rated, Div. 2, based on VK Cup 2018 Round 3)",
+      "name": "Codeforces Round 477 (рейтинговый, Div. 2, по задачам VK Cup 2018 Раунд 3)",
       "startTimeSeconds": 1525007700,
       "durationSeconds": 9000
     },
@@ -175490,7 +175490,7 @@
     },
     "976": {
       "id": 976,
-      "name": "Educational Codeforces Round 43 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 43 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1525099200,
       "durationSeconds": 7200
     },
@@ -175532,19 +175532,19 @@
     },
     "983": {
       "id": 983,
-      "name": "Codeforces Round 483 (Div. 1) [Thanks, Botan Investments and Victor Shaburov!]",
+      "name": "Codeforces Round 483 (Div. 1) [спасибо, Botan Investments и Виктор Шабуров!]",
       "startTimeSeconds": 1526395500,
       "durationSeconds": 7200
     },
     "984": {
       "id": 984,
-      "name": "Codeforces Round 483 (Div. 2) [Thanks, Botan Investments and Victor Shaburov!]",
+      "name": "Codeforces Round 483 (Div. 2) [спасибо, Botan Investments и Виктор Шабуров!]",
       "startTimeSeconds": 1526395500,
       "durationSeconds": 7200
     },
     "985": {
       "id": 985,
-      "name": "Educational Codeforces Round 44 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 44 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1526913900,
       "durationSeconds": 7200
     },
@@ -175574,7 +175574,7 @@
     },
     "990": {
       "id": 990,
-      "name": "Educational Codeforces Round 45 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 45 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1528625100,
       "durationSeconds": 7200
     },
@@ -175604,13 +175604,13 @@
     },
     "995": {
       "id": 995,
-      "name": "Codeforces Round 492 (Div. 1) [Thanks, uDebug!]",
+      "name": "Codeforces Round 492 (Div. 1) [спасибо, uDebug!]",
       "startTimeSeconds": 1529858100,
       "durationSeconds": 7200
     },
     "996": {
       "id": 996,
-      "name": "Codeforces Round 492 (Div. 2) [Thanks, uDebug!]",
+      "name": "Codeforces Round 492 (Div. 2) [спасибо, uDebug!]",
       "startTimeSeconds": 1529858100,
       "durationSeconds": 7200
     },
@@ -175634,7 +175634,7 @@
     },
     "1000": {
       "id": 1000,
-      "name": "Educational Codeforces Round 46 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 46 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1530110100,
       "durationSeconds": 7200
     },
@@ -175688,7 +175688,7 @@
     },
     "1009": {
       "id": 1009,
-      "name": "Educational Codeforces Round 47 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 47 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1531578900,
       "durationSeconds": 7200
     },
@@ -175706,13 +175706,13 @@
     },
     "1012": {
       "id": 1012,
-      "name": "Codeforces Round 500 (Div. 1) [based on EJOI]",
+      "name": "Codeforces Round 500 (Div. 1) [по мотивам EJOI]",
       "startTimeSeconds": 1532938500,
       "durationSeconds": 9000
     },
     "1013": {
       "id": 1013,
-      "name": "Codeforces Round 500 (Div. 2) [based on EJOI]",
+      "name": "Codeforces Round 500 (Div. 2) [по мотивам EJOI]",
       "startTimeSeconds": 1532938500,
       "durationSeconds": 9000
     },
@@ -175730,43 +175730,43 @@
     },
     "1016": {
       "id": 1016,
-      "name": "Educational Codeforces Round 48 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 48 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1533307500,
       "durationSeconds": 7200
     },
     "1017": {
       "id": 1017,
-      "name": "Codeforces Round 502 (in memory of Leopoldo Taravilse, Div. 1 + Div. 2)",
+      "name": "Codeforces Round 502 (в память о Leopoldo Taravilse, Div. 1 + Div. 2)",
       "startTimeSeconds": 1533737100,
       "durationSeconds": 9600
     },
     "1019": {
       "id": 1019,
-      "name": "Codeforces Round 503 (by SIS, Div. 1)",
+      "name": "Codeforces Round 503 (по олимпиаде ЛКШ, Div. 1)",
       "startTimeSeconds": 1533994500,
       "durationSeconds": 7200
     },
     "1020": {
       "id": 1020,
-      "name": "Codeforces Round 503 (by SIS, Div. 2)",
+      "name": "Codeforces Round 503 (по олимпиаде ЛКШ, Div. 2)",
       "startTimeSeconds": 1533994500,
       "durationSeconds": 7200
     },
     "1023": {
       "id": 1023,
-      "name": "Codeforces Round 504 (rated, Div. 1 + Div. 2, based on VK Cup 2018 Final)",
+      "name": "Codeforces Round 504 (рейтинговый, Div. 1 + Div. 2, основан на Финале VK Cup 2018)",
       "startTimeSeconds": 1534516500,
       "durationSeconds": 8100
     },
     "1025": {
       "id": 1025,
-      "name": "Codeforces Round 505 (rated, Div. 1 + Div. 2, based on VK Cup 2018 Final)",
+      "name": "Codeforces Round 505 (рейтинговый, Div. 1 + Div. 2, основан на Финале VK Cup 2018)",
       "startTimeSeconds": 1534685700,
       "durationSeconds": 8100
     },
     "1027": {
       "id": 1027,
-      "name": "Educational Codeforces Round 49 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 49 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1534602900,
       "durationSeconds": 7200
     },
@@ -175784,19 +175784,19 @@
     },
     "1030": {
       "id": 1030,
-      "name": "Technocup 2019 - Elimination Round 1",
+      "name": "Технокубок 2019 - Отборочный Раунд 1",
       "startTimeSeconds": 1537707900,
       "durationSeconds": 7200
     },
     "1031": {
       "id": 1031,
-      "name": "Technocup 2019 - Elimination Round 2",
+      "name": "Технокубок 2019 - Отборочный Раунд 2",
       "startTimeSeconds": 1540109400,
       "durationSeconds": 7200
     },
     "1032": {
       "id": 1032,
-      "name": "Technocup 2019 - Elimination Round 3",
+      "name": "Технокубок 2019 - Отборочный Раунд 3",
       "startTimeSeconds": 1542557100,
       "durationSeconds": 8400
     },
@@ -175814,7 +175814,7 @@
     },
     "1036": {
       "id": 1036,
-      "name": "Educational Codeforces Round 50 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 50 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1536330900,
       "durationSeconds": 7200
     },
@@ -175832,13 +175832,13 @@
     },
     "1039": {
       "id": 1039,
-      "name": "Codeforces Round 507 (Div. 1, based on Olympiad of Metropolises)",
+      "name": "Codeforces Round 507 (Div. 1, по задачам Олимпиады Мегаполисов)",
       "startTimeSeconds": 1536165300,
       "durationSeconds": 7200
     },
     "1040": {
       "id": 1040,
-      "name": "Codeforces Round 507 (Div. 2, based on Olympiad of Metropolises)",
+      "name": "Codeforces Round 507 (Div. 2, по задачам Олимпиады Мегаполисов)",
       "startTimeSeconds": 1536165300,
       "durationSeconds": 7200
     },
@@ -175904,7 +175904,7 @@
     },
     "1051": {
       "id": 1051,
-      "name": "Educational Codeforces Round 51 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 51 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1537454700,
       "durationSeconds": 7200
     },
@@ -175916,37 +175916,37 @@
     },
     "1053": {
       "id": 1053,
-      "name": "Codeforces Round 512 (Div. 1, based on Technocup 2019 Elimination Round 1)",
+      "name": "Codeforces Round 512 (Div. 1, основан на Отборочном раунде 1 Технокубка 2019)",
       "startTimeSeconds": 1537707900,
       "durationSeconds": 7200
     },
     "1054": {
       "id": 1054,
-      "name": "Mail.Ru Cup 2018 Round 1",
+      "name": "Mail.Ru Cup 2018 Раунд 1",
       "startTimeSeconds": 1539880500,
       "durationSeconds": 9000
     },
     "1055": {
       "id": 1055,
-      "name": "Mail.Ru Cup 2018 Round 2",
+      "name": "Mail.Ru Cup 2018 Раунд 2",
       "startTimeSeconds": 1541860500,
       "durationSeconds": 9000
     },
     "1056": {
       "id": 1056,
-      "name": "Mail.Ru Cup 2018 Round 3",
+      "name": "Mail.Ru Cup 2018 Раунд 3",
       "startTimeSeconds": 1543163700,
       "durationSeconds": 9000
     },
     "1057": {
       "id": 1057,
-      "name": "Mail.Ru Cup 2018 - Practice Round",
+      "name": "Mail.Ru Cup 2018 - Ознакомительный раунд",
       "startTimeSeconds": 1539335100,
       "durationSeconds": 259200
     },
     "1058": {
       "id": 1058,
-      "name": "Codeforces Round 512 (Div. 2, based on Technocup 2019 Elimination Round 1)",
+      "name": "Codeforces Round 512 (Div. 2, основан на Отборочном раунде 1 Технокубка 2019)",
       "startTimeSeconds": 1537707900,
       "durationSeconds": 7200
     },
@@ -175976,19 +175976,19 @@
     },
     "1063": {
       "id": 1063,
-      "name": "Codeforces Round 516 (Div. 1, by Moscow Team Olympiad)",
+      "name": "Codeforces Round 516 (Div. 1, по задачам МКОШП)",
       "startTimeSeconds": 1539511500,
       "durationSeconds": 7200
     },
     "1064": {
       "id": 1064,
-      "name": "Codeforces Round 516 (Div. 2, by Moscow Team Olympiad)",
+      "name": "Codeforces Round 516 (Div. 2, по задачам МКОШП)",
       "startTimeSeconds": 1539511500,
       "durationSeconds": 7200
     },
     "1065": {
       "id": 1065,
-      "name": "Educational Codeforces Round 52 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 52 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1539269400,
       "durationSeconds": 7200
     },
@@ -176000,37 +176000,37 @@
     },
     "1067": {
       "id": 1067,
-      "name": "Codeforces Round 518 (Div. 1) [Thanks, Mail.Ru!]",
+      "name": "Codeforces Round 518 (Div. 1) [спасибо, Mail.Ru!]",
       "startTimeSeconds": 1540398900,
       "durationSeconds": 7200
     },
     "1068": {
       "id": 1068,
-      "name": "Codeforces Round 518 (Div. 2) [Thanks, Mail.Ru!]",
+      "name": "Codeforces Round 518 (Div. 2) [спасибо, Mail.Ru!]",
       "startTimeSeconds": 1540398900,
       "durationSeconds": 7200
     },
     "1070": {
       "id": 1070,
-      "name": "2018-2019 ICPC, NEERC, Southern Subregional Contest (Online Mirror, ACM-ICPC Rules, Teams Preferred)",
+      "name": "2018-2019 ICPC, NEERC, Южный четвертьфинал (онлайн-трансляция, правила ACM-ICPC, предпочтительно команды)",
       "startTimeSeconds": 1540022700,
       "durationSeconds": 18000
     },
     "1071": {
       "id": 1071,
-      "name": "Codeforces Round 517 (Div. 1, based on Technocup 2019 Elimination Round 2)",
+      "name": "Codeforces Round 517 (Div. 1, основан на Отборочном раунде 2 Технокубка 2019)",
       "startTimeSeconds": 1540109400,
       "durationSeconds": 7200
     },
     "1072": {
       "id": 1072,
-      "name": "Codeforces Round 517 (Div. 2, based on Technocup 2019 Elimination Round 2)",
+      "name": "Codeforces Round 517 (Div. 2, основан на Отборочном раунде 2 Технокубка 2019)",
       "startTimeSeconds": 1540109400,
       "durationSeconds": 7200
     },
     "1073": {
       "id": 1073,
-      "name": "Educational Codeforces Round 53 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 53 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1540478100,
       "durationSeconds": 7200
     },
@@ -176048,7 +176048,7 @@
     },
     "1076": {
       "id": 1076,
-      "name": "Educational Codeforces Round 54 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 54 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1542033300,
       "durationSeconds": 7200
     },
@@ -176060,13 +176060,13 @@
     },
     "1078": {
       "id": 1078,
-      "name": "Codeforces Round 522 (Div. 1, based on Technocup 2019 Elimination Round 3)",
+      "name": "Codeforces Round 522 (Div. 1, основан на Отборочном раунде 3 Технокубка 2019)",
       "startTimeSeconds": 1542557100,
       "durationSeconds": 8400
     },
     "1079": {
       "id": 1079,
-      "name": "Codeforces Round 522 (Div. 2, based on Technocup 2019 Elimination Round 3)",
+      "name": "Codeforces Round 522 (Div. 2, основан на Отборочном раунде 3 Технокубка 2019)",
       "startTimeSeconds": 1542557100,
       "durationSeconds": 8400
     },
@@ -176084,7 +176084,7 @@
     },
     "1082": {
       "id": 1082,
-      "name": "Educational Codeforces Round 55 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 55 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1543415700,
       "durationSeconds": 7200
     },
@@ -176102,19 +176102,19 @@
     },
     "1085": {
       "id": 1085,
-      "name": "Technocup 2019 - Elimination Round 4",
+      "name": "Технокубок 2019 - Отборочный Раунд 4",
       "startTimeSeconds": 1545572100,
       "durationSeconds": 7200
     },
     "1086": {
       "id": 1086,
-      "name": "Codeforces Round 528 (Div. 1, based on Technocup 2019 Elimination Round 4)",
+      "name": "Codeforces Round 528 (Div. 1, основан на Отборочном раунде 4 Технокубка 2019)",
       "startTimeSeconds": 1545572100,
       "durationSeconds": 7200
     },
     "1087": {
       "id": 1087,
-      "name": "Codeforces Round 528 (Div. 2, based on Technocup 2019 Elimination Round 4)",
+      "name": "Codeforces Round 528 (Div. 2, основан на Отборочном раунде 4 Технокубка 2019)",
       "startTimeSeconds": 1545572100,
       "durationSeconds": 7200
     },
@@ -176126,13 +176126,13 @@
     },
     "1089": {
       "id": 1089,
-      "name": "2018-2019 ICPC, NEERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)",
+      "name": "2018-2019 ICPC, NEERC, Northern Eurasia Finals (нерейтинговый, онлайн-трансляция, правила ICPC, предпочтительно команды)",
       "startTimeSeconds": 1543734300,
       "durationSeconds": 18000
     },
     "1090": {
       "id": 1090,
-      "name": "2018-2019 Russia Open High School Programming Contest (Unrated, Online Mirror, ICPC Rules, Teams Preferred)",
+      "name": "2018-2019 Всероссийская командная олимпиада школьников по программированию (нерейтинговый, онлайн-трансляция, правила ICPC, предпочтительно команды)",
       "startTimeSeconds": 1544342700,
       "durationSeconds": 18000
     },
@@ -176150,7 +176150,7 @@
     },
     "1093": {
       "id": 1093,
-      "name": "Educational Codeforces Round 56 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 56 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1544884500,
       "durationSeconds": 7200
     },
@@ -176168,7 +176168,7 @@
     },
     "1096": {
       "id": 1096,
-      "name": "Educational Codeforces Round 57 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 57 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1546007700,
       "durationSeconds": 7200
     },
@@ -176198,7 +176198,7 @@
     },
     "1101": {
       "id": 1101,
-      "name": "Educational Codeforces Round 58 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 58 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1547217300,
       "durationSeconds": 7200
     },
@@ -176234,7 +176234,7 @@
     },
     "1107": {
       "id": 1107,
-      "name": "Educational Codeforces Round 59 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 59 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1548516900,
       "durationSeconds": 7200
     },
@@ -176264,7 +176264,7 @@
     },
     "1112": {
       "id": 1112,
-      "name": "Technocup 2019 - Final",
+      "name": "Технокубок 2019 - Финал",
       "startTimeSeconds": 1551601800,
       "durationSeconds": 10800
     },
@@ -176294,7 +176294,7 @@
     },
     "1117": {
       "id": 1117,
-      "name": "Educational Codeforces Round 60 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 60 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1550504400,
       "durationSeconds": 7200
     },
@@ -176312,13 +176312,13 @@
     },
     "1120": {
       "id": 1120,
-      "name": "Codeforces Round 543 (Div. 1, based on Technocup 2019 Final Round)",
+      "name": "Codeforces Round 543 (Div. 1, основан на Финальном раунде Технокубка 2019)",
       "startTimeSeconds": 1551627300,
       "durationSeconds": 7200
     },
     "1121": {
       "id": 1121,
-      "name": "Codeforces Round 543 (Div. 2, based on Technocup 2019 Final Round)",
+      "name": "Codeforces Round 543 (Div. 2, основан на Финальном раунде Технокубка 2019)",
       "startTimeSeconds": 1551627300,
       "durationSeconds": 7200
     },
@@ -176342,7 +176342,7 @@
     },
     "1132": {
       "id": 1132,
-      "name": "Educational Codeforces Round 61 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 61 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1551798300,
       "durationSeconds": 8100
     },
@@ -176378,7 +176378,7 @@
     },
     "1140": {
       "id": 1140,
-      "name": "Educational Codeforces Round 62 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 62 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1553267100,
       "durationSeconds": 7200
     },
@@ -176408,7 +176408,7 @@
     },
     "1145": {
       "id": 1145,
-      "name": "April Fools Day Contest 2019",
+      "name": "Первоапрельский контест 2019",
       "startTimeSeconds": 1554131100,
       "durationSeconds": 7200
     },
@@ -176468,13 +176468,13 @@
     },
     "1155": {
       "id": 1155,
-      "name": "Educational Codeforces Round 63 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 63 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1555943700,
       "durationSeconds": 7200
     },
     "1156": {
       "id": 1156,
-      "name": "Educational Codeforces Round 64 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 64 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1556721300,
       "durationSeconds": 7200
     },
@@ -176540,7 +176540,7 @@
     },
     "1167": {
       "id": 1167,
-      "name": "Educational Codeforces Round 65 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 65 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1557930900,
       "durationSeconds": 7200
     },
@@ -176588,7 +176588,7 @@
     },
     "1175": {
       "id": 1175,
-      "name": "Educational Codeforces Round 66 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 66 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1559745300,
       "durationSeconds": 7200
     },
@@ -176660,7 +176660,7 @@
     },
     "1187": {
       "id": 1187,
-      "name": "Educational Codeforces Round 67 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 67 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1561905900,
       "durationSeconds": 7200
     },
@@ -176702,7 +176702,7 @@
     },
     "1194": {
       "id": 1194,
-      "name": "Educational Codeforces Round 68 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 68 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1563115500,
       "durationSeconds": 7200
     },
@@ -176720,7 +176720,7 @@
     },
     "1197": {
       "id": 1197,
-      "name": "Educational Codeforces Round 69 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 69 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1563806100,
       "durationSeconds": 7200
     },
@@ -176750,7 +176750,7 @@
     },
     "1202": {
       "id": 1202,
-      "name": "Educational Codeforces Round 70 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 70 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1565188500,
       "durationSeconds": 7200
     },
@@ -176780,7 +176780,7 @@
     },
     "1207": {
       "id": 1207,
-      "name": "Educational Codeforces Round 71 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 71 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1566484500,
       "durationSeconds": 7200
     },
@@ -176792,13 +176792,13 @@
     },
     "1209": {
       "id": 1209,
-      "name": "Codeforces Round 584 - Dasha Code Championship - Elimination Round (rated, open for everyone, Div. 1 + Div. 2)",
+      "name": "Codeforces Round 584 - Dasha Code Championship - отборочный раунд (рейтинговый, открыт для всех, Div. 1 + Div. 2)",
       "startTimeSeconds": 1568466300,
       "durationSeconds": 9000
     },
     "1210": {
       "id": 1210,
-      "name": "Dasha Code Championship - SPb Finals Round (only for onsite-finalists)",
+      "name": "Dasha Code Championship - СПб Финал (только для онсайт-финалистов)",
       "startTimeSeconds": 1569143100,
       "durationSeconds": 9000
     },
@@ -176822,7 +176822,7 @@
     },
     "1214": {
       "id": 1214,
-      "name": "Codeforces Round 583 (Div. 1 + Div. 2, based on Olympiad of Metropolises)",
+      "name": "Codeforces Round 583 (Div. 1 + Div. 2, по задачам Олимпиады Мегаполисов)",
       "startTimeSeconds": 1567587900,
       "durationSeconds": 9000
     },
@@ -176840,7 +176840,7 @@
     },
     "1217": {
       "id": 1217,
-      "name": "Educational Codeforces Round 72 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 72 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1567694100,
       "durationSeconds": 7200
     },
@@ -176864,7 +176864,7 @@
     },
     "1221": {
       "id": 1221,
-      "name": "Educational Codeforces Round 73 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 73 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1568903700,
       "durationSeconds": 7200
     },
@@ -176876,7 +176876,7 @@
     },
     "1223": {
       "id": 1223,
-      "name": "Technocup 2020 - Elimination Round 1",
+      "name": "Технокубок 2020 - Отборочный Раунд 1",
       "startTimeSeconds": 1570374300,
       "durationSeconds": 7200
     },
@@ -176888,7 +176888,7 @@
     },
     "1225": {
       "id": 1225,
-      "name": "Technocup 2020 - Elimination Round 2",
+      "name": "Технокубок 2020 - Отборочный Раунд 2",
       "startTimeSeconds": 1572087900,
       "durationSeconds": 7200
     },
@@ -176900,7 +176900,7 @@
     },
     "1227": {
       "id": 1227,
-      "name": "Technocup 2020 - Elimination Round 3",
+      "name": "Технокубок 2020 - Отборочный Раунд 3",
       "startTimeSeconds": 1574582700,
       "durationSeconds": 7200
     },
@@ -176924,7 +176924,7 @@
     },
     "1231": {
       "id": 1231,
-      "name": "Dasha Code Championship - Novosibirsk Finals Round (only for onsite-finalists)",
+      "name": "Dasha Code Championship - Новосибирск Финал (только для онсайт-финалистов)",
       "startTimeSeconds": 1569143100,
       "durationSeconds": 9000
     },
@@ -176954,7 +176954,7 @@
     },
     "1238": {
       "id": 1238,
-      "name": "Educational Codeforces Round 74 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 74 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1570545300,
       "durationSeconds": 8400
     },
@@ -176966,7 +176966,7 @@
     },
     "1240": {
       "id": 1240,
-      "name": "Codeforces Round 591 (Div. 1, based on Technocup 2020 Elimination Round 1)",
+      "name": "Codeforces Round 591 (Div. 1, основан на Отборочном раунде 1 Технокубка 2020)",
       "startTimeSeconds": 1570374300,
       "durationSeconds": 7200
     },
@@ -177002,13 +177002,13 @@
     },
     "1246": {
       "id": 1246,
-      "name": "Codeforces Round 596 (Div. 1, based on Technocup 2020 Elimination Round 2)",
+      "name": "Codeforces Round 596 (Div. 1, основан на Отборочном раунде 2 Технокубка 2020)",
       "startTimeSeconds": 1572087900,
       "durationSeconds": 7200
     },
     "1247": {
       "id": 1247,
-      "name": "Codeforces Round 596 (Div. 2, based on Technocup 2020 Elimination Round 2)",
+      "name": "Codeforces Round 596 (Div. 2, основан на Отборочном раунде 2 Технокубка 2020)",
       "startTimeSeconds": 1572087900,
       "durationSeconds": 7200
     },
@@ -177026,13 +177026,13 @@
     },
     "1250": {
       "id": 1250,
-      "name": "2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules, Teams Preferred)",
+      "name": "2019-2020 ICPC, NERC, Южный четвертьфинал (онлайн-трансляция, правила ICPC, предпочтительно команды)",
       "startTimeSeconds": 1572168900,
       "durationSeconds": 18000
     },
     "1251": {
       "id": 1251,
-      "name": "Educational Codeforces Round 75 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 75 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1571929500,
       "durationSeconds": 7200
     },
@@ -177068,7 +177068,7 @@
     },
     "1257": {
       "id": 1257,
-      "name": "Educational Codeforces Round 76 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 76 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1573655700,
       "durationSeconds": 7200
     },
@@ -177080,25 +177080,25 @@
     },
     "1259": {
       "id": 1259,
-      "name": "Technocup 2020 - Elimination Round 4",
+      "name": "Технокубок 2020 - Отборочный Раунд 4",
       "startTimeSeconds": 1576321500,
       "durationSeconds": 7200
     },
     "1260": {
       "id": 1260,
-      "name": "Educational Codeforces Round 77 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 77 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1574862600,
       "durationSeconds": 7200
     },
     "1261": {
       "id": 1261,
-      "name": "Codeforces Round 602 (Div. 1, based on Technocup 2020 Elimination Round 3)",
+      "name": "Codeforces Round 602 (Div. 1, основан на Отборочном раунде 3 Технокубка 2020)",
       "startTimeSeconds": 1574582700,
       "durationSeconds": 7200
     },
     "1262": {
       "id": 1262,
-      "name": "Codeforces Round 602 (Div. 2, based on Technocup 2020 Elimination Round 3)",
+      "name": "Codeforces Round 602 (Div. 2, основан на Отборочном раунде 3 Технокубка 2020)",
       "startTimeSeconds": 1574582700,
       "durationSeconds": 7200
     },
@@ -177128,7 +177128,7 @@
     },
     "1267": {
       "id": 1267,
-      "name": "2019-2020 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)",
+      "name": "2019-2020 ICPC, NERC, Northern Eurasia Finals (нерейтинговый, онлайн-трансляция, правила ICPC, предпочтительно команды)",
       "startTimeSeconds": 1575183600,
       "durationSeconds": 18000
     },
@@ -177182,25 +177182,25 @@
     },
     "1276": {
       "id": 1276,
-      "name": "Codeforces Round 606 (Div. 1, based on Technocup 2020 Elimination Round 4)",
+      "name": "Codeforces Round 606 (Div. 1, основан на Отборочном раунде 4 Технокубка 2020)",
       "startTimeSeconds": 1576321500,
       "durationSeconds": 7200
     },
     "1277": {
       "id": 1277,
-      "name": "Codeforces Round 606 (Div. 2, based on Technocup 2020 Elimination Round 4)",
+      "name": "Codeforces Round 606 (Div. 2, основан на Отборочном раунде 4 Технокубка 2020)",
       "startTimeSeconds": 1576321500,
       "durationSeconds": 7200
     },
     "1278": {
       "id": 1278,
-      "name": "Educational Codeforces Round 78 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 78 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1576766100,
       "durationSeconds": 7200
     },
     "1279": {
       "id": 1279,
-      "name": "Educational Codeforces Round 79 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 79 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1577457600,
       "durationSeconds": 7200
     },
@@ -177254,7 +177254,7 @@
     },
     "1288": {
       "id": 1288,
-      "name": "Educational Codeforces Round 80 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 80 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1579012500,
       "durationSeconds": 7200
     },
@@ -177290,7 +177290,7 @@
     },
     "1295": {
       "id": 1295,
-      "name": "Educational Codeforces Round 81 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 81 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1580308500,
       "durationSeconds": 7200
     },
@@ -177338,7 +177338,7 @@
     },
     "1303": {
       "id": 1303,
-      "name": "Educational Codeforces Round 82 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 82 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1581518100,
       "durationSeconds": 7200
     },
@@ -177362,7 +177362,7 @@
     },
     "1310": {
       "id": 1310,
-      "name": "VK Cup 2019-2020 - Elimination Round (Engine)",
+      "name": "VK Cup 2019-2020 - Отборочный раунд (Engine)",
       "startTimeSeconds": 1582473900,
       "durationSeconds": 9000
     },
@@ -177374,7 +177374,7 @@
     },
     "1312": {
       "id": 1312,
-      "name": "Educational Codeforces Round 83 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 83 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1583764500,
       "durationSeconds": 7200
     },
@@ -177386,13 +177386,13 @@
     },
     "1314": {
       "id": 1314,
-      "name": "Codeforces Round 623 (Div. 1, based on VK Cup 2019-2020 - Elimination Round, Engine)",
+      "name": "Codeforces Round 623 (Div. 1, по задачам VK Cup 2019-2020 - Отборочный раунд, Engine)",
       "startTimeSeconds": 1582473900,
       "durationSeconds": 9000
     },
     "1315": {
       "id": 1315,
-      "name": "Codeforces Round 623 (Div. 2, based on VK Cup 2019-2020 - Elimination Round, Engine)",
+      "name": "Codeforces Round 623 (Div. 2, по задачам VK Cup 2019-2020 - Отборочный раунд, Engine)",
       "startTimeSeconds": 1582473900,
       "durationSeconds": 9000
     },
@@ -177422,13 +177422,13 @@
     },
     "1322": {
       "id": 1322,
-      "name": "Codeforces Round 626 (Div. 1, based on Moscow Open Olympiad in Informatics)",
+      "name": "Codeforces Round 626 (Div. 1, по задачам Открытой олимпиады школьников по программированию)",
       "startTimeSeconds": 1583573700,
       "durationSeconds": 7200
     },
     "1323": {
       "id": 1323,
-      "name": "Codeforces Round 626 (Div. 2, based on Moscow Open Olympiad in Informatics)",
+      "name": "Codeforces Round 626 (Div. 2, по задачам Открытой олимпиады школьников по программированию)",
       "startTimeSeconds": 1583573700,
       "durationSeconds": 7200
     },
@@ -177452,7 +177452,7 @@
     },
     "1327": {
       "id": 1327,
-      "name": "Educational Codeforces Round 84 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 84 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1584974100,
       "durationSeconds": 7200
     },
@@ -177494,7 +177494,7 @@
     },
     "1334": {
       "id": 1334,
-      "name": "Educational Codeforces Round 85 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 85 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1586529300,
       "durationSeconds": 7200
     },
@@ -177542,7 +177542,7 @@
     },
     "1342": {
       "id": 1342,
-      "name": "Educational Codeforces Round 86 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 86 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1587911700,
       "durationSeconds": 7200
     },
@@ -177614,7 +177614,7 @@
     },
     "1354": {
       "id": 1354,
-      "name": "Educational Codeforces Round 87 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 87 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1589707200,
       "durationSeconds": 7200
     },
@@ -177644,7 +177644,7 @@
     },
     "1359": {
       "id": 1359,
-      "name": "Educational Codeforces Round 88 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 88 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1590676500,
       "durationSeconds": 7200
     },
@@ -177686,7 +177686,7 @@
     },
     "1366": {
       "id": 1366,
-      "name": "Educational Codeforces Round 89 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 89 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1591886100,
       "durationSeconds": 7200
     },
@@ -177728,7 +177728,7 @@
     },
     "1373": {
       "id": 1373,
-      "name": "Educational Codeforces Round 90 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 90 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1593095700,
       "durationSeconds": 7200
     },
@@ -177770,7 +177770,7 @@
     },
     "1380": {
       "id": 1380,
-      "name": "Educational Codeforces Round 91 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 91 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1594565100,
       "durationSeconds": 9000
     },
@@ -177824,7 +177824,7 @@
     },
     "1389": {
       "id": 1389,
-      "name": "Educational Codeforces Round 92 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 92 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1596033300,
       "durationSeconds": 7200
     },
@@ -177872,7 +177872,7 @@
     },
     "1398": {
       "id": 1398,
-      "name": "Educational Codeforces Round 93 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 93 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1597415700,
       "durationSeconds": 7200
     },
@@ -177884,7 +177884,7 @@
     },
     "1400": {
       "id": 1400,
-      "name": "Educational Codeforces Round 94 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 94 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1598366100,
       "durationSeconds": 7200
     },
@@ -177950,7 +177950,7 @@
     },
     "1411": {
       "id": 1411,
-      "name": "Technocup 2021 - Elimination Round 3",
+      "name": "Технокубок 2021 - Отборочный Раунд 3",
       "startTimeSeconds": 1608476700,
       "durationSeconds": 7200
     },
@@ -177962,7 +177962,7 @@
     },
     "1413": {
       "id": 1413,
-      "name": "Technocup 2021 - Elimination Round 1",
+      "name": "Технокубок 2021 - Отборочный Раунд 1",
       "startTimeSeconds": 1603623900,
       "durationSeconds": 7200
     },
@@ -177974,7 +177974,7 @@
     },
     "1415": {
       "id": 1415,
-      "name": "Technocup 2021 - Elimination Round 2",
+      "name": "Технокубок 2021 - Отборочный Раунд 2",
       "startTimeSeconds": 1606633500,
       "durationSeconds": 7200
     },
@@ -177992,7 +177992,7 @@
     },
     "1418": {
       "id": 1418,
-      "name": "Educational Codeforces Round 95 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 95 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1600094100,
       "durationSeconds": 7200
     },
@@ -178058,7 +178058,7 @@
     },
     "1430": {
       "id": 1430,
-      "name": "Educational Codeforces Round 96 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 96 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1602407100,
       "durationSeconds": 7200
     },
@@ -178082,13 +178082,13 @@
     },
     "1434": {
       "id": 1434,
-      "name": "Codeforces Round 679 (Div. 1, based on Technocup 2021 Elimination Round 1)",
+      "name": "Codeforces Round 679 (Div. 1, основан на Отборочном раунде 1 Технокубка 2021)",
       "startTimeSeconds": 1603623900,
       "durationSeconds": 7200
     },
     "1435": {
       "id": 1435,
-      "name": "Codeforces Round 679 (Div. 2, based on Technocup 2021 Elimination Round 1)",
+      "name": "Codeforces Round 679 (Div. 2, основан на Отборочном раунде 1 Технокубка 2021)",
       "startTimeSeconds": 1603623900,
       "durationSeconds": 7200
     },
@@ -178100,7 +178100,7 @@
     },
     "1437": {
       "id": 1437,
-      "name": "Educational Codeforces Round 97 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 97 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1603809300,
       "durationSeconds": 7200
     },
@@ -178124,31 +178124,31 @@
     },
     "1441": {
       "id": 1441,
-      "name": "VK Cup 2019-2020 - Final Round (Engine)",
+      "name": "VK Cup 2019-2020 - Финальный раунд (Engine)",
       "startTimeSeconds": 1604239500,
       "durationSeconds": 7200
     },
     "1442": {
       "id": 1442,
-      "name": "Codeforces Round 681 (Div. 1, based on VK Cup 2019-2020 - Final)",
+      "name": "Codeforces Round 681 (Div. 1, по задачам VK Cup 2019-2020 - Финал)",
       "startTimeSeconds": 1604327700,
       "durationSeconds": 7200
     },
     "1443": {
       "id": 1443,
-      "name": "Codeforces Round 681 (Div. 2, based on VK Cup 2019-2020 - Final)",
+      "name": "Codeforces Round 681 (Div. 2, по задачам VK Cup 2019-2020 - Финал)",
       "startTimeSeconds": 1604327700,
       "durationSeconds": 7200
     },
     "1444": {
       "id": 1444,
-      "name": "Codeforces Round 680 (Div. 1, based on Moscow Team Olympiad)",
+      "name": "Codeforces Round 680 (Div. 1, по задачам МКОШП)",
       "startTimeSeconds": 1604228700,
       "durationSeconds": 7200
     },
     "1445": {
       "id": 1445,
-      "name": "Codeforces Round 680 (Div. 2, based on Moscow Team Olympiad)",
+      "name": "Codeforces Round 680 (Div. 2, по задачам МКОШП)",
       "startTimeSeconds": 1604228700,
       "durationSeconds": 7200
     },
@@ -178178,7 +178178,7 @@
     },
     "1452": {
       "id": 1452,
-      "name": "Educational Codeforces Round 98 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 98 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1605796500,
       "durationSeconds": 7200
     },
@@ -178196,19 +178196,19 @@
     },
     "1455": {
       "id": 1455,
-      "name": "Educational Codeforces Round 99 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 99 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1606746900,
       "durationSeconds": 7200
     },
     "1456": {
       "id": 1456,
-      "name": "Codeforces Round 687 (Div. 1, based on Technocup 2021 Elimination Round 2)",
+      "name": "Codeforces Round 687 (Div. 1, основан на Отборочном раунде 2 Технокубка 2021)",
       "startTimeSeconds": 1606633500,
       "durationSeconds": 7200
     },
     "1457": {
       "id": 1457,
-      "name": "Codeforces Round 687 (Div. 2, based on Technocup 2021 Elimination Round 2)",
+      "name": "Codeforces Round 687 (Div. 2, основан на Отборочном раунде 2 Технокубка 2021)",
       "startTimeSeconds": 1606633500,
       "durationSeconds": 7200
     },
@@ -178244,19 +178244,19 @@
     },
     "1463": {
       "id": 1463,
-      "name": "Educational Codeforces Round 100 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 100 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1608215700,
       "durationSeconds": 7200
     },
     "1464": {
       "id": 1464,
-      "name": "Codeforces Round 692 (Div. 1, based on Technocup 2021 Elimination Round 3)",
+      "name": "Codeforces Round 692 (Div. 1, основан на Отборочном раунде 3 Технокубка 2021)",
       "startTimeSeconds": 1608476700,
       "durationSeconds": 7200
     },
     "1465": {
       "id": 1465,
-      "name": "Codeforces Round 692 (Div. 2, based on Technocup 2021 Elimination Round 3)",
+      "name": "Codeforces Round 692 (Div. 2, основан на Отборочном раунде 3 Технокубка 2021)",
       "startTimeSeconds": 1608476700,
       "durationSeconds": 7200
     },
@@ -178274,13 +178274,13 @@
     },
     "1468": {
       "id": 1468,
-      "name": "2020-2021 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules)",
+      "name": "2020-2021 ICPC, NERC, Южный четвертьфинал (онлайн-трансляция, правила ICPC)",
       "startTimeSeconds": 1608896100,
       "durationSeconds": 18000
     },
     "1469": {
       "id": 1469,
-      "name": "Educational Codeforces Round 101 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 101 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1609166100,
       "durationSeconds": 7200
     },
@@ -178304,7 +178304,7 @@
     },
     "1473": {
       "id": 1473,
-      "name": "Educational Codeforces Round 102 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 102 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1610634900,
       "durationSeconds": 7200
     },
@@ -178322,7 +178322,7 @@
     },
     "1476": {
       "id": 1476,
-      "name": "Educational Codeforces Round 103 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 103 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1611930900,
       "durationSeconds": 7200
     },
@@ -178364,13 +178364,13 @@
     },
     "1483": {
       "id": 1483,
-      "name": "Codeforces Round 709 (Div. 1, based on Technocup 2021 Final Round)",
+      "name": "Codeforces Round 709 (Div. 1, основан на Финале Технокубка 2021)",
       "startTimeSeconds": 1616332800,
       "durationSeconds": 8100
     },
     "1484": {
       "id": 1484,
-      "name": "Codeforces Round 709 (Div. 2, based on Technocup 2021 Final Round)",
+      "name": "Codeforces Round 709 (Div. 2, основан на Финале Технокубка 2021)",
       "startTimeSeconds": 1616332800,
       "durationSeconds": 8100
     },
@@ -178388,7 +178388,7 @@
     },
     "1487": {
       "id": 1487,
-      "name": "Educational Codeforces Round 104 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 104 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1613399700,
       "durationSeconds": 7200
     },
@@ -178430,7 +178430,7 @@
     },
     "1494": {
       "id": 1494,
-      "name": "Educational Codeforces Round 105 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 105 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1614696300,
       "durationSeconds": 7200
     },
@@ -178460,19 +178460,19 @@
     },
     "1499": {
       "id": 1499,
-      "name": "Educational Codeforces Round 106 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 106 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1616079000,
       "durationSeconds": 7200
     },
     "1500": {
       "id": 1500,
-      "name": "Codeforces Round 707 (Div. 1, based on Moscow Open Olympiad in Informatics)",
+      "name": "Codeforces Round 707 (Div. 1, по задачам Открытой олимпиады школьников по программированию)",
       "startTimeSeconds": 1615626300,
       "durationSeconds": 9000
     },
     "1501": {
       "id": 1501,
-      "name": "Codeforces Round 707 (Div. 2, based on Moscow Open Olympiad in Informatics)",
+      "name": "Codeforces Round 707 (Div. 2, по задачам Открытой олимпиады школьников по программированию)",
       "startTimeSeconds": 1615626300,
       "durationSeconds": 9000
     },
@@ -178520,7 +178520,7 @@
     },
     "1511": {
       "id": 1511,
-      "name": "Educational Codeforces Round 107 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 107 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1618238100,
       "durationSeconds": 7200
     },
@@ -178562,7 +178562,7 @@
     },
     "1519": {
       "id": 1519,
-      "name": "Educational Codeforces Round 108 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 108 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1619706900,
       "durationSeconds": 7200
     },
@@ -178598,7 +178598,7 @@
     },
     "1525": {
       "id": 1525,
-      "name": "Educational Codeforces Round 109 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 109 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1621152000,
       "durationSeconds": 7200
     },
@@ -178628,7 +178628,7 @@
     },
     "1530": {
       "id": 1530,
-      "name": "Codeforces Round 733 (Div. 1 + Div. 2, based on VK Cup 2021 - Elimination (Engine))",
+      "name": "Codeforces Round 733 (Div. 1 + Div. 2, основан на VK Cup 2021 - Отбор (Engine))",
       "startTimeSeconds": 1626532500,
       "durationSeconds": 10800
     },
@@ -178658,7 +178658,7 @@
     },
     "1535": {
       "id": 1535,
-      "name": "Educational Codeforces Round 110 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 110 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1622817300,
       "durationSeconds": 7200
     },
@@ -178712,7 +178712,7 @@
     },
     "1544": {
       "id": 1544,
-      "name": "VK Cup 2021 - Elimination (Engine)",
+      "name": "VK Cup 2021 - Отборочный раунд (Engine)",
       "startTimeSeconds": 1626532500,
       "durationSeconds": 10800
     },
@@ -178748,7 +178748,7 @@
     },
     "1550": {
       "id": 1550,
-      "name": "Educational Codeforces Round 111 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 111 (рейтинговый для Див. 2)",
       "startTimeSeconds": 1626273300,
       "durationSeconds": 7200
     },
@@ -178796,7 +178796,7 @@
     },
     "1558": {
       "id": 1558,
-      "name": "Codeforces Round 740 (Div. 1, based on VK Cup 2021 - Final (Engine))",
+      "name": "Codeforces Round 740 (Div. 1, основан на VK Cup 2021 - Финал (Engine))",
       "startTimeSeconds": 1629815700,
       "durationSeconds": 9000
     },
@@ -178814,7 +178814,7 @@
     },
     "1561": {
       "id": 1561,
-      "name": "Codeforces Round 740 (Div. 2, based on VK Cup 2021 - Final (Engine))",
+      "name": "Codeforces Round 740 (Div. 2, основан на VK Cup 2021 - Финал (Engine))",
       "startTimeSeconds": 1629815700,
       "durationSeconds": 9000
     },
@@ -178826,7 +178826,7 @@
     },
     "1563": {
       "id": 1563,
-      "name": "VK Cup 2021 - Final (Engine)",
+      "name": "VK Cup 2021 - Финальный раунд (Engine)",
       "startTimeSeconds": 1629633900,
       "durationSeconds": 9000
     },
@@ -178922,43 +178922,43 @@
     },
     "1583": {
       "id": 1583,
-      "name": "Technocup 2022 - Elimination Round 1",
+      "name": "Технокубок 2022 - Отборочный Раунд 1",
       "startTimeSeconds": 1634468700,
       "durationSeconds": 8100
     },
     "1584": {
       "id": 1584,
-      "name": "Technocup 2022 - Elimination Round 2",
+      "name": "Технокубок 2022 - Отборочный Раунд 2",
       "startTimeSeconds": 1636869900,
       "durationSeconds": 8100
     },
     "1585": {
       "id": 1585,
-      "name": "Technocup 2022 - Elimination Round 3",
+      "name": "Технокубок 2022 - Отборочный Раунд 3",
       "startTimeSeconds": 1639322100,
       "durationSeconds": 7200
     },
     "1586": {
       "id": 1586,
-      "name": "Codeforces Round 749 (Div. 1 + Div. 2, based on Technocup 2022 Elimination Round 1)",
+      "name": "Codeforces Round 749 (Div. 1 + Div. 2, основан на Отборочном раунде 1 Технокубка 2022)",
       "startTimeSeconds": 1634468700,
       "durationSeconds": 8100
     },
     "1588": {
       "id": 1588,
-      "name": "Codeforces Round 755 (Div. 1, based on Technocup 2022 Elimination Round 2)",
+      "name": "Codeforces Round 755 (Div. 1, основан на Отборочном раунде 2 Технокубка 2022)",
       "startTimeSeconds": 1636869900,
       "durationSeconds": 8100
     },
     "1589": {
       "id": 1589,
-      "name": "Codeforces Round 755 (Div. 2, based on Technocup 2022 Elimination Round 2)",
+      "name": "Codeforces Round 755 (Div. 2, основан на Отборочном раунде 2 Технокубка 2022)",
       "startTimeSeconds": 1636869900,
       "durationSeconds": 8100
     },
     "1591": {
       "id": 1591,
-      "name": "Codeforces Round 759 (Div. 2, based on Technocup 2022 Elimination Round 3)",
+      "name": "Codeforces Round 759 (Div. 2, основан на Отборочном раунде 3 Технокубка 2022)",
       "startTimeSeconds": 1639322100,
       "durationSeconds": 7200
     },
@@ -179000,7 +179000,7 @@
     },
     "1598": {
       "id": 1598,
-      "name": "Educational Codeforces Round 115 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 115 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1633856700,
       "durationSeconds": 7200
     },
@@ -179048,7 +179048,7 @@
     },
     "1606": {
       "id": 1606,
-      "name": "Educational Codeforces Round 116 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 116 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1635518100,
       "durationSeconds": 7200
     },
@@ -179084,13 +179084,13 @@
     },
     "1612": {
       "id": 1612,
-      "name": "Educational Codeforces Round 117 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 117 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1637573700,
       "durationSeconds": 7200
     },
     "1613": {
       "id": 1613,
-      "name": "Educational Codeforces Round 118 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 118 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1638369300,
       "durationSeconds": 7200
     },
@@ -179132,7 +179132,7 @@
     },
     "1620": {
       "id": 1620,
-      "name": "Educational Codeforces Round 119 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 119 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1639841700,
       "durationSeconds": 7200
     },
@@ -179144,7 +179144,7 @@
     },
     "1622": {
       "id": 1622,
-      "name": "Educational Codeforces Round 120 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 120 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1640615700,
       "durationSeconds": 7200
     },
@@ -179168,7 +179168,7 @@
     },
     "1626": {
       "id": 1626,
-      "name": "Educational Codeforces Round 121 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 121 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1642343700,
       "durationSeconds": 7200
     },
@@ -179210,7 +179210,7 @@
     },
     "1633": {
       "id": 1633,
-      "name": "Educational Codeforces Round 122 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 122 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1643639700,
       "durationSeconds": 7200
     },
@@ -179258,7 +179258,7 @@
     },
     "1644": {
       "id": 1644,
-      "name": "Educational Codeforces Round 123 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 123 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1645540500,
       "durationSeconds": 7200
     },
@@ -179276,13 +179276,13 @@
     },
     "1648": {
       "id": 1648,
-      "name": "Codeforces Round 775 (Div. 1, based on Moscow Open Olympiad in Informatics)",
+      "name": "Codeforces Round 775 (Div. 1, по задачам Открытой олимпиады школьников по программированию)",
       "startTimeSeconds": 1646560500,
       "durationSeconds": 8100
     },
     "1649": {
       "id": 1649,
-      "name": "Codeforces Round 775 (Div. 2, based on Moscow Open Olympiad in Informatics)",
+      "name": "Codeforces Round 775 (Div. 2, по задачам Открытой олимпиады школьников по программированию)",
       "startTimeSeconds": 1646560500,
       "durationSeconds": 8100
     },
@@ -179294,7 +179294,7 @@
     },
     "1651": {
       "id": 1651,
-      "name": "Educational Codeforces Round 124 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 124 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1646922900,
       "durationSeconds": 7200
     },
@@ -179306,7 +179306,7 @@
     },
     "1654": {
       "id": 1654,
-      "name": "Codeforces Round 778 (Div. 1 + Div. 2, based on Technocup 2022 Final Round)",
+      "name": "Codeforces Round 778 (Div. 1 + Div. 2, основан на Финале Технокубка 2022)",
       "startTimeSeconds": 1647776100,
       "durationSeconds": 8100
     },
@@ -179342,7 +179342,7 @@
     },
     "1661": {
       "id": 1661,
-      "name": "Educational Codeforces Round 126 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 126 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1649514900,
       "durationSeconds": 7200
     },
@@ -179450,13 +179450,13 @@
     },
     "1680": {
       "id": 1680,
-      "name": "Educational Codeforces Round 128 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 128 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1652452500,
       "durationSeconds": 7200
     },
     "1681": {
       "id": 1681,
-      "name": "Educational Codeforces Round 129 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 129 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1653316500,
       "durationSeconds": 7200
     },
@@ -179546,7 +179546,7 @@
     },
     "1697": {
       "id": 1697,
-      "name": "Educational Codeforces Round 130 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 130 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1655044500,
       "durationSeconds": 7200
     },
@@ -179570,7 +179570,7 @@
     },
     "1701": {
       "id": 1701,
-      "name": "Educational Codeforces Round 131 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 131 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1657290900,
       "durationSeconds": 7200
     },
@@ -179618,7 +179618,7 @@
     },
     "1709": {
       "id": 1709,
-      "name": "Educational Codeforces Round 132 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 132 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1658414100,
       "durationSeconds": 7200
     },
@@ -179660,7 +179660,7 @@
     },
     "1716": {
       "id": 1716,
-      "name": "Educational Codeforces Round 133 (Rated for Div. 2)",
+      "name": "Educational Codeforces Round 133 (рейтинговый для Div. 2)",
       "startTimeSeconds": 1659623700,
       "durationSeconds": 7200
     },
@@ -179930,7 +179930,7 @@
     },
     "1765": {
       "id": 1765,
-      "name": "2022-2023 ICPC, NERC, Southern and Volga Russian Regional Contest (Online Mirror, ICPC Rules, Preferably Teams)",
+      "name": "2022-2023 ICPC, NERC, Южный четвертьфинал (онлайн-трансляция, правила ICPC, командное соревнование)",
       "startTimeSeconds": 1669545300,
       "durationSeconds": 18000
     },
@@ -180032,7 +180032,7 @@
     },
     "1782": {
       "id": 1782,
-      "name": "Codeforces Round 844 (Div. 1 + Div. 2, based on VK Cup 2022 - Elimination Round)",
+      "name": "Codeforces Round 844 (Div. 1 + Div. 2, основан на Отборочном раунде VK Cup 2022)",
       "startTimeSeconds": 1673784300,
       "durationSeconds": 10800
     },
@@ -180050,13 +180050,13 @@
     },
     "1785": {
       "id": 1785,
-      "name": "Codeforces Round 850 (Div. 1, based on VK Cup 2022 - Final Round)",
+      "name": "Codeforces Round 850 (Div. 1, основан на Финальном раунде VK Cup 2022)",
       "startTimeSeconds": 1675598700,
       "durationSeconds": 10800
     },
     "1786": {
       "id": 1786,
-      "name": "Codeforces Round 850 (Div. 2, based on VK Cup 2022 - Final Round)",
+      "name": "Codeforces Round 850 (Div. 2, основан на Финальном раунде VK Cup 2022)",
       "startTimeSeconds": 1675598700,
       "durationSeconds": 10800
     },
@@ -180470,7 +180470,7 @@
     },
     "1856": {
       "id": 1856,
-      "name": "Codeforces Round 890 (Div. 2) supported by Constructor Institute",
+      "name": "Codeforces Round 890 (Div. 2) при поддержке Constructor Institute",
       "startTimeSeconds": 1691246100,
       "durationSeconds": 7200
     },
@@ -180938,7 +180938,7 @@
     },
     "1940": {
       "id": 1940,
-      "name": "XVIII Open Olympiad in Informatics - Final Stage, Day 2 (Unrated, Online Mirror, IOI rules)",
+      "name": "XVIII Открытая олимпиада по программированию - заключительный этап, день 2 (вне рейтинга, зеркало, правила IOI)",
       "startTimeSeconds": 1709975100,
       "durationSeconds": 18000
     },
@@ -181154,7 +181154,7 @@
     },
     "1982": {
       "id": 1982,
-      "name": "Codeforces Round 955 (Div. 2, with prizes from NEAR!)",
+      "name": "Codeforces Round 955 (Div. 2, с призами от NEAR!)",
       "startTimeSeconds": 1719326100,
       "durationSeconds": 7200
     },
@@ -181226,7 +181226,7 @@
     },
     "1994": {
       "id": 1994,
-      "name": "Codeforces Round 959 sponsored by NEAR (Div. 1 + Div. 2)",
+      "name": "Codeforces Round 959 при поддержке NEAR (Div. 1 + Div. 2)",
       "startTimeSeconds": 1721313300,
       "durationSeconds": 7200
     },
@@ -181382,7 +181382,7 @@
     },
     "2021": {
       "id": 2021,
-      "name": "Codeforces Round 977 (Div. 2, based on COMPFEST 16 - Final Round)",
+      "name": "Codeforces Round 977 (Div. 2, на основе COMPFEST 16 - Final Round)",
       "startTimeSeconds": 1728194700,
       "durationSeconds": 7200
     },
