@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T19:03:51.545Z",
+  "updatedAt": "2026-09-16T22:07:29.230Z",
   "problemsetFetchedAt": "2026-09-14T12:46:54.385Z",
   "ratingDisagreements": [],
   "contests": {
@@ -182801,6 +182801,24 @@
       "name": "Codeforces Round (Div. 2)",
       "startTimeSeconds": 1790433300,
       "durationSeconds": 9000
+    },
+    "2270": {
+      "id": 2270,
+      "name": "Codeforces Round (Div. 2)",
+      "startTimeSeconds": 1791743700,
+      "durationSeconds": 9000
+    },
+    "2271": {
+      "id": 2271,
+      "name": "Codeforces Round (Div. 1)",
+      "startTimeSeconds": 1791644700,
+      "durationSeconds": 10800
+    },
+    "2272": {
+      "id": 2272,
+      "name": "Codeforces Round (Div. 2)",
+      "startTimeSeconds": 1791644700,
+      "durationSeconds": 10800
     },
     "100001": {
       "id": 100001,
