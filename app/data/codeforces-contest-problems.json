@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-15T18:56:05.492Z",
+  "updatedAt": "2026-09-16T00:46:17.976Z",
   "problemsetFetchedAt": "2026-09-14T12:46:54.385Z",
   "ratingDisagreements": [],
   "contests": {
@@ -198568,6 +198568,12 @@
       "id": 106707,
       "name": "The 8th Guangxi Collegiate Programming Contest",
       "startTimeSeconds": 1748134800,
+      "durationSeconds": 18000
+    },
+    "106710": {
+      "id": 106710,
+      "name": "2026 ICPC Gran Premio de Mexico Repechaje",
+      "startTimeSeconds": null,
       "durationSeconds": 18000
     }
   }
