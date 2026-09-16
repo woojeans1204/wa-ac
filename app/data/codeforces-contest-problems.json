@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T00:46:17.976Z",
+  "updatedAt": "2026-09-16T19:03:51.545Z",
   "problemsetFetchedAt": "2026-09-14T12:46:54.385Z",
   "ratingDisagreements": [],
   "contests": {
@@ -182790,6 +182790,18 @@
       "startTimeSeconds": 1790346900,
       "durationSeconds": 7200
     },
+    "2268": {
+      "id": 2268,
+      "name": "Codeforces Round (Div. 1)",
+      "startTimeSeconds": 1790433300,
+      "durationSeconds": 9000
+    },
+    "2269": {
+      "id": 2269,
+      "name": "Codeforces Round (Div. 2)",
+      "startTimeSeconds": 1790433300,
+      "durationSeconds": 9000
+    },
     "100001": {
       "id": 100001,
       "name": "2010 Codeforces Beta Round #1 (training)",
@@ -198575,6 +198587,18 @@
       "name": "2026 ICPC Gran Premio de Mexico Repechaje",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106711": {
+      "id": 106711,
+      "name": "UTPC Contest 9-16-2026 Div. 2 (Beginner)",
+      "startTimeSeconds": 1789601400,
+      "durationSeconds": 7200
+    },
+    "106712": {
+      "id": 106712,
+      "name": "UTPC Contest 9-16-2026 Div. 1 (Advanced)",
+      "startTimeSeconds": 1789601400,
+      "durationSeconds": 7200
     }
   }
 }
