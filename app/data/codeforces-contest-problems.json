@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T04:52:41.808Z",
+  "updatedAt": "2026-09-17T05:20:04.062Z",
   "problemsetFetchedAt": "2026-09-17T04:52:41.742Z",
   "ratingDisagreements": [],
   "contests": {
@@ -182780,7 +182780,7 @@
     },
     "2266": {
       "id": 2266,
-      "name": "Codeforces Round (Div. 3)",
+      "name": "Codeforces Round 1122 (Div. 3)",
       "startTimeSeconds": 1790001300,
       "durationSeconds": 9000
     },
