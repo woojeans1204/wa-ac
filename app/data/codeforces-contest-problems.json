@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T22:07:29.230Z",
-  "problemsetFetchedAt": "2026-09-14T12:46:54.385Z",
+  "updatedAt": "2026-09-17T04:52:41.808Z",
+  "problemsetFetchedAt": "2026-09-17T04:52:41.742Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169694,8 +169694,8 @@
           "tags": [
             "combinatorics",
             "graphs",
-            "math",
-            "schedules"
+            "greedy",
+            "math"
           ]
         },
         {
