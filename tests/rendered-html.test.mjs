@@ -23,8 +23,12 @@ async function render(pathname = "/") {
   );
 }
 
-test("server-renders the WA:AC application from the public home", async () => {
-  const response = await render("/");
+test("the public home permanently redirects to the canonical Codeforces search", async () => {
+  const redirect = await render("/");
+  assert.equal(redirect.status, 308);
+  assert.equal(redirect.headers.get("location"), "/codeforces");
+
+  const response = await render("/codeforces");
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
@@ -35,6 +39,15 @@ test("server-renders the WA:AC application from the public home", async () => {
   assert.match(html, /Search a Codeforces handle/);
   assert.doesNotMatch(html, />AtCoder<\/a>/);
   assert.doesNotMatch(html, /Your site is taking shape|Building your site/);
+});
+
+test("the sitemap lists only the canonical Codeforces search page", async () => {
+  const response = await render("/sitemap.xml");
+  assert.equal(response.status, 200);
+  const xml = await response.text();
+
+  assert.match(xml, /<loc>https:\/\/wa-ac\.awj1204\.workers\.dev\/codeforces<\/loc>/);
+  assert.doesNotMatch(xml, /<loc>https:\/\/wa-ac\.awj1204\.workers\.dev<\/loc>/);
 });
 
 test("uses the locally hosted Cabinet Grotesk font", async () => {
@@ -301,4 +314,14 @@ test("analytics distinguishes anonymous new and returning visitors", async () =>
   assert.match(worker, /cleanId\(payload\?\.sessionId\)/);
   assert.match(worker, /WA_NEW_VISITORS/);
   assert.match(worker, /WA_RETURNING_SESSIONS/);
+});
+
+test("successful profile searches immediately update the analytics section", async () => {
+  const [codeforcesSearch, atcoderSearch] = await Promise.all([
+    readFile(new URL("../components/codeforces/codeforces-search.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../components/atcoder/atcoder-search.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(codeforcesSearch, /replaceState[\s\S]*search_success[\s\S]*dispatchEvent\(new Event\("waac:navigation"\)\)/);
+  assert.match(atcoderSearch, /replaceState[\s\S]*dispatchEvent\(new Event\("waac:navigation"\)\)/);
 });

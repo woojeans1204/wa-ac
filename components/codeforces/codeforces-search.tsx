@@ -150,6 +150,7 @@ export function CodeforcesSearch({ initialHandle = "" }: { initialHandle?: strin
         `/codeforces/${encodeURIComponent(payload.history.user)}${window.location.hash || "#dashboard"}`
       )
       trackEvent("search_success", { platform: "Codeforces" })
+      window.dispatchEvent(new Event("waac:navigation"))
 
       // Rating history is small but Codeforces requires it to start 2.1s after
       // the submissions request. Let the contest dashboard render during that wait.

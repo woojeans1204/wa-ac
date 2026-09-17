@@ -46,6 +46,7 @@ export function AtCoderSearch({ initialHistory }: { initialHistory: History }) {
         "",
         `/shadcn?handle=${encodeURIComponent(payload.history.user)}${window.location.hash || "#dashboard"}`
       )
+      window.dispatchEvent(new Event("waac:navigation"))
     } catch (cause) {
       const timedOut = cause instanceof Error && (
         cause.name === "TimeoutError" || cause.name === "AbortError"
