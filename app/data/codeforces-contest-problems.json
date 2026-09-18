@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T10:24:42.201Z",
-  "problemsetFetchedAt": "2026-09-17T04:52:41.742Z",
+  "updatedAt": "2026-09-18T11:14:33.484Z",
+  "problemsetFetchedAt": "2026-09-18T11:14:33.425Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169834,7 +169834,8 @@
           "standingsRating": null,
           "tags": [
             "data structures",
-            "greedy"
+            "greedy",
+            "math"
           ]
         },
         {
