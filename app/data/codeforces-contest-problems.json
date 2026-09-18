@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18T16:23:59.420Z",
+  "updatedAt": "2026-09-18T18:22:58.843Z",
   "problemsetFetchedAt": "2026-09-18T16:23:59.354Z",
   "ratingDisagreements": [],
   "contests": {
@@ -198632,6 +198632,12 @@
       "name": "UTPC Contest 9-16-2026 Div. 1 (Advanced)",
       "startTimeSeconds": 1789601400,
       "durationSeconds": 7200
+    },
+    "106714": {
+      "id": 106714,
+      "name": "[Unofficial Mirror] 2025 ICPC Shaanxi National Invitational Contest",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
