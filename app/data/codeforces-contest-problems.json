@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18T11:14:33.484Z",
-  "problemsetFetchedAt": "2026-09-18T11:14:33.425Z",
+  "updatedAt": "2026-09-18T16:23:59.420Z",
+  "problemsetFetchedAt": "2026-09-18T16:23:59.354Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169561,7 +169561,7 @@
           "contestId": 2260,
           "index": "A",
           "name": "Monocarp's Contest",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "implementation"
@@ -169571,7 +169571,7 @@
           "contestId": 2260,
           "index": "B",
           "name": "Monocarp and Projects",
-          "rating": null,
+          "rating": 900,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -169583,7 +169583,7 @@
           "contestId": 2260,
           "index": "C",
           "name": "Maximize XOR, Minimize Operations",
-          "rating": null,
+          "rating": 1300,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -169594,7 +169594,7 @@
           "contestId": 2260,
           "index": "D",
           "name": "Signs of Prefix Sums",
-          "rating": null,
+          "rating": 1700,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -169608,7 +169608,7 @@
           "contestId": 2260,
           "index": "E",
           "name": "Cyclic Balance",
-          "rating": null,
+          "rating": 2000,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -169621,7 +169621,7 @@
           "contestId": 2260,
           "index": "F",
           "name": "Edge Three-Coloring",
-          "rating": null,
+          "rating": 2500,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -169635,7 +169635,7 @@
           "contestId": 2260,
           "index": "G",
           "name": "Sortable Permutations",
-          "rating": null,
+          "rating": 2900,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -169669,7 +169669,8 @@
           "standingsRating": null,
           "tags": [
             "dp",
-            "implementation"
+            "implementation",
+            "math"
           ]
         },
         {
@@ -169693,6 +169694,7 @@
           "standingsRating": null,
           "tags": [
             "combinatorics",
+            "constructive algorithms",
             "graphs",
             "greedy",
             "math"
