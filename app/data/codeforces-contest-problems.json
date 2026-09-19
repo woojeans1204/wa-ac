@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18T20:54:34.758Z",
-  "problemsetFetchedAt": "2026-09-18T20:54:34.694Z",
+  "updatedAt": "2026-09-19T15:53:17.821Z",
+  "problemsetFetchedAt": "2026-09-19T15:53:17.758Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169745,7 +169745,9 @@
           "name": "Min Max Game",
           "rating": null,
           "standingsRating": null,
-          "tags": []
+          "tags": [
+            "games"
+          ]
         },
         {
           "contestId": 2263,
