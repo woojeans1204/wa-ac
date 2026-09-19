@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19T15:53:17.821Z",
-  "problemsetFetchedAt": "2026-09-19T15:53:17.758Z",
+  "updatedAt": "2026-09-19T20:40:19.278Z",
+  "problemsetFetchedAt": "2026-09-19T20:40:19.209Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169654,7 +169654,7 @@
           "contestId": 2262,
           "index": "A1",
           "name": "Floor of MEX (Easy Version)",
-          "rating": null,
+          "rating": 1200,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -169665,7 +169665,7 @@
           "contestId": 2262,
           "index": "A2",
           "name": "Floor of MEX (Hard Version)",
-          "rating": null,
+          "rating": 1800,
           "standingsRating": null,
           "tags": [
             "dp",
@@ -169677,7 +169677,7 @@
           "contestId": 2262,
           "index": "B",
           "name": "Culling Game",
-          "rating": null,
+          "rating": 2000,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -169690,7 +169690,7 @@
           "contestId": 2262,
           "index": "C",
           "name": "Traveling the World",
-          "rating": null,
+          "rating": 2200,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -169704,7 +169704,7 @@
           "contestId": 2262,
           "index": "D",
           "name": "PLUSworld",
-          "rating": null,
+          "rating": 2800,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -169716,7 +169716,7 @@
           "contestId": 2262,
           "index": "E",
           "name": "Paired Bracket Sequences",
-          "rating": null,
+          "rating": 3100,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -169727,7 +169727,7 @@
           "contestId": 2262,
           "index": "F",
           "name": "Rank Removal",
-          "rating": null,
+          "rating": 3500,
           "standingsRating": null,
           "tags": [
             "math"
@@ -169743,7 +169743,7 @@
           "contestId": 2263,
           "index": "A",
           "name": "Min Max Game",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "games"
@@ -169753,7 +169753,7 @@
           "contestId": 2263,
           "index": "B",
           "name": "Min Matrices",
-          "rating": null,
+          "rating": 900,
           "standingsRating": null,
           "tags": [
             "constructive algorithms"
@@ -169822,7 +169822,7 @@
           "contestId": 2264,
           "index": "A",
           "name": "Rumb Needs a Hand",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "implementation",
@@ -169834,7 +169834,7 @@
           "contestId": 2264,
           "index": "B",
           "name": "Knife's Pill Farm",
-          "rating": null,
+          "rating": 1000,
           "standingsRating": null,
           "tags": [
             "data structures",
@@ -169846,7 +169846,7 @@
           "contestId": 2264,
           "index": "C",
           "name": "Madamant's Skating Dynasty",
-          "rating": null,
+          "rating": 1300,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -169858,7 +169858,7 @@
           "contestId": 2264,
           "index": "D",
           "name": "Dr. Agos's Dark Mode",
-          "rating": null,
+          "rating": 1800,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -169872,7 +169872,7 @@
           "contestId": 2264,
           "index": "E1",
           "name": "A Prime Flood (Easy Version)",
-          "rating": null,
+          "rating": 2100,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -169884,7 +169884,7 @@
           "contestId": 2264,
           "index": "E2",
           "name": "A Prime Flood (Hard Version)",
-          "rating": null,
+          "rating": 2700,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -169897,7 +169897,7 @@
           "contestId": 2264,
           "index": "F",
           "name": "Deranged Calculator",
-          "rating": null,
+          "rating": 2700,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
