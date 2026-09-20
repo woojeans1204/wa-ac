@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19T20:40:19.278Z",
+  "updatedAt": "2026-09-20T20:45:31.217Z",
   "problemsetFetchedAt": "2026-09-19T20:40:19.209Z",
   "ratingDisagreements": [],
   "contests": {
@@ -198641,6 +198641,12 @@
       "id": 106714,
       "name": "[Unofficial Mirror] 2025 ICPC Shaanxi National Invitational Contest",
       "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106715": {
+      "id": 106715,
+      "name": "OCPC 2026 Winter, Day 9: Trademark Contest 2",
+      "startTimeSeconds": 1769932800,
       "durationSeconds": 18000
     }
   }
