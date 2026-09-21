@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-20T20:45:31.217Z",
+  "updatedAt": "2026-09-21T19:58:37.154Z",
   "problemsetFetchedAt": "2026-09-19T20:40:19.209Z",
   "ratingDisagreements": [],
   "contests": {
@@ -169903,6 +169903,111 @@
             "constructive algorithms",
             "implementation",
             "math"
+          ]
+        }
+      ]
+    },
+    "2266": {
+      "name": "Codeforces Round 1122 (Div. 3)",
+      "fetchedAt": "2026-09-21T19:58:37.072Z",
+      "problems": [
+        {
+          "contestId": 2266,
+          "index": "A",
+          "name": "Good Contest",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2266,
+          "index": "B",
+          "name": "Three Piles",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "games",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2266,
+          "index": "C",
+          "name": "AND, OR, Sort!",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2266,
+          "index": "D",
+          "name": "Falling Concrete",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "data structures",
+            "math",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2266,
+          "index": "E",
+          "name": "Prime Destruction",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2266,
+          "index": "F",
+          "name": "MEX Replacement",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "brute force",
+            "greedy",
+            "implementation",
+            "math",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2266,
+          "index": "G",
+          "name": "Modular Tree",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dfs and similar",
+            "greedy",
+            "math",
+            "number theory",
+            "trees"
+          ]
+        },
+        {
+          "contestId": 2266,
+          "index": "H",
+          "name": "Deque Malfunction",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "dp",
+            "greedy"
           ]
         }
       ]
