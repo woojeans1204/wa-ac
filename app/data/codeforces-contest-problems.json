@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T23:47:33.512Z",
-  "problemsetFetchedAt": "2026-09-19T20:40:19.209Z",
+  "updatedAt": "2026-09-23T11:36:31.239Z",
+  "problemsetFetchedAt": "2026-09-23T11:36:31.178Z",
   "ratingDisagreements": [],
   "contests": {
     "1": {
@@ -169992,6 +169992,7 @@
           "standingsRating": null,
           "tags": [
             "dfs and similar",
+            "dp",
             "greedy",
             "math",
             "number theory",
@@ -170005,6 +170006,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "binary search",
             "data structures",
             "dp",
             "greedy"
