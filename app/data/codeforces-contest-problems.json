@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T11:36:31.239Z",
+  "updatedAt": "2026-09-23T19:00:58.405Z",
   "problemsetFetchedAt": "2026-09-23T11:36:31.178Z",
   "ratingDisagreements": [],
   "contests": {
@@ -182902,7 +182902,7 @@
       "id": 2267,
       "name": "Codeforces Round 1123 (Div. 2)",
       "startTimeSeconds": 1790346900,
-      "durationSeconds": 7200
+      "durationSeconds": 8100
     },
     "2268": {
       "id": 2268,
