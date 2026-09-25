@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T19:31:25.479Z",
-  "problemsetFetchedAt": "2026-09-24T11:45:40.523Z",
+  "updatedAt": "2026-09-25T21:34:59.966Z",
+  "problemsetFetchedAt": "2026-09-25T21:34:59.897Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -170234,7 +170234,9 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "constructive algorithms"
+            "brute force",
+            "constructive algorithms",
+            "sortings"
           ]
         },
         {
@@ -170244,6 +170246,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "greedy",
             "math",
             "number theory"
           ]
@@ -170258,7 +170261,8 @@
             "constructive algorithms",
             "dp",
             "greedy",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -170269,7 +170273,8 @@
           "standingsRating": null,
           "tags": [
             "combinatorics",
-            "data structures"
+            "data structures",
+            "math"
           ]
         },
         {
@@ -170293,6 +170298,7 @@
           "standingsRating": null,
           "tags": [
             "bitmasks",
+            "brute force",
             "data structures",
             "strings",
             "trees"
