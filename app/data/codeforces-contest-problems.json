@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T04:50:02.674Z",
+  "updatedAt": "2026-09-25T19:31:25.479Z",
   "problemsetFetchedAt": "2026-09-24T11:45:40.523Z",
   "ratingDisagreements": [
     {
@@ -170209,6 +170209,103 @@
             "data structures",
             "dp",
             "greedy"
+          ]
+        }
+      ]
+    },
+    "2267": {
+      "name": "Codeforces Round 1123 (Div. 2)",
+      "fetchedAt": "2026-09-25T19:31:25.416Z",
+      "problems": [
+        {
+          "contestId": 2267,
+          "index": "A",
+          "name": "Turn Into a Palindrome",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2267,
+          "index": "B",
+          "name": "Fashionable Array",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "contestId": 2267,
+          "index": "C",
+          "name": "GCD Treasury",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2267,
+          "index": "D",
+          "name": "Backrooms Hill",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "dp",
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2267,
+          "index": "E",
+          "name": "Clean Substrings",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "data structures"
+          ]
+        },
+        {
+          "contestId": 2267,
+          "index": "F1",
+          "name": "XOR Transformations (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "brute force",
+            "implementation",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2267,
+          "index": "F2",
+          "name": "XOR Transformations (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "data structures",
+            "strings",
+            "trees"
+          ]
+        },
+        {
+          "contestId": 2267,
+          "index": "G",
+          "name": "New LRT",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp"
           ]
         }
       ]
