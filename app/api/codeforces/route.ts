@@ -117,7 +117,12 @@ function buildHistory(
     grouped.set(key, group)
   }
 
-  const sessions: Session[] = [...grouped.values()].map((group) => {
+  const sessions: Session[] = [...grouped.values()]
+    // A submission list only tells us which problems the user attempted. Until
+    // the complete contest catalog is available, we cannot show an accurate
+    // solved/total count or upsolve queue for that contest.
+    .filter((group) => contestProblemOverrides.has(group.contestId))
+    .map((group) => {
     const submittedByProblem = new Map<string, CfSubmission[]>()
     for (const submission of group.submissions) {
       const key = submission.problem.index
@@ -128,8 +133,7 @@ function buildHistory(
     const submittedProblems = [...new Map(
       group.submissions.map((item) => [item.problem.index, item.problem]),
     ).values()]
-    const catalogProblems = completeContestProblems(group.contestId, submittedProblems)
-      ?? submittedProblems
+    const catalogProblems = completeContestProblems(group.contestId, submittedProblems) ?? []
     const problems: Problem[] = [...catalogProblems]
       .sort((a, b) => a.index.localeCompare(b.index, undefined, { numeric: true }))
       .map((cfProblem) => {
@@ -180,7 +184,8 @@ function buildHistory(
       },
       problems,
     }
-  }).sort((a, b) => new Date(b.startAt).getTime() - new Date(a.startAt).getTime())
+    })
+    .sort((a, b) => new Date(b.startAt).getTime() - new Date(a.startAt).getTime())
 
   const actualSessions = sessions.filter((session) => session.type === "actual").length
   const virtualSessions = sessions.filter((session) => session.type === "virtual").length
