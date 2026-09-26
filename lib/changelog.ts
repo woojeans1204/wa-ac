@@ -7,6 +7,15 @@ export type ChangelogEntry = {
 
 export const changelog: ChangelogEntry[] = [
   {
+    id: "2026-09-26-problem-details",
+    date: "Sep 26, 2026",
+    title: "Latest updates",
+    changes: [
+      "Added problem links to contest details.",
+      "Fixed missing difficulty ratings in shared Div. 1/2 rounds.",
+    ],
+  },
+  {
     id: "2026-09-11-loading-speed",
     date: "Sep 11, 2026",
     title: "Latest updates",

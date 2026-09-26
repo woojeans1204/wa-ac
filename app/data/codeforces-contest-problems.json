@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T04:57:58.775Z",
-  "problemsetFetchedAt": "2026-09-26T04:57:58.719Z",
+  "updatedAt": "2026-09-26T05:05:00.736Z",
+  "problemsetFetchedAt": "2026-09-26T05:05:00.692Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -36,6 +36,12 @@
     {
       "contestId": 2165,
       "index": "D",
+      "standingsRating": 2500,
+      "problemsetRating": 2600
+    },
+    {
+      "contestId": 2166,
+      "index": "F",
       "standingsRating": 2500,
       "problemsetRating": 2600
     },
@@ -168,6 +174,12 @@
     {
       "contestId": 2239,
       "index": "B",
+      "standingsRating": 1500,
+      "problemsetRating": 1600
+    },
+    {
+      "contestId": 2240,
+      "index": "D",
       "standingsRating": 1500,
       "problemsetRating": 1600
     },
@@ -9344,7 +9356,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "implementation",
+            "brute force",
             "math"
           ]
         },
@@ -9355,9 +9367,9 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "graph matchings",
+            "constructive algorithms",
             "greedy",
-            "math"
+            "implementation"
           ]
         },
         {
@@ -9366,7 +9378,10 @@
           "name": "Help Caretaker",
           "rating": 2300,
           "standingsRating": 2300,
-          "tags": []
+          "tags": [
+            "brute force",
+            "dp"
+          ]
         }
       ]
     },
@@ -9524,7 +9539,8 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -9534,9 +9550,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "brute force",
-            "constructive algorithms",
-            "implementation"
+            "constructive algorithms"
           ]
         },
         {
@@ -9547,7 +9561,8 @@
           "standingsRating": 2100,
           "tags": [
             "combinatorics",
-            "dp"
+            "dp",
+            "math"
           ]
         }
       ]
@@ -9806,7 +9821,6 @@
           "standingsRating": 1400,
           "tags": [
             "games",
-            "greedy",
             "math",
             "number theory"
           ]
@@ -9819,7 +9833,7 @@
           "standingsRating": 1600,
           "tags": [
             "combinatorics",
-            "dsu",
+            "dfs and similar",
             "graphs",
             "math"
           ]
@@ -9831,6 +9845,7 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "data structures",
             "math",
             "probabilities"
           ]
@@ -10045,7 +10060,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "dp",
             "greedy"
           ]
         },
@@ -10067,6 +10081,7 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "graphs",
             "hashing",
             "sortings"
           ]
@@ -10166,9 +10181,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "brute force",
-            "dp",
-            "strings"
+            "brute force"
           ]
         },
         {
@@ -10178,6 +10191,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "constructive algorithms",
+            "data structures",
             "implementation"
           ]
         },
@@ -10188,8 +10203,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "dp",
-            "math"
+            "combinatorics",
+            "dp"
           ]
         }
       ]
@@ -12087,10 +12102,7 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "dp",
-            "math",
-            "matrices",
-            "number theory"
+            "math"
           ]
         },
         {
@@ -12101,8 +12113,7 @@
           "standingsRating": 1800,
           "tags": [
             "math",
-            "number theory",
-            "probabilities"
+            "ternary search"
           ]
         },
         {
@@ -12112,7 +12123,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "*broken"
+            "dp"
           ]
         }
       ]
@@ -12304,8 +12315,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "greedy",
-            "implementation"
+            "greedy"
           ]
         },
         {
@@ -12326,8 +12336,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "binary search",
-            "shortest paths"
+            "dfs and similar",
+            "dsu"
           ]
         }
       ]
@@ -12498,8 +12508,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "brute force",
-            "constructive algorithms"
+            "greedy"
           ]
         },
         {
@@ -12510,6 +12519,7 @@
           "standingsRating": 1900,
           "tags": [
             "data structures",
+            "dfs and similar",
             "trees"
           ]
         }
@@ -12611,11 +12621,8 @@
           "standingsRating": 1700,
           "tags": [
             "constructive algorithms",
-            "dfs and similar",
             "graphs",
-            "implementation",
-            "matrices",
-            "strings"
+            "trees"
           ]
         },
         {
@@ -12624,7 +12631,9 @@
           "name": "Xor",
           "rating": 2000,
           "standingsRating": 2000,
-          "tags": []
+          "tags": [
+            "brute force"
+          ]
         },
         {
           "contestId": 194,
@@ -12633,7 +12642,10 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
-            "math"
+            "constructive algorithms",
+            "greedy",
+            "math",
+            "matrices"
           ]
         }
       ]
@@ -12804,8 +12816,6 @@
           "standingsRating": 1100,
           "tags": [
             "greedy",
-            "implementation",
-            "sortings",
             "strings"
           ]
         },
@@ -12816,8 +12826,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "graphs",
-            "hashing"
+            "dfs and similar",
+            "graphs"
           ]
         },
         {
@@ -12828,8 +12838,9 @@
           "standingsRating": 2200,
           "tags": [
             "constructive algorithms",
-            "dfs and similar",
+            "divide and conquer",
             "geometry",
+            "sortings",
             "trees"
           ]
         }
@@ -12929,6 +12940,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "implementation",
             "math"
           ]
         },
@@ -12939,7 +12951,6 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "dfs and similar",
             "shortest paths"
           ]
         },
@@ -13119,7 +13130,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "binary search",
+            "constructive algorithms",
+            "dp",
             "math"
           ]
         },
@@ -13130,8 +13142,8 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "dp",
-            "math"
+            "math",
+            "ternary search"
           ]
         },
         {
@@ -13141,7 +13153,6 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "data structures",
             "dp"
           ]
         }
@@ -13307,10 +13318,8 @@
           "standingsRating": 1500,
           "tags": [
             "binary search",
-            "brute force",
             "combinatorics",
-            "dp",
-            "math"
+            "dp"
           ]
         },
         {
@@ -13321,8 +13330,7 @@
           "standingsRating": 1500,
           "tags": [
             "binary search",
-            "brute force",
-            "sortings"
+            "data structures"
           ]
         },
         {
@@ -13332,8 +13340,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "brute force",
-            "combinatorics",
+            "math",
             "probabilities"
           ]
         }
@@ -13974,7 +13981,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "brute force",
+            "dfs and similar",
             "greedy"
           ]
         },
@@ -13986,8 +13993,7 @@
           "standingsRating": 1900,
           "tags": [
             "combinatorics",
-            "dp",
-            "math"
+            "dp"
           ]
         },
         {
@@ -14225,6 +14231,7 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
+            "brute force",
             "dfs and similar",
             "dsu",
             "graphs"
@@ -14237,7 +14244,8 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "implementation"
+            "brute force",
+            "math"
           ]
         },
         {
@@ -14246,7 +14254,11 @@
           "name": "Formurosa",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "divide and conquer",
+            "dp",
+            "expression parsing"
+          ]
         }
       ]
     },
@@ -14404,6 +14416,7 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
+            "implementation",
             "sortings"
           ]
         },
@@ -14414,6 +14427,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "constructive algorithms",
             "data structures"
           ]
         },
@@ -14423,7 +14437,9 @@
           "name": "Little Elephant and Shifts",
           "rating": 2100,
           "standingsRating": 2100,
-          "tags": []
+          "tags": [
+            "data structures"
+          ]
         }
       ]
     },
@@ -14592,7 +14608,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "data structures"
+            "data structures",
+            "expression parsing",
+            "implementation"
           ]
         },
         {
@@ -14603,6 +14621,7 @@
           "standingsRating": 1900,
           "tags": [
             "data structures",
+            "dp",
             "strings"
           ]
         },
@@ -14787,8 +14806,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "math",
-            "sortings"
+            "greedy"
           ]
         },
         {
@@ -14798,6 +14816,9 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "data structures",
+            "implementation",
+            "math",
             "matrices",
             "number theory"
           ]
@@ -14967,10 +14988,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "binary search",
-            "data structures",
-            "dp",
-            "implementation"
+            "brute force",
+            "two pointers"
           ]
         },
         {
@@ -14981,6 +15000,7 @@
           "standingsRating": 1700,
           "tags": [
             "binary search",
+            "data structures",
             "graphs",
             "shortest paths"
           ]
@@ -15168,9 +15188,10 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "combinatorics",
+            "binary search",
+            "constructive algorithms",
             "graphs",
-            "matrices"
+            "greedy"
           ]
         },
         {
@@ -15192,7 +15213,13 @@
           "name": "Doe Graphs",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "constructive algorithms",
+            "divide and conquer",
+            "dp",
+            "graphs",
+            "shortest paths"
+          ]
         }
       ]
     },
@@ -15384,7 +15411,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "greedy",
             "number theory"
           ]
         },
@@ -15406,7 +15432,11 @@
           "name": "Cyclical Quest",
           "rating": 2700,
           "standingsRating": 2700,
-          "tags": []
+          "tags": [
+            "data structures",
+            "string suffix structures",
+            "strings"
+          ]
         }
       ]
     },
@@ -15570,7 +15600,6 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "combinatorics",
             "constructive algorithms",
             "math"
           ]
@@ -15582,9 +15611,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "constructive algorithms",
-            "greedy",
-            "sortings"
+            "constructive algorithms"
           ]
         },
         {
@@ -15593,7 +15620,12 @@
           "name": "World Eater Brothers",
           "rating": 2100,
           "standingsRating": 2100,
-          "tags": []
+          "tags": [
+            "dfs and similar",
+            "dp",
+            "greedy",
+            "trees"
+          ]
         }
       ]
     },
@@ -15905,9 +15937,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "bitmasks",
-            "divide and conquer",
-            "math"
+            "bitmasks"
           ]
         },
         {
@@ -15916,7 +15946,10 @@
           "name": "Hydra",
           "rating": 2000,
           "standingsRating": 2000,
-          "tags": []
+          "tags": [
+            "graphs",
+            "sortings"
+          ]
         },
         {
           "contestId": 244,
@@ -15924,7 +15957,10 @@
           "name": "Colorado Potato Beetle",
           "rating": 2200,
           "standingsRating": 2200,
-          "tags": []
+          "tags": [
+            "dfs and similar",
+            "implementation"
+          ]
         }
       ]
     },
@@ -16209,6 +16245,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "binary search",
             "geometry"
           ]
         },
@@ -16220,7 +16257,8 @@
           "standingsRating": 2300,
           "tags": [
             "binary search",
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -16231,6 +16269,7 @@
           "standingsRating": 2600,
           "tags": [
             "dp",
+            "math",
             "probabilities"
           ]
         },
@@ -16429,9 +16468,8 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "brute force",
-            "combinatorics",
-            "implementation"
+            "implementation",
+            "math"
           ]
         },
         {
@@ -16442,6 +16480,7 @@
           "standingsRating": 2000,
           "tags": [
             "dp",
+            "greedy",
             "number theory"
           ]
         }
@@ -16650,9 +16689,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "binary search",
-            "dp",
-            "two pointers"
+            "brute force",
+            "dp"
           ]
         },
         {
@@ -16663,7 +16701,7 @@
           "standingsRating": 1800,
           "tags": [
             "binary search",
-            "brute force",
+            "implementation",
             "math"
           ]
         },
@@ -16674,7 +16712,9 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "games"
+            "games",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -16863,7 +16903,7 @@
           "standingsRating": 1100,
           "tags": [
             "greedy",
-            "strings"
+            "math"
           ]
         },
         {
@@ -16875,8 +16915,7 @@
           "tags": [
             "brute force",
             "combinatorics",
-            "dp",
-            "math"
+            "dp"
           ]
         },
         {
@@ -16888,6 +16927,7 @@
           "tags": [
             "binary search",
             "combinatorics",
+            "dp",
             "math"
           ]
         }
@@ -17065,8 +17105,9 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "combinatorics",
-            "dp"
+            "dp",
+            "math",
+            "probabilities"
           ]
         },
         {
@@ -17076,7 +17117,9 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "dp"
+            "constructive algorithms",
+            "dp",
+            "math"
           ]
         }
       ]
@@ -17238,8 +17281,10 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
-            "greedy",
-            "implementation"
+            "constructive algorithms",
+            "data structures",
+            "implementation",
+            "two pointers"
           ]
         },
         {
@@ -17260,8 +17305,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "schedules",
-            "sortings"
+            "dp"
           ]
         }
       ]
@@ -17529,11 +17573,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "binary search",
             "greedy",
-            "implementation",
-            "math",
-            "sortings"
+            "math"
           ]
         },
         {
@@ -17553,8 +17594,10 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "dfs and similar",
-            "sortings"
+            "constructive algorithms",
+            "flows",
+            "graphs",
+            "greedy"
           ]
         }
       ]
@@ -17695,7 +17738,10 @@
           "name": "Dima and Staircase",
           "rating": 1500,
           "standingsRating": 1500,
-          "tags": []
+          "tags": [
+            "data structures",
+            "implementation"
+          ]
         },
         {
           "contestId": 273,
@@ -17704,7 +17750,9 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "combinatorics"
+            "combinatorics",
+            "math",
+            "sortings"
           ]
         },
         {
@@ -17714,8 +17762,9 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "graphs",
-            "greedy"
+            "combinatorics",
+            "constructive algorithms",
+            "graphs"
           ]
         },
         {
@@ -17853,6 +17902,7 @@
           "tags": [
             "dfs and similar",
             "dp",
+            "greedy",
             "trees"
           ]
         },
@@ -17862,7 +17912,10 @@
           "name": "The Last Hole!",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "brute force",
+            "geometry"
+          ]
         }
       ]
     },
@@ -18025,6 +18078,7 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
+            "dfs and similar",
             "dsu"
           ]
         },
@@ -18046,7 +18100,8 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
-            "games"
+            "games",
+            "implementation"
           ]
         }
       ]
@@ -18220,8 +18275,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "geometry",
-            "implementation"
+            "geometry"
           ]
         },
         {
@@ -18231,6 +18285,8 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "data structures",
+            "implementation",
             "two pointers"
           ]
         },
@@ -18241,7 +18297,10 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "math"
+            "implementation",
+            "math",
+            "probabilities",
+            "trees"
           ]
         }
       ]
@@ -18408,7 +18467,7 @@
           "tags": [
             "constructive algorithms",
             "data structures",
-            "dp"
+            "implementation"
           ]
         },
         {
@@ -18419,7 +18478,8 @@
           "standingsRating": 1700,
           "tags": [
             "dfs and similar",
-            "dp"
+            "dp",
+            "graphs"
           ]
         },
         {
@@ -18429,7 +18489,6 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "dfs and similar",
             "dp"
           ]
         }
@@ -18595,8 +18654,6 @@
           "standingsRating": 1400,
           "tags": [
             "constructive algorithms",
-            "greedy",
-            "implementation",
             "math"
           ]
         },
@@ -18606,7 +18663,9 @@
           "name": "Shifting",
           "rating": 2200,
           "standingsRating": 2200,
-          "tags": []
+          "tags": [
+            "implementation"
+          ]
         },
         {
           "contestId": 287,
@@ -18615,8 +18674,8 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "data structures",
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         }
       ]
@@ -18718,8 +18777,7 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "constructive algorithms",
-            "implementation"
+            "greedy"
           ]
         },
         {
@@ -18729,10 +18787,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "brute force",
-            "combinatorics",
-            "dfs and similar",
-            "math"
+            "combinatorics"
           ]
         },
         {
@@ -18742,8 +18797,6 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "data structures",
-            "greedy",
             "implementation",
             "math"
           ]
@@ -19177,7 +19230,6 @@
           "standingsRating": 1400,
           "tags": [
             "data structures",
-            "dp",
             "implementation"
           ]
         },
@@ -19189,7 +19241,8 @@
           "standingsRating": 1700,
           "tags": [
             "dp",
-            "graphs"
+            "graphs",
+            "shortest paths"
           ]
         },
         {
@@ -19200,8 +19253,9 @@
           "standingsRating": 2100,
           "tags": [
             "combinatorics",
-            "dfs and similar",
-            "dp"
+            "dp",
+            "graphs",
+            "shortest paths"
           ]
         }
       ]
@@ -19297,10 +19351,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "combinatorics",
-            "constructive algorithms",
-            "math",
-            "number theory"
+            "constructive algorithms"
           ]
         },
         {
@@ -19310,9 +19361,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "greedy",
-            "math",
-            "sortings"
+            "constructive algorithms",
+            "greedy"
           ]
         },
         {
@@ -19322,8 +19372,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
-            "constructive algorithms",
-            "sortings"
+            "constructive algorithms"
           ]
         }
       ]
@@ -19550,8 +19599,7 @@
           "standingsRating": 2100,
           "tags": [
             "binary search",
-            "dfs and similar",
-            "dp",
+            "graphs",
             "shortest paths"
           ]
         },
@@ -19561,7 +19609,9 @@
           "name": "Yaroslav and Algorithm",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "constructive algorithms"
+          ]
         }
       ]
     },
@@ -19663,7 +19713,9 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -19673,8 +19725,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "math",
-            "ternary search"
+            "implementation",
+            "math"
           ]
         },
         {
@@ -19684,6 +19736,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "brute force",
             "graphs",
             "math",
             "number theory"
@@ -20007,7 +20060,8 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "implementation"
           ]
         },
         {
@@ -20017,6 +20071,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "data structures",
             "dp"
           ]
         },
@@ -20027,6 +20082,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "brute force",
             "data structures",
             "graphs",
             "shortest paths"
@@ -20192,8 +20248,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "dp",
-            "greedy",
             "implementation"
           ]
         },
@@ -20204,6 +20258,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "binary search",
             "dfs and similar",
             "strings"
           ]
@@ -20215,8 +20270,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "combinatorics",
-            "data structures"
+            "data structures",
+            "dp"
           ]
         }
       ]
@@ -20512,8 +20567,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "greedy",
-            "math"
+            "brute force"
           ]
         },
         {
@@ -20523,7 +20577,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "dfs and similar"
+            "brute force",
+            "implementation"
           ]
         },
         {
@@ -20534,7 +20589,9 @@
           "standingsRating": 2500,
           "tags": [
             "constructive algorithms",
-            "dfs and similar"
+            "dfs and similar",
+            "graphs",
+            "trees"
           ]
         }
       ]
@@ -20634,6 +20691,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "combinatorics",
             "math"
           ]
         },
@@ -20644,7 +20702,8 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "data structures"
+            "data structures",
+            "implementation"
           ]
         },
         {
@@ -20654,7 +20713,8 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "dp"
+            "dp",
+            "geometry"
           ]
         }
       ]
@@ -20759,9 +20819,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "binary search",
             "implementation",
-            "math",
-            "number theory"
+            "math"
           ]
         },
         {
@@ -20773,8 +20833,7 @@
           "tags": [
             "dp",
             "flows",
-            "greedy",
-            "two pointers"
+            "greedy"
           ]
         },
         {
@@ -20784,7 +20843,11 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "divide and conquer"
+            "constructive algorithms",
+            "dfs and similar",
+            "divide and conquer",
+            "greedy",
+            "trees"
           ]
         }
       ]
@@ -21228,7 +21291,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "matrices"
+            "constructive algorithms",
+            "greedy"
           ]
         },
         {
@@ -21239,7 +21303,6 @@
           "standingsRating": 1500,
           "tags": [
             "dfs and similar",
-            "implementation",
             "shortest paths"
           ]
         },
@@ -21249,7 +21312,9 @@
           "name": "Graph Reconstruction",
           "rating": 2400,
           "standingsRating": 2400,
-          "tags": []
+          "tags": [
+            "constructive algorithms"
+          ]
         }
       ]
     },
@@ -21546,7 +21611,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "math"
+            "greedy"
           ]
         },
         {
@@ -21556,9 +21621,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "greedy",
-            "implementation",
-            "two pointers"
+            "greedy"
           ]
         },
         {
@@ -21567,7 +21630,10 @@
           "name": "Lucky Tickets",
           "rating": 2700,
           "standingsRating": 2700,
-          "tags": []
+          "tags": [
+            "brute force",
+            "constructive algorithms"
+          ]
         }
       ]
     },
@@ -21787,8 +21853,10 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "binary search",
             "greedy",
             "math",
+            "matrices",
             "number theory"
           ]
         },
@@ -21800,6 +21868,7 @@
           "standingsRating": 2000,
           "tags": [
             "dfs and similar",
+            "divide and conquer",
             "dp",
             "trees"
           ]
@@ -21812,8 +21881,8 @@
           "standingsRating": 2200,
           "tags": [
             "brute force",
-            "dp",
-            "number theory"
+            "number theory",
+            "trees"
           ]
         },
         {
@@ -21980,6 +22049,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "combinatorics",
+            "implementation",
             "math"
           ]
         },
@@ -22003,7 +22074,6 @@
           "standingsRating": 2000,
           "tags": [
             "combinatorics",
-            "dp",
             "math"
           ]
         },
@@ -22220,6 +22290,7 @@
           "standingsRating": 1900,
           "tags": [
             "binary search",
+            "greedy",
             "two pointers"
           ]
         }
@@ -22426,9 +22497,8 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "dp",
             "greedy",
-            "number theory"
+            "math"
           ]
         }
       ]
@@ -22532,7 +22602,9 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "implementation"
+            "binary search",
+            "math",
+            "sortings"
           ]
         },
         {
@@ -22553,7 +22625,10 @@
           "name": "Subset Sums",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "brute force",
+            "data structures"
+          ]
         }
       ]
     },
@@ -22722,7 +22797,8 @@
           "tags": [
             "dp",
             "greedy",
-            "implementation"
+            "implementation",
+            "math"
           ]
         },
         {
@@ -22732,7 +22808,9 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "math"
+            "combinatorics",
+            "dp",
+            "probabilities"
           ]
         },
         {
@@ -22741,7 +22819,10 @@
           "name": "Jeff and Brackets",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "dp",
+            "matrices"
+          ]
         }
       ]
     },
@@ -22910,7 +22991,8 @@
           "standingsRating": 1500,
           "tags": [
             "brute force",
-            "dp"
+            "greedy",
+            "math"
           ]
         },
         {
@@ -22919,7 +23001,11 @@
           "name": "Game with Strings",
           "rating": 2400,
           "standingsRating": 2400,
-          "tags": []
+          "tags": [
+            "bitmasks",
+            "dp",
+            "games"
+          ]
         },
         {
           "contestId": 355,
@@ -22928,9 +23014,9 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "binary search",
             "brute force",
-            "data structures"
+            "dp",
+            "number theory"
           ]
         }
       ]
@@ -23037,7 +23123,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "data structures"
+            "data structures",
+            "dsu"
           ]
         },
         {
@@ -23047,7 +23134,8 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "number theory"
+            "implementation",
+            "math"
           ]
         },
         {
@@ -23056,7 +23144,12 @@
           "name": "Compartments",
           "rating": 2100,
           "standingsRating": 2100,
-          "tags": []
+          "tags": [
+            "combinatorics",
+            "constructive algorithms",
+            "greedy",
+            "implementation"
+          ]
         }
       ]
     },
@@ -23285,9 +23378,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "brute force",
-            "constructive algorithms",
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -23307,7 +23399,10 @@
           "name": "Levko and Strings",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "combinatorics",
+            "dp"
+          ]
         }
       ]
     },
@@ -23533,10 +23628,9 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "brute force",
             "combinatorics",
-            "math",
-            "matrices"
+            "data structures",
+            "implementation"
           ]
         },
         {
@@ -23721,7 +23815,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "brute force",
+            "data structures",
             "implementation"
           ]
         },
@@ -23732,8 +23826,8 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "data structures",
-            "two pointers"
+            "binary search",
+            "data structures"
           ]
         },
         {
@@ -23743,9 +23837,9 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "combinatorics",
             "graphs",
-            "implementation"
+            "greedy",
+            "sortings"
           ]
         }
       ]
@@ -24045,6 +24139,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "binary search",
             "greedy",
             "sortings",
             "two pointers"
@@ -24056,7 +24151,11 @@
           "name": "Counting Rectangles is Fun",
           "rating": 1900,
           "standingsRating": 1900,
-          "tags": []
+          "tags": [
+            "brute force",
+            "divide and conquer",
+            "dp"
+          ]
         },
         {
           "contestId": 373,
@@ -24065,7 +24164,9 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "dp"
+            "data structures",
+            "dp",
+            "math"
           ]
         }
       ]
@@ -24246,6 +24347,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "data structures",
             "dp",
             "implementation",
             "sortings"
@@ -24382,9 +24484,8 @@
           "standingsRating": 2200,
           "tags": [
             "bitmasks",
-            "brute force",
             "dp",
-            "greedy"
+            "games"
           ]
         }
       ]
@@ -24569,8 +24670,7 @@
           "standingsRating": 1600,
           "tags": [
             "binary search",
-            "implementation",
-            "two pointers"
+            "brute force"
           ]
         },
         {
@@ -24580,7 +24680,8 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
-            "brute force"
+            "graphs",
+            "implementation"
           ]
         },
         {
@@ -24590,7 +24691,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "data structures"
+            "data structures",
+            "schedules"
           ]
         }
       ]
@@ -24756,6 +24858,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "data structures",
             "greedy"
           ]
         },
@@ -24766,7 +24869,10 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "implementation"
+            "binary search",
+            "implementation",
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -24778,7 +24884,6 @@
           "tags": [
             "data structures",
             "dfs and similar",
-            "graphs",
             "trees"
           ]
         }
@@ -25064,9 +25169,8 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "binary search",
-            "dp",
-            "greedy"
+            "greedy",
+            "sortings"
           ]
         },
         {
@@ -25076,10 +25180,11 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "bitmasks",
             "constructive algorithms",
             "graphs",
             "implementation",
-            "shortest paths"
+            "math"
           ]
         },
         {
@@ -25089,8 +25194,9 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "games",
             "greedy",
-            "implementation"
+            "sortings"
           ]
         }
       ]
@@ -25869,6 +25975,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "brute force",
             "constructive algorithms",
             "graphs"
           ]
@@ -26066,8 +26173,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "constructive algorithms",
-            "greedy"
+            "greedy",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -26077,7 +26185,6 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
-            "constructive algorithms",
             "dfs and similar",
             "graphs"
           ]
@@ -26203,7 +26310,9 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "brute force",
             "geometry",
+            "implementation",
             "math"
           ]
         },
@@ -26214,7 +26323,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "dp"
+            "dp",
+            "implementation"
           ]
         },
         {
@@ -26223,7 +26333,12 @@
           "name": "Curious Array",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "brute force",
+            "combinatorics",
+            "implementation",
+            "math"
+          ]
         }
       ]
     },
@@ -26583,7 +26698,6 @@
           "standingsRating": 1500,
           "tags": [
             "constructive algorithms",
-            "greedy",
             "number theory"
           ]
         },
@@ -26606,8 +26720,8 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "divide and conquer",
-            "sortings"
+            "combinatorics",
+            "divide and conquer"
           ]
         }
       ]
@@ -27130,8 +27244,7 @@
           "standingsRating": 1500,
           "tags": [
             "brute force",
-            "sortings",
-            "two pointers"
+            "sortings"
           ]
         },
         {
@@ -27140,7 +27253,10 @@
           "name": "Sereja and Table ",
           "rating": 2200,
           "standingsRating": 2200,
-          "tags": []
+          "tags": [
+            "bitmasks",
+            "greedy"
+          ]
         },
         {
           "contestId": 426,
@@ -27148,7 +27264,10 @@
           "name": "Sereja and Two Sequences",
           "rating": 2300,
           "standingsRating": 2300,
-          "tags": []
+          "tags": [
+            "data structures",
+            "dp"
+          ]
         }
       ]
     },
@@ -27312,8 +27431,6 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "brute force",
-            "data structures",
             "dfs and similar",
             "trees"
           ]
@@ -27325,7 +27442,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "brute force",
             "dp"
           ]
         },
@@ -27336,9 +27452,11 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "bitmasks",
             "constructive algorithms",
-            "data structures",
-            "dfs and similar"
+            "dp",
+            "greedy",
+            "trees"
           ]
         }
       ]
@@ -27546,6 +27664,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "implementation",
             "math",
             "sortings"
           ]
@@ -27557,11 +27676,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "divide and conquer",
-            "dp",
             "dsu",
-            "implementation",
-            "two pointers"
+            "implementation"
           ]
         },
         {
@@ -27802,6 +27918,7 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
+            "graphs",
             "greedy",
             "sortings"
           ]
@@ -27813,7 +27930,6 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "dp",
             "dsu",
             "sortings"
           ]
@@ -28136,7 +28252,6 @@
           "tags": [
             "bitmasks",
             "brute force",
-            "constructive algorithms",
             "implementation"
           ]
         },
@@ -28147,11 +28262,9 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "dp",
             "greedy",
             "math",
-            "probabilities",
-            "sortings"
+            "probabilities"
           ]
         },
         {
@@ -28161,6 +28274,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "data structures",
             "greedy"
           ]
         }
@@ -28262,8 +28376,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "graphs",
-            "greedy"
+            "greedy",
+            "math"
           ]
         },
         {
@@ -28572,7 +28686,7 @@
           "standingsRating": 1700,
           "tags": [
             "greedy",
-            "implementation"
+            "math"
           ]
         },
         {
@@ -28832,8 +28946,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "combinatorics",
-            "math",
             "probabilities"
           ]
         },
@@ -28845,6 +28957,7 @@
           "standingsRating": 2000,
           "tags": [
             "bitmasks",
+            "brute force",
             "dp"
           ]
         },
@@ -28969,9 +29082,12 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "dfs and similar",
             "dp",
             "games",
-            "strings"
+            "implementation",
+            "strings",
+            "trees"
           ]
         },
         {
@@ -28982,8 +29098,9 @@
           "standingsRating": 2100,
           "tags": [
             "dfs and similar",
+            "dp",
             "dsu",
-            "graphs",
+            "ternary search",
             "trees"
           ]
         }
@@ -29353,7 +29470,7 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
-            "implementation",
+            "greedy",
             "sortings"
           ]
         },
@@ -29364,8 +29481,9 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "dfs and similar",
             "dp",
-            "graphs"
+            "trees"
           ]
         },
         {
@@ -29374,7 +29492,10 @@
           "name": "Appleman and a Sheet of Paper",
           "rating": 2200,
           "standingsRating": 2200,
-          "tags": []
+          "tags": [
+            "data structures",
+            "implementation"
+          ]
         }
       ]
     },
@@ -29538,7 +29659,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "brute force"
+            "greedy",
+            "strings"
           ]
         },
         {
@@ -29548,7 +29670,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "brute force"
+            "brute force",
+            "geometry"
           ]
         },
         {
@@ -29558,7 +29681,6 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "constructive algorithms",
             "dp"
           ]
         }
@@ -29795,7 +29917,8 @@
           "standingsRating": 1500,
           "tags": [
             "constructive algorithms",
-            "implementation"
+            "greedy",
+            "math"
           ]
         },
         {
@@ -29806,7 +29929,8 @@
           "standingsRating": 2000,
           "tags": [
             "2-sat",
-            "data structures",
+            "dfs and similar",
+            "dsu",
             "graph matchings",
             "greedy"
           ]
@@ -29818,7 +29942,9 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "constructive algorithms"
+            "binary search",
+            "constructive algorithms",
+            "math"
           ]
         }
       ]
@@ -30288,6 +30414,8 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "constructive algorithms",
+            "greedy",
             "math"
           ]
         },
@@ -30298,7 +30426,8 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "dp"
+            "dp",
+            "strings"
           ]
         },
         {
@@ -30475,9 +30604,7 @@
           "tags": [
             "binary search",
             "greedy",
-            "hashing",
-            "implementation",
-            "sortings"
+            "implementation"
           ]
         },
         {
@@ -30488,8 +30615,7 @@
           "standingsRating": 1900,
           "tags": [
             "combinatorics",
-            "dp",
-            "implementation"
+            "dp"
           ]
         },
         {
@@ -30616,7 +30742,7 @@
           "standingsRating": 1200,
           "tags": [
             "constructive algorithms",
-            "implementation"
+            "greedy"
           ]
         },
         {
@@ -30627,7 +30753,8 @@
           "standingsRating": 1800,
           "tags": [
             "constructive algorithms",
-            "data structures"
+            "data structures",
+            "trees"
           ]
         },
         {
@@ -30638,7 +30765,8 @@
           "standingsRating": 2600,
           "tags": [
             "bitmasks",
-            "dp"
+            "dp",
+            "probabilities"
           ]
         }
       ]
@@ -30742,8 +30870,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "implementation",
-            "math"
+            "bitmasks",
+            "constructive algorithms"
           ]
         },
         {
@@ -30754,7 +30882,9 @@
           "standingsRating": 2100,
           "tags": [
             "binary search",
-            "sortings"
+            "math",
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -30763,7 +30893,10 @@
           "name": "Strange Sorting",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "implementation",
+            "math"
+          ]
         }
       ]
     },
@@ -30934,6 +31067,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "binary search",
             "brute force",
             "implementation"
           ]
@@ -30945,6 +31079,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "binary search",
             "data structures",
             "dp",
             "two pointers"
@@ -30958,7 +31093,8 @@
           "standingsRating": 2300,
           "tags": [
             "constructive algorithms",
-            "math"
+            "math",
+            "number theory"
           ]
         }
       ]
@@ -31384,8 +31520,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "greedy",
-            "implementation"
+            "greedy"
           ]
         },
         {
@@ -31395,7 +31530,6 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "binary search",
             "dp",
             "strings"
           ]
@@ -31406,7 +31540,10 @@
           "name": "Helping People",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "dp",
+            "probabilities"
+          ]
         }
       ]
     },
@@ -31484,7 +31621,9 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "greedy"
+            "brute force",
+            "constructive algorithms",
+            "implementation"
           ]
         },
         {
@@ -31494,9 +31633,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "binary search",
-            "brute force",
-            "implementation"
+            "binary search"
           ]
         },
         {
@@ -31506,11 +31643,8 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "data structures",
             "greedy",
-            "implementation",
-            "sortings",
-            "two pointers"
+            "sortings"
           ]
         },
         {
@@ -31634,8 +31768,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "geometry",
-            "math"
+            "geometry"
           ]
         },
         {
@@ -31646,6 +31779,7 @@
           "standingsRating": 2400,
           "tags": [
             "dp",
+            "probabilities",
             "two pointers"
           ]
         },
@@ -31655,7 +31789,11 @@
           "name": "Array and Operations",
           "rating": 2100,
           "standingsRating": 2100,
-          "tags": []
+          "tags": [
+            "flows",
+            "graph matchings",
+            "number theory"
+          ]
         }
       ]
     },
@@ -31829,8 +31967,9 @@
           "tags": [
             "constructive algorithms",
             "data structures",
-            "graphs",
-            "greedy"
+            "greedy",
+            "sortings",
+            "trees"
           ]
         },
         {
@@ -31840,9 +31979,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "binary search",
-            "data structures",
-            "math"
+            "data structures"
           ]
         },
         {
@@ -31852,8 +31989,9 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "implementation",
-            "math"
+            "binary search",
+            "combinatorics",
+            "implementation"
           ]
         },
         {
@@ -31957,7 +32095,9 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "dp"
+            "dfs and similar",
+            "dp",
+            "two pointers"
           ]
         },
         {
@@ -31967,8 +32107,7 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "dfs and similar",
-            "graphs"
+            "dfs and similar"
           ]
         },
         {
@@ -32284,7 +32423,6 @@
           "tags": [
             "dfs and similar",
             "graphs",
-            "greedy",
             "sortings"
           ]
         },
@@ -32295,11 +32433,10 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "data structures",
+            "bitmasks",
+            "brute force",
             "dp",
-            "math",
-            "number theory",
-            "shortest paths"
+            "math"
           ]
         },
         {
@@ -32309,8 +32446,7 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
-            "flows",
-            "graph matchings"
+            "flows"
           ]
         },
         {
@@ -32623,10 +32759,9 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "dp",
             "greedy",
-            "implementation",
-            "math"
+            "math",
+            "sortings"
           ]
         },
         {
@@ -32636,10 +32771,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "data structures",
-            "graph matchings",
-            "greedy",
-            "implementation"
+            "constructive algorithms",
+            "greedy"
           ]
         },
         {
@@ -32906,8 +33039,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "greedy",
-            "math"
+            "math",
+            "strings"
           ]
         },
         {
@@ -32917,7 +33050,7 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "data structures",
+            "games",
             "greedy",
             "implementation"
           ]
@@ -33370,6 +33503,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "binary search",
             "data structures",
             "implementation"
           ]
@@ -33381,8 +33515,11 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "data structures",
             "dp",
-            "greedy"
+            "greedy",
+            "implementation",
+            "sortings"
           ]
         },
         {
@@ -33392,7 +33529,7 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
-            "constructive algorithms",
+            "dfs and similar",
             "graphs"
           ]
         },
@@ -33985,6 +34122,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "greedy",
             "hashing",
             "string suffix structures",
             "strings"
@@ -34444,7 +34582,6 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "brute force",
             "constructive algorithms",
             "graphs",
             "shortest paths"
@@ -34699,9 +34836,10 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "brute force",
             "greedy",
-            "math",
-            "number theory"
+            "implementation",
+            "math"
           ]
         },
         {
@@ -34713,7 +34851,8 @@
           "tags": [
             "binary search",
             "data structures",
-            "dp"
+            "dp",
+            "dsu"
           ]
         },
         {
@@ -34723,6 +34862,7 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "bitmasks",
             "combinatorics",
             "dp",
             "math",
@@ -35154,7 +35294,11 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "binary search",
+            "combinatorics",
+            "constructive algorithms",
             "greedy",
+            "implementation",
             "math"
           ]
         },
@@ -35276,9 +35420,9 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "binary search",
             "data structures",
-            "greedy"
+            "greedy",
+            "sortings"
           ]
         },
         {
@@ -35288,7 +35432,6 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "binary search",
             "data structures"
           ]
         }
@@ -35534,7 +35677,9 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "geometry"
+            "brute force",
+            "geometry",
+            "math"
           ]
         },
         {
@@ -35544,8 +35689,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "divide and conquer",
             "hashing",
-            "implementation",
+            "sortings",
             "strings"
           ]
         },
@@ -35557,7 +35703,9 @@
           "standingsRating": 2200,
           "tags": [
             "combinatorics",
-            "dp"
+            "dp",
+            "math",
+            "number theory"
           ]
         }
       ]
@@ -35883,8 +36031,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "binary search",
             "brute force",
+            "implementation",
             "math",
             "number theory"
           ]
@@ -35896,7 +36044,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "brute force",
+            "combinatorics",
             "dp",
             "math"
           ]
@@ -35907,7 +36055,10 @@
           "name": "New Language",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "2-sat",
+            "greedy"
+          ]
         }
       ]
     },
@@ -36446,7 +36597,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "implementation",
+            "math",
             "number theory"
           ]
         },
@@ -36456,7 +36607,12 @@
           "name": "Invariance of Tree",
           "rating": 2100,
           "standingsRating": 2100,
-          "tags": []
+          "tags": [
+            "constructive algorithms",
+            "dfs and similar",
+            "greedy",
+            "trees"
+          ]
         },
         {
           "contestId": 577,
@@ -36465,7 +36621,11 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "divide and conquer",
+            "geometry",
+            "greedy",
+            "sortings"
           ]
         }
       ]
@@ -36574,7 +36734,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "binary search",
+            "geometry",
             "math"
           ]
         },
@@ -36586,8 +36746,7 @@
           "standingsRating": 1700,
           "tags": [
             "brute force",
-            "greedy",
-            "math"
+            "greedy"
           ]
         },
         {
@@ -36606,7 +36765,10 @@
           "name": "LCS Again",
           "rating": 2700,
           "standingsRating": 2700,
-          "tags": []
+          "tags": [
+            "dp",
+            "greedy"
+          ]
         }
       ]
     },
@@ -36850,6 +37012,7 @@
           "standingsRating": 1700,
           "tags": [
             "constructive algorithms",
+            "greedy",
             "number theory"
           ]
         },
@@ -36861,7 +37024,8 @@
           "standingsRating": 1900,
           "tags": [
             "constructive algorithms",
-            "dp"
+            "dp",
+            "matrices"
           ]
         },
         {
@@ -37042,6 +37206,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "brute force",
             "implementation"
           ]
         },
@@ -37053,7 +37218,6 @@
           "standingsRating": 1700,
           "tags": [
             "dfs and similar",
-            "dp",
             "graphs",
             "shortest paths"
           ]
@@ -37179,7 +37343,9 @@
           "name": "Duff and Weight Lifting",
           "rating": 1500,
           "standingsRating": 1500,
-          "tags": []
+          "tags": [
+            "greedy"
+          ]
         },
         {
           "contestId": 588,
@@ -37187,7 +37353,9 @@
           "name": "Duff in Beach",
           "rating": 2100,
           "standingsRating": 2100,
-          "tags": []
+          "tags": [
+            "dp"
+          ]
         },
         {
           "contestId": 588,
@@ -37197,7 +37365,6 @@
           "standingsRating": 2200,
           "tags": [
             "data structures",
-            "dfs and similar",
             "trees"
           ]
         },
@@ -37207,7 +37374,10 @@
           "name": "Duff in Mafia",
           "rating": 3100,
           "standingsRating": 3100,
-          "tags": []
+          "tags": [
+            "2-sat",
+            "binary search"
+          ]
         }
       ]
     },
@@ -37305,7 +37475,6 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "constructive algorithms",
             "implementation"
           ]
         },
@@ -37316,7 +37485,9 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
-            "geometry"
+            "binary search",
+            "geometry",
+            "math"
           ]
         },
         {
@@ -37563,6 +37734,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "binary search",
             "geometry"
           ]
         },
@@ -37575,7 +37747,8 @@
           "tags": [
             "brute force",
             "greedy",
-            "implementation"
+            "implementation",
+            "two pointers"
           ]
         }
       ]
@@ -37990,7 +38163,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "graphs"
+            "graphs",
+            "shortest paths"
           ]
         },
         {
@@ -38000,6 +38174,7 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "data structures",
             "math"
           ]
         },
@@ -38010,6 +38185,8 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "dp",
+            "math",
             "probabilities"
           ]
         }
@@ -38115,7 +38292,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "constructive algorithms",
             "dp",
             "greedy",
             "math"
@@ -38129,6 +38305,7 @@
           "standingsRating": 1800,
           "tags": [
             "combinatorics",
+            "dfs and similar",
             "dsu",
             "math",
             "number theory"
@@ -38238,7 +38415,10 @@
           "name": "Sorting Railway Cars",
           "rating": 1600,
           "standingsRating": 1600,
-          "tags": []
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
         },
         {
           "contestId": 606,
@@ -38247,6 +38427,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "constructive algorithms",
+            "data structures",
             "graphs"
           ]
         },
@@ -38256,7 +38438,9 @@
           "name": "Freelancer's Dreams",
           "rating": 2400,
           "standingsRating": 2400,
-          "tags": []
+          "tags": [
+            "geometry"
+          ]
         }
       ]
     },
@@ -38353,6 +38537,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "binary search",
             "dp"
           ]
         },
@@ -38373,6 +38558,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "hashing",
             "strings"
           ]
         }
@@ -38794,7 +38980,9 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "geometry"
+            "binary search",
+            "geometry",
+            "ternary search"
           ]
         },
         {
@@ -38804,9 +38992,12 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "binary search",
+            "brute force",
             "dp",
             "greedy",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -41279,8 +41470,7 @@
           "tags": [
             "data structures",
             "geometry",
-            "implementation",
-            "sortings"
+            "math"
           ]
         },
         {
@@ -41303,6 +41493,8 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "dfs and similar",
+            "dp",
             "dsu",
             "graphs",
             "greedy"
@@ -42165,7 +42357,10 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "greedy"
+            "constructive algorithms",
+            "expression parsing",
+            "greedy",
+            "math"
           ]
         },
         {
@@ -42375,6 +42570,7 @@
           "standingsRating": 1800,
           "tags": [
             "dp",
+            "implementation",
             "strings"
           ]
         },
@@ -42385,7 +42581,6 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "brute force",
             "graphs",
             "shortest paths"
           ]
@@ -42396,7 +42591,10 @@
           "name": "Chain Reaction",
           "rating": 3000,
           "standingsRating": 3000,
-          "tags": []
+          "tags": [
+            "brute force",
+            "geometry"
+          ]
         }
       ]
     },
@@ -42708,7 +42906,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "brute force",
+            "dp",
             "geometry",
             "greedy",
             "implementation"
@@ -43254,8 +43452,7 @@
           "tags": [
             "constructive algorithms",
             "interactive",
-            "math",
-            "number theory"
+            "math"
           ]
         },
         {
@@ -43266,8 +43463,7 @@
           "standingsRating": 2200,
           "tags": [
             "binary search",
-            "brute force",
-            "constructive algorithms",
+            "dp",
             "greedy"
           ]
         },
@@ -43277,7 +43473,11 @@
           "name": "Bear and Square Grid",
           "rating": 2400,
           "standingsRating": 2400,
-          "tags": []
+          "tags": [
+            "dfs and similar",
+            "dsu",
+            "implementation"
+          ]
         }
       ]
     },
@@ -43638,6 +43838,7 @@
           "tags": [
             "brute force",
             "combinatorics",
+            "dp",
             "math"
           ]
         },
@@ -44302,7 +44503,12 @@
           "name": "Puzzles",
           "rating": 1700,
           "standingsRating": 1700,
-          "tags": []
+          "tags": [
+            "dfs and similar",
+            "math",
+            "probabilities",
+            "trees"
+          ]
         },
         {
           "contestId": 697,
@@ -44312,8 +44518,10 @@
           "standingsRating": 2000,
           "tags": [
             "combinatorics",
+            "dp",
+            "implementation",
             "math",
-            "number theory"
+            "matrices"
           ]
         },
         {
@@ -44325,6 +44533,7 @@
           "tags": [
             "data structures",
             "dp",
+            "matrices",
             "strings"
           ]
         }
@@ -44435,7 +44644,6 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "brute force",
             "dp"
           ]
         },
@@ -44472,7 +44680,11 @@
           "name": "Limak and Shooting Points",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "brute force",
+            "geometry",
+            "math"
+          ]
         }
       ]
     },
@@ -44608,6 +44820,7 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "dfs and similar",
             "graphs"
           ]
         }
@@ -44857,7 +45070,8 @@
           "standingsRating": 2500,
           "tags": [
             "dp",
-            "graphs"
+            "graphs",
+            "greedy"
           ]
         },
         {
@@ -44866,7 +45080,12 @@
           "name": "Black Widow",
           "rating": 2900,
           "standingsRating": 2900,
-          "tags": []
+          "tags": [
+            "dp",
+            "graphs",
+            "implementation",
+            "math"
+          ]
         }
       ]
     },
@@ -45434,6 +45653,7 @@
           "standingsRating": 2200,
           "tags": [
             "binary search",
+            "constructive algorithms",
             "interactive"
           ]
         },
@@ -45445,7 +45665,6 @@
           "standingsRating": 2300,
           "tags": [
             "dp",
-            "flows",
             "sortings"
           ]
         }
@@ -45550,8 +45769,7 @@
           "standingsRating": 1600,
           "tags": [
             "constructive algorithms",
-            "math",
-            "number theory"
+            "math"
           ]
         },
         {
@@ -45561,6 +45779,8 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "binary search",
+            "constructive algorithms",
             "graphs",
             "shortest paths"
           ]
@@ -45574,6 +45794,7 @@
           "tags": [
             "dfs and similar",
             "divide and conquer",
+            "dsu",
             "trees"
           ]
         }
@@ -46930,8 +47151,7 @@
           "tags": [
             "combinatorics",
             "constructive algorithms",
-            "dfs and similar",
-            "dp",
+            "greedy",
             "math"
           ]
         },
@@ -47232,7 +47452,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "greedy"
           ]
         },
         {
@@ -47245,8 +47466,8 @@
             "binary search",
             "data structures",
             "dfs and similar",
-            "graph matchings",
-            "graphs"
+            "graphs",
+            "trees"
           ]
         },
         {
@@ -47255,7 +47476,9 @@
           "name": "Alyona and towers",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "data structures"
+          ]
         }
       ]
     },
@@ -47381,6 +47604,8 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "constructive algorithms",
+            "dfs and similar",
             "graphs"
           ]
         }
@@ -47550,7 +47775,6 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "constructive algorithms",
             "dfs and similar",
             "graphs"
           ]
@@ -47574,6 +47798,8 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "bitmasks",
+            "brute force",
             "dp"
           ]
         }
@@ -48958,6 +49184,8 @@
           "standingsRating": 1600,
           "tags": [
             "dfs and similar",
+            "dp",
+            "dsu",
             "graphs",
             "implementation",
             "trees"
@@ -48970,6 +49198,7 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "constructive algorithms",
             "geometry"
           ]
         },
@@ -48979,7 +49208,12 @@
           "name": "Timofey and remoduling",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "brute force",
+            "implementation",
+            "math",
+            "number theory"
+          ]
         }
       ]
     },
@@ -50075,6 +50309,7 @@
           "standingsRating": 1700,
           "tags": [
             "binary search",
+            "greedy",
             "strings"
           ]
         },
@@ -50085,9 +50320,11 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "data structures",
+            "bitmasks",
+            "brute force",
+            "dfs and similar",
             "expression parsing",
-            "greedy"
+            "implementation"
           ]
         },
         {
@@ -50097,7 +50334,12 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "strings"
+            "brute force",
+            "dfs and similar",
+            "dsu",
+            "hashing",
+            "strings",
+            "trees"
           ]
         }
       ]
@@ -50616,6 +50858,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "dfs and similar",
             "dp",
             "games"
           ]
@@ -50640,7 +50883,7 @@
           "standingsRating": 2400,
           "tags": [
             "data structures",
-            "trees"
+            "divide and conquer"
           ]
         }
       ]
@@ -50744,7 +50987,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "data structures",
             "dp",
             "two pointers"
           ]
@@ -50756,7 +50998,10 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "combinatorics",
             "constructive algorithms",
+            "dfs and similar",
+            "dsu",
             "graphs"
           ]
         },
@@ -50767,12 +51012,8 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
-            "brute force",
             "dfs and similar",
-            "dp",
-            "graph matchings",
             "graphs",
-            "math",
             "shortest paths"
           ]
         }
@@ -52102,7 +52343,9 @@
           "rating": 1000,
           "standingsRating": 1000,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "greedy",
+            "math"
           ]
         },
         {
@@ -52112,7 +52355,10 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "combinatorics"
+            "combinatorics",
+            "greedy",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -52134,8 +52380,11 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "graphs",
-            "probabilities",
+            "binary search",
+            "brute force",
+            "dfs and similar",
+            "dp",
+            "sortings",
             "trees"
           ]
         }
@@ -52492,6 +52741,7 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "combinatorics",
             "divide and conquer",
             "dp"
           ]
@@ -52880,7 +53130,9 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "brute force",
             "combinatorics",
+            "constructive algorithms",
             "math"
           ]
         },
@@ -52891,6 +53143,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "brute force",
             "dp",
             "trees"
           ]
@@ -53074,7 +53327,6 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "*broken",
             "games",
             "greedy"
           ]
@@ -53168,6 +53420,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "data structures",
             "implementation",
             "math"
           ]
@@ -53178,7 +53431,9 @@
           "name": "Mister B and Beacons on Field",
           "rating": 2900,
           "standingsRating": 2900,
-          "tags": []
+          "tags": [
+            "number theory"
+          ]
         }
       ]
     },
@@ -53965,7 +54220,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "math"
+            "math",
+            "number theory"
           ]
         },
         {
@@ -53975,9 +54231,11 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "binary search",
             "data structures",
             "divide and conquer",
-            "dp"
+            "dp",
+            "two pointers"
           ]
         },
         {
@@ -53986,7 +54244,12 @@
           "name": "Ever-Hungry Krakozyabra",
           "rating": 2700,
           "standingsRating": 2700,
-          "tags": []
+          "tags": [
+            "brute force",
+            "combinatorics",
+            "greedy",
+            "math"
+          ]
         }
       ]
     },
@@ -54385,7 +54648,11 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "greedy"
+            "combinatorics",
+            "greedy",
+            "math",
+            "number theory",
+            "sortings"
           ]
         },
         {
@@ -54395,7 +54662,10 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "constructive algorithms",
+            "data structures",
             "dfs and similar",
+            "dp",
             "graphs"
           ]
         },
@@ -54405,7 +54675,10 @@
           "name": "On the Bench",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "combinatorics",
+            "dp"
+          ]
         }
       ]
     },
@@ -55029,7 +55302,12 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "geometry"
+            "constructive algorithms",
+            "data structures",
+            "geometry",
+            "implementation",
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -55039,7 +55317,8 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
-            "data structures"
+            "data structures",
+            "divide and conquer"
           ]
         }
       ]
@@ -57092,8 +57371,7 @@
           "standingsRating": 1600,
           "tags": [
             "bitmasks",
-            "constructive algorithms",
-            "graph matchings"
+            "constructive algorithms"
           ]
         },
         {
@@ -57103,7 +57381,8 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
-            "data structures"
+            "data structures",
+            "implementation"
           ]
         },
         {
@@ -57113,7 +57392,8 @@
           "rating": 2700,
           "standingsRating": 2700,
           "tags": [
-            "data structures"
+            "data structures",
+            "graphs"
           ]
         }
       ]
@@ -57803,7 +58083,11 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "greedy"
+            "brute force",
+            "dp",
+            "greedy",
+            "math",
+            "number theory"
           ]
         },
         {
@@ -57824,6 +58108,8 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "data structures",
+            "dsu",
             "graphs"
           ]
         }
@@ -58133,8 +58419,7 @@
           "standingsRating": 1700,
           "tags": [
             "binary search",
-            "combinatorics",
-            "math"
+            "dfs and similar"
           ]
         },
         {
@@ -58146,7 +58431,8 @@
           "tags": [
             "binary search",
             "constructive algorithms",
-            "implementation",
+            "games",
+            "greedy",
             "interactive"
           ]
         },
@@ -58157,7 +58443,8 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
-            "data structures"
+            "data structures",
+            "probabilities"
           ]
         }
       ]
@@ -58477,7 +58764,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "trees"
           ]
         },
         {
@@ -58487,6 +58775,7 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "constructive algorithms",
             "math"
           ]
         },
@@ -58497,9 +58786,12 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "binary search",
             "data structures",
             "dfs and similar",
-            "graphs"
+            "dsu",
+            "graphs",
+            "two pointers"
           ]
         }
       ]
@@ -59621,7 +59913,6 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "data structures",
             "dp",
             "greedy",
             "implementation",
@@ -60772,9 +61063,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "brute force",
-            "dp",
-            "implementation"
+            "dp"
           ]
         },
         {
@@ -60974,6 +61263,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "binary search",
+            "implementation",
             "math"
           ]
         },
@@ -60985,6 +61276,7 @@
           "standingsRating": 2100,
           "tags": [
             "dfs and similar",
+            "dp",
             "games",
             "graphs"
           ]
@@ -60997,6 +61289,7 @@
           "standingsRating": 2300,
           "tags": [
             "constructive algorithms",
+            "implementation",
             "strings"
           ]
         }
@@ -61653,7 +61946,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "constructive algorithms",
             "greedy"
           ]
         },
@@ -61675,7 +61967,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "2-sat",
+            "dfs and similar",
             "graphs"
           ]
         },
@@ -61686,7 +61978,10 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
-            "greedy"
+            "binary search",
+            "brute force",
+            "greedy",
+            "sortings"
           ]
         }
       ]
@@ -62867,7 +63162,6 @@
           "standingsRating": 1800,
           "tags": [
             "math",
-            "matrices",
             "number theory"
           ]
         },
@@ -62878,8 +63172,10 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "constructive algorithms",
             "dfs and similar",
             "dp",
+            "greedy",
             "trees"
           ]
         },
@@ -62890,7 +63186,9 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
-            "math"
+            "brute force",
+            "math",
+            "number theory"
           ]
         }
       ]
@@ -63804,8 +64102,7 @@
           "standingsRating": 1700,
           "tags": [
             "implementation",
-            "math",
-            "number theory"
+            "math"
           ]
         },
         {
@@ -64040,6 +64337,8 @@
           "standingsRating": 1600,
           "tags": [
             "graphs",
+            "greedy",
+            "number theory",
             "shortest paths"
           ]
         },
@@ -64050,6 +64349,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "combinatorics",
             "math"
           ]
         },
@@ -64062,6 +64362,7 @@
           "tags": [
             "bitmasks",
             "dfs and similar",
+            "dsu",
             "graphs"
           ]
         }
@@ -64682,7 +64983,10 @@
           "name": "Tesla",
           "rating": 2100,
           "standingsRating": 2100,
-          "tags": []
+          "tags": [
+            "constructive algorithms",
+            "implementation"
+          ]
         },
         {
           "contestId": 996,
@@ -64691,8 +64995,8 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "brute force",
             "greedy",
+            "implementation",
             "math"
           ]
         },
@@ -64823,6 +65127,9 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "brute force",
+            "greedy",
+            "implementation",
             "math"
           ]
         },
@@ -64835,7 +65142,9 @@
           "tags": [
             "brute force",
             "combinatorics",
-            "greedy"
+            "dp",
+            "greedy",
+            "math"
           ]
         },
         {
@@ -65670,7 +65979,10 @@
           "standingsRating": 1300,
           "tags": [
             "combinatorics",
-            "math"
+            "data structures",
+            "math",
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -65680,6 +65992,9 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "bitmasks",
+            "brute force",
+            "combinatorics",
             "math",
             "number theory"
           ]
@@ -65896,7 +66211,6 @@
           "standingsRating": 1500,
           "tags": [
             "binary search",
-            "greedy",
             "math"
           ]
         },
@@ -65930,6 +66244,7 @@
           "tags": [
             "dfs and similar",
             "graphs",
+            "implementation",
             "trees"
           ]
         }
@@ -66042,8 +66357,10 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "brute force",
             "implementation",
-            "math"
+            "math",
+            "sortings"
           ]
         },
         {
@@ -66053,7 +66370,9 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "constructive algorithms",
             "dfs and similar",
+            "dsu",
             "graphs",
             "matrices"
           ]
@@ -69579,9 +69898,9 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "dfs and similar",
             "graphs",
-            "shortest paths",
-            "trees"
+            "shortest paths"
           ]
         },
         {
@@ -70788,6 +71107,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "data structures",
             "dp",
             "trees"
           ]
@@ -72043,6 +72363,8 @@
           "standingsRating": 1600,
           "tags": [
             "constructive algorithms",
+            "dfs and similar",
+            "greedy",
             "trees"
           ]
         },
@@ -72053,6 +72375,7 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "brute force",
             "constructive algorithms",
             "greedy",
             "math"
@@ -72419,8 +72742,8 @@
           "standingsRating": 2000,
           "tags": [
             "binary search",
-            "interactive",
-            "math"
+            "constructive algorithms",
+            "interactive"
           ]
         },
         {
@@ -72431,6 +72754,7 @@
           "standingsRating": 2700,
           "tags": [
             "constructive algorithms",
+            "dfs and similar",
             "graphs",
             "math"
           ]
@@ -73124,7 +73448,10 @@
           "name": "Sasha and a Bit of Relax",
           "rating": 1600,
           "standingsRating": 1600,
-          "tags": []
+          "tags": [
+            "dp",
+            "implementation"
+          ]
         },
         {
           "contestId": 1113,
@@ -73133,8 +73460,8 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "brute force",
             "constructive algorithms",
+            "hashing",
             "strings"
           ]
         },
@@ -73145,7 +73472,9 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
-            "data structures"
+            "binary search",
+            "data structures",
+            "implementation"
           ]
         },
         {
@@ -73155,8 +73484,10 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "brute force",
             "combinatorics",
             "dp",
+            "math",
             "trees"
           ]
         }
@@ -74463,7 +74794,6 @@
           "tags": [
             "greedy",
             "hashing",
-            "string suffix structures",
             "strings"
           ]
         },
@@ -74474,9 +74804,9 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "dfs and similar",
             "dp",
-            "graphs"
+            "graphs",
+            "implementation"
           ]
         },
         {
@@ -74487,9 +74817,8 @@
           "standingsRating": 2400,
           "tags": [
             "constructive algorithms",
-            "graphs",
             "interactive",
-            "math"
+            "number theory"
           ]
         }
       ]
@@ -74860,9 +75189,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "implementation",
-            "math",
-            "number theory"
+            "brute force",
+            "math"
           ]
         },
         {
@@ -74873,8 +75201,10 @@
           "standingsRating": 2000,
           "tags": [
             "data structures",
-            "greedy",
-            "math"
+            "dfs and similar",
+            "dp",
+            "math",
+            "trees"
           ]
         },
         {
@@ -74884,9 +75214,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
-            "data structures",
-            "geometry",
-            "math"
+            "geometry"
           ]
         }
       ]
@@ -75438,6 +75766,7 @@
           "standingsRating": 2200,
           "tags": [
             "dp",
+            "implementation",
             "strings"
           ]
         },
@@ -75449,6 +75778,7 @@
           "standingsRating": 2700,
           "tags": [
             "data structures",
+            "implementation",
             "trees"
           ]
         }
@@ -76175,9 +76505,13 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "binary search",
+            "constructive algorithms",
             "greedy",
             "implementation",
-            "math"
+            "math",
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -76187,9 +76521,7 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "brute force",
             "constructive algorithms",
-            "greedy",
             "math",
             "strings"
           ]
@@ -76201,10 +76533,13 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "constructive algorithms",
             "data structures",
             "dfs and similar",
             "graphs",
-            "math"
+            "greedy",
+            "math",
+            "sortings"
           ]
         },
         {
@@ -76216,6 +76551,7 @@
           "tags": [
             "constructive algorithms",
             "geometry",
+            "greedy",
             "math"
           ]
         }
@@ -77058,7 +77394,8 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "brute force"
+            "brute force",
+            "two pointers"
           ]
         },
         {
@@ -77068,6 +77405,7 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "bitmasks",
             "dp"
           ]
         }
@@ -77369,7 +77707,6 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "binary search",
             "greedy",
             "implementation"
           ]
@@ -77384,7 +77721,6 @@
             "combinatorics",
             "dfs and similar",
             "dp",
-            "geometry",
             "trees"
           ]
         },
@@ -77935,8 +78271,13 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "binary search",
             "data structures",
-            "math"
+            "graph matchings",
+            "greedy",
+            "implementation",
+            "math",
+            "trees"
           ]
         }
       ]
@@ -78747,6 +79088,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "constructive algorithms",
             "dfs and similar",
             "implementation",
             "trees"
@@ -78759,7 +79101,10 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
-            "number theory"
+            "math",
+            "matrices",
+            "number theory",
+            "two pointers"
           ]
         },
         {
@@ -78880,7 +79225,8 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "implementation"
+            "implementation",
+            "two pointers"
           ]
         },
         {
@@ -78890,8 +79236,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "games",
-            "greedy"
+            "games"
           ]
         },
         {
@@ -78914,7 +79259,9 @@
           "standingsRating": 2000,
           "tags": [
             "data structures",
-            "divide and conquer"
+            "divide and conquer",
+            "sortings",
+            "two pointers"
           ]
         }
       ]
@@ -79452,6 +79799,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "sortings",
             "two pointers"
           ]
         },
@@ -79462,8 +79810,10 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "binary search",
+            "brute force",
             "data structures",
-            "implementation"
+            "sortings"
           ]
         },
         {
@@ -79475,7 +79825,8 @@
           "tags": [
             "constructive algorithms",
             "graphs",
-            "greedy"
+            "greedy",
+            "sortings"
           ]
         },
         {
@@ -80016,6 +80367,7 @@
           "standingsRating": 1200,
           "tags": [
             "constructive algorithms",
+            "greedy",
             "math"
           ]
         },
@@ -80027,7 +80379,9 @@
           "standingsRating": 1900,
           "tags": [
             "bitmasks",
-            "graphs"
+            "brute force",
+            "graphs",
+            "shortest paths"
           ]
         },
         {
@@ -80037,7 +80391,6 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
-            "constructive algorithms",
             "implementation",
             "interactive"
           ]
@@ -82820,6 +83173,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "constructive algorithms",
+            "math",
             "number theory"
           ]
         },
@@ -82833,7 +83188,7 @@
             "dfs and similar",
             "dsu",
             "graphs",
-            "two pointers"
+            "sortings"
           ]
         },
         {
@@ -82846,8 +83201,7 @@
             "bitmasks",
             "dfs and similar",
             "dp",
-            "graphs",
-            "implementation"
+            "graphs"
           ]
         }
       ]
@@ -83228,7 +83582,9 @@
           "name": "The World Is Just a Programming Task (Hard Version)",
           "rating": 2500,
           "standingsRating": 2500,
-          "tags": []
+          "tags": [
+            "implementation"
+          ]
         },
         {
           "contestId": 1248,
@@ -83238,7 +83594,8 @@
           "standingsRating": 2300,
           "tags": [
             "data structures",
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -83248,7 +83605,9 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "2-sat",
             "dfs and similar",
+            "graph matchings",
             "graphs"
           ]
         }
@@ -83957,6 +84316,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "constructive algorithms",
             "greedy",
             "implementation"
           ]
@@ -83968,9 +84328,12 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "constructive algorithms",
             "greedy",
             "math",
-            "number theory"
+            "number theory",
+            "ternary search",
+            "two pointers"
           ]
         },
         {
@@ -83980,9 +84343,12 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "constructive algorithms",
             "greedy",
             "math",
-            "number theory"
+            "number theory",
+            "ternary search",
+            "two pointers"
           ]
         },
         {
@@ -83992,8 +84358,10 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "constructive algorithms",
             "geometry",
-            "interactive"
+            "interactive",
+            "math"
           ]
         }
       ]
@@ -84730,6 +85098,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "brute force",
             "constructive algorithms",
             "greedy"
           ]
@@ -84754,6 +85123,8 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "combinatorics",
+            "dp",
             "probabilities"
           ]
         }
@@ -85092,8 +85463,10 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "constructive algorithms",
             "greedy",
-            "implementation"
+            "implementation",
+            "strings"
           ]
         },
         {
@@ -85103,8 +85476,8 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "combinatorics",
-            "constructive algorithms",
+            "dp",
+            "greedy",
             "math"
           ]
         },
@@ -85975,8 +86348,6 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "constructive algorithms",
-            "greedy",
             "implementation",
             "math"
           ]
@@ -85991,7 +86362,6 @@
             "dfs and similar",
             "graphs",
             "greedy",
-            "implementation",
             "trees"
           ]
         },
@@ -86488,6 +86858,7 @@
             "data structures",
             "dfs and similar",
             "graphs",
+            "greedy",
             "trees"
           ]
         },
@@ -86498,8 +86869,10 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "brute force",
             "constructive algorithms",
-            "interactive"
+            "interactive",
+            "math"
           ]
         },
         {
@@ -86509,8 +86882,11 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
+            "brute force",
             "constructive algorithms",
-            "interactive"
+            "hashing",
+            "interactive",
+            "math"
           ]
         },
         {
@@ -86522,6 +86898,7 @@
           "tags": [
             "data structures",
             "math",
+            "matrices",
             "probabilities"
           ]
         }
@@ -86712,8 +87089,7 @@
           "tags": [
             "brute force",
             "data structures",
-            "greedy",
-            "math"
+            "implementation"
           ]
         },
         {
@@ -86876,7 +87252,8 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "constructive algorithms",
+            "data structures",
+            "dsu",
             "implementation"
           ]
         },
@@ -86889,6 +87266,8 @@
           "tags": [
             "brute force",
             "constructive algorithms",
+            "geometry",
+            "greedy",
             "implementation"
           ]
         },
@@ -86900,6 +87279,7 @@
           "standingsRating": 2300,
           "tags": [
             "combinatorics",
+            "dfs and similar",
             "dp",
             "greedy",
             "trees"
@@ -86914,6 +87294,7 @@
           "tags": [
             "dp",
             "graphs",
+            "greedy",
             "math",
             "number theory",
             "trees"
@@ -87458,6 +87839,7 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "brute force",
             "greedy",
             "math"
           ]
@@ -89528,7 +89910,9 @@
           "standingsRating": 1800,
           "tags": [
             "constructive algorithms",
-            "greedy"
+            "greedy",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -89539,8 +89923,7 @@
           "standingsRating": 1700,
           "tags": [
             "bitmasks",
-            "constructive algorithms",
-            "dp",
+            "combinatorics",
             "math"
           ]
         },
@@ -89551,6 +89934,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "constructive algorithms",
             "data structures",
             "greedy",
             "implementation"
@@ -90158,10 +90542,10 @@
           "standingsRating": 1700,
           "tags": [
             "binary search",
-            "data structures",
-            "implementation",
+            "greedy",
             "math",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -90182,8 +90566,8 @@
           "rating": 3200,
           "standingsRating": 3200,
           "tags": [
-            "interactive",
-            "math"
+            "constructive algorithms",
+            "interactive"
           ]
         }
       ]
@@ -90293,9 +90677,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "bitmasks",
-            "brute force",
-            "greedy"
+            "greedy",
+            "math"
           ]
         },
         {
@@ -90307,7 +90690,9 @@
           "tags": [
             "bitmasks",
             "constructive algorithms",
+            "dfs and similar",
             "greedy",
+            "math",
             "trees"
           ]
         },
@@ -90319,8 +90704,9 @@
           "standingsRating": 2200,
           "tags": [
             "bitmasks",
+            "brute force",
             "constructive algorithms",
-            "implementation",
+            "divide and conquer",
             "math"
           ]
         }
@@ -90441,6 +90827,8 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
+            "brute force",
+            "data structures",
             "greedy",
             "implementation"
           ]
@@ -90454,6 +90842,7 @@
           "tags": [
             "bitmasks",
             "dp",
+            "graphs",
             "greedy"
           ]
         },
@@ -90464,8 +90853,9 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "dfs and similar",
+            "dp",
             "graphs",
-            "implementation",
             "shortest paths"
           ]
         },
@@ -90478,7 +90868,8 @@
           "tags": [
             "constructive algorithms",
             "dfs and similar",
-            "graphs"
+            "graphs",
+            "trees"
           ]
         }
       ]
@@ -90754,6 +91145,7 @@
           "standingsRating": 1600,
           "tags": [
             "math",
+            "number theory",
             "sortings"
           ]
         },
@@ -90766,7 +91158,8 @@
           "tags": [
             "constructive algorithms",
             "dfs and similar",
-            "dsu"
+            "dsu",
+            "graphs"
           ]
         },
         {
@@ -90778,7 +91171,8 @@
           "tags": [
             "dfs and similar",
             "dp",
-            "graphs"
+            "graphs",
+            "math"
           ]
         },
         {
@@ -90789,7 +91183,8 @@
           "standingsRating": 2700,
           "tags": [
             "binary search",
-            "greedy"
+            "greedy",
+            "math"
           ]
         }
       ]
@@ -91173,6 +91568,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "data structures",
             "math",
             "number theory"
           ]
@@ -91185,7 +91581,8 @@
           "standingsRating": 2000,
           "tags": [
             "constructive algorithms",
-            "greedy"
+            "greedy",
+            "math"
           ]
         },
         {
@@ -91195,10 +91592,9 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "data structures",
+            "dfs and similar",
             "graphs",
             "implementation",
-            "math",
             "shortest paths"
           ]
         },
@@ -92286,7 +92682,6 @@
             "constructive algorithms",
             "graphs",
             "greedy",
-            "implementation",
             "sortings"
           ]
         },
@@ -92297,13 +92692,10 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "data structures",
             "greedy",
             "implementation",
             "math",
-            "number theory",
-            "sortings",
-            "two pointers"
+            "sortings"
           ]
         },
         {
@@ -92313,8 +92705,11 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "binary search",
+            "bitmasks",
             "constructive algorithms",
             "dfs and similar",
+            "dsu",
             "graphs"
           ]
         }
@@ -93960,7 +94355,8 @@
             "constructive algorithms",
             "data structures",
             "implementation",
-            "strings"
+            "strings",
+            "two pointers"
           ]
         },
         {
@@ -93981,9 +94377,11 @@
           "standingsRating": 2500,
           "tags": [
             "constructive algorithms",
+            "graph matchings",
             "greedy",
             "implementation",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         }
       ]
@@ -94123,12 +94521,13 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "dfs and similar",
             "dsu",
             "graphs",
             "greedy",
             "sortings",
-            "trees"
+            "strings",
+            "trees",
+            "two pointers"
           ]
         },
         {
@@ -94140,7 +94539,9 @@
           "tags": [
             "bitmasks",
             "constructive algorithms",
+            "dp",
             "games",
+            "greedy",
             "math"
           ]
         },
@@ -94164,8 +94565,11 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
+            "brute force",
             "constructive algorithms",
-            "greedy"
+            "graphs",
+            "greedy",
+            "sortings"
           ]
         }
       ]
@@ -94913,10 +95317,10 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "brute force",
             "dp",
             "greedy",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -94927,6 +95331,7 @@
           "standingsRating": 2300,
           "tags": [
             "brute force",
+            "dfs and similar",
             "graphs",
             "hashing"
           ]
@@ -94940,7 +95345,7 @@
           "tags": [
             "binary search",
             "geometry",
-            "strings"
+            "ternary search"
           ]
         }
       ]
@@ -95049,7 +95454,6 @@
           "tags": [
             "constructive algorithms",
             "greedy",
-            "math",
             "number theory"
           ]
         },
@@ -95061,9 +95465,9 @@
           "standingsRating": 1800,
           "tags": [
             "brute force",
+            "constructive algorithms",
             "games",
-            "greedy",
-            "implementation"
+            "greedy"
           ]
         },
         {
@@ -95074,7 +95478,8 @@
           "standingsRating": 2300,
           "tags": [
             "dp",
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         }
       ]
@@ -95653,7 +96058,6 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "greedy",
             "implementation",
             "strings"
           ]
@@ -95665,11 +96069,9 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "constructive algorithms",
             "dfs and similar",
             "dp",
             "games",
-            "strings",
             "trees"
           ]
         },
@@ -95681,8 +96083,10 @@
           "standingsRating": 2300,
           "tags": [
             "binary search",
+            "constructive algorithms",
             "data structures",
-            "sortings"
+            "greedy",
+            "two pointers"
           ]
         }
       ]
@@ -96389,7 +96793,10 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "data structures"
+            "binary search",
+            "data structures",
+            "implementation",
+            "two pointers"
           ]
         },
         {
@@ -96412,7 +96819,12 @@
           "standingsRating": 2000,
           "tags": [
             "bitmasks",
+            "data structures",
             "divide and conquer",
+            "dp",
+            "greedy",
+            "math",
+            "sortings",
             "strings",
             "trees"
           ]
@@ -96426,6 +96838,8 @@
           "tags": [
             "data structures",
             "dsu",
+            "graphs",
+            "implementation",
             "trees"
           ]
         }
@@ -98408,6 +98822,8 @@
           "standingsRating": 1900,
           "tags": [
             "constructive algorithms",
+            "graphs",
+            "greedy",
             "implementation"
           ]
         },
@@ -98418,9 +98834,9 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "constructive algorithms",
             "data structures",
-            "graphs",
-            "hashing"
+            "graphs"
           ]
         },
         {
@@ -98432,7 +98848,9 @@
           "tags": [
             "binary search",
             "data structures",
-            "greedy"
+            "divide and conquer",
+            "greedy",
+            "implementation"
           ]
         }
       ]
@@ -99773,7 +100191,6 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "brute force",
             "dp"
           ]
         },
@@ -99795,6 +100212,7 @@
           "rating": 3100,
           "standingsRating": 3100,
           "tags": [
+            "data structures",
             "graphs",
             "greedy"
           ]
@@ -100795,9 +101213,11 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "brute force",
+            "binary search",
+            "dp",
             "greedy",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -100836,6 +101256,7 @@
           "tags": [
             "constructive algorithms",
             "dfs and similar",
+            "graph matchings",
             "graphs",
             "greedy"
           ]
@@ -101449,6 +101870,7 @@
             "constructive algorithms",
             "geometry",
             "greedy",
+            "math",
             "sortings"
           ]
         }
@@ -101577,7 +101999,6 @@
           "tags": [
             "binary search",
             "interactive",
-            "math",
             "ternary search"
           ]
         },
@@ -101588,6 +102009,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "constructive algorithms",
             "data structures",
             "dp",
             "greedy",
@@ -101601,9 +102023,11 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "constructive algorithms",
             "data structures",
             "dp",
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -103008,6 +103432,7 @@
           "tags": [
             "geometry",
             "greedy",
+            "math",
             "sortings"
           ]
         },
@@ -103018,7 +103443,8 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "games"
+            "games",
+            "greedy"
           ]
         },
         {
@@ -103039,10 +103465,12 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "combinatorics",
             "dfs and similar",
             "graphs",
             "math",
-            "shortest paths"
+            "shortest paths",
+            "trees"
           ]
         }
       ]
@@ -103595,7 +104023,6 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "brute force",
             "constructive algorithms",
             "greedy"
           ]
@@ -103609,7 +104036,6 @@
           "tags": [
             "constructive algorithms",
             "games",
-            "graphs",
             "interactive"
           ]
         },
@@ -103623,10 +104049,10 @@
             "binary search",
             "data structures",
             "dp",
-            "graphs",
             "greedy",
             "shortest paths",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -103975,6 +104401,7 @@
           "tags": [
             "constructive algorithms",
             "greedy",
+            "implementation",
             "strings",
             "two pointers"
           ]
@@ -103986,9 +104413,10 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "brute force",
+            "binary search",
+            "combinatorics",
             "constructive algorithms",
-            "math"
+            "implementation"
           ]
         },
         {
@@ -103998,6 +104426,8 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "bitmasks",
+            "brute force",
             "data structures",
             "dfs and similar",
             "dsu",
@@ -105510,8 +105940,8 @@
           "standingsRating": 1600,
           "tags": [
             "dfs and similar",
+            "divide and conquer",
             "dp",
-            "graphs",
             "greedy",
             "trees"
           ]
@@ -105525,8 +105955,7 @@
           "tags": [
             "combinatorics",
             "dp",
-            "math",
-            "number theory"
+            "math"
           ]
         },
         {
@@ -105549,6 +105978,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "constructive algorithms",
             "graphs",
             "shortest paths"
           ]
@@ -106653,6 +107083,7 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "brute force",
             "combinatorics",
             "dp",
             "graphs",
@@ -107088,7 +107519,11 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
+            "2-sat",
+            "brute force",
             "combinatorics",
+            "constructive algorithms",
+            "graph matchings",
             "graphs"
           ]
         },
@@ -107099,6 +107534,7 @@
           "rating": 3000,
           "standingsRating": 3000,
           "tags": [
+            "constructive algorithms",
             "interactive",
             "math"
           ]
@@ -107324,6 +107760,7 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
+            "brute force",
             "graphs",
             "greedy"
           ]
@@ -107337,7 +107774,9 @@
           "tags": [
             "binary search",
             "data structures",
+            "divide and conquer",
             "math",
+            "number theory",
             "two pointers"
           ]
         },
@@ -107361,7 +107800,9 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "bitmasks",
             "geometry",
+            "math",
             "number theory"
           ]
         },
@@ -107372,7 +107813,9 @@
           "rating": 3300,
           "standingsRating": 3300,
           "tags": [
+            "brute force",
             "geometry",
+            "math",
             "number theory"
           ]
         }
@@ -109263,10 +109706,13 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "binary search",
+            "brute force",
             "data structures",
             "dp",
             "graphs",
-            "implementation"
+            "implementation",
+            "sortings"
           ]
         },
         {
@@ -109276,7 +109722,10 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
-            "constructive algorithms"
+            "brute force",
+            "constructive algorithms",
+            "greedy",
+            "two pointers"
           ]
         },
         {
@@ -109298,6 +109747,7 @@
           "standingsRating": 2800,
           "tags": [
             "flows",
+            "graph matchings",
             "graphs",
             "greedy"
           ]
@@ -109928,6 +110378,7 @@
           "standingsRating": 1700,
           "tags": [
             "brute force",
+            "data structures",
             "dp",
             "greedy",
             "implementation"
@@ -109940,7 +110391,10 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
-            "dp"
+            "brute force",
+            "combinatorics",
+            "dp",
+            "trees"
           ]
         },
         {
@@ -109962,8 +110416,10 @@
           "rating": 2900,
           "standingsRating": 2900,
           "tags": [
+            "brute force",
+            "divide and conquer",
             "dp",
-            "graphs",
+            "greedy",
             "trees"
           ]
         }
@@ -111446,6 +111902,7 @@
           "standingsRating": 1300,
           "tags": [
             "bitmasks",
+            "greedy",
             "math",
             "number theory"
           ]
@@ -111458,10 +111915,11 @@
           "standingsRating": 1900,
           "tags": [
             "data structures",
+            "dfs and similar",
             "dp",
             "graphs",
-            "greedy",
-            "shortest paths"
+            "shortest paths",
+            "two pointers"
           ]
         },
         {
@@ -111472,7 +111930,10 @@
           "standingsRating": 2300,
           "tags": [
             "data structures",
-            "divide and conquer"
+            "divide and conquer",
+            "dp",
+            "greedy",
+            "sortings"
           ]
         },
         {
@@ -111599,8 +112060,7 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "brute force",
-            "greedy",
+            "constructive algorithms",
             "math",
             "number theory"
           ]
@@ -111612,6 +112072,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "constructive algorithms",
             "math",
             "number theory"
           ]
@@ -111625,6 +112086,7 @@
           "tags": [
             "dp",
             "greedy",
+            "math",
             "number theory"
           ]
         },
@@ -111635,6 +112097,7 @@
           "rating": 3000,
           "standingsRating": 3000,
           "tags": [
+            "divide and conquer",
             "dp",
             "number theory"
           ]
@@ -113886,9 +114349,10 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
+            "binary search",
             "constructive algorithms",
-            "data structures",
             "greedy",
+            "implementation",
             "math",
             "two pointers"
           ]
@@ -113913,6 +114377,7 @@
           "tags": [
             "constructive algorithms",
             "greedy",
+            "implementation",
             "interactive",
             "math"
           ]
@@ -113926,7 +114391,8 @@
           "tags": [
             "combinatorics",
             "dp",
-            "games"
+            "games",
+            "math"
           ]
         },
         {
@@ -113938,7 +114404,8 @@
           "tags": [
             "combinatorics",
             "dp",
-            "games"
+            "games",
+            "math"
           ]
         }
       ]
@@ -114071,6 +114538,7 @@
           "tags": [
             "binary search",
             "constructive algorithms",
+            "data structures",
             "greedy",
             "two pointers"
           ]
@@ -114082,6 +114550,7 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "dp",
             "greedy",
             "sortings",
             "two pointers"
@@ -114094,6 +114563,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "constructive algorithms",
             "dp",
             "greedy",
             "number theory"
@@ -114849,6 +115319,7 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
+            "brute force",
             "greedy",
             "sortings"
           ]
@@ -114861,6 +115332,7 @@
           "standingsRating": 2000,
           "tags": [
             "constructive algorithms",
+            "implementation",
             "sortings"
           ]
         },
@@ -114872,7 +115344,10 @@
           "standingsRating": 2200,
           "tags": [
             "binary search",
+            "brute force",
             "data structures",
+            "dsu",
+            "greedy",
             "sortings"
           ]
         },
@@ -114883,9 +115358,11 @@
           "rating": 2700,
           "standingsRating": 2700,
           "tags": [
-            "binary search",
             "bitmasks",
+            "brute force",
             "combinatorics",
+            "greedy",
+            "hashing",
             "math",
             "two pointers"
           ]
@@ -116871,6 +117348,7 @@
           "tags": [
             "constructive algorithms",
             "dfs and similar",
+            "dp",
             "trees"
           ]
         }
@@ -117760,7 +118238,8 @@
           "standingsRating": 1600,
           "tags": [
             "brute force",
-            "data structures"
+            "data structures",
+            "dp"
           ]
         },
         {
@@ -117770,8 +118249,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "dp",
-            "implementation"
+            "data structures",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -117783,9 +118263,8 @@
           "tags": [
             "constructive algorithms",
             "dfs and similar",
-            "dsu",
-            "greedy",
-            "math"
+            "graphs",
+            "greedy"
           ]
         },
         {
@@ -118354,11 +118833,10 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "constructive algorithms",
             "greedy",
+            "implementation",
             "sortings",
-            "strings",
-            "two pointers"
+            "strings"
           ]
         },
         {
@@ -118368,6 +118846,7 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "brute force",
             "constructive algorithms",
             "greedy"
           ]
@@ -118379,7 +118858,9 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "dfs and similar",
+            "dsu"
           ]
         }
       ]
@@ -118517,9 +118998,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "greedy",
-            "implementation",
-            "math"
+            "brute force",
+            "greedy"
           ]
         },
         {
@@ -118529,9 +119009,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "brute force",
             "constructive algorithms",
-            "dsu",
             "graphs",
             "greedy",
             "interactive",
@@ -118545,9 +119023,12 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "binary search",
             "brute force",
             "data structures",
-            "dsu"
+            "dsu",
+            "greedy",
+            "sortings"
           ]
         }
       ]
@@ -119033,6 +119514,8 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "graphs",
+            "greedy",
             "shortest paths"
           ]
         },
@@ -119045,6 +119528,8 @@
           "tags": [
             "brute force",
             "data structures",
+            "divide and conquer",
+            "dp",
             "greedy"
           ]
         }
@@ -120251,7 +120736,9 @@
           "standingsRating": 1600,
           "tags": [
             "binary search",
-            "greedy"
+            "constructive algorithms",
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -120262,6 +120749,8 @@
           "standingsRating": 1900,
           "tags": [
             "brute force",
+            "data structures",
+            "implementation",
             "sortings"
           ]
         },
@@ -120273,8 +120762,11 @@
           "standingsRating": 2400,
           "tags": [
             "dfs and similar",
+            "dsu",
             "graphs",
-            "greedy"
+            "greedy",
+            "sortings",
+            "trees"
           ]
         },
         {
@@ -120285,6 +120777,7 @@
           "standingsRating": 3000,
           "tags": [
             "combinatorics",
+            "dfs and similar",
             "dp",
             "math",
             "trees"
@@ -120487,7 +120980,8 @@
           "standingsRating": 1500,
           "tags": [
             "constructive algorithms",
-            "greedy"
+            "greedy",
+            "math"
           ]
         },
         {
@@ -120500,7 +120994,10 @@
             "binary search",
             "brute force",
             "data structures",
-            "sortings"
+            "geometry",
+            "greedy",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -120511,7 +121008,11 @@
           "standingsRating": 2500,
           "tags": [
             "bitmasks",
-            "dp"
+            "brute force",
+            "constructive algorithms",
+            "dp",
+            "greedy",
+            "math"
           ]
         }
       ]
@@ -121167,8 +121668,6 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "bitmasks",
-            "brute force",
             "dp",
             "greedy"
           ]
@@ -121180,10 +121679,9 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "bitmasks",
+            "data structures",
             "dp",
-            "greedy",
-            "math"
+            "greedy"
           ]
         },
         {
@@ -121195,6 +121693,7 @@
           "tags": [
             "greedy",
             "implementation",
+            "math",
             "number theory"
           ]
         },
@@ -121205,8 +121704,8 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
-            "brute force",
             "data structures",
+            "greedy",
             "math",
             "number theory"
           ]
@@ -123905,7 +124404,9 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "dp",
+            "greedy"
           ]
         },
         {
@@ -123916,7 +124417,8 @@
           "standingsRating": 1500,
           "tags": [
             "constructive algorithms",
-            "implementation"
+            "dp",
+            "greedy"
           ]
         },
         {
@@ -123926,7 +124428,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
-            "math"
+            "math",
+            "number theory"
           ]
         },
         {
@@ -123937,6 +124440,7 @@
           "standingsRating": 2000,
           "tags": [
             "dp",
+            "math",
             "probabilities"
           ]
         },
@@ -123947,6 +124451,8 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "constructive algorithms",
+            "dfs and similar",
             "graphs",
             "shortest paths"
           ]
@@ -128358,7 +128864,7 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
-            "binary search",
+            "data structures",
             "greedy",
             "sortings"
           ]
@@ -128373,6 +128879,7 @@
             "binary search",
             "data structures",
             "dp",
+            "greedy",
             "sortings"
           ]
         },
@@ -128383,10 +128890,13 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "binary search",
+            "data structures",
             "dp",
             "graphs",
             "greedy",
-            "shortest paths"
+            "shortest paths",
+            "sortings"
           ]
         },
         {
@@ -128396,6 +128906,10 @@
           "rating": 3000,
           "standingsRating": 3000,
           "tags": [
+            "data structures",
+            "divide and conquer",
+            "dsu",
+            "hashing",
             "trees"
           ]
         }
@@ -129517,8 +130031,8 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "math",
-            "sortings"
+            "greedy",
+            "math"
           ]
         },
         {
@@ -129528,6 +130042,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "brute force",
             "constructive algorithms",
             "graphs",
             "implementation",
@@ -129545,7 +130060,8 @@
           "tags": [
             "constructive algorithms",
             "dfs and similar",
-            "graphs"
+            "graphs",
+            "greedy"
           ]
         },
         {
@@ -129555,6 +130071,7 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "bitmasks",
             "combinatorics",
             "dp",
             "math"
@@ -129672,7 +130189,7 @@
           "standingsRating": 1500,
           "tags": [
             "binary search",
-            "dp",
+            "data structures",
             "greedy"
           ]
         },
@@ -129684,9 +130201,9 @@
           "standingsRating": 1900,
           "tags": [
             "brute force",
+            "constructive algorithms",
             "dfs and similar",
-            "graphs",
-            "implementation"
+            "graphs"
           ]
         },
         {
@@ -129696,6 +130213,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "combinatorics",
             "math"
           ]
         },
@@ -129707,7 +130225,8 @@
           "standingsRating": 2700,
           "tags": [
             "constructive algorithms",
-            "games"
+            "games",
+            "implementation"
           ]
         }
       ]
@@ -129828,7 +130347,7 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "constructive algorithms",
+            "brute force",
             "greedy"
           ]
         },
@@ -129839,8 +130358,8 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "brute force",
-            "data structures",
+            "geometry",
+            "greedy",
             "implementation",
             "sortings",
             "two pointers"
@@ -129854,6 +130373,7 @@
           "standingsRating": 2400,
           "tags": [
             "constructive algorithms",
+            "dp",
             "implementation",
             "math",
             "trees"
@@ -129866,8 +130386,10 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
+            "brute force",
             "data structures",
-            "dp"
+            "dp",
+            "two pointers"
           ]
         }
       ]
@@ -130251,7 +130773,7 @@
           "standingsRating": 1400,
           "tags": [
             "greedy",
-            "sortings"
+            "implementation"
           ]
         },
         {
@@ -130262,8 +130784,8 @@
           "standingsRating": 1800,
           "tags": [
             "combinatorics",
-            "dp",
             "math",
+            "probabilities",
             "trees"
           ]
         },
@@ -130277,6 +130799,7 @@
             "combinatorics",
             "dfs and similar",
             "math",
+            "probabilities",
             "trees"
           ]
         },
@@ -130288,6 +130811,7 @@
           "standingsRating": 2500,
           "tags": [
             "data structures",
+            "dfs and similar",
             "dp",
             "dsu",
             "greedy",
@@ -130513,9 +131037,10 @@
           "rating": 1100,
           "standingsRating": 1100,
           "tags": [
-            "binary search",
             "combinatorics",
-            "sortings"
+            "math",
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -130526,11 +131051,11 @@
           "standingsRating": 2000,
           "tags": [
             "binary search",
-            "brute force",
-            "data structures",
             "dp",
             "dsu",
-            "greedy"
+            "greedy",
+            "trees",
+            "two pointers"
           ]
         },
         {
@@ -130553,6 +131078,8 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "binary search",
+            "brute force",
             "data structures",
             "dp",
             "hashing",
@@ -130566,7 +131093,10 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
-            "dfs and similar"
+            "data structures",
+            "dfs and similar",
+            "greedy",
+            "trees"
           ]
         }
       ]
@@ -130798,9 +131328,7 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "binary search",
             "brute force",
-            "data structures",
             "math"
           ]
         },
@@ -130812,12 +131340,11 @@
           "standingsRating": 2400,
           "tags": [
             "combinatorics",
-            "data structures",
+            "greedy",
             "hashing",
             "math",
             "number theory",
-            "sortings",
-            "two pointers"
+            "sortings"
           ]
         },
         {
@@ -131218,7 +131745,6 @@
           "standingsRating": 1700,
           "tags": [
             "brute force",
-            "greedy",
             "implementation",
             "math"
           ]
@@ -131231,7 +131757,9 @@
           "standingsRating": 2500,
           "tags": [
             "binary search",
-            "implementation",
+            "brute force",
+            "greedy",
+            "math",
             "two pointers"
           ]
         },
@@ -131242,8 +131770,10 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
+            "bitmasks",
+            "brute force",
             "constructive algorithms",
-            "meet-in-the-middle",
+            "math",
             "probabilities"
           ]
         },
@@ -132777,9 +133307,8 @@
           "standingsRating": 1800,
           "tags": [
             "binary search",
-            "constructive algorithms",
-            "implementation",
-            "math"
+            "math",
+            "number theory"
           ]
         },
         {
@@ -132790,7 +133319,9 @@
           "standingsRating": 1800,
           "tags": [
             "constructive algorithms",
+            "graphs",
             "greedy",
+            "math",
             "sortings",
             "two pointers"
           ]
@@ -132803,6 +133334,7 @@
           "standingsRating": 2400,
           "tags": [
             "data structures",
+            "dp",
             "greedy",
             "math"
           ]
@@ -132947,7 +133479,8 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "math"
           ]
         },
         {
@@ -132980,6 +133513,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "combinatorics",
             "dp",
             "math",
             "probabilities"
@@ -132993,7 +133527,8 @@
           "standingsRating": 3000,
           "tags": [
             "binary search",
-            "interactive"
+            "interactive",
+            "trees"
           ]
         }
       ]
@@ -134222,7 +134757,7 @@
           "standingsRating": 1300,
           "tags": [
             "constructive algorithms",
-            "math"
+            "implementation"
           ]
         },
         {
@@ -134235,6 +134770,7 @@
             "bitmasks",
             "constructive algorithms",
             "graphs",
+            "greedy",
             "implementation",
             "math"
           ]
@@ -134263,7 +134799,9 @@
           "tags": [
             "combinatorics",
             "dp",
-            "math"
+            "implementation",
+            "math",
+            "trees"
           ]
         },
         {
@@ -134692,6 +135230,7 @@
           "standingsRating": 1200,
           "tags": [
             "brute force",
+            "games",
             "greedy",
             "implementation"
           ]
@@ -134727,9 +135266,11 @@
           "standingsRating": 2400,
           "tags": [
             "bitmasks",
+            "brute force",
             "dfs and similar",
             "dp",
-            "graphs"
+            "graphs",
+            "shortest paths"
           ]
         },
         {
@@ -134753,6 +135294,7 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
+            "divide and conquer",
             "dp",
             "math",
             "probabilities"
@@ -135697,9 +136239,7 @@
           "standingsRating": 1900,
           "tags": [
             "binary search",
-            "data structures",
             "graphs",
-            "implementation",
             "shortest paths"
           ]
         },
@@ -135711,9 +136251,12 @@
           "standingsRating": 2400,
           "tags": [
             "binary search",
+            "brute force",
+            "constructive algorithms",
             "data structures",
             "greedy",
-            "math"
+            "hashing",
+            "two pointers"
           ]
         }
       ]
@@ -135846,8 +136389,8 @@
           "standingsRating": 1300,
           "tags": [
             "constructive algorithms",
-            "implementation",
-            "two pointers"
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -135857,7 +136400,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "graphs",
+            "constructive algorithms",
             "greedy",
             "math",
             "sortings"
@@ -135872,7 +136415,9 @@
           "tags": [
             "brute force",
             "data structures",
-            "dp"
+            "dp",
+            "greedy",
+            "sortings"
           ]
         },
         {
@@ -135893,6 +136438,7 @@
           "rating": 3000,
           "standingsRating": 3000,
           "tags": [
+            "brute force",
             "dfs and similar",
             "graphs",
             "implementation",
@@ -136083,7 +136629,8 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "constructive algorithms",
+            "brute force",
+            "dfs and similar",
             "graphs",
             "implementation"
           ]
@@ -136096,7 +136643,7 @@
           "standingsRating": 1700,
           "tags": [
             "constructive algorithms",
-            "data structures",
+            "greedy",
             "sortings",
             "two pointers"
           ]
@@ -136109,7 +136656,6 @@
           "standingsRating": 2000,
           "tags": [
             "brute force",
-            "data structures",
             "greedy",
             "implementation"
           ]
@@ -138943,7 +139489,7 @@
             "constructive algorithms",
             "dp",
             "greedy",
-            "implementation",
+            "shortest paths",
             "strings"
           ]
         },
@@ -138969,7 +139515,8 @@
           "tags": [
             "data structures",
             "implementation",
-            "math"
+            "math",
+            "sortings"
           ]
         },
         {
@@ -138980,7 +139527,8 @@
           "standingsRating": 2400,
           "tags": [
             "geometry",
-            "math"
+            "math",
+            "matrices"
           ]
         }
       ]
@@ -140053,7 +140601,9 @@
           "tags": [
             "bitmasks",
             "constructive algorithms",
-            "interactive"
+            "greedy",
+            "interactive",
+            "math"
           ]
         },
         {
@@ -140066,6 +140616,7 @@
             "binary search",
             "data structures",
             "implementation",
+            "math",
             "two pointers"
           ]
         },
@@ -140076,7 +140627,10 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "data structures",
             "graphs",
+            "greedy",
+            "implementation",
             "shortest paths",
             "sortings"
           ]
@@ -140088,7 +140642,10 @@
           "rating": 3100,
           "standingsRating": 3100,
           "tags": [
+            "binary search",
+            "bitmasks",
             "data structures",
+            "greedy",
             "two pointers"
           ]
         }
@@ -140670,7 +141227,6 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "constructive algorithms",
             "games",
             "greedy"
           ]
@@ -140684,6 +141240,7 @@
           "tags": [
             "hashing",
             "implementation",
+            "math",
             "strings"
           ]
         },
@@ -140707,6 +141264,7 @@
           "rating": 2400,
           "standingsRating": 2400,
           "tags": [
+            "brute force",
             "combinatorics",
             "dp",
             "math"
@@ -142212,7 +142770,9 @@
           "standingsRating": 1400,
           "tags": [
             "games",
-            "greedy"
+            "greedy",
+            "math",
+            "sortings"
           ]
         },
         {
@@ -142222,9 +142782,9 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "bitmasks",
             "constructive algorithms",
             "greedy",
-            "math",
             "number theory"
           ]
         },
@@ -142235,8 +142795,9 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "constructive algorithms",
             "greedy",
-            "implementation"
+            "strings"
           ]
         },
         {
@@ -142931,7 +143492,6 @@
           "standingsRating": 1400,
           "tags": [
             "binary search",
-            "constructive algorithms",
             "greedy",
             "implementation",
             "math",
@@ -142969,10 +143529,13 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "bitmasks",
+            "brute force",
             "combinatorics",
             "data structures",
+            "dp",
             "math",
-            "matrices"
+            "trees"
           ]
         },
         {
@@ -142985,7 +143548,9 @@
             "binary search",
             "dfs and similar",
             "graphs",
-            "implementation"
+            "implementation",
+            "shortest paths",
+            "two pointers"
           ]
         }
       ]
@@ -146370,6 +146935,8 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
+            "constructive algorithms",
+            "dfs and similar",
             "games",
             "graphs",
             "greedy",
@@ -146386,6 +146953,7 @@
             "brute force",
             "data structures",
             "dfs and similar",
+            "dsu",
             "math",
             "trees"
           ]
@@ -146397,8 +146965,9 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
-            "binary search",
             "data structures",
+            "divide and conquer",
+            "math",
             "number theory",
             "two pointers"
           ]
@@ -147360,6 +147929,8 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "2-sat",
+            "brute force",
             "greedy",
             "implementation",
             "math"
@@ -147373,10 +147944,11 @@
           "standingsRating": 1900,
           "tags": [
             "binary search",
-            "constructive algorithms",
             "data structures",
+            "dp",
             "greedy",
-            "math"
+            "implementation",
+            "two pointers"
           ]
         },
         {
@@ -147386,9 +147958,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "constructive algorithms",
+            "brute force",
             "dfs and similar",
-            "dp",
+            "greedy",
             "sortings",
             "trees"
           ]
@@ -147404,6 +147976,8 @@
             "dp",
             "dsu",
             "greedy",
+            "implementation",
+            "matrices",
             "sortings"
           ]
         }
@@ -147837,6 +148411,7 @@
           "tags": [
             "constructive algorithms",
             "greedy",
+            "math",
             "sortings"
           ]
         },
@@ -147847,14 +148422,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "constructive algorithms",
-            "data structures",
-            "divide and conquer",
+            "binary search",
             "dp",
-            "flows",
             "graphs",
-            "greedy",
-            "implementation",
             "shortest paths"
           ]
         },
@@ -147866,8 +148436,11 @@
           "standingsRating": 2400,
           "tags": [
             "constructive algorithms",
+            "dfs and similar",
             "graphs",
+            "greedy",
             "hashing",
+            "implementation",
             "strings"
           ]
         },
@@ -147878,8 +148451,11 @@
           "rating": 2900,
           "standingsRating": 2900,
           "tags": [
+            "brute force",
             "dp",
-            "math"
+            "greedy",
+            "math",
+            "probabilities"
           ]
         }
       ]
@@ -150374,7 +150950,6 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
-            "data structures",
             "greedy",
             "sortings"
           ]
@@ -150401,9 +150976,10 @@
           "tags": [
             "binary search",
             "data structures",
-            "flows",
             "greedy",
-            "implementation"
+            "sortings",
+            "ternary search",
+            "two pointers"
           ]
         },
         {
@@ -152329,8 +152905,9 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "constructive algorithms",
             "graphs",
+            "greedy",
+            "implementation",
             "interactive"
           ]
         },
@@ -152342,6 +152919,8 @@
           "standingsRating": 1900,
           "tags": [
             "constructive algorithms",
+            "data structures",
+            "dp",
             "greedy",
             "implementation"
           ]
@@ -152354,8 +152933,9 @@
           "standingsRating": 2300,
           "tags": [
             "bitmasks",
-            "data structures",
-            "dp"
+            "combinatorics",
+            "dp",
+            "math"
           ]
         },
         {
@@ -152365,7 +152945,10 @@
           "rating": 3300,
           "standingsRating": 3300,
           "tags": [
-            "data structures"
+            "binary search",
+            "data structures",
+            "greedy",
+            "implementation"
           ]
         }
       ]
@@ -153299,7 +153882,6 @@
             "constructive algorithms",
             "greedy",
             "math",
-            "probabilities",
             "sortings"
           ]
         },
@@ -153323,6 +153905,7 @@
           "standingsRating": 1900,
           "tags": [
             "bitmasks",
+            "constructive algorithms",
             "implementation",
             "interactive",
             "math"
@@ -153351,9 +153934,12 @@
           "standingsRating": 2700,
           "tags": [
             "combinatorics",
+            "constructive algorithms",
             "data structures",
             "divide and conquer",
-            "greedy"
+            "dp",
+            "greedy",
+            "math"
           ]
         }
       ]
@@ -154257,8 +154843,10 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
+            "binary search",
             "data structures",
-            "math",
+            "flows",
+            "greedy",
             "two pointers"
           ]
         },
@@ -154271,7 +154859,10 @@
           "tags": [
             "binary search",
             "data structures",
-            "greedy"
+            "dp",
+            "flows",
+            "greedy",
+            "two pointers"
           ]
         },
         {
@@ -154281,8 +154872,8 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "combinatorics",
             "dp",
+            "games",
             "math",
             "probabilities"
           ]
@@ -155006,7 +155597,8 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "greedy",
+            "2-sat",
+            "brute force",
             "math",
             "sortings"
           ]
@@ -155020,8 +155612,12 @@
           "tags": [
             "combinatorics",
             "dfs and similar",
+            "dp",
+            "dsu",
             "graphs",
-            "math"
+            "implementation",
+            "math",
+            "trees"
           ]
         },
         {
@@ -155033,6 +155629,8 @@
           "tags": [
             "chinese remainder theorem",
             "geometry",
+            "implementation",
+            "math",
             "number theory"
           ]
         },
@@ -155042,7 +155640,11 @@
           "name": "Homework",
           "rating": 2800,
           "standingsRating": 2800,
-          "tags": []
+          "tags": [
+            "bitmasks",
+            "math",
+            "matrices"
+          ]
         }
       ]
     },
@@ -155163,7 +155765,8 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "implementation"
           ]
         },
         {
@@ -155173,7 +155776,9 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "brute force",
             "data structures",
+            "divide and conquer",
             "greedy",
             "sortings"
           ]
@@ -155185,6 +155790,8 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
+            "binary search",
+            "brute force",
             "data structures",
             "greedy",
             "ternary search",
@@ -155199,7 +155806,9 @@
           "standingsRating": 2500,
           "tags": [
             "data structures",
-            "greedy"
+            "implementation",
+            "sortings",
+            "two pointers"
           ]
         }
       ]
@@ -156408,12 +157017,10 @@
           "rating": 1500,
           "standingsRating": 1500,
           "tags": [
-            "brute force",
-            "dfs and similar",
+            "constructive algorithms",
             "dp",
             "math",
-            "number theory",
-            "shortest paths"
+            "number theory"
           ]
         },
         {
@@ -156423,8 +157030,10 @@
           "rating": 2100,
           "standingsRating": 2100,
           "tags": [
+            "brute force",
             "constructive algorithms",
             "dfs and similar",
+            "dp",
             "graphs",
             "greedy",
             "trees"
@@ -156439,7 +157048,9 @@
           "tags": [
             "combinatorics",
             "dp",
-            "greedy"
+            "greedy",
+            "math",
+            "probabilities"
           ]
         },
         {
@@ -156450,6 +157061,8 @@
           "standingsRating": 2900,
           "tags": [
             "bitmasks",
+            "dp",
+            "games",
             "greedy",
             "math"
           ]
@@ -157803,8 +158416,11 @@
           "standingsRating": 1300,
           "tags": [
             "constructive algorithms",
+            "dp",
             "dsu",
-            "greedy"
+            "graphs",
+            "greedy",
+            "sortings"
           ]
         },
         {
@@ -157814,8 +158430,11 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "brute force",
             "data structures",
-            "greedy"
+            "dp",
+            "greedy",
+            "sortings"
           ]
         },
         {
@@ -157826,9 +158445,9 @@
           "standingsRating": 1900,
           "tags": [
             "binary search",
+            "bitmasks",
             "constructive algorithms",
-            "interactive",
-            "strings"
+            "interactive"
           ]
         },
         {
@@ -157841,8 +158460,7 @@
             "binary search",
             "bitmasks",
             "constructive algorithms",
-            "interactive",
-            "strings"
+            "interactive"
           ]
         },
         {
@@ -157852,6 +158470,10 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "binary search",
+            "bitmasks",
+            "constructive algorithms",
+            "dp",
             "interactive"
           ]
         },
@@ -157862,7 +158484,11 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
-            "dp"
+            "brute force",
+            "combinatorics",
+            "dp",
+            "implementation",
+            "math"
           ]
         }
       ]
@@ -158400,9 +159026,13 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
+            "binary search",
+            "bitmasks",
+            "combinatorics",
             "dfs and similar",
             "dsu",
-            "graphs"
+            "graphs",
+            "math"
           ]
         },
         {
@@ -158413,7 +159043,8 @@
           "standingsRating": 2100,
           "tags": [
             "constructive algorithms",
-            "interactive"
+            "interactive",
+            "math"
           ]
         },
         {
@@ -158423,6 +159054,7 @@
           "rating": 2500,
           "standingsRating": 2500,
           "tags": [
+            "brute force",
             "constructive algorithms",
             "interactive",
             "math"
@@ -158677,7 +159309,8 @@
           "standingsRating": 1900,
           "tags": [
             "data structures",
-            "greedy"
+            "greedy",
+            "two pointers"
           ]
         },
         {
@@ -158687,9 +159320,10 @@
           "rating": 1800,
           "standingsRating": 1800,
           "tags": [
+            "brute force",
             "dfs and similar",
             "dp",
-            "math",
+            "graphs",
             "trees"
           ]
         },
@@ -158701,6 +159335,7 @@
           "standingsRating": 2000,
           "tags": [
             "bitmasks",
+            "brute force",
             "dfs and similar",
             "dp",
             "fft",
@@ -158713,7 +159348,13 @@
           "name": "Antiamuny and Slider Movement",
           "rating": 2600,
           "standingsRating": 2600,
-          "tags": []
+          "tags": [
+            "brute force",
+            "combinatorics",
+            "implementation",
+            "math",
+            "sortings"
+          ]
         }
       ]
     },
@@ -159814,6 +160455,8 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
+            "data structures",
+            "hashing",
             "implementation"
           ]
         },
@@ -159836,7 +160479,9 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "combinatorics"
+            "combinatorics",
+            "implementation",
+            "math"
           ]
         },
         {
@@ -159847,9 +160492,7 @@
           "standingsRating": 2100,
           "tags": [
             "data structures",
-            "dp",
-            "games",
-            "greedy"
+            "dp"
           ]
         },
         {
@@ -159860,7 +160503,8 @@
           "standingsRating": 2700,
           "tags": [
             "combinatorics",
-            "dp"
+            "dp",
+            "math"
           ]
         },
         {
@@ -159870,10 +160514,11 @@
           "rating": 2600,
           "standingsRating": 2600,
           "tags": [
-            "binary search",
             "divide and conquer",
             "interactive",
-            "math"
+            "math",
+            "probabilities",
+            "sortings"
           ]
         },
         {
@@ -160742,9 +161387,8 @@
           "standingsRating": 1700,
           "tags": [
             "constructive algorithms",
-            "greedy",
-            "interactive",
-            "math"
+            "implementation",
+            "interactive"
           ]
         },
         {
@@ -160755,7 +161399,9 @@
           "standingsRating": 2100,
           "tags": [
             "brute force",
+            "data structures",
             "dp",
+            "dsu",
             "greedy",
             "implementation",
             "two pointers"
@@ -160769,8 +161415,7 @@
           "standingsRating": 2300,
           "tags": [
             "combinatorics",
-            "dp",
-            "graphs",
+            "graph matchings",
             "math"
           ]
         },
@@ -160782,7 +161427,7 @@
           "standingsRating": 2500,
           "tags": [
             "binary search",
-            "data structures",
+            "brute force",
             "dp",
             "geometry",
             "greedy",
@@ -160797,9 +161442,9 @@
           "rating": 3200,
           "standingsRating": 3200,
           "tags": [
-            "data structures",
             "dp",
-            "greedy"
+            "greedy",
+            "math"
           ]
         }
       ]
@@ -161323,8 +161968,6 @@
           "standingsRating": 1300,
           "tags": [
             "constructive algorithms",
-            "data structures",
-            "dsu",
             "greedy"
           ]
         },
@@ -161336,7 +161979,8 @@
           "standingsRating": 1900,
           "tags": [
             "dp",
-            "math"
+            "math",
+            "sortings"
           ]
         },
         {
@@ -161347,7 +161991,6 @@
           "standingsRating": 2000,
           "tags": [
             "bitmasks",
-            "dp",
             "greedy",
             "math"
           ]
@@ -161356,10 +161999,9 @@
           "contestId": 2166,
           "index": "F",
           "name": "Path Split",
-          "rating": 2500,
+          "rating": 2600,
           "standingsRating": 2500,
           "tags": [
-            "data structures",
             "graph matchings",
             "greedy"
           ]
@@ -162192,7 +162834,8 @@
           "standingsRating": 1200,
           "tags": [
             "greedy",
-            "strings"
+            "strings",
+            "two pointers"
           ]
         },
         {
@@ -162202,8 +162845,7 @@
           "rating": 1900,
           "standingsRating": 1900,
           "tags": [
-            "dp",
-            "greedy"
+            "dp"
           ]
         },
         {
@@ -162238,7 +162880,8 @@
           "standingsRating": 3400,
           "tags": [
             "data structures",
-            "implementation",
+            "dp",
+            "greedy",
             "trees"
           ]
         }
@@ -163453,8 +164096,7 @@
             "bitmasks",
             "constructive algorithms",
             "dp",
-            "greedy",
-            "math"
+            "greedy"
           ]
         },
         {
@@ -163466,6 +164108,7 @@
           "tags": [
             "data structures",
             "dfs and similar",
+            "dsu",
             "games",
             "graphs",
             "greedy",
@@ -163491,6 +164134,8 @@
           "rating": 3500,
           "standingsRating": 3500,
           "tags": [
+            "brute force",
+            "data structures",
             "dp"
           ]
         }
@@ -163743,7 +164388,9 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
-            "games"
+            "constructive algorithms",
+            "games",
+            "greedy"
           ]
         },
         {
@@ -163753,7 +164400,12 @@
           "rating": 1400,
           "standingsRating": 1400,
           "tags": [
-            "constructive algorithms"
+            "combinatorics",
+            "constructive algorithms",
+            "dp",
+            "greedy",
+            "strings",
+            "two pointers"
           ]
         },
         {
@@ -163764,7 +164416,9 @@
           "standingsRating": 1900,
           "tags": [
             "dp",
-            "games"
+            "games",
+            "implementation",
+            "strings"
           ]
         },
         {
@@ -163774,7 +164428,10 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "greedy",
+            "implementation",
             "interactive",
+            "sortings",
             "two pointers"
           ]
         },
@@ -163786,7 +164443,10 @@
           "standingsRating": 2500,
           "tags": [
             "combinatorics",
-            "number theory"
+            "dsu",
+            "number theory",
+            "probabilities",
+            "trees"
           ]
         },
         {
@@ -164334,7 +164994,6 @@
           "standingsRating": 1200,
           "tags": [
             "games",
-            "greedy",
             "math"
           ]
         },
@@ -164346,10 +165005,8 @@
           "standingsRating": 1600,
           "tags": [
             "brute force",
-            "data structures",
-            "divide and conquer",
             "math",
-            "number theory"
+            "two pointers"
           ]
         },
         {
@@ -164390,8 +165047,10 @@
           "tags": [
             "data structures",
             "dp",
+            "expression parsing",
             "flows",
-            "greedy"
+            "greedy",
+            "strings"
           ]
         }
       ]
@@ -164847,9 +165506,7 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
-            "data structures",
-            "dsu",
-            "greedy"
+            "data structures"
           ]
         },
         {
@@ -164860,9 +165517,7 @@
           "standingsRating": 1700,
           "tags": [
             "data structures",
-            "dp",
-            "dsu",
-            "greedy"
+            "dp"
           ]
         },
         {
@@ -164872,8 +165527,7 @@
           "rating": 1700,
           "standingsRating": 1700,
           "tags": [
-            "constructive algorithms",
-            "implementation"
+            "constructive algorithms"
           ]
         },
         {
@@ -164883,7 +165537,9 @@
           "rating": 2000,
           "standingsRating": 2000,
           "tags": [
-            "dp"
+            "combinatorics",
+            "dp",
+            "greedy"
           ]
         },
         {
@@ -164894,7 +165550,8 @@
           "standingsRating": 2500,
           "tags": [
             "data structures",
-            "greedy"
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -164914,7 +165571,10 @@
           "rating": 2800,
           "standingsRating": 2800,
           "tags": [
-            "data structures"
+            "constructive algorithms",
+            "data structures",
+            "hashing",
+            "math"
           ]
         }
       ]
@@ -166456,7 +167116,9 @@
           "standingsRating": 1400,
           "tags": [
             "brute force",
-            "math"
+            "constructive algorithms",
+            "math",
+            "number theory"
           ]
         },
         {
@@ -166467,7 +167129,10 @@
           "standingsRating": 1900,
           "tags": [
             "binary search",
-            "interactive"
+            "constructive algorithms",
+            "divide and conquer",
+            "interactive",
+            "math"
           ]
         },
         {
@@ -166478,6 +167143,8 @@
           "standingsRating": 2000,
           "tags": [
             "binary search",
+            "bitmasks",
+            "constructive algorithms",
             "interactive"
           ]
         },
@@ -166488,10 +167155,11 @@
           "rating": 2300,
           "standingsRating": 2300,
           "tags": [
+            "dfs and similar",
             "dp",
             "greedy",
+            "math",
             "probabilities",
-            "sortings",
             "trees"
           ]
         },
@@ -166501,7 +167169,12 @@
           "name": "MEX Replacement on Tree",
           "rating": 2700,
           "standingsRating": 2700,
-          "tags": []
+          "tags": [
+            "data structures",
+            "implementation",
+            "math",
+            "trees"
+          ]
         }
       ]
     },
@@ -168161,19 +168834,23 @@
           "rating": 1300,
           "standingsRating": 1300,
           "tags": [
+            "constructive algorithms",
             "games",
-            "greedy"
+            "greedy",
+            "math"
           ]
         },
         {
           "contestId": 2240,
           "index": "D",
           "name": "Decidophobia",
-          "rating": 1500,
+          "rating": 1600,
           "standingsRating": 1500,
           "tags": [
             "greedy",
-            "sortings"
+            "math",
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -168183,9 +168860,10 @@
           "rating": 2200,
           "standingsRating": 2200,
           "tags": [
-            "constructive algorithms",
+            "binary search",
             "data structures",
-            "math"
+            "math",
+            "two pointers"
           ]
         },
         {
@@ -168196,7 +168874,9 @@
           "standingsRating": 2500,
           "tags": [
             "combinatorics",
-            "graphs"
+            "dp",
+            "graphs",
+            "math"
           ]
         }
       ]
@@ -168992,7 +169672,10 @@
           "standingsRating": 2000,
           "tags": [
             "data structures",
-            "implementation"
+            "dfs and similar",
+            "dsu",
+            "implementation",
+            "two pointers"
           ]
         },
         {
@@ -169421,8 +170104,9 @@
           "rating": 1200,
           "standingsRating": 1200,
           "tags": [
-            "brute force",
-            "games"
+            "games",
+            "greedy",
+            "implementation"
           ]
         },
         {
@@ -169432,6 +170116,7 @@
           "rating": 1600,
           "standingsRating": 1600,
           "tags": [
+            "combinatorics",
             "math"
           ]
         },
@@ -169443,6 +170128,8 @@
           "standingsRating": 2100,
           "tags": [
             "communication",
+            "constructive algorithms",
+            "expression parsing",
             "greedy",
             "interactive",
             "math",
@@ -169458,8 +170145,10 @@
           "tags": [
             "binary search",
             "bitmasks",
+            "data structures",
             "greedy",
-            "math"
+            "math",
+            "sortings"
           ]
         }
       ]
@@ -169962,7 +170651,7 @@
           "contestId": 2263,
           "index": "C1",
           "name": "Floor of MEX (Easy Version)",
-          "rating": null,
+          "rating": 1200,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -169973,40 +170662,49 @@
           "contestId": 2263,
           "index": "C2",
           "name": "Floor of MEX (Hard Version)",
-          "rating": null,
+          "rating": 1800,
           "standingsRating": null,
           "tags": [
             "dp",
-            "two pointers"
+            "implementation",
+            "math"
           ]
         },
         {
           "contestId": 2263,
           "index": "D",
           "name": "Culling Game",
-          "rating": null,
+          "rating": 2000,
           "standingsRating": null,
           "tags": [
-            "data structures"
+            "binary search",
+            "data structures",
+            "implementation",
+            "two pointers"
           ]
         },
         {
           "contestId": 2263,
           "index": "E",
           "name": "Traveling the World",
-          "rating": null,
+          "rating": 2300,
           "standingsRating": null,
           "tags": [
-            "graphs"
+            "combinatorics",
+            "constructive algorithms",
+            "graphs",
+            "greedy",
+            "math"
           ]
         },
         {
           "contestId": 2263,
           "index": "F",
           "name": "PLUSworld",
-          "rating": null,
+          "rating": 2900,
           "standingsRating": null,
           "tags": [
+            "constructive algorithms",
             "graphs",
             "greedy"
           ]
@@ -196338,7 +197036,7 @@
     },
     "105700": {
       "id": 105700,
-      "name": "2020-2021 Всероссийская олимпиада школьников по информатике, первый тур",
+      "name": "2020-2021 Всероссийская ол��мпиада школьников по информатике, первый тур",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },

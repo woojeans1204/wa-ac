@@ -1,6 +1,7 @@
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises"
 import { dirname, resolve } from "node:path"
 import process from "node:process"
+import { createProblemLookup } from "./codeforces-problem-lookup.mjs"
 
 const DEFAULT_OUTPUT = "app/data/codeforces-contest-problems.json"
 const API_BASE = "https://codeforces.com/api"
@@ -219,10 +220,6 @@ function createCodeforcesClient(delay) {
   }
 }
 
-function problemKey(contestId, index) {
-  return `${contestId}:${index}`
-}
-
 function compactProblem(problem, contestId, globalProblem) {
   const standingsRating = Number.isFinite(problem.rating) ? problem.rating : null
   const problemsetRating = Number.isFinite(globalProblem?.rating) ? globalProblem.rating : null
@@ -237,24 +234,20 @@ function compactProblem(problem, contestId, globalProblem) {
 }
 
 function crossValidateStoredContests(checkpoint, globalProblems) {
-  const globalMap = new Map(
-    globalProblems
-      .filter((problem) => problem.contestId != null)
-      .map((problem) => [problemKey(problem.contestId, problem.index), problem]),
-  )
+  const lookup = createProblemLookup(globalProblems, checkpoint.contestMetadata ?? {})
   const disagreements = []
   let updatedRatings = 0
 
   for (const [contestIdText, contest] of Object.entries(checkpoint.contests)) {
     const contestId = Number(contestIdText)
     contest.problems = contest.problems.map((problem) => {
-      const globalProblem = globalMap.get(problemKey(contestId, problem.index))
+      const globalProblem = lookup(contestId, problem)
       const standingsRating = Number.isFinite(problem.standingsRating) ? problem.standingsRating : null
       const problemsetRating = Number.isFinite(globalProblem?.rating) ? globalProblem.rating : null
       if (standingsRating != null && problemsetRating != null && standingsRating !== problemsetRating) {
         disagreements.push({ contestId, index: problem.index, standingsRating, problemsetRating })
       }
-      const rating = problemsetRating ?? standingsRating
+      const rating = problemsetRating ?? standingsRating ?? problem.rating ?? null
       if (problem.rating !== rating) updatedRatings += 1
       return {
         ...problem,
@@ -267,7 +260,7 @@ function crossValidateStoredContests(checkpoint, globalProblems) {
 
   checkpoint.problemsetFetchedAt = new Date().toISOString()
   checkpoint.ratingDisagreements = disagreements
-  return { globalMap, disagreements, updatedRatings }
+  return { disagreements, updatedRatings }
 }
 
 function syncContestMetadata(checkpoint, contests) {
@@ -302,12 +295,12 @@ async function main() {
   const checkpoint = await readCheckpoint(outputPath)
   const request = createCodeforcesClient(options.delay)
 
-  let globalMap = new Map()
+  let globalProblems = []
   if (!options.skipRatings) {
     console.log("Fetching the current Codeforces problemset for rating cross-validation...")
     const problemset = await request("problemset.problems")
+    globalProblems = problemset.problems
     const result = crossValidateStoredContests(checkpoint, problemset.problems)
-    globalMap = result.globalMap
     console.log(`Checked ${Object.keys(checkpoint.contests).length} stored contests: ${result.updatedRatings} rating updates, ${result.disagreements.length} disagreements.`)
   }
 
@@ -320,6 +313,12 @@ async function main() {
   const contests = await request("contest.list", { gym: "false" })
   const gymContests = await request("contest.list", { gym: "true" })
   syncContestMetadata(checkpoint, [...contests, ...gymContests])
+  const lookup = createProblemLookup(
+    options.skipRatings
+      ? Object.values(checkpoint.contests).flatMap((contest) => contest.problems)
+      : globalProblems,
+    checkpoint.contestMetadata,
+  )
   console.log(`Stored metadata for ${Object.keys(checkpoint.contestMetadata).length} regular and gym contests.`)
   const selectedIds = new Set(options.contestIds)
   const targets = contests
@@ -346,7 +345,7 @@ async function main() {
       )
       const contestDisagreements = []
       const problems = standingsProblems.map((problem) => {
-        const globalProblem = globalMap.get(problemKey(contest.id, problem.index))
+        const globalProblem = lookup(contest.id, problem)
         const compact = compactProblem(problem, contest.id, globalProblem)
         if (
           compact.standingsRating != null

@@ -17,6 +17,25 @@ function isAccepted(result: string) {
   return result === "AC" || result === "OK"
 }
 
+function ProblemOpenButton({ problem, session, platform, mobile = false }: {
+  problem: Problem
+  session: Session
+  platform: "Codeforces" | "AtCoder"
+  mobile?: boolean
+}) {
+  const href = platform === "Codeforces"
+    ? `https://codeforces.com/${Number(session.contestId) >= 100000 ? "gym" : "contest"}/${session.contestId}/problem/${problem.index}`
+    : `https://atcoder.jp/contests/${session.contestId}/tasks/${problem.problemId}`
+  return (
+    <Button variant="outline" size="icon-sm" asChild
+      className={mobile ? "shrink-0" : "shrink-0 opacity-0 transition-opacity group-hover/problem:opacity-100 group-focus-within/problem:opacity-100 [@media(hover:none)]:opacity-100"}>
+      <a href={href} target="_blank" rel="noreferrer" aria-label={`Open ${problem.index} ${problem.title || "problem"}`} title="Open problem">
+        <IconExternalLink />
+      </a>
+    </Button>
+  )
+}
+
 function duration(session: Session) {
   if (!session.metrics.lastAcEpochSecond) return "—"
   const seconds = session.metrics.lastAcEpochSecond - Math.floor(new Date(session.startAt).getTime() / 1000)
@@ -234,6 +253,7 @@ export function ShadcnDataTable({
                                   <div className="flex min-w-0 items-baseline gap-2 text-[15px]">
                                     <span className="shrink-0 font-medium">{problem.index}</span>
                                     {problem.title && <span className="min-w-0 truncate text-muted-foreground">{problem.title}</span>}
+                                    <ProblemOpenButton problem={problem} session={session} platform={platform} mobile />
                                     <span
                                       className="ml-auto shrink-0 font-medium tabular-nums"
                                       style={{ color: platform === "Codeforces" ? cfRatingColor(problem.difficulty) : undefined }}
@@ -340,7 +360,12 @@ export function ShadcnDataTable({
                                   const firstAc = firstAcSecond(problem)
                                   return (
                                     <TableRow key={problem.problemId}>
-                                      <TableCell><span className="font-medium">{problem.index}</span>{problem.title && <span className="ml-2 text-muted-foreground">{problem.title}</span>}</TableCell>
+                                      <TableCell className="group/problem">
+                                        <div className="flex min-w-0 items-center gap-1.5">
+                                          <span className="min-w-0 break-words"><span className="font-medium">{problem.index}</span>{problem.title && <span className="ml-2 text-muted-foreground">{problem.title}</span>}</span>
+                                          <ProblemOpenButton problem={problem} session={session} platform={platform} />
+                                        </div>
+                                      </TableCell>
                                       <TableCell><Badge variant={problem.solved ? "default" : problem.attempted ? "destructive" : "outline"}>{problem.solved ? "AC" : problem.attempted ? "Unsolved" : "Not attempted"}</Badge></TableCell>
                                       <TableCell className="text-right font-medium" style={{ color: platform === "Codeforces" ? cfRatingColor(problem.difficulty) : undefined }}>{problem.difficulty ?? "—"}</TableCell>
                                       <TableCell className="text-right font-mono tabular-nums">{exactElapsed(firstAc)}</TableCell>
