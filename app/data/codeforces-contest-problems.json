@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T21:34:59.966Z",
-  "problemsetFetchedAt": "2026-09-25T21:34:59.897Z",
+  "updatedAt": "2026-09-26T04:57:58.775Z",
+  "problemsetFetchedAt": "2026-09-26T04:57:58.719Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -170224,6 +170224,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "greedy",
             "strings"
           ]
         },
@@ -170300,6 +170301,7 @@
             "bitmasks",
             "brute force",
             "data structures",
+            "greedy",
             "strings",
             "trees"
           ]
