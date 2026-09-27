@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-27T06:34:21.210Z",
-  "problemsetFetchedAt": "2026-09-27T05:18:39.756Z",
+  "updatedAt": "2026-09-27T12:02:14.692Z",
+  "problemsetFetchedAt": "2026-09-27T12:02:14.625Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171042,6 +171042,7 @@
           "standingsRating": null,
           "tags": [
             "bitmasks",
+            "brute force",
             "math"
           ]
         },
