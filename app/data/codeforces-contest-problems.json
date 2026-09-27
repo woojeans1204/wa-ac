@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-27T05:18:39.812Z",
+  "updatedAt": "2026-09-27T06:34:21.210Z",
   "problemsetFetchedAt": "2026-09-27T05:18:39.756Z",
   "ratingDisagreements": [
     {
@@ -199926,6 +199926,12 @@
       "id": 106722,
       "name": "2026 XVIII Donald Knuth Annual Programming Contest by ESCOM-IPN",
       "startTimeSeconds": 1787331600,
+      "durationSeconds": 18000
+    },
+    "106725": {
+      "id": 106725,
+      "name": "The 2026 CCPC Online Contest",
+      "startTimeSeconds": 1789794000,
       "durationSeconds": 18000
     }
   }
