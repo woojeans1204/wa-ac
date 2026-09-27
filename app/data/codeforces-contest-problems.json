@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-27T12:02:14.692Z",
-  "problemsetFetchedAt": "2026-09-27T12:02:14.625Z",
+  "updatedAt": "2026-09-27T21:20:44.044Z",
+  "problemsetFetchedAt": "2026-09-27T21:20:43.998Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171014,7 +171014,8 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "dp"
+            "dp",
+            "fft"
           ]
         }
       ]
