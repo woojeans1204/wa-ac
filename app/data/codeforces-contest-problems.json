@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T05:23:48.985Z",
+  "updatedAt": "2026-09-28T08:38:29.873Z",
   "problemsetFetchedAt": "2026-09-28T05:23:48.927Z",
   "ratingDisagreements": [
     {
@@ -199744,6 +199744,12 @@
       "name": "National Taiwan University Class Preliminary 2026",
       "startTimeSeconds": 1786253400,
       "durationSeconds": 18000
+    },
+    "106646": {
+      "id": 106646,
+      "name": "ICPC Masters Mexico 2026",
+      "startTimeSeconds": null,
+      "durationSeconds": 10800
     },
     "106648": {
       "id": 106648,
