@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T08:38:29.873Z",
-  "problemsetFetchedAt": "2026-09-28T05:23:48.927Z",
+  "updatedAt": "2026-09-28T13:54:36.898Z",
+  "problemsetFetchedAt": "2026-09-28T13:54:36.837Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171045,6 +171045,7 @@
           "tags": [
             "bitmasks",
             "brute force",
+            "data structures",
             "math"
           ]
         },
@@ -171061,6 +171062,7 @@
             "data structures",
             "divide and conquer",
             "greedy",
+            "trees",
             "two pointers"
           ]
         },
