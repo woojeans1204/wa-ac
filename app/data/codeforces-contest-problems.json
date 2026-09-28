@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T13:54:36.898Z",
+  "updatedAt": "2026-09-28T17:37:13.507Z",
   "problemsetFetchedAt": "2026-09-28T13:54:36.837Z",
   "ratingDisagreements": [
     {
@@ -199944,6 +199944,18 @@
       "name": "The 2026 CCPC Online Contest",
       "startTimeSeconds": 1789794000,
       "durationSeconds": 18000
+    },
+    "106727": {
+      "id": 106727,
+      "name": "Отборочный этап любительской лиги Московской командной олимпиады школьников по программированию (МКОШП) 2026",
+      "startTimeSeconds": null,
+      "durationSeconds": 14100
+    },
+    "106728": {
+      "id": 106728,
+      "name": "2026 ICPC Asia Taiwan Online Programming Contest",
+      "startTimeSeconds": 1789779600,
+      "durationSeconds": 10800
     }
   }
 }
