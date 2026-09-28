@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-27T21:20:44.044Z",
-  "problemsetFetchedAt": "2026-09-27T21:20:43.998Z",
+  "updatedAt": "2026-09-28T05:23:48.985Z",
+  "problemsetFetchedAt": "2026-09-28T05:23:48.927Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171002,6 +171002,7 @@
             "data structures",
             "dfs and similar",
             "greedy",
+            "math",
             "sortings",
             "strings",
             "trees"
