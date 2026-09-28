@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T17:37:13.507Z",
+  "updatedAt": "2026-09-28T22:38:33.047Z",
   "problemsetFetchedAt": "2026-09-28T13:54:36.837Z",
   "ratingDisagreements": [
     {
@@ -184083,7 +184083,7 @@
     },
     "2271": {
       "id": 2271,
-      "name": "Codeforces Round (Div. 1 + Div. 2)",
+      "name": "DeepInfra Round 1 (Codeforces Round, Div. 1 + Div. 2)",
       "startTimeSeconds": 1791644700,
       "durationSeconds": 10800
     },
