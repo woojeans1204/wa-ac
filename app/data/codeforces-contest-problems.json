@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T22:38:33.047Z",
-  "problemsetFetchedAt": "2026-09-28T13:54:36.837Z",
+  "updatedAt": "2026-09-29T12:52:47.882Z",
+  "problemsetFetchedAt": "2026-09-29T12:52:47.833Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171015,6 +171015,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "divide and conquer",
             "dp",
             "fft"
           ]
