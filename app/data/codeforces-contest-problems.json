@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29T20:42:46.700Z",
-  "problemsetFetchedAt": "2026-09-29T12:52:47.833Z",
+  "updatedAt": "2026-09-29T22:15:03.150Z",
+  "problemsetFetchedAt": "2026-09-29T22:15:03.116Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171062,6 +171062,7 @@
             "brute force",
             "data structures",
             "divide and conquer",
+            "dsu",
             "greedy",
             "trees",
             "two pointers"
