@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30T12:28:31.415Z",
+  "updatedAt": "2026-09-30T22:15:07.803Z",
   "problemsetFetchedAt": "2026-09-29T22:15:03.116Z",
   "ratingDisagreements": [
     {
@@ -199965,11 +199965,23 @@
       "startTimeSeconds": 1789779600,
       "durationSeconds": 10800
     },
+    "106730": {
+      "id": 106730,
+      "name": "2026 Benelux Algorithm Programming Contest Preliminary (BAPC Prelims 2026)",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
     "106732": {
       "id": 106732,
       "name": "MEPhI Аutumn Cup 2026",
       "startTimeSeconds": null,
       "durationSeconds": 9000
+    },
+    "106733": {
+      "id": 106733,
+      "name": "UTPC Contest 9-30-2026",
+      "startTimeSeconds": 1790811000,
+      "durationSeconds": 7200
     }
   }
 }
