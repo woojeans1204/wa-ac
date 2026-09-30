@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29T22:15:03.150Z",
+  "updatedAt": "2026-09-30T12:28:31.415Z",
   "problemsetFetchedAt": "2026-09-29T22:15:03.116Z",
   "ratingDisagreements": [
     {
@@ -184107,6 +184107,12 @@
       "startTimeSeconds": 1791743700,
       "durationSeconds": 9000
     },
+    "2275": {
+      "id": 2275,
+      "name": "Codeforces Round (Div. 3)",
+      "startTimeSeconds": 1791383700,
+      "durationSeconds": 9000
+    },
     "100001": {
       "id": 100001,
       "name": "2010 Codeforces Beta Round #1 (training)",
@@ -199958,6 +199964,12 @@
       "name": "2026 ICPC Asia Taiwan Online Programming Contest",
       "startTimeSeconds": 1789779600,
       "durationSeconds": 10800
+    },
+    "106732": {
+      "id": 106732,
+      "name": "MEPhI Аutumn Cup 2026",
+      "startTimeSeconds": null,
+      "durationSeconds": 9000
     }
   }
 }
