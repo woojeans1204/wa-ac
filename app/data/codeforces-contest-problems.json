@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-01T20:28:55.688Z",
-  "problemsetFetchedAt": "2026-09-29T22:15:03.116Z",
+  "updatedAt": "2026-10-01T22:41:15.614Z",
+  "problemsetFetchedAt": "2026-10-01T22:41:15.554Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -170812,7 +170812,7 @@
           "contestId": 2266,
           "index": "A",
           "name": "Good Contest",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "greedy"
@@ -170822,7 +170822,7 @@
           "contestId": 2266,
           "index": "B",
           "name": "Three Piles",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "games",
@@ -170834,7 +170834,7 @@
           "contestId": 2266,
           "index": "C",
           "name": "AND, OR, Sort!",
-          "rating": null,
+          "rating": 1000,
           "standingsRating": null,
           "tags": [
             "greedy",
@@ -170845,7 +170845,7 @@
           "contestId": 2266,
           "index": "D",
           "name": "Falling Concrete",
-          "rating": null,
+          "rating": 1400,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -170858,7 +170858,7 @@
           "contestId": 2266,
           "index": "E",
           "name": "Prime Destruction",
-          "rating": null,
+          "rating": 1400,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -170871,7 +170871,7 @@
           "contestId": 2266,
           "index": "F",
           "name": "MEX Replacement",
-          "rating": null,
+          "rating": 2000,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -170886,7 +170886,7 @@
           "contestId": 2266,
           "index": "G",
           "name": "Modular Tree",
-          "rating": null,
+          "rating": 2200,
           "standingsRating": null,
           "tags": [
             "dfs and similar",
@@ -170901,7 +170901,7 @@
           "contestId": 2266,
           "index": "H",
           "name": "Deque Malfunction",
-          "rating": null,
+          "rating": 2400,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -170920,7 +170920,7 @@
           "contestId": 2267,
           "index": "A",
           "name": "Turn Into a Palindrome",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "greedy",
@@ -170931,7 +170931,7 @@
           "contestId": 2267,
           "index": "B",
           "name": "Fashionable Array",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -170943,7 +170943,7 @@
           "contestId": 2267,
           "index": "C",
           "name": "GCD Treasury",
-          "rating": null,
+          "rating": 1200,
           "standingsRating": null,
           "tags": [
             "greedy",
@@ -170955,7 +170955,7 @@
           "contestId": 2267,
           "index": "D",
           "name": "Backrooms Hill",
-          "rating": null,
+          "rating": 1400,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -170969,7 +170969,7 @@
           "contestId": 2267,
           "index": "E",
           "name": "Clean Substrings",
-          "rating": null,
+          "rating": 2000,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -170981,7 +170981,7 @@
           "contestId": 2267,
           "index": "F1",
           "name": "XOR Transformations (Easy Version)",
-          "rating": null,
+          "rating": 1700,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -170994,7 +170994,7 @@
           "contestId": 2267,
           "index": "F2",
           "name": "XOR Transformations (Hard Version)",
-          "rating": null,
+          "rating": 2300,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -171012,7 +171012,7 @@
           "contestId": 2267,
           "index": "G",
           "name": "New LRT",
-          "rating": null,
+          "rating": 2600,
           "standingsRating": null,
           "tags": [
             "divide and conquer",
@@ -171030,7 +171030,7 @@
           "contestId": 2268,
           "index": "A",
           "name": "K Is Important",
-          "rating": null,
+          "rating": 1200,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -171041,7 +171041,7 @@
           "contestId": 2268,
           "index": "B",
           "name": "What a SauSaGe! It's All Meat",
-          "rating": null,
+          "rating": 1500,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -171054,7 +171054,7 @@
           "contestId": 2268,
           "index": "C",
           "name": "KiaKio and Energy Intervals",
-          "rating": null,
+          "rating": 2300,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -171072,7 +171072,7 @@
           "contestId": 2268,
           "index": "D",
           "name": "AghaBalaSar and Hamed",
-          "rating": null,
+          "rating": 2600,
           "standingsRating": null,
           "tags": [
             "data structures",
@@ -171084,7 +171084,7 @@
           "contestId": 2268,
           "index": "E",
           "name": "Kia Kio and Tree of Life",
-          "rating": null,
+          "rating": 2700,
           "standingsRating": null,
           "tags": [
             "data structures",
@@ -171097,7 +171097,7 @@
           "contestId": 2268,
           "index": "F",
           "name": "Deglado",
-          "rating": null,
+          "rating": 3500,
           "standingsRating": null,
           "tags": [
             "constructive algorithms"
@@ -171113,7 +171113,7 @@
           "contestId": 2269,
           "index": "A",
           "name": "SauSaGe Bank",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "greedy",
@@ -171124,7 +171124,7 @@
           "contestId": 2269,
           "index": "B",
           "name": "KiaKio and Squared Numbers",
-          "rating": null,
+          "rating": 1000,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -171135,42 +171135,54 @@
           "contestId": 2269,
           "index": "C",
           "name": "K Is Important",
-          "rating": null,
+          "rating": 1200,
           "standingsRating": null,
           "tags": [
-            "constructive algorithms"
+            "constructive algorithms",
+            "greedy"
           ]
         },
         {
           "contestId": 2269,
           "index": "D",
           "name": "What a SauSaGe! It's All Meat",
-          "rating": null,
+          "rating": 1500,
           "standingsRating": null,
           "tags": [
-            "bitmasks"
+            "bitmasks",
+            "brute force",
+            "data structures",
+            "math"
           ]
         },
         {
           "contestId": 2269,
           "index": "E",
           "name": "KiaKio and Energy Intervals",
-          "rating": null,
+          "rating": 2300,
           "standingsRating": null,
           "tags": [
             "binary search",
             "bitmasks",
-            "data structures"
+            "brute force",
+            "data structures",
+            "divide and conquer",
+            "dsu",
+            "greedy",
+            "trees",
+            "two pointers"
           ]
         },
         {
           "contestId": 2269,
           "index": "F",
           "name": "AghaBalaSar and Hamed",
-          "rating": null,
+          "rating": 2600,
           "standingsRating": null,
           "tags": [
-            "dp"
+            "data structures",
+            "dp",
+            "trees"
           ]
         }
       ]
