@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30T22:15:07.803Z",
+  "updatedAt": "2026-10-01T01:31:55.922Z",
   "problemsetFetchedAt": "2026-09-29T22:15:03.116Z",
   "ratingDisagreements": [
     {
@@ -199980,7 +199980,7 @@
     "106733": {
       "id": 106733,
       "name": "UTPC Contest 9-30-2026",
-      "startTimeSeconds": 1790811000,
+      "startTimeSeconds": 1790812800,
       "durationSeconds": 7200
     }
   }
