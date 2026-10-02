@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-01T22:41:15.614Z",
-  "problemsetFetchedAt": "2026-10-01T22:41:15.554Z",
+  "updatedAt": "2026-10-02T12:34:45.617Z",
+  "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171059,7 +171059,6 @@
           "tags": [
             "binary search",
             "bitmasks",
-            "brute force",
             "data structures",
             "divide and conquer",
             "dsu",
@@ -171164,7 +171163,6 @@
           "tags": [
             "binary search",
             "bitmasks",
-            "brute force",
             "data structures",
             "divide and conquer",
             "dsu",
