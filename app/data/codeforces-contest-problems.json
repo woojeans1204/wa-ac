@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-03T13:19:56.910Z",
+  "updatedAt": "2026-10-04T15:19:31.989Z",
   "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
@@ -199992,6 +199992,12 @@
       "name": "UTPC Contest 9-30-2026",
       "startTimeSeconds": 1790812800,
       "durationSeconds": 7200
+    },
+    "106738": {
+      "id": 106738,
+      "name": "East China University of Science and Technology Programming Contest 2026 Fall",
+      "startTimeSeconds": 1790658000,
+      "durationSeconds": 18000
     }
   }
 }
