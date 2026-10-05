@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-04T15:19:31.989Z",
+  "updatedAt": "2026-10-05T01:14:43.168Z",
   "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
@@ -199998,6 +199998,12 @@
       "name": "East China University of Science and Technology Programming Contest 2026 Fall",
       "startTimeSeconds": 1790658000,
       "durationSeconds": 18000
+    },
+    "106741": {
+      "id": 106741,
+      "name": "2026 Fall UT CS104c Midterm #1",
+      "startTimeSeconds": 1791234000,
+      "durationSeconds": 3000
     }
   }
 }
