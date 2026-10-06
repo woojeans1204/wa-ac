@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T03:18:57.643Z",
+  "updatedAt": "2026-10-06T10:45:37.843Z",
   "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
@@ -200021,6 +200021,18 @@
       "id": 106745,
       "name": "University of Science and Technology of China Freshman Programming Contest 2026(2026 Kruskal Cup)",
       "startTimeSeconds": 1789272000,
+      "durationSeconds": 18000
+    },
+    "106747": {
+      "id": 106747,
+      "name": "Интернет-олимпиады, Сезон 2025-2026, Третья личная олимпиада",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106748": {
+      "id": 106748,
+      "name": "Интернет-олимпиады, Сезон 2025-2026, Четвертая личная олимпиада",
+      "startTimeSeconds": null,
       "durationSeconds": 18000
     }
   }
