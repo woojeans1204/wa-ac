@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-05T17:05:43.587Z",
+  "updatedAt": "2026-10-06T03:18:57.643Z",
   "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
@@ -200015,6 +200015,12 @@
       "id": 106744,
       "name": "2026-2027 ICPC NERC, Kyrgyzstan Qualification Contest",
       "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106745": {
+      "id": 106745,
+      "name": "University of Science and Technology of China Freshman Programming Contest 2026(2026 Kruskal Cup)",
+      "startTimeSeconds": 1789272000,
       "durationSeconds": 18000
     }
   }
