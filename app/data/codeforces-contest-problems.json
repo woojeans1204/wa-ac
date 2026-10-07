@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T21:52:44.486Z",
+  "updatedAt": "2026-10-07T01:29:41.444Z",
   "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
@@ -184125,7 +184125,7 @@
     },
     "100001": {
       "id": 100001,
-      "name": "2010 Codeforces Beta Round #1 (тренировка)",
+      "name": "2010 Codeforces Beta Round #1 (training)",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -184215,7 +184215,7 @@
     },
     "100017": {
       "id": 100017,
-      "name": "2011-2012 Третья зимняя олимпиада, Вологда, 31 января 2011",
+      "name": "2011-2012 Third winter olympiad, Vologda, 31 January 2011",
       "startTimeSeconds": 1328007600,
       "durationSeconds": 10800
     },
@@ -184227,7 +184227,7 @@
     },
     "100020": {
       "id": 100020,
-      "name": "2010-2011 Летние Петрозаводские сборы, Контест Киевского НУ",
+      "name": "2010-2011 Petrozavodsk Summer Training Camp, Kyiv NU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184239,13 +184239,13 @@
     },
     "100025": {
       "id": 100025,
-      "name": "2011-2012 Летние Петрозаводские сборы, Контест Киевского и Харьковского НУ",
+      "name": "2011-2012 Petrozavodsk Summer Training Camp, Kyiv + Kharkov NU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100026": {
       "id": 100026,
-      "name": "2011-2012 Зимние Петрозаводские сборы, Контест Саратовского ГУ (кубок ГК, Поволжья)",
+      "name": "2011-2012 Petrozavodsk Winter Training Camp, Saratov SU Contest",
       "startTimeSeconds": 1506690600,
       "durationSeconds": 18000
     },
@@ -184257,13 +184257,13 @@
     },
     "100030": {
       "id": 100030,
-      "name": "2012, V Самарская областная межвузовская олимпиада по программированию",
+      "name": "2012, V Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100032": {
       "id": 100032,
-      "name": "2012 Турнир ICL",
+      "name": "2012 ICL Сup",
       "startTimeSeconds": 1335081600,
       "durationSeconds": 18000
     },
@@ -184347,7 +184347,7 @@
     },
     "100050": {
       "id": 100050,
-      "name": "2012 Russian Code Cup, квалификация 1",
+      "name": "2012 Russian Code Cup, Qualification 1",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -184419,13 +184419,13 @@
     },
     "100065": {
       "id": 100065,
-      "name": "2011-2012 международная открытая олимпиада KPI-Open 2012, тур 1",
+      "name": "2011-2012 internation open olympiad KPI-Open 2012, round 1",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
     "100066": {
       "id": 100066,
-      "name": "2011-2012 международная открытая олимпиада KPI-Open 2012, тур 2",
+      "name": "2011-2012 internation open olympiad KPI-Open 2012, round 2",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184491,7 +184491,7 @@
     },
     "100078": {
       "id": 100078,
-      "name": "2007-2008 ACM-ICPC, NEERC, Северный четвертьфинал (NEERC 07)",
+      "name": "2007–2008 ACM ICPC Northern Subregional Contest (NEERC 07)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184563,7 +184563,7 @@
     },
     "100090": {
       "id": 100090,
-      "name": "2012, Отборочный контест СГАУ на четвертьфинал ACM ICPC",
+      "name": "2012, Samara SAU ACM ICPC Quarterfinal Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184599,7 +184599,7 @@
     },
     "100096": {
       "id": 100096,
-      "name": "2007-2008 Зимние Петрозаводские сборы, Контест Варшавского университета",
+      "name": "2007-2008 Petrozavodsk Winter Training Camp, Warsaw Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184647,7 +184647,7 @@
     },
     "100107": {
       "id": 100107,
-      "name": "2012-2013 ACM-ICPC, NEERC, Восточный четвертьфинал",
+      "name": "2012-2013 ACM-ICPC, NEERC, Eastern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184659,7 +184659,7 @@
     },
     "100109": {
       "id": 100109,
-      "name": "2012-2013 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2012-2013 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": 1485788400,
       "durationSeconds": 18000
     },
@@ -184677,13 +184677,13 @@
     },
     "100113": {
       "id": 100113,
-      "name": "2012-2013 ACM-ICPC, NEERC, Западный четвертьфинал",
+      "name": "2012-2013 ACM-ICPC, NEERC, Western Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100114": {
       "id": 100114,
-      "name": "2012-2013 ACM-ICPC, NEERC, Центральный четвертьфинал",
+      "name": "2012-2013 ACM-ICPC, NEERC, Central Subregional Contest",
       "startTimeSeconds": 1477559700,
       "durationSeconds": 18600
     },
@@ -184743,7 +184743,7 @@
     },
     "100125": {
       "id": 100125,
-      "name": "2012-2013 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2012-2013 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184827,13 +184827,13 @@
     },
     "100142": {
       "id": 100142,
-      "name": "2008-2009 V Международная Жаутыковская олимпиада по информатике",
+      "name": "2008-2009 V International Zhautykov Olympiad",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100143": {
       "id": 100143,
-      "name": "2009-2010 VI Международная Жаутыковская олимпиада по информатике",
+      "name": "2009-2010 VI International Zhautykov Olympiad",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184851,7 +184851,7 @@
     },
     "100147": {
       "id": 100147,
-      "name": "2010-2011 VII Международная Жаутыковская олимпиада по информатике",
+      "name": "2010-2011 VII International Zhautykov Olympiad",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184863,13 +184863,13 @@
     },
     "100151": {
       "id": 100151,
-      "name": "2011-2012 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2011-2012 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100153": {
       "id": 100153,
-      "name": "2007-2008 Летние Петрозаводские сборы, Andrew Stankevich Contest 26 (ASC 26)",
+      "name": "2007-2008 Summer Petrozavodsk Camp, Andrew Stankevich Contest 26 (ASC 26)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -184917,7 +184917,7 @@
     },
     "100162": {
       "id": 100162,
-      "name": "2012-2013 Зимние Петрозаводские сборы, Контест Саратовского ГУ (XIII Открытый Кубок, Гран-При Саратова)",
+      "name": "2012-2013 Petrozavodsk Winter Training Camp, Saratov SU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185019,7 +185019,7 @@
     },
     "100184": {
       "id": 100184,
-      "name": "2013 ACM-ICPC Ukraine, Первый этап (Четвертьфиналы)",
+      "name": "2013 ACM-ICPC Ukraine, Round 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185031,13 +185031,13 @@
     },
     "100186": {
       "id": 100186,
-      "name": "III (XIV) открытый командный студенческий чемпионат Поволжья по спортивному программированию",
+      "name": "III (XIV) Volga Region Open Team Student Programming Contest",
       "startTimeSeconds": 1381891200,
       "durationSeconds": 18300
     },
     "100187": {
       "id": 100187,
-      "name": "2013, VI Самарская областная межвузовская олимпиада по программированию",
+      "name": "2013, VI Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": 1446183000,
       "durationSeconds": 18000
     },
@@ -185079,37 +185079,37 @@
     },
     "100197": {
       "id": 100197,
-      "name": "2003-2004 Летние Петрозаводские сборы, Andrew Stankevich Contest 2 (ASC 2)",
+      "name": "2003-2004 Summer Petrozavodsk Camp, Andrew Stankevich Contest 2 (ASC 2)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100198": {
       "id": 100198,
-      "name": "2003-2004 Летние Петрозаводские сборы, Andrew Stankevich Contest 3 (ASC 3)",
+      "name": "2003-2004 Summer Petrozavodsk Camp, Andrew Stankevich Contest 3 (ASC 3)",
       "startTimeSeconds": null,
       "durationSeconds": 19800
     },
     "100199": {
       "id": 100199,
-      "name": "2002-2003 Зимние Петрозаводские сборы, Andrew Stankevich Contest 1 (ASC 1)",
+      "name": "2002-2003 Winter Petrozavodsk Camp, Andrew Stankevich Contest 1 (ASC 1)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100200": {
       "id": 100200,
-      "name": "2003-2004 Зимние Петрозаводские сборы, Andrew Stankevich Contest 4 (ASC 4)",
+      "name": "2003-2004 Winter Petrozavodsk Camp, Andrew Stankevich Contest 4 (ASC 4)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100201": {
       "id": 100201,
-      "name": "2003-2004 Зимние Петрозаводские сборы, Andrew Stankevich Contest 5 (ASC 5)",
+      "name": "2003-2004 Winter Petrozavodsk Camp, Andrew Stankevich Contest 5 (ASC 5)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100202": {
       "id": 100202,
-      "name": "2003-2004 Зимние Петрозаводские сборы, Andrew Stankevich Contest 6 (ASC 6)",
+      "name": "2003-2004 Winter Petrozavodsk Camp, Andrew Stankevich Contest 6 (ASC 6)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185121,7 +185121,7 @@
     },
     "100204": {
       "id": 100204,
-      "name": "2004-2005 Летние Петрозаводские сборы, Andrew Stankevich Contest 7 (ASC 7)",
+      "name": "2004-2005 Summer Petrozavodsk Camp, Andrew Stankevich Contest 7 (ASC 7)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185133,7 +185133,7 @@
     },
     "100206": {
       "id": 100206,
-      "name": "2009-2010 Летние Петрозаводские сборы, Goryinyich Challenge X",
+      "name": "2009-2010 Petrozavodsk Summer Training Camp, Goryinyich Challenge X",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185145,67 +185145,67 @@
     },
     "100210": {
       "id": 100210,
-      "name": "2004-2005 Летние Петрозаводские сборы, Andrew Stankevich Contest 8 (ASC 8)",
+      "name": "2004-2005 Summer Petrozavodsk Camp, Andrew Stankevich Contest 8 (ASC 8)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100211": {
       "id": 100211,
-      "name": "2004-2005 Летние Петрозаводские сборы, Andrew Stankevich Contest 9 (ASC 9)",
+      "name": "2004-2005 Summer Petrozavodsk Camp, Andrew Stankevich Contest 9 (ASC 9)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100212": {
       "id": 100212,
-      "name": "2004-2005 Зимние Петрозаводские сборы, Andrew Stankevich Contest 10 (ASC 10)",
+      "name": "2004-2005 Winter Petrozavodsk Camp, Andrew Stankevich Contest 10 (ASC 10)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100213": {
       "id": 100213,
-      "name": "2004-2005 Зимние Петрозаводские сборы, Andrew Stankevich Contest 11 (ASC 11)",
+      "name": "2004-2005 Winter Petrozavodsk Camp, Andrew Stankevich Contest 11 (ASC 11)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100215": {
       "id": 100215,
-      "name": "2004-2005 Зимние Петрозаводские сборы, Andrew Stankevich Contest 12 (ASC 12)",
+      "name": "2004-2005 Winter Petrozavodsk Camp, Andrew Stankevich Contest 12 (ASC 12)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100216": {
       "id": 100216,
-      "name": "2005-2006 Летние Петрозаводские сборы, Andrew Stankevich Contest 13 (ASC 13)",
+      "name": "2005-2006 Summer Petrozavodsk Camp, Andrew Stankevich Contest 13 (ASC 13)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100217": {
       "id": 100217,
-      "name": "2005-2006 Летние Петрозаводские сборы, Andrew Stankevich Contest 14 (ASC 14)",
+      "name": "2005-2006 Summer Petrozavodsk Camp, Andrew Stankevich Contest 14 (ASC 14)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100218": {
       "id": 100218,
-      "name": "2005-2006 Летние Петрозаводские сборы, Andrew Stankevich Contest 15 (ASC 15)",
+      "name": "2005-2006 Summer Petrozavodsk Camp, Andrew Stankevich Contest 15 (ASC 15)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100220": {
       "id": 100220,
-      "name": "2005-2006 Зимние Петрозаводские сборы, Andrew Stankevich Contest 16 (ASC 16)",
+      "name": "2005-2006 Winter Petrozavodsk Camp, Andrew Stankevich Contest 16 (ASC 16)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100221": {
       "id": 100221,
-      "name": "2005-2006 Зимние Петрозаводские сборы, Andrew Stankevich Contest 17 (ASC 17)",
+      "name": "2005-2006 Winter Petrozavodsk Camp, Andrew Stankevich Contest 17 (ASC 17)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100222": {
       "id": 100222,
-      "name": "2005-2006 Зимние Петрозаводские сборы, Andrew Stankevich Contest 18 (ASC 18)",
+      "name": "2005-2006 Winter Petrozavodsk Camp, Andrew Stankevich Contest 18 (ASC 18)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185283,7 +185283,7 @@
     },
     "100243": {
       "id": 100243,
-      "name": "2007-2008 Летние Петрозаводские сборы, Andrew Stankevich Contest 27 (ASC 27)",
+      "name": "2007-2008 Summer Petrozavodsk Camp, Andrew Stankevich Contest 27 (ASC 27)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185307,7 +185307,7 @@
     },
     "100247": {
       "id": 100247,
-      "name": "2013, Отборочный контест СГАУ на четвертьфинал ACM ICPC",
+      "name": "2013, Samara SAU ACM ICPC Quarterfinal Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185337,7 +185337,7 @@
     },
     "100253": {
       "id": 100253,
-      "name": "2013-2014 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2013-2014 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": 1509003000,
       "durationSeconds": 18000
     },
@@ -185355,7 +185355,7 @@
     },
     "100257": {
       "id": 100257,
-      "name": "2013-2014 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2013-2014 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185385,7 +185385,7 @@
     },
     "100269": {
       "id": 100269,
-      "name": "2013-2014 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2013-2014 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185403,13 +185403,13 @@
     },
     "100276": {
       "id": 100276,
-      "name": "2013-2014 Открытая Всесибирская олимпиада по программированию имени И.В. Поттосина: Интернет-тур",
+      "name": "2013-2014 Wide-Siberian Olympiad: Online round",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100279": {
       "id": 100279,
-      "name": "2012-2013 международная открытая олимпиада KPI-Open 2013, тур 1",
+      "name": "2012-2013 international open olympiad KPI-Open 2013, round 1",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -185433,7 +185433,7 @@
     },
     "100285": {
       "id": 100285,
-      "name": "2013-2014 ACM-ICPC, NEERC, Восточный четвертьфинал",
+      "name": "2013-2014 ACM-ICPC, NEERC, Eastern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185475,7 +185475,7 @@
     },
     "100297": {
       "id": 100297,
-      "name": "2012-2013 международная открытая олимпиада KPI-Open 2013, тур 2",
+      "name": "2012-2013 international open olympiad KPI-Open 2013, round 2",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185523,61 +185523,61 @@
     },
     "100324": {
       "id": 100324,
-      "name": "2006-2007 Летние Петрозаводские сборы, Andrew Stankevich Contest 19 (ASC 19)",
+      "name": "2006-2007 Summer Petrozavodsk Camp, Andrew Stankevich Contest 19 (ASC 19)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100325": {
       "id": 100325,
-      "name": "2006-2007 Летние Петрозаводские сборы, Andrew Stankevich Contest 20 (ASC 20)",
+      "name": "2006-2007 Summer Petrozavodsk Camp, Andrew Stankevich Contest 20 (ASC 20)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100337": {
       "id": 100337,
-      "name": "2006-2007 Летние Петрозаводские сборы, Andrew Stankevich Contest 21 (ASC 21)",
+      "name": "2006-2007 Summer Petrozavodsk Camp, Andrew Stankevich Contest 21 (ASC 21)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100338": {
       "id": 100338,
-      "name": "2006-2007 Зимние Петрозаводские сборы, Andrew Stankevich Contest 22 (ASC 22)",
+      "name": "2006-2007 Winter Petrozavodsk Camp, Andrew Stankevich Contest 22 (ASC 22)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100339": {
       "id": 100339,
-      "name": "2006-2007 Зимние Петрозаводские сборы, Andrew Stankevich Contest 23 (ASC 23)",
+      "name": "2006-2007 Winter Petrozavodsk Camp, Andrew Stankevich Contest 23 (ASC 23)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100340": {
       "id": 100340,
-      "name": "2006-2007 Зимние Петрозаводские сборы, Andrew Stankevich Contest 24 (ASC 24)",
+      "name": "2006-2007 Winter Petrozavodsk Camp, Andrew Stankevich Contest 24 (ASC 24)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100341": {
       "id": 100341,
-      "name": "2007-2008 Летние Петрозаводские сборы, Andrew Stankevich Contest 25 (ASC 25)",
+      "name": "2007-2008 Summer Petrozavodsk Camp, Andrew Stankevich Contest 25 (ASC 25)",
       "startTimeSeconds": 1473566400,
       "durationSeconds": 18000
     },
     "100342": {
       "id": 100342,
-      "name": "2007-2008 Зимние Петрозаводские сборы, Andrew Stankevich Contest 28 (ASC 28)",
+      "name": "2007-2008 Winter Petrozavodsk Camp, Andrew Stankevich Contest 28 (ASC 28)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100343": {
       "id": 100343,
-      "name": "2007-2008 Зимние Петрозаводские сборы, Andrew Stankevich Contest 29 (ASC 29)",
+      "name": "2007-2008 Winter Petrozavodsk Camp, Andrew Stankevich Contest 29 (ASC 29)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100345": {
       "id": 100345,
-      "name": "2007-2008 Зимние Петрозаводские сборы, Andrew Stankevich Contest 30 (ASC 30)",
+      "name": "2007-2008 Winter Petrozavodsk Camp, Andrew Stankevich Contest 30 (ASC 30)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185595,7 +185595,7 @@
     },
     "100357": {
       "id": 100357,
-      "name": "2008-2009 Летние Петрозаводские сборы, Andrew Stankevich Contest 31 (ASC 31)",
+      "name": "2008-2009 Summer Petrozavodsk Camp, Andrew Stankevich Contest 31 (ASC 31)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185607,91 +185607,91 @@
     },
     "100363": {
       "id": 100363,
-      "name": "2008-2009 Зимние Петрозаводские сборы, Andrew Stankevich Contest 33 (ASC 33)",
+      "name": "2008-2009 Winter Petrozavodsk Camp, Andrew Stankevich Contest 33 (ASC 33)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100365": {
       "id": 100365,
-      "name": "2008-2009 Зимние Петрозаводские сборы, Andrew Stankevich Contest 34 (ASC 34)",
+      "name": "2008-2009 Winter Petrozavodsk Camp, Andrew Stankevich Contest 34 (ASC 34)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100371": {
       "id": 100371,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 1 (Е. Капун). Высшая лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 1 (E. Kapun). High league",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
     "100372": {
       "id": 100372,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 2 (С. Нагин). Юниорская лига",
+      "name": "Training 2016.10.05 solo",
       "startTimeSeconds": 1485583200,
       "durationSeconds": 10800
     },
     "100373": {
       "id": 100373,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 2 (С. Нагин). Высшая лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 2 (S. Nagin). High league",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
     "100374": {
       "id": 100374,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 3 (А. Шмелев). Юниорская лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 3 (A. Shmelev). Junior league",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100375": {
       "id": 100375,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 3 (А. Шмелев). Высшая лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 3 (A. Shmelev). High league",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100376": {
       "id": 100376,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 4 (Я. Твердохлеб, Р. Едемский). Юниорская лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 4 (I. Tverdokhlib, R. Edemskiy). Junior league",
       "startTimeSeconds": 1480151700,
       "durationSeconds": 14400
     },
     "100377": {
       "id": 100377,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 4 (Я. Твердохлеб, Р. Едемский). Высшая лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 4 (Y. Tverdokhleb, R. Iedemskyi). High league",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
     "100379": {
       "id": 100379,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 6 (Н. Бондаренко). Высшая лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 6 (N. Bondarenko). High league",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100380": {
       "id": 100380,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 7 (С. Копелиович)",
+      "name": "2014 Winter Programming School, Kharkiv, day 7 (S. Kopeliovich)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100382": {
       "id": 100382,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 8 (Команда Akai). Юниорская лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 8 (Team Akai). Junior league",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100383": {
       "id": 100383,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 8 (Команда Akai). Высшая лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 8 (Team Akai). High league",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100384": {
       "id": 100384,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 9 (В. Неспирный). Юниорская лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 9 (V. Nespirtny). Junior league",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100385": {
       "id": 100385,
-      "name": "2014 Зимняя школа по программированию, Харьков, день 9 (В. Неспирный). Высшая лига",
+      "name": "2014 Winter Programming School, Kharkiv, day 9 (V. Nespirtny). High league",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185727,7 +185727,7 @@
     },
     "100402": {
       "id": 100402,
-      "name": "2008-2009 Летние Петрозаводские сборы, Andrew Stankevich Contest 32 (ASC 32)",
+      "name": "2008-2009 Summer Petrozavodsk Camp, Andrew Stankevich Contest 32 (ASC 32)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185763,19 +185763,19 @@
     },
     "100417": {
       "id": 100417,
-      "name": "2009-2010 Летние Петрозаводские сборы, Andrew Stankevich Contest 35 (ASC 35)",
+      "name": "2009-2010 Summer Petrozavodsk Camp, Andrew Stankevich Contest 35 (ASC 35)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100418": {
       "id": 100418,
-      "name": "2013-2014 Открытый чемпионат БГУИР по программированию. Финал",
+      "name": "2013-2014 BSUIR Open Programming Championship. Final",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100419": {
       "id": 100419,
-      "name": "2013-2014 Открытый чемпионат БГУИР по программированию. Полуфинал",
+      "name": "2013-2014 BSUIR Open Programming Championship 2014. Semifinal",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -185787,7 +185787,7 @@
     },
     "100425": {
       "id": 100425,
-      "name": "2014 VIII Открытая олимпиада ЮФУ по программированию. Финал командного турнира.",
+      "name": "2014 VIII SFU Open Programming Contest. Team Final.",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185799,25 +185799,25 @@
     },
     "100427": {
       "id": 100427,
-      "name": "2014 VIII Открытая олимпиада ЮФУ по программированию. Финал личного турнира.",
+      "name": "2014 VIII SFU Open Programming Contest. Personal Final.",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
     "100430": {
       "id": 100430,
-      "name": "2009-2010 Летние Петрозаводские сборы, Andrew Stankevich Contest 36 (ASC 36)",
+      "name": "2009-2010 Summer Petrozavodsk Camp, Andrew Stankevich Contest 36 (ASC 36)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100431": {
       "id": 100431,
-      "name": "2009-2010 Зимние Петрозаводские сборы, Andrew Stankevich Contest 37 (ASC 37)",
+      "name": "2009-2010 Winter Petrozavodsk Camp, Andrew Stankevich Contest 37 (ASC 37)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100436": {
       "id": 100436,
-      "name": "2014 Яндекс.Алгоритм - Разминочный раунд",
+      "name": "2014 Yandex.Algorithm - Warmup Round",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
@@ -185853,19 +185853,19 @@
     },
     "100448": {
       "id": 100448,
-      "name": "2014 Яндекс.Алгоритм - Отборочный этап, раунд 1",
+      "name": "2014 Yandex.Algorithm - Elimination Stage, Online Round 1",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "100451": {
       "id": 100451,
-      "name": "2013-2014 Зимние Петрозаводские сборы, Контест Саратовского ГУ (XIV Открытый Кубок, Гран-При Саратова)",
+      "name": "2013-2014 Petrozavodsk Winter Training Camp, Saratov SU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100453": {
       "id": 100453,
-      "name": "2014 Яндекс.Алгоритм - Отборочный этап, раунд 2",
+      "name": "2014 Yandex.Algorithm - Elimination Stage, Online Round 2",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
@@ -185877,13 +185877,13 @@
     },
     "100459": {
       "id": 100459,
-      "name": "2014 Яндекс.Алгоритм - Отборочный этап, раунд 3",
+      "name": "2014 Yandex.Algorithm - Elimination Stage, Online Round 3",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "100460": {
       "id": 100460,
-      "name": "2014, VII Самарская областная межвузовская олимпиада по программированию",
+      "name": "2014, VII Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": 1494072600,
       "durationSeconds": 18000
     },
@@ -185895,7 +185895,7 @@
     },
     "100467": {
       "id": 100467,
-      "name": "2014 Туймаада, день 1",
+      "name": "2014 Tuymaada, Day 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185919,25 +185919,25 @@
     },
     "100488": {
       "id": 100488,
-      "name": "2014, Отборочный контест СГАУ на четвертьфинал ACM ICPC",
+      "name": "2014, Samara SAU ACM ICPC Quarterfinal Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100490": {
       "id": 100490,
-      "name": "2010-2011 Летние Петрозаводские сборы, Andrew Stankevich Contest 38 (ASC 38)",
+      "name": "2010-2011 Summer Petrozavodsk Camp, Andrew Stankevich Contest 38 (ASC 38)",
       "startTimeSeconds": 1496997000,
       "durationSeconds": 18000
     },
     "100491": {
       "id": 100491,
-      "name": "2010-2011 Зимние Петрозаводские сборы, Andrew Stankevich Contest 39 (ASC 39)",
+      "name": "2010-2011 Winter Petrozavodsk Camp, Andrew Stankevich Contest 39 (ASC 39)",
       "startTimeSeconds": 1497258900,
       "durationSeconds": 18000
     },
     "100492": {
       "id": 100492,
-      "name": "2011-2012 Летние Петрозаводские сборы, Andrew Stankevich Contest 40 (ASC 40)",
+      "name": "2011-2012 Summer Petrozavodsk Camp, Andrew Stankevich Contest 40 (ASC 40)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185961,7 +185961,7 @@
     },
     "100496": {
       "id": 100496,
-      "name": "2011-2012 Зимние Петрозаводские сборы, Andrew Stankevich Contest 41 (ASC 41)",
+      "name": "2011-2012 Winter Petrozavodsk Camp, Andrew Stankevich Contest 41 (ASC 41)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -185997,7 +185997,7 @@
     },
     "100503": {
       "id": 100503,
-      "name": "2014-2015 CT S02E05: Codeforces Trainings Season 2 Episode 5 - 2009-2010 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2014-2015 CT S02E05: Codeforces Trainings Season 2 Episode 5 - 2009-2010 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": 1412856600,
       "durationSeconds": 16200
     },
@@ -186021,19 +186021,19 @@
     },
     "100507": {
       "id": 100507,
-      "name": "2014-2015 ACM-ICPC, NEERC, Восточный четвертьфинал",
+      "name": "2014-2015 ACM-ICPC, NEERC, Eastern Subregional Contest",
       "startTimeSeconds": 1496383200,
       "durationSeconds": 18000
     },
     "100512": {
       "id": 100512,
-      "name": "2012-2013 Летние Петрозаводские сборы, Andrew Stankevich Contest 42 (ASC 42)",
+      "name": "2012-2013 Summer Petrozavodsk Camp, Andrew Stankevich Contest 42 (ASC 42)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100513": {
       "id": 100513,
-      "name": "2014-2015 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2014-2015 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": 1441177200,
       "durationSeconds": 18000
     },
@@ -186057,25 +186057,25 @@
     },
     "100517": {
       "id": 100517,
-      "name": "2012-2013 Зимние Петрозаводские сборы, Andrew Stankevich Contest 43 (ASC 43)",
+      "name": "2012-2013 Winter Petrozavodsk Camp, Andrew Stankevich Contest 43 (ASC 43)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100518": {
       "id": 100518,
-      "name": "2013-2014 Летние Петрозаводские сборы, Andrew Stankevich Contest 44 (ASC 44)",
+      "name": "2013-2014 Summer Petrozavodsk Camp, Andrew Stankevich Contest 44 (ASC 44)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100519": {
       "id": 100519,
-      "name": "2014-2015 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2014-2015 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100520": {
       "id": 100520,
-      "name": "2013-2014 Зимние Петрозаводские сборы, Andrew Stankevich Contest 45 (ASC 45)",
+      "name": "2013-2014 Winter Petrozavodsk Camp, Andrew Stankevich Contest 45 (ASC 45)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186087,7 +186087,7 @@
     },
     "100524": {
       "id": 100524,
-      "name": "2014-2015 Летние Петрозаводские сборы, Andrew Stankevich Contest 46 (ASC 46)",
+      "name": "2014-2015 Summer Petrozavodsk Camp, Andrew Stankevich Contest 46 (ASC 46)",
       "startTimeSeconds": 1437453960,
       "durationSeconds": 18000
     },
@@ -186111,7 +186111,7 @@
     },
     "100531": {
       "id": 100531,
-      "name": "2014-2015 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2014-2015 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186177,7 +186177,7 @@
     },
     "100551": {
       "id": 100551,
-      "name": "Dynamic Connectivity Training",
+      "name": "Dynamic connectivity contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186315,19 +186315,19 @@
     },
     "100608": {
       "id": 100608,
-      "name": "2014-2015 Зимние Петрозаводские сборы, Andrew Stankevich Contest 47 (ASC 47)",
+      "name": "2014-2015 Winter Petrozavodsk Camp, Andrew Stankevich Contest 47 (ASC 47)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100609": {
       "id": 100609,
-      "name": "2011-2012 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2011-2012 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": 1475901300,
       "durationSeconds": 18000
     },
     "100610": {
       "id": 100610,
-      "name": "2010-2011 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2010-2011 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": 1470112200,
       "durationSeconds": 18000
     },
@@ -186339,13 +186339,13 @@
     },
     "100622": {
       "id": 100622,
-      "name": "2009-2010 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2009-2010 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100623": {
       "id": 100623,
-      "name": "2008-2009 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2008-2009 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": 1458892800,
       "durationSeconds": 18000
     },
@@ -186381,13 +186381,13 @@
     },
     "100633": {
       "id": 100633,
-      "name": "2015 XV Открытый командный турнир по программированию среди студентов и школьников РТ, Div. 1 (ICL 15, Div. 1)",
+      "name": "2015 ICL, Finals, Div. 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100637": {
       "id": 100637,
-      "name": "2015 XV Открытый командный турнир по программированию среди студентов и школьников РТ, Div. 2 (ICL 15, Div. 2)",
+      "name": "2015 ICL, Finals, Div. 2",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186495,7 +186495,7 @@
     },
     "100685": {
       "id": 100685,
-      "name": "2012-2013 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2012-2013 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": 1501407000,
       "durationSeconds": 18000
     },
@@ -186519,7 +186519,7 @@
     },
     "100694": {
       "id": 100694,
-      "name": "2015, VIII Самарская областная межвузовская олимпиада по программированию",
+      "name": "2015, VIII Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186543,7 +186543,7 @@
     },
     "100703": {
       "id": 100703,
-      "name": "V (XVI) открытый командный студенческий чемпионат Поволжья по спортивному программированию",
+      "name": "2015 V (XVI) Volga Region Open Team Student Programming Contest",
       "startTimeSeconds": 1434873600,
       "durationSeconds": 18000
     },
@@ -186561,7 +186561,7 @@
     },
     "100714": {
       "id": 100714,
-      "name": "2010-2011 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2010-2011 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": 1485356400,
       "durationSeconds": 18000
     },
@@ -186615,7 +186615,7 @@
     },
     "100725": {
       "id": 100725,
-      "name": "2003-2004 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2003-2004 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186681,7 +186681,7 @@
     },
     "100765": {
       "id": 100765,
-      "name": "2005-2006 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2005-2006 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": 1485576000,
       "durationSeconds": 18000
     },
@@ -186759,7 +186759,7 @@
     },
     "100792": {
       "id": 100792,
-      "name": "2015-2016 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2015-2016 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186789,7 +186789,7 @@
     },
     "100801": {
       "id": 100801,
-      "name": "2015-2016 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2015-2016 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": 1476935100,
       "durationSeconds": 18000
     },
@@ -186837,7 +186837,7 @@
     },
     "100812": {
       "id": 100812,
-      "name": "2015, Отборочный контест СГАУ на четвертьфинал ACM ICPC",
+      "name": "2015, Samara SAU ACM ICPC Quarterfinal Qualification Contest",
       "startTimeSeconds": 1447804800,
       "durationSeconds": 18000
     },
@@ -186903,13 +186903,13 @@
     },
     "100834": {
       "id": 100834,
-      "name": "VIII открытый командный чемпионат КФУ по программированию 2015",
+      "name": "VIII Open Programming Championship of Kazan Federal University 2015",
       "startTimeSeconds": 1448704800,
       "durationSeconds": 18000
     },
     "100837": {
       "id": 100837,
-      "name": "2009-2010 Летние Петрозаводские сборы, Japanese Contest 3, 2009-08-27",
+      "name": "2009-2010 Summer Petrozavodsk Camp, Japanese Contest 3, 2009-08-27",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186945,37 +186945,37 @@
     },
     "100860": {
       "id": 100860,
-      "name": "2007-2008 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2007-2008 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100861": {
       "id": 100861,
-      "name": "2008-2009 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2008-2009 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100863": {
       "id": 100863,
-      "name": "2011-2012 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2011-2012 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100864": {
       "id": 100864,
-      "name": "2009-2010 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2009-2010 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": 1474689600,
       "durationSeconds": 18000
     },
     "100866": {
       "id": 100866,
-      "name": "2005-2006 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2005-2006 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100867": {
       "id": 100867,
-      "name": "2004-2005 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2004-2005 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -186993,7 +186993,7 @@
     },
     "100876": {
       "id": 100876,
-      "name": "2006-2007 Зимние Петрозаводские сборы, контест Белорусского ГУ",
+      "name": "2006-2007 Winter Petrozavodsk Camp, Belarussian SU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187035,7 +187035,7 @@
     },
     "100886": {
       "id": 100886,
-      "name": "2015-2016 Зимние Петрозаводские сборы, Контест Саратовского ГУ (XVI Открытый Кубок, Гран-При Саратова)",
+      "name": "2015-2016 Petrozavodsk Winter Training Camp, Saratov SU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187053,7 +187053,7 @@
     },
     "100905": {
       "id": 100905,
-      "name": "Заключительный этап Открытой Олимпиады Университета Иннополис. 2015-2016",
+      "name": "Innopolis Open, Final round, 2015-2016",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187089,13 +187089,13 @@
     },
     "100917": {
       "id": 100917,
-      "name": "2015-2016 XVI Открытый Кубок, Гран-При Башкортостана, второй тур кубка СКБ Контур",
+      "name": "2015-2016 XVI Open Cup, Grand Prix of Bashkortostan, SKB Kontur Cup Stage 2",
       "startTimeSeconds": 1457209800,
       "durationSeconds": 18000
     },
     "100920": {
       "id": 100920,
-      "name": "2010-2011 IX Открытый Кубок, онсайт, 2-я летняя школа Яндекс",
+      "name": "IX Open Cup Onsite Finals, II Yandex Summer School",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187125,13 +187125,13 @@
     },
     "100941": {
       "id": 100941,
-      "name": "2008-2009 Летние Петрозаводские сборы, Petrozavodsk SU Wx Contest",
+      "name": "2008-2009 Summer Petrozavodsk Camp, Petrozavodsk SU Wx Contest",
       "startTimeSeconds": 1458392700,
       "durationSeconds": 18000
     },
     "100942": {
       "id": 100942,
-      "name": "XVI Открытый командный турнир по программированию среди студентов и школьников РТ",
+      "name": "ICL 2016 (XVI Open Cup, Grand Prix of Tatarstan)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187161,31 +187161,31 @@
     },
     "100956": {
       "id": 100956,
-      "name": "2015-2016 Зимние Петрозаводские сборы, Контест СПбГУ + СПбАУ",
+      "name": "2015-2016 Petrozavodsk Winter Training Camp, SPb SU + SPb AU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100957": {
       "id": 100957,
-      "name": "2016 (IV) олимпиада МИСиС по программированию, очный тур",
+      "name": "2016 (IV) Olympiad of MISiS, Final Round",
       "startTimeSeconds": 1474189200,
       "durationSeconds": 18000
     },
     "100958": {
       "id": 100958,
-      "name": "2014-2015 Зимние Петрозаводские сборы, Contest.58 (контест Makoto rng_58 Soejima)",
+      "name": "2014-2015 Petrozavodsk Winter Training Camp, Contest.58 (Makoto rng_58 Soejima contest)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100959": {
       "id": 100959,
-      "name": "2015-2016 Зимние Петрозаводские сборы, Контест Makoto rng_58 Soejima 4",
+      "name": "2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4",
       "startTimeSeconds": 1485617400,
       "durationSeconds": 18000
     },
     "100960": {
       "id": 100960,
-      "name": "2015-2016 Зимние Петрозаводские сборы, Контест Нижегородского ГУ",
+      "name": "2015-2016 Petrozavodsk Winter Training Camp, Nizhny Novgorod SU Contest",
       "startTimeSeconds": 1485183600,
       "durationSeconds": 18000
     },
@@ -187197,31 +187197,31 @@
     },
     "100962": {
       "id": 100962,
-      "name": "2015-2016 Зимние Петрозаводские сборы, Контест Moscow SU Trinity",
+      "name": "2015-2016 Petrozavodsk Winter Training Camp, Moscow SU Trinity Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100963": {
       "id": 100963,
-      "name": "2007-2008 Летние Петрозаводские сборы, Japanese Contest, 2007-08-29",
+      "name": "2007-2008 Summer Petrozavodsk Camp, Japanese Contest, 2007-08-29",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100965": {
       "id": 100965,
-      "name": "2009-2010 Зимние Петрозаводские сборы, Moscow SU Unpredictable + SE + old ST Contest",
+      "name": "2009-2010 Petrozavodsk Winter Training Camp, Moscow SU Unpredictable + SE + old ST Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "100971": {
       "id": 100971,
-      "name": "2016, IX Самарская областная межвузовская олимпиада по программированию",
+      "name": "2016, IX Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": 1493467800,
       "durationSeconds": 18000
     },
     "100975": {
       "id": 100975,
-      "name": "2003-2004 Летние Петрозаводские сборы, Контест Саратовского ГУ",
+      "name": "2003-2004 Petrozavodsk Summer Training Camp, Saratov SU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187257,13 +187257,13 @@
     },
     "100993": {
       "id": 100993,
-      "name": "2016 Russian Code Cup (RCC 16), 1-й квалификационный раунд",
+      "name": "2016 Russian Code Cup (RCC 16), 1st qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
     "100994": {
       "id": 100994,
-      "name": "2016 Russian Code Cup (RCC 16), Разогревочный раунд",
+      "name": "WarmUp round",
       "startTimeSeconds": 1511942400,
       "durationSeconds": 7200
     },
@@ -187281,13 +187281,13 @@
     },
     "101010": {
       "id": 101010,
-      "name": "2016 Russian Code Cup (RCC 16), 2-й квалификационный раунд",
+      "name": "2016 Russian Code Cup (RCC 16), 2nd qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
     "101016": {
       "id": 101016,
-      "name": "2016 Russian Code Cup (RCC 16), 3-й квалификационный раунд",
+      "name": "2016 Russian Code Cup (RCC 16), 3rd qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -187299,13 +187299,13 @@
     },
     "101021": {
       "id": 101021,
-      "name": "Пробный тур с примером интерактивной задачи",
+      "name": "Interactive Problem Training Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101026": {
       "id": 101026,
-      "name": "2016 Russian Code Cup (RCC 16), Elimination Round",
+      "name": "2016 Russian Code Cup (RCC 16), отборочный раунд",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -187383,13 +187383,13 @@
     },
     "101096": {
       "id": 101096,
-      "name": "2016 Олимпиада мегаполисов, день 1",
+      "name": "2016 International Olympiad of Metropolises, day 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101097": {
       "id": 101097,
-      "name": "2011-2012 Летние Петрозаводские сборы, Warsaw U Contest, 2011-09-11",
+      "name": "2011-2012 Summer Petrozavodsk Camp, Warsaw U Contest, 2011-09-11",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187449,7 +187449,7 @@
     },
     "101137": {
       "id": 101137,
-      "name": "2016-2017 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2016-2017 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": 1492745700,
       "durationSeconds": 18000
     },
@@ -187461,7 +187461,7 @@
     },
     "101142": {
       "id": 101142,
-      "name": "2016-2017 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2016-2017 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187473,7 +187473,7 @@
     },
     "101149": {
       "id": 101149,
-      "name": "2016, Отборочный контест Самарского университета на четвертьфинал ACM ICPC",
+      "name": "2016, Samara University ACM ICPC Quarterfinal Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187569,7 +187569,7 @@
     },
     "101182": {
       "id": 101182,
-      "name": "Отборочный этап Открытой Олимпиады Университета Иннополис. Второй тур. 2016-2017",
+      "name": "Innopolis Open, Elimination round, 2016-2017",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187593,19 +187593,19 @@
     },
     "101191": {
       "id": 101191,
-      "name": "2014-2015 V Открытый Чемпионат БГУИР по программированию",
+      "name": "2014-2015 V BSUIR Open Programming Championship",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101192": {
       "id": 101192,
-      "name": "2015-2016 VI Открытый чемпионат БГУИР по программированию. Полуфинал",
+      "name": "2015-2016 6th BSUIR Open Programming Contest. Semifinal",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101193": {
       "id": 101193,
-      "name": "2015-2016 VI Открытый чемпионат БГУИР по программированию. Финал",
+      "name": "2015-2016 6th BSUIR Open Programming Contest. Final",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187695,7 +187695,7 @@
     },
     "101237": {
       "id": 101237,
-      "name": "2013-2014 Зимние Петрозаводские сборы, Контест Moscow SU Trinity",
+      "name": "2013-2014 Petrozavodsk Winter Training Camp, Moscow SU Trinity Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187713,7 +187713,7 @@
     },
     "101241": {
       "id": 101241,
-      "name": "2013-2014 Открытая Всесибирская олимпиада по программированию имени И.В. Поттосина: Очный тур",
+      "name": "2013-2014 Wide-Siberian Olympiad: Onsite round",
       "startTimeSeconds": 1485529200,
       "durationSeconds": 18000
     },
@@ -187725,7 +187725,7 @@
     },
     "101243": {
       "id": 101243,
-      "name": "2016-2017 ACM-ICPC, NEERC, Центральный четвертьфинал",
+      "name": "2016-2017 ACM-ICPC, NEERC, Central Subregional Contest",
       "startTimeSeconds": 1496030700,
       "durationSeconds": 18000
     },
@@ -187737,13 +187737,13 @@
     },
     "101246": {
       "id": 101246,
-      "name": "2010-2011 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2010-2011 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": 1492571100,
       "durationSeconds": 18000
     },
     "101252": {
       "id": 101252,
-      "name": "2009-2010 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2009-2010 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": 1500264000,
       "durationSeconds": 18000
     },
@@ -187941,25 +187941,25 @@
     },
     "101311": {
       "id": 101311,
-      "name": "2017 Russian Code Cup (RCC 17), Разогревочный раунд",
+      "name": "2017 Russian Code Cup (RCC 17), WarmUp round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
     "101315": {
       "id": 101315,
-      "name": "Квалификационнный тур Чемпионата ВШ ЭКН по программированию",
+      "name": "Qualification Round of the Championship 2017",
       "startTimeSeconds": 1491051600,
       "durationSeconds": 10800
     },
     "101319": {
       "id": 101319,
-      "name": "2016-2017 Открытая олимпиада школьников по программированию, заключительный этап, тур 1",
+      "name": "2016-2017 Moscow Open Olympiad in Informatics, day 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101320": {
       "id": 101320,
-      "name": "2016-2017 Открытая олимпиада школьников по программированию, заключительный этап, тур 2",
+      "name": "2016-2017 Moscow Open Olympiad in Informatics, second day",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -187983,13 +187983,13 @@
     },
     "101336": {
       "id": 101336,
-      "name": "2017 Russian Code Cup (RCC 17), 1-й квалификационный раунд",
+      "name": "2017 Russian Code Cup (RCC 17), 1st qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
     "101341": {
       "id": 101341,
-      "name": "2017, X Самарская областная межвузовская олимпиада по программированию",
+      "name": "2017, X Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": 1496452200,
       "durationSeconds": 18000
     },
@@ -188013,7 +188013,7 @@
     },
     "101355": {
       "id": 101355,
-      "name": "2017 Russian Code Cup (RCC 17), 2-й квалификационный раунд",
+      "name": "2017 Russian Code Cup (RCC 17), 2nd qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -188025,43 +188025,43 @@
     },
     "101365": {
       "id": 101365,
-      "name": "2006-2007 Летние Петрозаводские сборы, Petr Mitrichev Contest 1",
+      "name": "2006-2007 Summer Petrozavodsk Camp, Petr Mitrichev Contest 1",
       "startTimeSeconds": 1496910600,
       "durationSeconds": 18000
     },
     "101366": {
       "id": 101366,
-      "name": "2006-2007 Зимние Петрозаводские сборы, Petr Mitrichev Contest 2",
+      "name": "2006-2007 Winter Petrozavodsk Camp, Petr Mitrichev Contest 2",
       "startTimeSeconds": 1497067200,
       "durationSeconds": 18000
     },
     "101367": {
       "id": 101367,
-      "name": "2007-2008 Летние Петрозаводские сборы, Petr Mitrichev Contest 3",
+      "name": "2007-2008 Summer Petrozavodsk Camp, Petr Mitrichev Contest 3",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101368": {
       "id": 101368,
-      "name": "2008-2009 Зимние Петрозаводские сборы, Petr Mitrichev Contest 4",
+      "name": "2008-2009 Winter Petrozavodsk Camp, Petr Mitrichev Contest 4",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101370": {
       "id": 101370,
-      "name": "2009-2010 Летние Петрозаводские сборы, Petr Mitrichev Contest 5",
+      "name": "2009-2010 Summer Petrozavodsk Camp, Petr Mitrichev Contest 5",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101371": {
       "id": 101371,
-      "name": "2009-2010 Зимние Петрозаводские сборы, Petr Mitrichev Contest 6",
+      "name": "2009-2010 Winter Petrozavodsk Camp, Petr Mitrichev Contest 6",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101372": {
       "id": 101372,
-      "name": "2017 Russian Code Cup (RCC 17), 3-й квалификационный раунд",
+      "name": "2017 Russian Code Cup (RCC 17), 3rd qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -188079,25 +188079,25 @@
     },
     "101380": {
       "id": 101380,
-      "name": "2010-2011 Летние Петрозаводские сборы, Petr Mitrichev Contest 7",
+      "name": "2010-2011 Summer Petrozavodsk Camp, Petr Mitrichev Contest 7",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101382": {
       "id": 101382,
-      "name": "2010-2011 Зимние Петрозаводские сборы, Petr Mitrichev Contest 8",
+      "name": "2010-2011 Winter Petrozavodsk Camp, Petr Mitrichev Contest 8",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101383": {
       "id": 101383,
-      "name": "2011-2012 Летние Петрозаводские сборы, Petr Mitrichev Contest 9",
+      "name": "2011-2012 Summer Petrozavodsk Camp, Petr Mitrichev Contest 9",
       "startTimeSeconds": 1496822400,
       "durationSeconds": 18000
     },
     "101385": {
       "id": 101385,
-      "name": "2014-2015 Летние Петрозаводские сборы, Petr Mitrichev Contest 12",
+      "name": "2014-2015 Summer Petrozavodsk Camp, Petr Mitrichev Contest 12",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -188115,7 +188115,7 @@
     },
     "101397": {
       "id": 101397,
-      "name": "2017 Russian Code Cup (RCC 17), отборочный раунд",
+      "name": "2017 Russian Code Cup (RCC 17), Elimination Round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -188145,19 +188145,19 @@
     },
     "101409": {
       "id": 101409,
-      "name": "2010-2011 ACM-ICPC, NEERC, Западный четвертьфинал",
+      "name": "2010-2011 ACM-ICPC, NEERC, Western Subregional Contest",
       "startTimeSeconds": 1509369000,
       "durationSeconds": 18000
     },
     "101410": {
       "id": 101410,
-      "name": "2011-2012 ACM-ICPC, NEERC, Западный четвертьфинал",
+      "name": "2011-2012 ACM-ICPC, NEERC, Western Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101411": {
       "id": 101411,
-      "name": "2009-2010 ACM-ICPC, NEERC, Западный четвертьфинал",
+      "name": "2009-2010 ACM-ICPC, NEERC, Western Subregional Contest",
       "startTimeSeconds": 1500006900,
       "durationSeconds": 18000
     },
@@ -188193,43 +188193,43 @@
     },
     "101435": {
       "id": 101435,
-      "name": "2017 Яндекс.Алгоритм - Разминочный раунд",
+      "name": "2017 Yandex.Algorithm - Warmup Round",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "101436": {
       "id": 101436,
-      "name": "2017 Яндекс.Алгоритм - Отборочный этап, раунд 1",
+      "name": "2017 Yandex.Algorithm - Elimination Stage, Online Round 1",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "101437": {
       "id": 101437,
-      "name": "2017 Яндекс.Алгоритм - Отборочный этап, раунд 2",
+      "name": "2017 Yandex.Algorithm - Elimination Stage, Online Round 2",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "101438": {
       "id": 101438,
-      "name": "2017 Яндекс.Алгоритм - Отборочный этап, раунд 3",
+      "name": "2017 Yandex.Algorithm - Elimination Stage, Online Round 3",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "101439": {
       "id": 101439,
-      "name": "2017 Яндекс.Алгоритм - Квалификационный раунд",
+      "name": "2017 Yandex.Algorithm - Qualification Round",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "101445": {
       "id": 101445,
-      "name": "2016 (V) олимпиада МИСиС по программированию, заочный тур",
+      "name": "2016 (V) Olympiad of MISiS, Prefinal Round",
       "startTimeSeconds": 1500800400,
       "durationSeconds": 18000
     },
     "101446": {
       "id": 101446,
-      "name": "2017 (V) олимпиада МИСиС по программированию, очный тур",
+      "name": "2017 (V) Olympiad of MISiS, Final Round",
       "startTimeSeconds": 1502010000,
       "durationSeconds": 18000
     },
@@ -188361,13 +188361,13 @@
     },
     "101503": {
       "id": 101503,
-      "name": "2007-2008 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2007-2008 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101504": {
       "id": 101504,
-      "name": "2008-2009 ACM-ICPC, NEERC, Южный четвертьфинал",
+      "name": "2008-2009 ACM-ICPC, NEERC, Southern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -188571,7 +188571,7 @@
     },
     "101591": {
       "id": 101591,
-      "name": "2008-2009 Летние Петрозаводские сборы, Контест Саратовского ГУ",
+      "name": "2008-2009 Petrozavodsk Summer Training Camp, Saratov SU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -188613,13 +188613,13 @@
     },
     "101611": {
       "id": 101611,
-      "name": "2017-2018 ACM-ICPC, NEERC, Московский четвертьфинал",
+      "name": "2017-2018 ACM-ICPC, NEERC, Moscow Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101612": {
       "id": 101612,
-      "name": "2017-2018 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2017-2018 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -188673,7 +188673,7 @@
     },
     "101627": {
       "id": 101627,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Первый тур. 2017-2018",
+      "name": "Innopolis Open, Elimination round 1, 2017-2018",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -188715,7 +188715,7 @@
     },
     "101640": {
       "id": 101640,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Второй тур. 2017-2018",
+      "name": "Innopolis Open, Elimination round 2, 2017-2018",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -188727,31 +188727,31 @@
     },
     "101647": {
       "id": 101647,
-      "name": "2017 Russian Code Cup (RCC 17), финальный раунд",
+      "name": "2017 Russian Code Cup (RCC 17), Final Round",
       "startTimeSeconds": null,
       "durationSeconds": 10800
     },
     "101648": {
       "id": 101648,
-      "name": "2004-2005 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2004-2005 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101649": {
       "id": 101649,
-      "name": "2005-2006 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2005-2006 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101650": {
       "id": 101650,
-      "name": "2006-2007 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2006-2007 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "101651": {
       "id": 101651,
-      "name": "2003-2004 ACM-ICPC, NEERC, Северный четвертьфинал",
+      "name": "2003-2004 ACM-ICPC, NEERC, Northern Subregional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -188817,7 +188817,7 @@
     },
     "101675": {
       "id": 101675,
-      "name": "2016 Russian Code Cup (RCC 16), финальный раунд",
+      "name": "2016 Russian Code Cup (RCC 16), Final Round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -188961,7 +188961,7 @@
     },
     "101720": {
       "id": 101720,
-      "name": "2017 Яндекс.Алгоритм - Финальный раунд",
+      "name": "2017 Yandex.Algorithm - Final Round",
       "startTimeSeconds": null,
       "durationSeconds": 9000
     },
@@ -188985,13 +188985,13 @@
     },
     "101727": {
       "id": 101727,
-      "name": "2018 Яндекс.Алгоритм - Разминочный раунд",
+      "name": "2018 Yandex.Algorithm - Warmup Round",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "101733": {
       "id": 101733,
-      "name": "2018 Яндекс.Алгоритм - Квалификационный раунд",
+      "name": "2018 Yandex.Algorithm - Qualification Round",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
@@ -189009,7 +189009,7 @@
     },
     "101741": {
       "id": 101741,
-      "name": "2017-2018 Зимние Петрозаводские сборы, Контест Саратовского ГУ (XVII Открытый Кубок, Гран-При Саратова)",
+      "name": "2017-2018 Petrozavodsk Winter Training Camp, Saratov SU Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -189021,7 +189021,7 @@
     },
     "101745": {
       "id": 101745,
-      "name": "2018 Яндекс.Алгоритм - Отборочный этап, раунд 1",
+      "name": "2018 Yandex.Algorithm - Elimination Stage, Online Round 1",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
@@ -189033,13 +189033,13 @@
     },
     "101754": {
       "id": 101754,
-      "name": "Яндекс.Алгоритм 2018, второй отборочный раунд",
+      "name": "Yandex.Algorithm 2018, second qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
     "101755": {
       "id": 101755,
-      "name": "2018, XI Самарская областная межвузовская олимпиада по программированию",
+      "name": "2018, XI Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": 1521360000,
       "durationSeconds": 18000
     },
@@ -189057,7 +189057,7 @@
     },
     "101773": {
       "id": 101773,
-      "name": "Яндекс.Алгоритм 2018, третий отборочный раунд",
+      "name": "Yandex.Algorithm 2018, third qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 6000
     },
@@ -189093,7 +189093,7 @@
     },
     "101790": {
       "id": 101790,
-      "name": "2018 Открытый чемпионат Юга России по спортивному программированию – XII Олимпиада ЮФУ «ContestSFedU-2018». Финал командного турнира.",
+      "name": "2018 Southern Russia Open Championship – XII SFU Olympiad «ContestSFedU-2018». Team Final.",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -189165,7 +189165,7 @@
     },
     "101821": {
       "id": 101821,
-      "name": "Финал Яндекс.Алгоритм 2018",
+      "name": "Yandex.Algorithm 2018, final round",
       "startTimeSeconds": null,
       "durationSeconds": 9000
     },
@@ -189267,7 +189267,7 @@
     },
     "101911": {
       "id": 101911,
-      "name": "Квалификационный этап Четвертьфинала Южного подрегиона NEERC, ACM-ICPC 2018-2019",
+      "name": "2018-2019 ACM-ICPC, NEERC, Southern Subregional Contest, Qualification Stage",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -189537,7 +189537,7 @@
     },
     "102032": {
       "id": 102032,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Первый тур. 2018-2019",
+      "name": "Innopolis Open, First elimination round, 2018-2019",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -189561,7 +189561,7 @@
     },
     "102052": {
       "id": 102052,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Второй тур. 2018-2019",
+      "name": "Innopolis Open, Second elimination round, 2018-2019",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -189711,43 +189711,43 @@
     },
     "102128": {
       "id": 102128,
-      "name": "2018-2019, Олимпиада Университета Иннополис, финал",
+      "name": "2018-2019, Innopolis Open",
       "startTimeSeconds": 1554296400,
       "durationSeconds": 18000
     },
     "102129": {
       "id": 102129,
-      "name": "2018-2019 Зимние Петрозаводские сборы, Oleksandr Kulkov Contest 1",
+      "name": "2018-2019 Winter Petrozavodsk Camp, Oleksandr Kulkov Contest 1",
       "startTimeSeconds": 1552122000,
       "durationSeconds": 18000
     },
     "102133": {
       "id": 102133,
-      "name": "2016-2017 VII Открытый чемпионат БГУИР по программированию. Финал",
+      "name": "2016-2017 7th BSUIR Open Programming Contest. Final",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102134": {
       "id": 102134,
-      "name": "2016-2017 VII Открытый чемпионат БГУИР по программированию. Полуфинал",
+      "name": "2016-2017 7th BSUIR Open Programming Contest. Semifinal",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
     "102135": {
       "id": 102135,
-      "name": "2017-2018 VIII Открытый чемпионат БГУИР по программированию. Полуфинал",
+      "name": "2017-2018 8th BSUIR Open Programming Contest. Semifinal",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102136": {
       "id": 102136,
-      "name": "2017-2018 VIII Открытый чемпионат БГУИР по программированию. Финал",
+      "name": "2017-2018 8th BSUIR Open Programming Contest. Final",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102137": {
       "id": 102137,
-      "name": "2017-2018 VIII Открытый чемпионат БГУИР по программированию. Школьный финал",
+      "name": "2017-2018 8th BSUIR Open Programming Contest. School final",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -189765,13 +189765,13 @@
     },
     "102147": {
       "id": 102147,
-      "name": "2017-2018 Всероссийская олимпиада школьников по информатике (ROI 2018), день 1",
+      "name": "2017-2018 Russian Olympiad in Informatics (ROI 2018), Day 1",
       "startTimeSeconds": 1553673900,
       "durationSeconds": 18000
     },
     "102150": {
       "id": 102150,
-      "name": "2019 IV Интеллектуальная олимпиада ПФО",
+      "name": "2019 IV IQ PFO",
       "startTimeSeconds": 1553324400,
       "durationSeconds": 18000
     },
@@ -189783,7 +189783,7 @@
     },
     "102154": {
       "id": 102154,
-      "name": "2017-2018 Всероссийская олимпиада школьников по информатике (ROI 2018), день 2",
+      "name": "2017-2018 Russian Olympiad in Informatics (ROI 2018), Day 2",
       "startTimeSeconds": 1553760300,
       "durationSeconds": 18000
     },
@@ -189831,13 +189831,13 @@
     },
     "102180": {
       "id": 102180,
-      "name": "Тренировочный контест МПГУ 2018-2019",
+      "name": "MSPU Training Contest 2018-2019",
       "startTimeSeconds": 1556026200,
       "durationSeconds": 10800
     },
     "102185": {
       "id": 102185,
-      "name": "Открытый чемпионат Юга России - ContestSFedU 2019, финал командного турнира",
+      "name": "Southern Russia Open Championship – ContestSFedU 2019, Team Final.",
       "startTimeSeconds": 1555830000,
       "durationSeconds": 18000
     },
@@ -189897,7 +189897,7 @@
     },
     "102215": {
       "id": 102215,
-      "name": "2019, XII Самарская областная межвузовская олимпиада по программированию",
+      "name": "2019, XII Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": 1558767600,
       "durationSeconds": 18000
     },
@@ -190107,7 +190107,7 @@
     },
     "102331": {
       "id": 102331,
-      "name": "2019 Летние Петрозаводские сборы, день 2: 300iq Contest 2 (XX Открытый кубок, Гран-при Казани)",
+      "name": "2019 Summer Petrozavodsk Camp, Day 2: 300iq Contest 2 (XX Open Cup, Grand Prix of Kazan)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -190131,13 +190131,13 @@
     },
     "102348": {
       "id": 102348,
-      "name": "ICPC 2019-2020 NERC (NEERC), квалификационный этап Чемпионата Юга и Поволжья России",
+      "name": "ICPC 2019-2020 NERC (NEERC), Southern and Volga Russia Qualifier",
       "startTimeSeconds": 1568649600,
       "durationSeconds": 14400
     },
     "102354": {
       "id": 102354,
-      "name": "2018-2019 Летние Петрозаводские сборы, Oleksandr Kulkov Contest 2",
+      "name": "2018-2019 Summer Petrozavodsk Camp, Oleksandr Kulkov Contest 2",
       "startTimeSeconds": 1578214800,
       "durationSeconds": 18000
     },
@@ -190203,7 +190203,7 @@
     },
     "102396": {
       "id": 102396,
-      "name": "2019-2020 Всероссийская командная олимпиада школьников по программированию, СПбКОШП + интернет-тур + отборы регионов (ВКОШП 19, СПбКОШП + интернет-тур)",
+      "name": "2019-2020 Saint-Petersburg Open High School Programming Contest (SpbKOSHP 19)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -190293,7 +190293,7 @@
     },
     "102436": {
       "id": 102436,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Первый тур. 2019-2020",
+      "name": "Innopolis Open 2019-2020, qualification, contest 1",
       "startTimeSeconds": 1574578800,
       "durationSeconds": 18000
     },
@@ -190305,25 +190305,25 @@
     },
     "102439": {
       "id": 102439,
-      "name": "2018-2019 IX Открытый чемпионат БГУИР по программированию. Полуфинал",
+      "name": "2018-2019 9th BSUIR Open Programming Championship. Semifinal",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102440": {
       "id": 102440,
-      "name": "2018-2019 IX Открытый чемпионат БГУИР по программированию. Школьный",
+      "name": "2018-2019 9th BSUIR Open Programming Championship. Junior",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102441": {
       "id": 102441,
-      "name": "2018-2019 IX Открытый чемпионат БГУИР по программированию. Финал",
+      "name": "2018-2019 9th BSUIR Open Programming Championship. Final",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102443": {
       "id": 102443,
-      "name": "2019-2020 Всероссийская командная олимпиада школьников по программированию (ВКОШП 19)",
+      "name": "2019-2020 Russia Team Open, High School Programming Contest (VKOSHP 19)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -190353,7 +190353,7 @@
     },
     "102461": {
       "id": 102461,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Второй тур. 2019-2020",
+      "name": "Innopolis Open 2019-2020, qualification, contest 2",
       "startTimeSeconds": 1576328400,
       "durationSeconds": 18000
     },
@@ -190449,7 +190449,7 @@
     },
     "102534": {
       "id": 102534,
-      "name": "Олимпиада Университета Иннополис, 2019-2020, финал",
+      "name": "Innopolis Open 2020 Finals",
       "startTimeSeconds": 1582534800,
       "durationSeconds": 18000
     },
@@ -190497,7 +190497,7 @@
     },
     "102558": {
       "id": 102558,
-      "name": "Контест на стажировку в Яндексе 2019",
+      "name": "Contest for Yandex interns 2019",
       "startTimeSeconds": 1585083600,
       "durationSeconds": 21600
     },
@@ -190521,7 +190521,7 @@
     },
     "102569": {
       "id": 102569,
-      "name": "2020, XIII Самарская областная межвузовская олимпиада по программированию",
+      "name": "2020, XIII Samara Regional Intercollegiate Programming Contest",
       "startTimeSeconds": 1586073600,
       "durationSeconds": 18000
     },
@@ -190551,7 +190551,7 @@
     },
     "102599": {
       "id": 102599,
-      "name": "Пятая Липецкая командная олимпиада школьников по программированию. Финал. 8-11 классы",
+      "name": "The fifth Lipetsk collegiate programming contest. Finals. 8-11 form",
       "startTimeSeconds": 1589617800,
       "durationSeconds": 18000
     },
@@ -190599,7 +190599,7 @@
     },
     "102640": {
       "id": 102640,
-      "name": "2020, XIII Самарская областная межвузовская олимпиада по программированию (марафонская задача)",
+      "name": "2020, XIII Samara Regional Intercollegiate Programming Contest (marathon problem)",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -190617,13 +190617,13 @@
     },
     "102651": {
       "id": 102651,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Первый тур. 2020-2021",
+      "name": "Innopolis Open 2020-2021, qualification, contest 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102672": {
       "id": 102672,
-      "name": "Подборка задач с Интернет олимпиад сезона 2019-20",
+      "name": "Selection of tasks from Internet olympiads season 2019-20",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -190767,7 +190767,7 @@
     },
     "102780": {
       "id": 102780,
-      "name": "ICPC Central Russia Regional Contest (CRRC 19), Чемпионат Центральной России, Центральный четвертьфинал",
+      "name": "ICPC Central Russia Regional Contest (CRRC 19)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -190785,7 +190785,7 @@
     },
     "102785": {
       "id": 102785,
-      "name": "ICPC Central Russia Regional Contest (CRRC 18), Чемпионат Центральной России, Центральный четвертьфинал",
+      "name": "ICPC Central Russia Regional Contest (CRRC 18)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -190803,13 +190803,13 @@
     },
     "102788": {
       "id": 102788,
-      "name": "2017-2018 ICPC Central Quarter Final of Northeastern European Regional Collegiate Programming Contest, Центральный четвертьфинал",
+      "name": "2017-2018 ICPC Central Quarter Final of Northeastern European Regional Collegiate Programming Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102791": {
       "id": 102791,
-      "name": "ICPC 2020-2021 NERC (NEERC), квалификационный этап Чемпионата Юга и Поволжья России",
+      "name": "ICPC 2020-2021 NERC (NEERC), Southern and Volga Russia Qualifier",
       "startTimeSeconds": 1602399600,
       "durationSeconds": 14400
     },
@@ -190923,7 +190923,7 @@
     },
     "102860": {
       "id": 102860,
-      "name": "2020-2021 Всероссийская командная олимпиада школьников по программированию, СПбКОШП + интернет-тур + отборы регионов (ВКОШП 20, СПбКОШП + интернет-тур)",
+      "name": "2020-2021 Saint-Petersburg Open High School Programming Contest (SpbKOSHP 20)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -190935,7 +190935,7 @@
     },
     "102862": {
       "id": 102862,
-      "name": "Отборочный контест ICPC ЛУ 2020 и Открытая командная олимпиада КФУ 2020",
+      "name": "LU ICPC Selection Contest 2020 and KFU Open Contest 2020",
       "startTimeSeconds": 1605945600,
       "durationSeconds": 18000
     },
@@ -191013,13 +191013,13 @@
     },
     "102893": {
       "id": 102893,
-      "name": "2020-2021 Всероссийская командная олимпиада школьников по программированию (ВКОШП 20)",
+      "name": "2020-2021 Russia Team Open, High School Programming Contest (VKOSHP 20)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "102894": {
       "id": 102894,
-      "name": "Муниципальный этап ВсОШ по информатике 2020-2021 в Смоленской области",
+      "name": "Municipal stage of the Russian Olympiad in Informatics (ROI), Smolensk",
       "startTimeSeconds": 1607756400,
       "durationSeconds": 18000
     },
@@ -191037,7 +191037,7 @@
     },
     "102898": {
       "id": 102898,
-      "name": "Отборочный этап Олимпиады Университета Иннополис. Второй тур. 2020-2021",
+      "name": "Innopolis Open 2020-2021, qualification, contest 2",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191061,7 +191061,7 @@
     },
     "102906": {
       "id": 102906,
-      "name": "Всероссийская олимпиада школьников по информатике 2020—2021, Муниципальный этап, Санкт-Петербург",
+      "name": "Russian Olympiad in Informatics 2020—2021, Municipal Stage, Saint Petersburg",
       "startTimeSeconds": null,
       "durationSeconds": 10800
     },
@@ -191151,7 +191151,7 @@
     },
     "102956": {
       "id": 102956,
-      "name": "2020-2021 Зимние Петрозаводские сборы, контест Белорусского ГУ (XXI Открытый кубок, Гран-при Беларуси)",
+      "name": "2020-2021 Winter Petrozavodsk Camp, Belarusian SU Contest (XXI Open Cup, Grand Prix of Belarus)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191163,7 +191163,7 @@
     },
     "102962": {
       "id": 102962,
-      "name": "Олимпиада Innopolis Open по информатике, 2020-2021, финал",
+      "name": "Innopolis Open in Informatics, 2020-2021, the final",
       "startTimeSeconds": 1613894400,
       "durationSeconds": 14400
     },
@@ -191445,7 +191445,7 @@
     },
     "103136": {
       "id": 103136,
-      "name": "Студенческая олимпиада по программированию в Пензе",
+      "name": "Student programming contest in Penza",
       "startTimeSeconds": 1622962800,
       "durationSeconds": 14400
     },
@@ -191571,13 +191571,13 @@
     },
     "103260": {
       "id": 103260,
-      "name": "2020-2021 Зимние Петрозаводские сборы, контест Almost Retired Dandelion (XXI Открытый кубок, Гран-при Нижнего Новгорода)",
+      "name": "2020-2021 Winter Petrozavodsk Camp, Day 5: Almost Retired Dandelion Contest (XXI Open Cup, Grand Prix of Nizhny Novgorod)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "103261": {
       "id": 103261,
-      "name": "2019-2020 Зимние Петрозаводские сборы, Almost Algorithmic Contest",
+      "name": "2019-2020 Winter Petrozavodsk Camp, Day 8: Almost Algorithmic Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191619,7 +191619,7 @@
     },
     "103286": {
       "id": 103286,
-      "name": "2021 VI Интеллектуальная олимпиада ПФО",
+      "name": "2021 VI IQ PFO",
       "startTimeSeconds": 1631340000,
       "durationSeconds": 18000
     },
@@ -191739,7 +191739,7 @@
     },
     "103369": {
       "id": 103369,
-      "name": "Московская командная олимпиада (МКОШП) 2021",
+      "name": "Moscow team olympiad 2021",
       "startTimeSeconds": 1635249600,
       "durationSeconds": 18000
     },
@@ -191811,7 +191811,7 @@
     },
     "103399": {
       "id": 103399,
-      "name": "Быстрое умножение по модулю",
+      "name": "Fast modular multiplication",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191835,13 +191835,13 @@
     },
     "103411": {
       "id": 103411,
-      "name": "2020-2021 ICPC, NERC, Восточно-Сибирский четвертьфинал + ВКОШП, Восточно-Сибирский регион",
+      "name": "2020-2021, ICPC, East Siberian Regional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "103414": {
       "id": 103414,
-      "name": "2021-2022 Всероссийская командная олимпиада школьников по программированию, СПбКОШП + интернет-тур + отборы регионов (ВКОШП 21, СПбКОШП + интернет-тур)",
+      "name": "2021-2022 Saint-Petersburg Open High School Programming Contest (SpbKOSHP 21)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191871,7 +191871,7 @@
     },
     "103426": {
       "id": 103426,
-      "name": "Innopolis Open 2021-2022. Первый отборочный тур",
+      "name": "Innopolis Open 2021-2022. First qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191895,7 +191895,7 @@
     },
     "103433": {
       "id": 103433,
-      "name": "2018-2019 Всероссийская командная олимпиада школьников по программированию (ВКОШП 18)",
+      "name": "2018-2019 Russia Team Open, High School Programming Contest (VKOSHP 18)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191907,7 +191907,7 @@
     },
     "103439": {
       "id": 103439,
-      "name": "XXII Открытый кубок, Гран-при Юго-восточной Европы",
+      "name": "XXII Open Cup, Grand Prix of Southeastern Europe",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191985,7 +191985,7 @@
     },
     "103464": {
       "id": 103464,
-      "name": "Второй этап республиканской олимпиады по информатике. Могилёвская область, 2021.",
+      "name": "The second stage of the Republican Olympiad in Informatics. Mogilev region, 2021.",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -191997,7 +191997,7 @@
     },
     "103469": {
       "id": 103469,
-      "name": "2021 Летние Петрозаводские сборы, день 3: IQ test (XXII Открытый кубок, Гран-при IMO)",
+      "name": "2021 Summer Petrozavodsk Camp, Day 3: IQ test (XXII Open Cup, Grand Prix of IMO)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -192015,7 +192015,7 @@
     },
     "103476": {
       "id": 103476,
-      "name": "Innopolis Open 2021-2022. Второй отборочный тур",
+      "name": "Innopolis Open 2021-2022. Second qualification round.",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -192033,7 +192033,7 @@
     },
     "103483": {
       "id": 103483,
-      "name": "2021-2022 Всероссийская командная олимпиада школьников по программированию (ВКОШП XXII)",
+      "name": "2021-2022 Russia Team Open, High School Programming Contest (VKOSHP XXII)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -192057,7 +192057,7 @@
     },
     "103491": {
       "id": 103491,
-      "name": "1 Олимпиада Силаэдра",
+      "name": "1 Silaeder olymp",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -192189,13 +192189,13 @@
     },
     "103566": {
       "id": 103566,
-      "name": "2021-2022 Олимпиада Когнитивные технологии, заключительный этап",
+      "name": "2021-2022 Olympiad Cognitive Technologies, Final Round",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
     "103567": {
       "id": 103567,
-      "name": "2021-2022 Олимпиада Когнитивные технологии, отборочный этап",
+      "name": "2021-2022 Olympiad Cognitive Technologies, Prefinal Round",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -192207,7 +192207,7 @@
     },
     "103575": {
       "id": 103575,
-      "name": "Innopolis Open 2021-2022. Заключительный тур",
+      "name": "Innopolis Open 2021-2022. Final round",
       "startTimeSeconds": 1645362000,
       "durationSeconds": 18000
     },
@@ -192315,7 +192315,7 @@
     },
     "103637": {
       "id": 103637,
-      "name": "2019-2020 X Открытый чемпионат БГУИР по программированию. Полуфинал",
+      "name": "2019-2020 10th BSUIR Open Programming Championship. Semifinal",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -192537,13 +192537,13 @@
     },
     "103831": {
       "id": 103831,
-      "name": "2017 Международная олимпиада школьников Туймаада",
+      "name": "2017 International olympiad Tuymaada",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "103833": {
       "id": 103833,
-      "name": "2017 Международная олимпиада школьников Туймаада",
+      "name": "2018 International olympiad Tuymaada",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -192723,7 +192723,7 @@
     },
     "103993": {
       "id": 103993,
-      "name": "ICPC 2022-2023 NERC (NEERC), квалификационный этап Чемпионата Юга и Поволжья России",
+      "name": "ICPC 2022-2023 NERC (NEERC), Southern and Volga Russia Qualifier",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -192771,7 +192771,7 @@
     },
     "104010": {
       "id": 104010,
-      "name": "2022-2023 Всероссийская командная олимпиада школьников по программированию, СПбКОШП + интернет-тур + отборы регионов (ВКОШП 22, СПбКОШП + интернет-тур)",
+      "name": "2022-2023 Saint-Petersburg Open High School Programming Contest (SpbKOSHP 22)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -192801,7 +192801,7 @@
     },
     "104015": {
       "id": 104015,
-      "name": "ICPC 2021-2022 NERC (NEERC), квалификационный этап Чемпионата Юга и Поволжья России",
+      "name": "ICPC 2021-2022 NERC (NEERC), Southern and Volga Russia Qualifier",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -192813,7 +192813,7 @@
     },
     "104018": {
       "id": 104018,
-      "name": "2022-2023 ICPC NERC (NEERC), Чемпионат Кыргызстана",
+      "name": "2022-2023 ICPC NERC (NEERC), Kyrgyzstan Regional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -192915,7 +192915,7 @@
     },
     "104052": {
       "id": 104052,
-      "name": "Innopolis Open 2022-2023. Первый отборочный тур",
+      "name": "Innopolis Open 2022-2023. First qualification round",
       "startTimeSeconds": 1668341700,
       "durationSeconds": 18000
     },
@@ -193017,7 +193017,7 @@
     },
     "104094": {
       "id": 104094,
-      "name": "2022-2023 Всероссийская командная олимпиада школьников по программированию (ВКОШП XXIII)",
+      "name": "2022-2023 Russia Team Open, High School Programming Contest (VKOSHP XXIII)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -193053,7 +193053,7 @@
     },
     "104103": {
       "id": 104103,
-      "name": "Innopolis Open 2022-2023. Второй отборочный тур",
+      "name": "Innopolis Open 2022-2023. Second qualification round",
       "startTimeSeconds": 1670781900,
       "durationSeconds": 18000
     },
@@ -193221,7 +193221,7 @@
     },
     "104182": {
       "id": 104182,
-      "name": "Innopolis Open 2022-2023. Финал",
+      "name": "Innopolis Open 2022-2023. Final round",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -193293,7 +193293,7 @@
     },
     "104235": {
       "id": 104235,
-      "name": "2022-2023 Олимпиада Когнитивные Технологии, Заключительный этап",
+      "name": "2022-2023 Olympiad Cognitive Technologies, Final Round",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -193461,7 +193461,7 @@
     },
     "104295": {
       "id": 104295,
-      "name": "ВКОШП.Junior - 2023. Финал",
+      "name": "vkoshp.letovo",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -193509,7 +193509,7 @@
     },
     "104314": {
       "id": 104314,
-      "name": "XXV Межрегиональная олимпиада по программированию, Вологда, ВоГУ, 2023",
+      "name": "XXV Interregional Programming Olympiad, Vologda SU, 2023",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -193575,7 +193575,7 @@
     },
     "104336": {
       "id": 104336,
-      "name": "II Олимпиада классов при механико-математическом факультете МГУ имени М.В. Ломоносова по программированию 2023",
+      "name": "II Olympiad of classes at the Mechanics and Mathematics Faculty of MSU in programming 2023.",
       "startTimeSeconds": 1682867100,
       "durationSeconds": 10800
     },
@@ -193587,7 +193587,7 @@
     },
     "104339": {
       "id": 104339,
-      "name": "Отборочный тур олимпиады ФПМИ для школьников (копия)",
+      "name": "FAMCS Olympiad for scholars, Qualification (copy)",
       "startTimeSeconds": 1682951400,
       "durationSeconds": 10800
     },
@@ -193827,7 +193827,7 @@
     },
     "104441": {
       "id": 104441,
-      "name": "Пригласительный этап ВсОШ по информатике, Сириус, 2023",
+      "name": "Invitational stage of the All-Russian Olympiad in Informatics for schoolchildren",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -194007,7 +194007,7 @@
     },
     "104535": {
       "id": 104535,
-      "name": "Формула++2023",
+      "name": "Formula++ 2023",
       "startTimeSeconds": 1692514800,
       "durationSeconds": 13500
     },
@@ -194469,7 +194469,7 @@
     },
     "104678": {
       "id": 104678,
-      "name": "Октябрьское возвращение. Совместная тренировка",
+      "name": "October come back. Together training",
       "startTimeSeconds": 1697031000,
       "durationSeconds": 12000
     },
@@ -194625,7 +194625,7 @@
     },
     "104730": {
       "id": 104730,
-      "name": "Московская командная олимпиада школьников (МКОШП) 2023",
+      "name": "Moscow team school olympiad (MKOSHP) 2023",
       "startTimeSeconds": 1697958000,
       "durationSeconds": 18000
     },
@@ -194697,7 +194697,7 @@
     },
     "104761": {
       "id": 104761,
-      "name": "2023-2024 ICPC NERC (NEERC), Чемпионат Кыргызстана",
+      "name": "2023-2024 ICPC NERC (NEERC), Kyrgyzstan Regional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -194727,7 +194727,7 @@
     },
     "104770": {
       "id": 104770,
-      "name": "XXXI командный чемпионат школьников Санкт-Петербурга по программированию (СПбКОШП 2023) | Отборочный интернет-тур XXIV открытой всероссийской командной олимпиады школьников по программированию (ВКОШП 2023)",
+      "name": "The XXXI Saint-Petersburg High School Programming Contest (SpbKOSHP 2023) | Qualification for the XXIV Russia Open High School Programming Contest (VKOSHP 2023)",
       "startTimeSeconds": 1699088400,
       "durationSeconds": 18000
     },
@@ -194811,7 +194811,7 @@
     },
     "104789": {
       "id": 104789,
-      "name": "Innopolis Open 2024. Отборочный этап 1",
+      "name": "Innopolis Open 2024. Qualification Round 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -194847,7 +194847,7 @@
     },
     "104804": {
       "id": 104804,
-      "name": "Central Russia Regional Contest, 2022, Квалификационный раунд",
+      "name": "Central Russia Regional Contest, 2022, Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -195003,13 +195003,13 @@
     },
     "104851": {
       "id": 104851,
-      "name": "Муниципальный этап ВсОШ по информатике в Вологодской области 2023, 7-8 классы",
+      "name": "Municipal stage of the All-Russian School Olympiad in Informatics in the Vologda Region 2023, grades 7-8",
       "startTimeSeconds": null,
       "durationSeconds": 10800
     },
     "104852": {
       "id": 104852,
-      "name": "Муниципальный этап ВсОШ по информатике в Вологодской области 2023, 9-11 классы",
+      "name": "Municipal stage of the All-Russian School Olympiad in Informatics in the Vologda Region 2023, grades 9-11",
       "startTimeSeconds": null,
       "durationSeconds": 14100
     },
@@ -195057,7 +195057,7 @@
     },
     "104872": {
       "id": 104872,
-      "name": "2023-2024 Всероссийская командная олимпиада школьников по программированию (ВКОШП XXIV)",
+      "name": "2023-2024 Russia Team Open, High School Programming Contest (VKOSHP XXIV)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -195087,7 +195087,7 @@
     },
     "104879": {
       "id": 104879,
-      "name": "Innopolis Open 2024. Отборочный этап 2",
+      "name": "Innopolis Open 2024. Qualification Round 2",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -195111,7 +195111,7 @@
     },
     "104885": {
       "id": 104885,
-      "name": "Муниципальный этап ВсОШ по информатике в Нижегородской области 2023",
+      "name": "Municipal stage of ROI in Nizhny Novgorod 2023",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -195135,13 +195135,13 @@
     },
     "104895": {
       "id": 104895,
-      "name": "Открытая олимпиада школьников по программированию 2021-22, первый тур",
+      "name": "Open Olympiad in Informatics 2021-22, first day",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "104896": {
       "id": 104896,
-      "name": "Открытая олимпиада школьников по программированию 2021-22, второй тур",
+      "name": "Open Olympiad in Informatics 2021-22, second day",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -195171,7 +195171,7 @@
     },
     "104922": {
       "id": 104922,
-      "name": "Длинный тур Открытой олимпиады 2023-2024",
+      "name": "Qualification stage of Open Olympiad 2023-2024",
       "startTimeSeconds": null,
       "durationSeconds": 604800
     },
@@ -195297,7 +195297,7 @@
     },
     "104985": {
       "id": 104985,
-      "name": "Innopolis Open 2024. Заключительный этап",
+      "name": "Innopolis Open 2024. Final round",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -195309,13 +195309,13 @@
     },
     "104992": {
       "id": 104992,
-      "name": "Отбор на ВКОШП.Junior 2024",
+      "name": "qual VKOSHP Junior 24",
       "startTimeSeconds": null,
       "durationSeconds": 10800
     },
     "105002": {
       "id": 105002,
-      "name": "ВКОШП.Junior - 2022. Финал",
+      "name": "vkoshp.letovo 2022",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -195585,7 +195585,7 @@
     },
     "105122": {
       "id": 105122,
-      "name": "XXVI Межрегиональная олимпиада по программированию, Вологда, ВоГУ, 2024",
+      "name": "XXVI Interregional Programming Olympiad, Vologda SU, 2024",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -195627,7 +195627,7 @@
     },
     "105141": {
       "id": 105141,
-      "name": "BSUIR Open XII: Student final",
+      "name": "BSUIR Open XII: Student Final",
       "startTimeSeconds": 1714203000,
       "durationSeconds": 18000
     },
@@ -195825,13 +195825,13 @@
     },
     "105212": {
       "id": 105212,
-      "name": "Vitebsk Open 2024, день 1",
+      "name": "Vitebsk Open 2024 day 1",
       "startTimeSeconds": 1718013600,
       "durationSeconds": 18000
     },
     "105213": {
       "id": 105213,
-      "name": "Vitebsk Open 2024, день 2",
+      "name": "Vitebsk Open 2024 day 2",
       "startTimeSeconds": 1718091000,
       "durationSeconds": 18000
     },
@@ -195903,7 +195903,7 @@
     },
     "105239": {
       "id": 105239,
-      "name": "Динамическое программирование, СПбГУ 2024, тренировка 1",
+      "name": "Dynamic Programming, SPbSU 2024, Training 1",
       "startTimeSeconds": 1720254600,
       "durationSeconds": 10800
     },
@@ -195915,7 +195915,7 @@
     },
     "105244": {
       "id": 105244,
-      "name": "Динамическое программирование, СПбГУ 2024, тренировка 2",
+      "name": "Dynamic Programming, SPbSU 2024, Training 2",
       "startTimeSeconds": 1720341000,
       "durationSeconds": 10800
     },
@@ -196347,7 +196347,7 @@
     },
     "105437": {
       "id": 105437,
-      "name": "ICPC 2024-2025 NERC, квалификационный этап Чемпионата Юга и Поволжья России",
+      "name": "ICPC 2024-2025 NERC, Southern and Volga Russia Qualifier",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -196377,7 +196377,7 @@
     },
     "105449": {
       "id": 105449,
-      "name": "Московская командная олимпиада школьников (МКОШП) 2024",
+      "name": "Moscow team school olympiad (MKOSHP) 2024",
       "startTimeSeconds": 1729412100,
       "durationSeconds": 18000
     },
@@ -196551,13 +196551,13 @@
     },
     "105493": {
       "id": 105493,
-      "name": "2024-2025 ICPC NERC, Чемпионат Кыргызстана",
+      "name": "2024-2025 ICPC NERC, Kyrgyzstan Regional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
     "105494": {
       "id": 105494,
-      "name": "2024-2025 ICPC NERC, Квалификация на Чемпионат Кыргызстана",
+      "name": "2024-2025 ICPC NERC, Kyrgyzstan Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -196707,7 +196707,7 @@
     },
     "105535": {
       "id": 105535,
-      "name": "Чемпионат Беларуси 2024",
+      "name": "2024 ICPC Belarus Regional Contest",
       "startTimeSeconds": 1731826800,
       "durationSeconds": 18000
     },
@@ -196761,7 +196761,7 @@
     },
     "105561": {
       "id": 105561,
-      "name": "Innopolis Open 2024-2025. Отборочный тур 1",
+      "name": "Innopolis Open 2024-2025. Elimination Round 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -196893,7 +196893,7 @@
     },
     "105600": {
       "id": 105600,
-      "name": "Муниципальный этап ВсОШ по информатике 2024, 9-11 класс, Вологодская область и Краснодарский край",
+      "name": "Municipal stage of ROI 2024, grades 9-11, Vologda and Krasnodar regions",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -196923,13 +196923,13 @@
     },
     "105613": {
       "id": 105613,
-      "name": "Отборочный тур IX областной олимпиады на приз Губернатора 2024, 9-10 классы, Вологодская область",
+      "name": "Qualifying round of the IX regional Olympiad for the Governors Prize 2024, grades 9-10, Vologda region",
       "startTimeSeconds": null,
       "durationSeconds": 12600
     },
     "105614": {
       "id": 105614,
-      "name": "Заключительный тур IX областной олимпиады на приз Губернатора 2024, 9-10 классы, Вологодская область",
+      "name": "Final round of the IX regional Olympiad for the Governors Prize 2024, grades 9-10, Vologda region",
       "startTimeSeconds": null,
       "durationSeconds": 12600
     },
@@ -196941,7 +196941,7 @@
     },
     "105617": {
       "id": 105617,
-      "name": "2024-2025 Всероссийская командная олимпиада школьников по программированию (ВКОШП XXV)",
+      "name": "2024-2025 Russia Team Open, High School Programming Contest (VKOSHP XXV)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -197019,7 +197019,7 @@
     },
     "105639": {
       "id": 105639,
-      "name": "Innopolis Open 2024-2025. Отборочный тур 2",
+      "name": "Innopolis Open 2024-2025. Elimination Round 2",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -197139,7 +197139,7 @@
     },
     "105681": {
       "id": 105681,
-      "name": "Длинный тур Открытой олимпиады 2024-2025",
+      "name": "Qualification stage of Open Olympiad 2024-2025",
       "startTimeSeconds": null,
       "durationSeconds": 604800
     },
@@ -197259,7 +197259,7 @@
     },
     "105719": {
       "id": 105719,
-      "name": "Innopolis Open 2024-2025. Заключительный тур",
+      "name": "Innopolis Open 2024-2025. Final round",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -197391,7 +197391,7 @@
     },
     "105788": {
       "id": 105788,
-      "name": "2024-2025 Отборочный этап региональной олимпиады «Машина Тьюринга»",
+      "name": "2024-2025 Qualifying stage of the regional Olympiad Turing Machine",
       "startTimeSeconds": null,
       "durationSeconds": 864000
     },
@@ -197415,7 +197415,7 @@
     },
     "105792": {
       "id": 105792,
-      "name": "2024-2025 Финал региональной олимпиады Машина Тьюринга",
+      "name": "2024-2025 Regional Olympiad Final Turing Machine",
       "startTimeSeconds": null,
       "durationSeconds": 14100
     },
@@ -197427,7 +197427,7 @@
     },
     "105798": {
       "id": 105798,
-      "name": "Когнитивные технологии 2024-2025. Финал",
+      "name": "Cognitive Technologies 2024-2025. Final",
       "startTimeSeconds": 1742715000,
       "durationSeconds": 14400
     },
@@ -197535,7 +197535,7 @@
     },
     "105839": {
       "id": 105839,
-      "name": "XXVII Межрегиональная олимпиада по программированию, Вологда, ВоГУ, 2025",
+      "name": "XXVII Interregional Programming Olympiad, Vologda SU, 2025",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -197625,7 +197625,7 @@
     },
     "105874": {
       "id": 105874,
-      "name": "Весенняя олимпиада Л2Ш по программированию 2025",
+      "name": "Spring Lyceum Second school olympiad in informatics 2025",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -197691,7 +197691,7 @@
     },
     "105905": {
       "id": 105905,
-      "name": "Первенство Свердловской обрасти по программированию 2025",
+      "name": "Ural championship 2025",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -197757,7 +197757,7 @@
     },
     "105934": {
       "id": 105934,
-      "name": "Весенний кубок МИФИ 2025",
+      "name": "MEPhI Spring Cup 2025",
       "startTimeSeconds": null,
       "durationSeconds": 9000
     },
@@ -197847,13 +197847,13 @@
     },
     "105971": {
       "id": 105971,
-      "name": "BSUIR Open XIII: Студенческий финал",
+      "name": "BSUIR Open XIII: Student final",
       "startTimeSeconds": 1745652300,
       "durationSeconds": 18000
     },
     "105972": {
       "id": 105972,
-      "name": "BSUIR Open XIII: Школьный финал",
+      "name": "BSUIR Open XIII: School final",
       "startTimeSeconds": 1746256200,
       "durationSeconds": 18000
     },
@@ -198183,7 +198183,7 @@
     },
     "106100": {
       "id": 106100,
-      "name": "Международная открытая олимпиада по Математике и Программированию Нархоз 2025",
+      "name": "International MathCoding Narxoz open olympiad 2025",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -198219,7 +198219,7 @@
     },
     "106110": {
       "id": 106110,
-      "name": "2025-2026 ICPC NERC, Квалификация на Чемпионат Кыргызстана",
+      "name": "2025-2026 ICPC NERC, Kyrgyzstan Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -198309,7 +198309,7 @@
     },
     "106141": {
       "id": 106141,
-      "name": "Московская командная олимпиада школьников по программированию 2025 (МКОШП)",
+      "name": "Moscow team school olympiad (MKOSHP) 2025",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -198369,7 +198369,7 @@
     },
     "106158": {
       "id": 106158,
-      "name": "Innopolis Open 2025-2026. Отборочный тур 1",
+      "name": "Innopolis Open 2025-2026. Elimination Round 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -198411,7 +198411,7 @@
     },
     "106169": {
       "id": 106169,
-      "name": "2025-2026 ICPC NERC, Чемпионат Кыргызстана",
+      "name": "2025-2026 ICPC NERC, Kyrgyzstan Regional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -198423,7 +198423,7 @@
     },
     "106174": {
       "id": 106174,
-      "name": "Заключительный тур X Вологодской областной олимпиады по информатике на приз Губернатора 2025, 9-10 классы",
+      "name": "Final round of the X Vologda Regional Informatics Olympiad for the Governors Prize 2025, grades 9-10",
       "startTimeSeconds": null,
       "durationSeconds": 10800
     },
@@ -198459,7 +198459,7 @@
     },
     "106182": {
       "id": 106182,
-      "name": "Petrozavodsk Summer Camp 2025. Day 6. Xeppelin Contest (The 4rd Universal Cup. Stage 2: Grand Prix of Paris)",
+      "name": "Petrozavodsk Summer Camp 2025. Day 6. Xeppelin Contest The 4rd Universal Cup. Stage 2: Grand Prix of Paris)",
       "startTimeSeconds": 1756112400,
       "durationSeconds": 18000
     },
@@ -198501,7 +198501,7 @@
     },
     "106191": {
       "id": 106191,
-      "name": "Осенний кубок МИФИ 2025",
+      "name": "MEPhI Аutumn Cup 2025",
       "startTimeSeconds": null,
       "durationSeconds": 9000
     },
@@ -198627,13 +198627,13 @@
     },
     "106235": {
       "id": 106235,
-      "name": "Algo Cup 2025 by csspace.io (Отборочный тур)",
+      "name": "Algo Cup 2025 by csspace.io (Qualification Round)",
       "startTimeSeconds": null,
       "durationSeconds": 10800
     },
     "106237": {
       "id": 106237,
-      "name": "Algo Cup 2025 by csspace.io (Финал)",
+      "name": "Algo Cup 2025 by csspace.io (Finals)",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -198663,7 +198663,7 @@
     },
     "106247": {
       "id": 106247,
-      "name": "Муниципальный этап ВсОШ 2025, 9-11 классы, профиль Программирование, Вологодская область и Краснодарский край",
+      "name": "Municipal stage of the All-Russian School Olympiad 2025, grades 9-11, Programming profile, Vologda and Krasnodar regions",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -198825,7 +198825,7 @@
     },
     "106292": {
       "id": 106292,
-      "name": "Innopolis Open 2025-2026. Отборочный тур 2",
+      "name": "Innopolis Open 2025-2026. Elimination Round 2",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -198963,7 +198963,7 @@
     },
     "106357": {
       "id": 106357,
-      "name": "Практика Dynamic Forest offline queries",
+      "name": "Practise Dynamic Forest offline queries",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -198987,7 +198987,7 @@
     },
     "106368": {
       "id": 106368,
-      "name": "Innopolis Open 2025-2026. Заключительный тур",
+      "name": "Innopolis Open 2025-2026. Final round",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -199353,7 +199353,7 @@
     },
     "106494": {
       "id": 106494,
-      "name": "Весенний кубок МИФИ 2026",
+      "name": "MEPhI Spring Cup 2026",
       "startTimeSeconds": null,
       "durationSeconds": 9000
     },
@@ -199365,7 +199365,7 @@
     },
     "106500": {
       "id": 106500,
-      "name": "XXVIII Межрегиональная олимпиада по программированию, Вологда, ВоГУ, 2026",
+      "name": "XXVIII Interregional Programming Olympiad, Vologda SU, 2026",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
@@ -199539,7 +199539,7 @@
     },
     "106557": {
       "id": 106557,
-      "name": "Пригласительный этап ВсОШ по информатике, 2026",
+      "name": "Invitational stage of the All-Russian Olympiad for School Students, 2026",
       "startTimeSeconds": null,
       "durationSeconds": 7200
     },
@@ -199701,7 +199701,7 @@
     },
     "106623": {
       "id": 106623,
-      "name": "Муниципальный этап ВсОШ 2025, профиль ИИ, 7-8 и 9-11 классы, Вологодская область",
+      "name": "Municipal stage of ROI 2025, AI profile, grades 7-8 and 9-11, Vologda region",
       "startTimeSeconds": null,
       "durationSeconds": 14400
     },
@@ -199983,7 +199983,7 @@
     },
     "106732": {
       "id": 106732,
-      "name": "Осенний кубок МИФИ 2026",
+      "name": "MEPhI Аutumn Cup 2026",
       "startTimeSeconds": null,
       "durationSeconds": 9000
     },
@@ -200013,7 +200013,7 @@
     },
     "106744": {
       "id": 106744,
-      "name": "2026-2027 ICPC NERC, Квалификация на Чемпионат Кыргызстана",
+      "name": "2026-2027 ICPC NERC, Kyrgyzstan Qualification Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
