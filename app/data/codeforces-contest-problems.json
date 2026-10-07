@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T01:29:41.444Z",
+  "updatedAt": "2026-10-07T15:30:55.112Z",
   "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
@@ -184120,7 +184120,7 @@
     "2275": {
       "id": 2275,
       "name": "Codeforces Round 1125 (Div. 3)",
-      "startTimeSeconds": 1791383700,
+      "startTimeSeconds": 1791384300,
       "durationSeconds": 9000
     },
     "100001": {
