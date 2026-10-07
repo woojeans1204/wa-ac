@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T15:30:55.112Z",
+  "updatedAt": "2026-10-07T20:45:51.057Z",
   "problemsetFetchedAt": "2026-10-02T12:34:45.557Z",
   "ratingDisagreements": [
     {
@@ -171181,6 +171181,106 @@
             "data structures",
             "dp",
             "trees"
+          ]
+        }
+      ]
+    },
+    "2275": {
+      "name": "Codeforces Round 1125 (Div. 3)",
+      "fetchedAt": "2026-10-07T20:45:50.988Z",
+      "problems": [
+        {
+          "contestId": 2275,
+          "index": "A",
+          "name": "In Search of Convenience",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "geometry",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2275,
+          "index": "B",
+          "name": "Did Not Go to Print",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2275,
+          "index": "C",
+          "name": "Unrequited Love",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "data structures"
+          ]
+        },
+        {
+          "contestId": 2275,
+          "index": "D",
+          "name": "Precision Alignment",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2275,
+          "index": "E",
+          "name": "Repentance Is Already on the Way",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2275,
+          "index": "F",
+          "name": "Tea Blend",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "hashing",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2275,
+          "index": "G",
+          "name": "Copper Squander",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "data structures",
+            "dsu",
+            "graphs",
+            "greedy",
+            "ternary search"
+          ]
+        },
+        {
+          "contestId": 2275,
+          "index": "H",
+          "name": "A Problem to Warm Up the Eyebrows",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "dp",
+            "math"
           ]
         }
       ]
