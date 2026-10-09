@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T01:10:48.604Z",
+  "updatedAt": "2026-10-09T07:58:55.340Z",
   "problemsetFetchedAt": "2026-10-08T06:03:47.484Z",
   "ratingDisagreements": [
     {
@@ -200144,6 +200144,12 @@
       "name": "Интернет-олимпиады, Сезон 2025-2026, Четвертая личная олимпиада",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106754": {
+      "id": 106754,
+      "name": "Заключительный этап Олимпиады школьников «Шаг в будущее» 2025-26",
+      "startTimeSeconds": null,
+      "durationSeconds": 14100
     }
   }
 }
