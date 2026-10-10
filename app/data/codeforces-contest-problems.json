@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T00:18:34.875Z",
+  "updatedAt": "2026-10-10T21:36:10.016Z",
   "problemsetFetchedAt": "2026-10-08T06:03:47.484Z",
   "ratingDisagreements": [
     {
@@ -171185,6 +171185,113 @@
         }
       ]
     },
+    "2271": {
+      "name": "DeepInfra Round 1 (Codeforces Round 1126, Div. 1 + Div. 2)",
+      "fetchedAt": "2026-10-10T21:36:09.977Z",
+      "problems": [
+        {
+          "contestId": 2271,
+          "index": "A",
+          "name": "Robot Odd Moves",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "B",
+          "name": "MEX Game",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "games"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "C",
+          "name": "XOR Problem",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "D",
+          "name": "Target Infection",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "brute force"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "E",
+          "name": "Array Emptying",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "F",
+          "name": "Beautiful Pillers",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "dp",
+            "greedy",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "G",
+          "name": "Grid Filling",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "H1",
+          "name": "Personal Issues (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "games",
+            "trees"
+          ]
+        },
+        {
+          "contestId": 2271,
+          "index": "H2",
+          "name": "Personal Issues (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "games",
+            "trees"
+          ]
+        }
+      ]
+    },
     "2275": {
       "name": "Codeforces Round 1125 (Div. 3)",
       "fetchedAt": "2026-10-07T20:45:50.988Z",
@@ -200150,6 +200257,12 @@
       "name": "Заключительный этап Олимпиады школьников «Шаг в будущее» 2025-26",
       "startTimeSeconds": null,
       "durationSeconds": 14100
+    },
+    "106755": {
+      "id": 106755,
+      "name": "Homs Collegiate Programming Contest 2026",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
