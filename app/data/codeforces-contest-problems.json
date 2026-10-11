@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11T05:46:27.644Z",
-  "problemsetFetchedAt": "2026-10-11T05:46:27.582Z",
+  "updatedAt": "2026-10-11T21:57:56.410Z",
+  "problemsetFetchedAt": "2026-10-11T21:57:56.374Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171218,6 +171218,7 @@
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
+            "graphs",
             "greedy",
             "math"
           ]
@@ -171232,7 +171233,8 @@
             "binary search",
             "brute force",
             "greedy",
-            "implementation"
+            "implementation",
+            "two pointers"
           ]
         },
         {
