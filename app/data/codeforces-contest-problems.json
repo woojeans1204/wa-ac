@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-12T05:57:49.011Z",
+  "updatedAt": "2026-10-12T09:05:54.851Z",
   "problemsetFetchedAt": "2026-10-12T05:57:48.952Z",
   "ratingDisagreements": [
     {
@@ -200428,6 +200428,12 @@
       "name": "GPL 2026 Advanced",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106761": {
+      "id": 106761,
+      "name": "2026 NUIT Freshman Contest",
+      "startTimeSeconds": 1791698400,
+      "durationSeconds": 14400
     }
   }
 }
