@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11T22:26:00.418Z",
+  "updatedAt": "2026-10-12T01:44:28.611Z",
   "problemsetFetchedAt": "2026-10-11T21:57:56.374Z",
   "ratingDisagreements": [
     {
@@ -200412,6 +200412,18 @@
     "106755": {
       "id": 106755,
       "name": "Homs Collegiate Programming Contest 2026",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106759": {
+      "id": 106759,
+      "name": "GPL 2026 Novice",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106760": {
+      "id": 106760,
+      "name": "GPL 2026 Advanced",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     }
