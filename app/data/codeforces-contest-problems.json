@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-12T09:05:54.851Z",
-  "problemsetFetchedAt": "2026-10-12T05:57:48.952Z",
+  "updatedAt": "2026-10-12T15:25:10.457Z",
+  "problemsetFetchedAt": "2026-10-12T15:25:10.397Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171312,6 +171312,7 @@
           "tags": [
             "binary search",
             "constructive algorithms",
+            "dp",
             "greedy"
           ]
         },
