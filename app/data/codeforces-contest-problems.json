@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13T16:24:29.383Z",
-  "problemsetFetchedAt": "2026-10-13T14:11:21.552Z",
+  "updatedAt": "2026-10-13T22:44:41.923Z",
+  "problemsetFetchedAt": "2026-10-13T22:44:41.862Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171245,6 +171245,7 @@
           "standingsRating": null,
           "tags": [
             "binary search",
+            "data structures",
             "greedy"
           ]
         },
