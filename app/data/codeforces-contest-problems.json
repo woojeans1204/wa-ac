@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13T14:11:21.612Z",
+  "updatedAt": "2026-10-13T16:24:29.383Z",
   "problemsetFetchedAt": "2026-10-13T14:11:21.552Z",
   "ratingDisagreements": [
     {
@@ -184407,7 +184407,7 @@
     },
     "2261": {
       "id": 2261,
-      "name": "WorldQuant Round 1 (Codeforces Round Div. 1 + Div. 2)",
+      "name": "WorldQuant Round 1 (Codeforces Round 1128, Div. 1 + Div. 2)",
       "startTimeSeconds": 1792247700,
       "durationSeconds": 10800
     },
@@ -200442,6 +200442,12 @@
       "name": "2026 NUIT Freshman Contest",
       "startTimeSeconds": 1791698400,
       "durationSeconds": 14400
+    },
+    "106763": {
+      "id": 106763,
+      "name": "Интернет-олимпиады, Сезон 2026-2027, Первая командная олимпиада",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
