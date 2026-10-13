@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-12T15:25:10.457Z",
+  "updatedAt": "2026-10-13T01:18:00.855Z",
   "problemsetFetchedAt": "2026-10-12T15:25:10.397Z",
   "ratingDisagreements": [
     {
@@ -184467,8 +184467,8 @@
     "2272": {
       "id": 2272,
       "name": "Codeforces Round (Div. 2)",
-      "startTimeSeconds": 1791644700,
-      "durationSeconds": 10800
+      "startTimeSeconds": 1793025300,
+      "durationSeconds": 8100
     },
     "2273": {
       "id": 2273,
