@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13T08:24:33.656Z",
-  "problemsetFetchedAt": "2026-10-12T15:25:10.397Z",
+  "updatedAt": "2026-10-13T14:11:21.612Z",
+  "problemsetFetchedAt": "2026-10-13T14:11:21.552Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171334,6 +171334,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "brute force",
             "data structures",
             "implementation",
             "math",
