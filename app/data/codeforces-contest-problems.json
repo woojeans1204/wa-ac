@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14T11:51:59.349Z",
+  "updatedAt": "2026-10-14T19:40:37.377Z",
   "problemsetFetchedAt": "2026-10-14T11:51:59.288Z",
   "ratingDisagreements": [
     {
@@ -171543,6 +171543,97 @@
           "contestId": 2275,
           "index": "H",
           "name": "A Problem to Warm Up the Eyebrows",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "dp",
+            "math"
+          ]
+        }
+      ]
+    },
+    "2276": {
+      "name": "Educational Codeforces Round 195 (Rated for Div. 2)",
+      "fetchedAt": "2026-10-14T19:40:37.313Z",
+      "problems": [
+        {
+          "contestId": 2276,
+          "index": "A",
+          "name": "Perfect Sandwiches",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2276,
+          "index": "B",
+          "name": "Replace and Compress",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "implementation",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2276,
+          "index": "C",
+          "name": "Subarrays",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2276,
+          "index": "D",
+          "name": "Caveman",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "graphs"
+          ]
+        },
+        {
+          "contestId": 2276,
+          "index": "E",
+          "name": "Good Substrings",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "data structures",
+            "dp",
+            "greedy",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2276,
+          "index": "F",
+          "name": "Permutation Coloring Game",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "dsu",
+            "games",
+            "greedy",
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2276,
+          "index": "G",
+          "name": "Elimination of Players",
           "rating": null,
           "standingsRating": null,
           "tags": [
