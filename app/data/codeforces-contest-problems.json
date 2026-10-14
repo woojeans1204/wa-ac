@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14T10:34:33.770Z",
-  "problemsetFetchedAt": "2026-10-13T22:44:41.862Z",
+  "updatedAt": "2026-10-14T11:51:59.349Z",
+  "problemsetFetchedAt": "2026-10-14T11:51:59.288Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171217,6 +171217,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "bitmasks",
             "constructive algorithms",
             "graphs",
             "greedy",
