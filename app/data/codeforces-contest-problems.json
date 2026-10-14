@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14T19:40:37.377Z",
+  "updatedAt": "2026-10-14T23:10:21.421Z",
   "problemsetFetchedAt": "2026-10-14T11:51:59.288Z",
   "ratingDisagreements": [
     {
@@ -200547,6 +200547,12 @@
       "name": "Интернет-олимпиады, Сезон 2026-2027, Первая командная олимпиада",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106764": {
+      "id": 106764,
+      "name": "UTPC Contest 10-14-2026",
+      "startTimeSeconds": 1792020600,
+      "durationSeconds": 7200
     }
   }
 }
