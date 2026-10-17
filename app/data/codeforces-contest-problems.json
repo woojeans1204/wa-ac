@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-17T13:10:20.645Z",
+  "updatedAt": "2026-10-17T19:19:13.072Z",
   "problemsetFetchedAt": "2026-10-15T11:28:38.053Z",
   "ratingDisagreements": [
     {
@@ -170530,6 +170530,137 @@
             "combinatorics",
             "math",
             "number theory"
+          ]
+        }
+      ]
+    },
+    "2261": {
+      "name": "WorldQuant Round 1 (Codeforces Round 1128, Div. 1 + Div. 2)",
+      "fetchedAt": "2026-10-17T19:19:13.009Z",
+      "problems": [
+        {
+          "contestId": 2261,
+          "index": "A",
+          "name": "Hey, It's Me, Souvlakity",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "games",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "B",
+          "name": "What's the Capital of France?",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "C",
+          "name": "I Know About a Million Things",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "games",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "D1",
+          "name": "Come Be My Friend, Don't Be So Scared (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "D2",
+          "name": "Come Be My Friend, Don't Be So Scared (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "data structures",
+            "dsu",
+            "hashing",
+            "trees",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "E",
+          "name": "What Does the Cow Say?",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "data structures",
+            "dfs and similar",
+            "greedy",
+            "trees"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "F1",
+          "name": "Plegma II: Ask Me Any Cell (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "communication",
+            "constructive algorithms",
+            "dp",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "F2",
+          "name": "Plegma II: Ask Me Any Cell (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "G",
+          "name": "1 2 3 and XOR, Where Did Everybody Go?",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "data structures",
+            "divide and conquer",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2261,
+          "index": "H",
+          "name": "Oh Tree Tree Tree, No Need to Leave",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "communication",
+            "dfs and similar",
+            "interactive",
+            "trees"
           ]
         }
       ]
