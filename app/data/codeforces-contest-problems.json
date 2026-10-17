@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-15T11:28:38.103Z",
+  "updatedAt": "2026-10-17T09:16:20.366Z",
   "problemsetFetchedAt": "2026-10-15T11:28:38.053Z",
   "ratingDisagreements": [
     {
@@ -200553,6 +200553,12 @@
       "name": "UTPC Contest 10-14-2026",
       "startTimeSeconds": 1792020600,
       "durationSeconds": 7200
+    },
+    "106768": {
+      "id": 106768,
+      "name": "Всероссийская олимпиада по информатике им. Мстислава Келдыша - 2026",
+      "startTimeSeconds": null,
+      "durationSeconds": 14400
     }
   }
 }
