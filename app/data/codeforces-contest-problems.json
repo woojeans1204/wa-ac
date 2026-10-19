@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-18T20:42:47.322Z",
-  "problemsetFetchedAt": "2026-10-18T20:42:47.270Z",
+  "updatedAt": "2026-10-19T04:40:31.258Z",
+  "problemsetFetchedAt": "2026-10-19T04:40:31.190Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -170648,7 +170648,8 @@
             "data structures",
             "divide and conquer",
             "dp",
-            "greedy"
+            "greedy",
+            "sortings"
           ]
         },
         {
