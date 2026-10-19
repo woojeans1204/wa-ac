@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19T13:14:51.134Z",
+  "updatedAt": "2026-10-19T17:45:17.475Z",
   "problemsetFetchedAt": "2026-10-19T13:14:51.071Z",
   "ratingDisagreements": [
     {
@@ -200704,6 +200704,12 @@
       "name": "Всероссийская олимпиада по информатике им. Мстислава Келдыша - 2026",
       "startTimeSeconds": null,
       "durationSeconds": 14400
+    },
+    "106775": {
+      "id": 106775,
+      "name": "mhuman_tasks_archive",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
