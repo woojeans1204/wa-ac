@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19T17:45:17.475Z",
-  "problemsetFetchedAt": "2026-10-19T13:14:51.071Z",
+  "updatedAt": "2026-10-19T22:21:02.282Z",
+  "problemsetFetchedAt": "2026-10-19T22:21:02.233Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171761,6 +171761,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "brute force",
             "dp",
             "dsu",
             "games",
