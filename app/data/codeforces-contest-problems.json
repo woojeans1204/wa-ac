@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19T04:40:31.258Z",
-  "problemsetFetchedAt": "2026-10-19T04:40:31.190Z",
+  "updatedAt": "2026-10-19T13:14:51.134Z",
+  "problemsetFetchedAt": "2026-10-19T13:14:51.071Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -170649,7 +170649,8 @@
             "divide and conquer",
             "dp",
             "greedy",
-            "sortings"
+            "sortings",
+            "two pointers"
           ]
         },
         {
@@ -170661,6 +170662,7 @@
           "tags": [
             "bitmasks",
             "communication",
+            "constructive algorithms",
             "dfs and similar",
             "interactive",
             "trees"
