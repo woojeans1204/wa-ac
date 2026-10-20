@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19T22:21:02.282Z",
-  "problemsetFetchedAt": "2026-10-19T22:21:02.233Z",
+  "updatedAt": "2026-10-20T11:36:06.122Z",
+  "problemsetFetchedAt": "2026-10-20T11:36:06.068Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -170542,7 +170542,7 @@
           "contestId": 2261,
           "index": "A",
           "name": "Hey, It's Me, Souvlakity",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "games",
@@ -170553,7 +170553,7 @@
           "contestId": 2261,
           "index": "B",
           "name": "What's the Capital of France?",
-          "rating": null,
+          "rating": 1100,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -170565,7 +170565,7 @@
           "contestId": 2261,
           "index": "C",
           "name": "I Know About a Million Things",
-          "rating": null,
+          "rating": 1000,
           "standingsRating": null,
           "tags": [
             "games",
@@ -170576,7 +170576,7 @@
           "contestId": 2261,
           "index": "D1",
           "name": "Come Be My Friend, Don't Be So Scared (Easy Version)",
-          "rating": null,
+          "rating": 1300,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -170587,7 +170587,7 @@
           "contestId": 2261,
           "index": "D2",
           "name": "Come Be My Friend, Don't Be So Scared (Hard Version)",
-          "rating": null,
+          "rating": 2400,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -170603,7 +170603,7 @@
           "contestId": 2261,
           "index": "E",
           "name": "What Does the Cow Say?",
-          "rating": null,
+          "rating": 1800,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -170617,7 +170617,7 @@
           "contestId": 2261,
           "index": "F1",
           "name": "Plegma II: Ask Me Any Cell (Easy Version)",
-          "rating": null,
+          "rating": 2500,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -170631,7 +170631,7 @@
           "contestId": 2261,
           "index": "F2",
           "name": "Plegma II: Ask Me Any Cell (Hard Version)",
-          "rating": null,
+          "rating": 3300,
           "standingsRating": null,
           "tags": [
             "constructive algorithms"
@@ -170641,7 +170641,7 @@
           "contestId": 2261,
           "index": "G",
           "name": "1 2 3 and XOR, Where Did Everybody Go?",
-          "rating": null,
+          "rating": 2800,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -170657,7 +170657,7 @@
           "contestId": 2261,
           "index": "H",
           "name": "Oh Tree Tree Tree, No Need to Leave",
-          "rating": null,
+          "rating": 3500,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -171329,7 +171329,7 @@
           "contestId": 2271,
           "index": "A",
           "name": "Robot Odd Moves",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -171340,7 +171340,7 @@
           "contestId": 2271,
           "index": "B",
           "name": "MEX Game",
-          "rating": null,
+          "rating": 1000,
           "standingsRating": null,
           "tags": [
             "games"
@@ -171350,7 +171350,7 @@
           "contestId": 2271,
           "index": "C",
           "name": "XOR Problem",
-          "rating": null,
+          "rating": 1400,
           "standingsRating": null,
           "tags": [
             "bitmasks",
@@ -171364,7 +171364,7 @@
           "contestId": 2271,
           "index": "D",
           "name": "Target Infection",
-          "rating": null,
+          "rating": 1700,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -171378,7 +171378,7 @@
           "contestId": 2271,
           "index": "E",
           "name": "Array Emptying",
-          "rating": null,
+          "rating": 2100,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -171390,7 +171390,7 @@
           "contestId": 2271,
           "index": "F",
           "name": "Beautiful Pillers",
-          "rating": null,
+          "rating": 2300,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -171404,7 +171404,7 @@
           "contestId": 2271,
           "index": "G",
           "name": "Grid Filling",
-          "rating": null,
+          "rating": 3100,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -171416,7 +171416,7 @@
           "contestId": 2271,
           "index": "H1",
           "name": "Personal Issues (Easy Version)",
-          "rating": null,
+          "rating": 2800,
           "standingsRating": null,
           "tags": [
             "dp",
@@ -171428,7 +171428,7 @@
           "contestId": 2271,
           "index": "H2",
           "name": "Personal Issues (Hard Version)",
-          "rating": null,
+          "rating": 3300,
           "standingsRating": null,
           "tags": [
             "games",
@@ -171445,7 +171445,7 @@
           "contestId": 2273,
           "index": "A",
           "name": "Lavencia Oranges",
-          "rating": null,
+          "rating": 1300,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -171458,7 +171458,7 @@
           "contestId": 2273,
           "index": "B",
           "name": "Robot Championship",
-          "rating": null,
+          "rating": 1900,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -171469,7 +171469,7 @@
           "contestId": 2273,
           "index": "C",
           "name": "Matrix Puzzle",
-          "rating": null,
+          "rating": 2100,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -171483,7 +171483,7 @@
           "contestId": 2273,
           "index": "D",
           "name": "Aura Battle",
-          "rating": null,
+          "rating": 2600,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -171496,7 +171496,7 @@
           "contestId": 2273,
           "index": "E",
           "name": "Six-Seven Bags",
-          "rating": null,
+          "rating": 2900,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -171508,7 +171508,7 @@
           "contestId": 2273,
           "index": "F",
           "name": "Pancho's Permutation",
-          "rating": null,
+          "rating": 3500,
           "standingsRating": null,
           "tags": [
             "constructive algorithms",
@@ -171527,7 +171527,7 @@
           "contestId": 2274,
           "index": "A",
           "name": "The Projections of Paco",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "dfs and similar",
@@ -171541,7 +171541,7 @@
           "contestId": 2274,
           "index": "B",
           "name": "Prefix",
-          "rating": null,
+          "rating": 1100,
           "standingsRating": null,
           "tags": [
             "greedy"
@@ -171596,7 +171596,7 @@
           "contestId": 2275,
           "index": "A",
           "name": "In Search of Convenience",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "geometry",
@@ -171607,7 +171607,7 @@
           "contestId": 2275,
           "index": "B",
           "name": "Did Not Go to Print",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "data structures",
@@ -171618,7 +171618,7 @@
           "contestId": 2275,
           "index": "C",
           "name": "Unrequited Love",
-          "rating": null,
+          "rating": 1000,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -171629,7 +171629,7 @@
           "contestId": 2275,
           "index": "D",
           "name": "Precision Alignment",
-          "rating": null,
+          "rating": 1300,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -171642,7 +171642,7 @@
           "contestId": 2275,
           "index": "E",
           "name": "Repentance Is Already on the Way",
-          "rating": null,
+          "rating": 1500,
           "standingsRating": null,
           "tags": [
             "dp",
@@ -171653,7 +171653,7 @@
           "contestId": 2275,
           "index": "F",
           "name": "Tea Blend",
-          "rating": null,
+          "rating": 1800,
           "standingsRating": null,
           "tags": [
             "hashing",
@@ -171665,7 +171665,7 @@
           "contestId": 2275,
           "index": "G",
           "name": "Copper Squander",
-          "rating": null,
+          "rating": 1900,
           "standingsRating": null,
           "tags": [
             "binary search",
@@ -171682,7 +171682,7 @@
           "contestId": 2275,
           "index": "H",
           "name": "A Problem to Warm Up the Eyebrows",
-          "rating": null,
+          "rating": 2400,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -171700,7 +171700,7 @@
           "contestId": 2276,
           "index": "A",
           "name": "Perfect Sandwiches",
-          "rating": null,
+          "rating": 800,
           "standingsRating": null,
           "tags": [
             "greedy",
@@ -171711,7 +171711,7 @@
           "contestId": 2276,
           "index": "B",
           "name": "Replace and Compress",
-          "rating": null,
+          "rating": 1000,
           "standingsRating": null,
           "tags": [
             "implementation",
@@ -171722,7 +171722,7 @@
           "contestId": 2276,
           "index": "C",
           "name": "Subarrays",
-          "rating": null,
+          "rating": 1100,
           "standingsRating": null,
           "tags": [
             "math",
@@ -171733,7 +171733,7 @@
           "contestId": 2276,
           "index": "D",
           "name": "Caveman",
-          "rating": null,
+          "rating": 1400,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -171744,7 +171744,7 @@
           "contestId": 2276,
           "index": "E",
           "name": "Good Substrings",
-          "rating": null,
+          "rating": 1800,
           "standingsRating": null,
           "tags": [
             "combinatorics",
@@ -171758,7 +171758,7 @@
           "contestId": 2276,
           "index": "F",
           "name": "Permutation Coloring Game",
-          "rating": null,
+          "rating": 2400,
           "standingsRating": null,
           "tags": [
             "brute force",
@@ -171774,7 +171774,7 @@
           "contestId": 2276,
           "index": "G",
           "name": "Elimination of Players",
-          "rating": null,
+          "rating": 2100,
           "standingsRating": null,
           "tags": [
             "combinatorics",
