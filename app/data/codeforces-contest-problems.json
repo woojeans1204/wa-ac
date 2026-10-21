@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-21T11:48:51.516Z",
+  "updatedAt": "2026-10-21T15:10:45.419Z",
   "problemsetFetchedAt": "2026-10-21T11:48:51.451Z",
   "ratingDisagreements": [
     {
@@ -184698,7 +184698,7 @@
     },
     "2272": {
       "id": 2272,
-      "name": "Codeforces Round (Div. 2)",
+      "name": "Codeforces Round 1130 (Div. 2)",
       "startTimeSeconds": 1793025300,
       "durationSeconds": 8100
     },
@@ -184728,13 +184728,13 @@
     },
     "2277": {
       "id": 2277,
-      "name": "Codeforces Round (Div. 2)",
+      "name": "Codeforces Round 1129 (Div. 2)",
       "startTimeSeconds": 1792839900,
       "durationSeconds": 7200
     },
     "2278": {
       "id": 2278,
-      "name": "Codeforces Round (Div. 3)",
+      "name": "Codeforces Round 1131 (Div. 3)",
       "startTimeSeconds": 1793457300,
       "durationSeconds": 8100
     },
@@ -200727,6 +200727,12 @@
       "name": "mhuman_tasks_archive",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106779": {
+      "id": 106779,
+      "name": "Bangladesh Olympiad In Informatics Discord Server Round 3",
+      "startTimeSeconds": null,
+      "durationSeconds": 10800
     }
   }
 }
