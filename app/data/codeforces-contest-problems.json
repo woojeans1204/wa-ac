@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-20T12:08:59.611Z",
-  "problemsetFetchedAt": "2026-10-20T11:36:06.068Z",
+  "updatedAt": "2026-10-21T11:48:51.516Z",
+  "problemsetFetchedAt": "2026-10-21T11:48:51.451Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -170620,9 +170620,7 @@
           "rating": 2500,
           "standingsRating": null,
           "tags": [
-            "brute force",
             "constructive algorithms",
-            "dp",
             "greedy",
             "math"
           ]
