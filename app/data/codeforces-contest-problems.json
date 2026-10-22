@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-22T04:44:47.518Z",
+  "updatedAt": "2026-10-22T23:58:32.458Z",
   "problemsetFetchedAt": "2026-10-22T04:44:47.442Z",
   "ratingDisagreements": [
     {
@@ -200726,6 +200726,12 @@
     "106775": {
       "id": 106775,
       "name": "mhuman_tasks_archive",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106778": {
+      "id": 106778,
+      "name": "Innopolis Open 2026-2027. Qualification round 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
