@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T14:28:30.060Z",
-  "problemsetFetchedAt": "2026-10-22T04:44:47.442Z",
+  "updatedAt": "2026-10-24T15:56:45.014Z",
+  "problemsetFetchedAt": "2026-10-24T15:56:44.965Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171814,6 +171814,7 @@
           "standingsRating": null,
           "tags": [
             "dfs and similar",
+            "graphs",
             "greedy",
             "trees"
           ]
