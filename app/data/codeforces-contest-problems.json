@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T19:08:27.046Z",
+  "updatedAt": "2026-10-24T14:28:30.060Z",
   "problemsetFetchedAt": "2026-10-22T04:44:47.442Z",
   "ratingDisagreements": [
     {
@@ -171779,6 +171779,91 @@
             "combinatorics",
             "dp",
             "math"
+          ]
+        }
+      ]
+    },
+    "2277": {
+      "name": "Codeforces Round 1129 (Div. 2)",
+      "fetchedAt": "2026-10-24T14:28:29.986Z",
+      "problems": [
+        {
+          "contestId": 2277,
+          "index": "A",
+          "name": "Subset Selecting",
+          "rating": null,
+          "standingsRating": null,
+          "tags": []
+        },
+        {
+          "contestId": 2277,
+          "index": "B",
+          "name": "Sequence Decreasing",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2277,
+          "index": "C",
+          "name": "Edge Addeleting",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dfs and similar",
+            "greedy",
+            "trees"
+          ]
+        },
+        {
+          "contestId": 2277,
+          "index": "D1",
+          "name": "Number Operating (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "brute force",
+            "dp",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2277,
+          "index": "D2",
+          "name": "Number Operating (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "divide and conquer",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2277,
+          "index": "E",
+          "name": "Tree Guessing",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "interactive",
+            "trees"
+          ]
+        },
+        {
+          "contestId": 2277,
+          "index": "F",
+          "name": "Token Re-Moving",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dfs and similar",
+            "dsu",
+            "trees"
           ]
         }
       ]
