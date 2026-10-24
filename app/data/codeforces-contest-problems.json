@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T19:46:27.278Z",
-  "problemsetFetchedAt": "2026-10-24T15:56:44.965Z",
+  "updatedAt": "2026-10-24T20:49:19.425Z",
+  "problemsetFetchedAt": "2026-10-24T20:49:19.373Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171862,6 +171862,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "data structures",
             "dfs and similar",
             "dsu",
             "trees"
