@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T20:49:19.425Z",
-  "problemsetFetchedAt": "2026-10-24T20:49:19.373Z",
+  "updatedAt": "2026-10-25T11:28:18.527Z",
+  "problemsetFetchedAt": "2026-10-25T11:28:18.479Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171793,7 +171793,9 @@
           "name": "Subset Selecting",
           "rating": null,
           "standingsRating": null,
-          "tags": []
+          "tags": [
+            "greedy"
+          ]
         },
         {
           "contestId": 2277,
@@ -171839,6 +171841,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "bitmasks",
             "brute force",
             "divide and conquer",
             "implementation"
