@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-26T01:39:48.429Z",
-  "problemsetFetchedAt": "2026-10-25T20:50:40.098Z",
+  "updatedAt": "2026-10-26T04:46:50.612Z",
+  "problemsetFetchedAt": "2026-10-26T04:46:50.550Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171829,6 +171829,7 @@
           "standingsRating": null,
           "tags": [
             "binary search",
+            "bitmasks",
             "brute force",
             "dp",
             "greedy",
@@ -171855,6 +171856,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "constructive algorithms",
             "interactive",
             "trees"
           ]
