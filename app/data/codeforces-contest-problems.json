@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-25T20:50:40.159Z",
+  "updatedAt": "2026-10-26T01:39:48.429Z",
   "problemsetFetchedAt": "2026-10-25T20:50:40.098Z",
   "ratingDisagreements": [
     {
@@ -184847,6 +184847,12 @@
       "name": "ICPC 2026 Online Challenge 2 powered by Huawei",
       "startTimeSeconds": 1793876400,
       "durationSeconds": 1209600
+    },
+    "2282": {
+      "id": 2282,
+      "name": "Kotlin Heroes: Episode 15",
+      "startTimeSeconds": 1795790100,
+      "durationSeconds": 9000
     },
     "100001": {
       "id": 100001,
