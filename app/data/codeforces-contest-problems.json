@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-26T04:46:50.612Z",
+  "updatedAt": "2026-10-26T07:43:56.076Z",
   "problemsetFetchedAt": "2026-10-26T04:46:50.550Z",
   "ratingDisagreements": [
     {
@@ -200844,6 +200844,12 @@
       "id": 106782,
       "name": "Greece and Cyprus Collegiate Programming Contest 2026",
       "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106785": {
+      "id": 106785,
+      "name": "Rutgers Programming Contest Fall 2026",
+      "startTimeSeconds": 1792947600,
       "durationSeconds": 18000
     }
   }
