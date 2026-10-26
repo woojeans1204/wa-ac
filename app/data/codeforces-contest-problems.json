@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-26T07:43:56.076Z",
+  "updatedAt": "2026-10-26T15:08:18.079Z",
   "problemsetFetchedAt": "2026-10-26T04:46:50.550Z",
   "ratingDisagreements": [
     {
@@ -184855,6 +184855,12 @@
       "name": "Kotlin Heroes: Episode 15",
       "startTimeSeconds": 1795790100,
       "durationSeconds": 9000
+    },
+    "2283": {
+      "id": 2283,
+      "name": "Educational Codeforces Round 196 (Rated for Div. 2)",
+      "startTimeSeconds": 1793802900,
+      "durationSeconds": 7200
     },
     "100001": {
       "id": 100001,
