@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T12:11:17.997Z",
+  "updatedAt": "2026-10-27T16:31:04.521Z",
   "problemsetFetchedAt": "2026-10-27T12:11:17.935Z",
   "ratingDisagreements": [
     {
@@ -200951,6 +200951,12 @@
       "id": 106785,
       "name": "Rutgers Programming Contest Fall 2026",
       "startTimeSeconds": 1792947600,
+      "durationSeconds": 18000
+    },
+    "106787": {
+      "id": 106787,
+      "name": "2026 United Kingdom and Ireland Programming Contest (UKIEPC 2026)",
+      "startTimeSeconds": 1793188800,
       "durationSeconds": 18000
     }
   }
