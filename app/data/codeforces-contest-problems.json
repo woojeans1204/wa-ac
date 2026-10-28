@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-28T19:05:02.171Z",
+  "updatedAt": "2026-10-28T23:10:47.664Z",
   "problemsetFetchedAt": "2026-10-28T12:54:03.320Z",
   "ratingDisagreements": [
     {
@@ -200974,6 +200974,18 @@
       "name": "ICPC 2026–2027 Northwestern Russia Qualification",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106794": {
+      "id": 106794,
+      "name": "UTPC Contest 10-28-2026 Div. 2 (Beginner)",
+      "startTimeSeconds": 1793230200,
+      "durationSeconds": 7200
+    },
+    "106795": {
+      "id": 106795,
+      "name": "UTPC Contest 10-28-2026 Div. 1 (Advanced)",
+      "startTimeSeconds": 1793230200,
+      "durationSeconds": 7200
     }
   }
 }
