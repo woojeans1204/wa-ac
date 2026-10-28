@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-28T12:54:03.381Z",
+  "updatedAt": "2026-10-28T19:05:02.171Z",
   "problemsetFetchedAt": "2026-10-28T12:54:03.320Z",
   "ratingDisagreements": [
     {
@@ -200961,6 +200961,12 @@
       "id": 106787,
       "name": "2026 United Kingdom and Ireland Programming Contest (UKIEPC 2026)",
       "startTimeSeconds": 1793188800,
+      "durationSeconds": 18000
+    },
+    "106788": {
+      "id": 106788,
+      "name": "2026-2027 ICPC Nordic Collegiate Programming Contest (NCPC 2026)",
+      "startTimeSeconds": 1793275200,
       "durationSeconds": 18000
     },
     "106790": {
