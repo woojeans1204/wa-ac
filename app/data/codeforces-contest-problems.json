@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T18:00:22.315Z",
+  "updatedAt": "2026-10-28T06:15:03.672Z",
   "problemsetFetchedAt": "2026-10-27T18:00:22.249Z",
   "ratingDisagreements": [
     {
@@ -200958,6 +200958,12 @@
       "id": 106787,
       "name": "2026 United Kingdom and Ireland Programming Contest (UKIEPC 2026)",
       "startTimeSeconds": 1793188800,
+      "durationSeconds": 18000
+    },
+    "106790": {
+      "id": 106790,
+      "name": "ICPC 2026–2027 Northwestern Russia Qualification",
+      "startTimeSeconds": null,
       "durationSeconds": 18000
     }
   }
