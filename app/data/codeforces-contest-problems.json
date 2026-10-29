@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T16:52:45.022Z",
+  "updatedAt": "2026-10-29T21:45:35.683Z",
   "problemsetFetchedAt": "2026-10-29T13:00:16.466Z",
   "ratingDisagreements": [
     {
@@ -200992,6 +200992,12 @@
       "name": "UTPC Contest 10-28-2026 Div. 1 (Advanced)",
       "startTimeSeconds": 1793230200,
       "durationSeconds": 7200
+    },
+    "106798": {
+      "id": 106798,
+      "name": "Пермская региональная олимпиада школьников по программированию (ПРОШП) 2026",
+      "startTimeSeconds": 1793077800,
+      "durationSeconds": 18000
     }
   }
 }
