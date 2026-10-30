@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T21:45:35.683Z",
+  "updatedAt": "2026-10-30T15:18:35.432Z",
   "problemsetFetchedAt": "2026-10-29T13:00:16.466Z",
   "ratingDisagreements": [
     {
@@ -200981,6 +200981,12 @@
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
+    "106793": {
+      "id": 106793,
+      "name": "SanSi Cup 2025",
+      "startTimeSeconds": null,
+      "durationSeconds": 15000
+    },
     "106794": {
       "id": 106794,
       "name": "UTPC Contest 10-28-2026 Div. 2 (Beginner)",
@@ -200992,6 +200998,18 @@
       "name": "UTPC Contest 10-28-2026 Div. 1 (Advanced)",
       "startTimeSeconds": 1793230200,
       "durationSeconds": 7200
+    },
+    "106796": {
+      "id": 106796,
+      "name": "2025-2026 ICPC North America Championship (NAC 2026)",
+      "startTimeSeconds": 1793793600,
+      "durationSeconds": 18000
+    },
+    "106797": {
+      "id": 106797,
+      "name": "2026-2027 ICPC German Collegiate Programming Contest (GCPC 2026)",
+      "startTimeSeconds": 1793624400,
+      "durationSeconds": 18000
     },
     "106798": {
       "id": 106798,
