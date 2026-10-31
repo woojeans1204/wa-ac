@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T15:18:35.432Z",
+  "updatedAt": "2026-10-31T20:17:08.334Z",
   "problemsetFetchedAt": "2026-10-29T13:00:16.466Z",
   "ratingDisagreements": [
     {
@@ -171958,6 +171958,88 @@
             "data structures",
             "dfs and similar",
             "dsu",
+            "trees"
+          ]
+        }
+      ]
+    },
+    "2278": {
+      "name": "Codeforces Round 1131 (Div. 3)",
+      "fetchedAt": "2026-10-31T20:17:08.268Z",
+      "problems": [
+        {
+          "contestId": 2278,
+          "index": "A",
+          "name": "Fraction and Six",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2278,
+          "index": "B",
+          "name": "Stakes and Shapes",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "contestId": 2278,
+          "index": "C",
+          "name": "Math and Physics",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2278,
+          "index": "D",
+          "name": "Lock and Unlock",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2278,
+          "index": "E",
+          "name": "Swap and Negate",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2278,
+          "index": "F",
+          "name": "Modulo and Counting",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2278,
+          "index": "G",
+          "name": "0s and 1s",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "hashing",
+            "number theory",
             "trees"
           ]
         }
