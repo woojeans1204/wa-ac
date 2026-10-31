@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T21:33:36.368Z",
+  "updatedAt": "2026-10-31T23:41:22.226Z",
   "problemsetFetchedAt": "2026-10-31T21:33:36.289Z",
   "ratingDisagreements": [
     {
@@ -185024,7 +185024,7 @@
     "2282": {
       "id": 2282,
       "name": "Kotlin Heroes: Episode 15",
-      "startTimeSeconds": 1795790100,
+      "startTimeSeconds": 1796740500,
       "durationSeconds": 9000
     },
     "2283": {
@@ -185048,7 +185048,7 @@
     "2286": {
       "id": 2286,
       "name": "Kotlin Heroes: Practice 15",
-      "startTimeSeconds": 1795185000,
+      "startTimeSeconds": 1796135400,
       "durationSeconds": 604800
     },
     "100001": {
