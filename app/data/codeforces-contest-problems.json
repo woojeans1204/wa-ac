@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T05:54:13.516Z",
-  "problemsetFetchedAt": "2026-10-31T21:33:36.289Z",
+  "updatedAt": "2026-11-01T06:03:51.539Z",
+  "problemsetFetchedAt": "2026-11-01T06:03:51.489Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -171976,7 +171976,8 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "implementation"
+            "implementation",
+            "sortings"
           ]
         },
         {
@@ -172039,6 +172040,8 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "bitmasks",
+            "dfs and similar",
             "dp",
             "hashing",
             "number theory",
