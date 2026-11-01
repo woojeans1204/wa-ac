@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T13:23:54.517Z",
+  "updatedAt": "2026-11-01T18:32:04.180Z",
   "problemsetFetchedAt": "2026-11-01T13:23:54.455Z",
   "ratingDisagreements": [
     {
@@ -201110,6 +201110,12 @@
       "id": 106799,
       "name": "The 2026 ICPC Asia Chengdu Regional Contest (The 5th Universal Cup. Stage 5: Grand Prix of Chengdu)",
       "startTimeSeconds": 1792890600,
+      "durationSeconds": 18000
+    },
+    "106800": {
+      "id": 106800,
+      "name": "IV DCC CODE CUP",
+      "startTimeSeconds": 1793462400,
       "durationSeconds": 18000
     }
   }
