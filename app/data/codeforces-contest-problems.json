@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T23:41:22.226Z",
+  "updatedAt": "2026-11-01T05:54:13.516Z",
   "problemsetFetchedAt": "2026-10-31T21:33:36.289Z",
   "ratingDisagreements": [
     {
@@ -201099,6 +201099,12 @@
       "id": 106798,
       "name": "Пермская региональная олимпиада школьников по программированию (ПРОШП) 2026",
       "startTimeSeconds": 1793077800,
+      "durationSeconds": 18000
+    },
+    "106799": {
+      "id": 106799,
+      "name": "The 2026 ICPC Asia Chengdu Regional Contest (The 5th Universal Cup. Stage 5: Grand Prix of Chengdu)",
+      "startTimeSeconds": 1792890600,
       "durationSeconds": 18000
     }
   }
