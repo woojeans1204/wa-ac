@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-03T02:13:46.795Z",
+  "updatedAt": "2026-11-03T10:01:10.807Z",
   "problemsetFetchedAt": "2026-11-01T13:23:54.455Z",
   "ratingDisagreements": [
     {
@@ -185055,6 +185055,18 @@
       "name": "Kotlin Heroes: Practice 15",
       "startTimeSeconds": 1796135400,
       "durationSeconds": 604800
+    },
+    "2287": {
+      "id": 2287,
+      "name": "Codeforces Round (Div. 1)",
+      "startTimeSeconds": 1795271700,
+      "durationSeconds": 7200
+    },
+    "2288": {
+      "id": 2288,
+      "name": "Codeforces Round (Div. 2)",
+      "startTimeSeconds": 1795271700,
+      "durationSeconds": 7200
     },
     "100001": {
       "id": 100001,
