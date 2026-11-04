@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-03T10:01:10.807Z",
+  "updatedAt": "2026-11-04T03:13:11.040Z",
   "problemsetFetchedAt": "2026-11-01T13:23:54.455Z",
   "ratingDisagreements": [
     {
@@ -201141,6 +201141,12 @@
       "name": "2026 Fall UT CS104c Midterm #2",
       "startTimeSeconds": 1793656800,
       "durationSeconds": 3000
+    },
+    "106806": {
+      "id": 106806,
+      "name": "2026 Benelux Algorithm Programming Contest (BAPC 26)",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
