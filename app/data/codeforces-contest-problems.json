@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04T03:13:11.040Z",
+  "updatedAt": "2026-11-04T18:51:18.975Z",
   "problemsetFetchedAt": "2026-11-01T13:23:54.455Z",
   "ratingDisagreements": [
     {
@@ -172051,6 +172051,91 @@
           ]
         }
       ]
+    },
+    "2283": {
+      "name": "Educational Codeforces Round 196 (Rated for Div. 2)",
+      "fetchedAt": "2026-11-04T18:51:18.893Z",
+      "problems": [
+        {
+          "contestId": 2283,
+          "index": "A",
+          "name": "Numbers on the Board",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2283,
+          "index": "B",
+          "name": "Rhythmic String",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2283,
+          "index": "C",
+          "name": "Big XOR",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "constructive algorithms"
+          ]
+        },
+        {
+          "contestId": 2283,
+          "index": "D",
+          "name": "Black, Gray and White",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "constructive algorithms",
+            "dfs and similar"
+          ]
+        },
+        {
+          "contestId": 2283,
+          "index": "E",
+          "name": "Partition of a Binary String",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "dp"
+          ]
+        },
+        {
+          "contestId": 2283,
+          "index": "F",
+          "name": "Minimize the Graph",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2283,
+          "index": "G",
+          "name": "Order Statistics on the Graph",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "brute force",
+            "sortings"
+          ]
+        }
+      ]
     }
   },
   "contestMetadata": {
@@ -185010,13 +185095,13 @@
     },
     "2279": {
       "id": 2279,
-      "name": "Codeforces Round (Div. 1)",
+      "name": "Codeforces Round 1133 (Div. 1)",
       "startTimeSeconds": 1794062100,
       "durationSeconds": 9000
     },
     "2280": {
       "id": 2280,
-      "name": "Codeforces Round (Div. 2)",
+      "name": "Codeforces Round 1133 (Div. 2)",
       "startTimeSeconds": 1794062100,
       "durationSeconds": 9000
     },
@@ -185035,12 +185120,12 @@
     "2283": {
       "id": 2283,
       "name": "Educational Codeforces Round 196 (Rated for Div. 2)",
-      "startTimeSeconds": 1793802900,
+      "startTimeSeconds": 1793803500,
       "durationSeconds": 7200
     },
     "2284": {
       "id": 2284,
-      "name": "Codeforces Round (Div. 2)",
+      "name": "Codeforces Round 1132 (Div. 2)",
       "startTimeSeconds": 1793975700,
       "durationSeconds": 8100
     },
