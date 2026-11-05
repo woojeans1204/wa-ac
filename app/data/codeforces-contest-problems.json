@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04T18:51:18.975Z",
-  "problemsetFetchedAt": "2026-11-01T13:23:54.455Z",
+  "updatedAt": "2026-11-05T06:45:28.778Z",
+  "problemsetFetchedAt": "2026-11-05T06:45:28.729Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172063,8 +172063,9 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "brute force",
-            "greedy"
+            "greedy",
+            "math",
+            "two pointers"
           ]
         },
         {
@@ -172119,6 +172120,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "brute force",
             "data structures",
             "greedy"
           ]
