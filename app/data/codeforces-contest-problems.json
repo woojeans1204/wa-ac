@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T07:21:04.279Z",
+  "updatedAt": "2026-11-05T15:48:04.551Z",
   "problemsetFetchedAt": "2026-11-05T06:45:28.729Z",
   "ratingDisagreements": [
     {
@@ -201239,6 +201239,12 @@
       "id": 106806,
       "name": "2026 Benelux Algorithm Programming Contest (BAPC 26)",
       "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106810": {
+      "id": 106810,
+      "name": "Replay of ICPC IUBAT Asia Dhaka Regional 2026 Online Preliminary Contest",
+      "startTimeSeconds": 1794042000,
       "durationSeconds": 18000
     }
   }
