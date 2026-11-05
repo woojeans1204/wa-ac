@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T15:48:04.551Z",
-  "problemsetFetchedAt": "2026-11-05T06:45:28.729Z",
+  "updatedAt": "2026-11-05T19:56:47.816Z",
+  "problemsetFetchedAt": "2026-11-05T19:56:47.769Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172099,7 +172099,8 @@
           "tags": [
             "brute force",
             "constructive algorithms",
-            "dfs and similar"
+            "dfs and similar",
+            "trees"
           ]
         },
         {
@@ -172122,6 +172123,7 @@
           "tags": [
             "brute force",
             "data structures",
+            "graphs",
             "greedy"
           ]
         },
