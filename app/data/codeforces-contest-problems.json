@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T06:45:28.778Z",
+  "updatedAt": "2026-11-05T07:21:04.279Z",
   "problemsetFetchedAt": "2026-11-05T06:45:28.729Z",
   "ratingDisagreements": [
     {
@@ -201143,6 +201143,12 @@
       "id": 106782,
       "name": "Greece and Cyprus Collegiate Programming Contest 2026",
       "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106783": {
+      "id": 106783,
+      "name": "The 22nd Hunan Provincial Collegiate Programming Contest",
+      "startTimeSeconds": 1792890000,
       "durationSeconds": 18000
     },
     "106785": {
