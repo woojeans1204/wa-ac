@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T19:56:47.816Z",
+  "updatedAt": "2026-11-06T17:26:23.064Z",
   "problemsetFetchedAt": "2026-11-05T19:56:47.769Z",
   "ratingDisagreements": [
     {
@@ -172140,6 +172140,116 @@
           ]
         }
       ]
+    },
+    "2284": {
+      "name": "Codeforces Round 1132 (Div. 2)",
+      "fetchedAt": "2026-11-06T17:26:22.993Z",
+      "problems": [
+        {
+          "contestId": 2284,
+          "index": "A1",
+          "name": "15K4JR3B (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2284,
+          "index": "A2",
+          "name": "15K4JR3B (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2284,
+          "index": "B",
+          "name": "Introduction to the Niche Internet",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2284,
+          "index": "C1",
+          "name": "Disgusting + GCD (Constructive Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "dp",
+            "greedy",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2284,
+          "index": "C2",
+          "name": "Disgusting + GCD (Checker Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "greedy",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2284,
+          "index": "D",
+          "name": "The Theorem of Two Cans",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "communication",
+            "constructive algorithms",
+            "dfs and similar",
+            "graphs",
+            "interactive",
+            "math",
+            "trees"
+          ]
+        },
+        {
+          "contestId": 2284,
+          "index": "E",
+          "name": "My Mind Is Going",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "graphs",
+            "interactive"
+          ]
+        },
+        {
+          "contestId": 2284,
+          "index": "F",
+          "name": "Fun Times",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "data structures",
+            "dp",
+            "math",
+            "matrices"
+          ]
+        }
+      ]
     }
   },
   "contestMetadata": {
@@ -201248,6 +201358,18 @@
       "name": "Replay of ICPC IUBAT Asia Dhaka Regional 2026 Online Preliminary Contest",
       "startTimeSeconds": 1794042000,
       "durationSeconds": 18000
+    },
+    "106812": {
+      "id": 106812,
+      "name": "Qualifying round of the 11th Regional Olympiad for the Governor’s Prize 2026, grades 9-10, Vologda Region",
+      "startTimeSeconds": null,
+      "durationSeconds": 10800
+    },
+    "106813": {
+      "id": 106813,
+      "name": "CSP-J 2026 自测（官方数据）",
+      "startTimeSeconds": 1793404800,
+      "durationSeconds": 1260000
     }
   }
 }
