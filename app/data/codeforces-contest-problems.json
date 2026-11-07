@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07T09:13:26.725Z",
-  "problemsetFetchedAt": "2026-11-07T05:57:41.917Z",
+  "updatedAt": "2026-11-07T12:59:52.064Z",
+  "problemsetFetchedAt": "2026-11-07T12:59:51.990Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172176,6 +172176,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "constructive algorithms",
             "greedy",
             "sortings"
           ]
@@ -172234,6 +172235,7 @@
           "standingsRating": null,
           "tags": [
             "binary search",
+            "dfs and similar",
             "graphs",
             "interactive"
           ]
