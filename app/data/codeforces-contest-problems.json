@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06T19:24:07.871Z",
-  "problemsetFetchedAt": "2026-11-06T19:24:07.788Z",
+  "updatedAt": "2026-11-07T05:57:41.993Z",
+  "problemsetFetchedAt": "2026-11-07T05:57:41.917Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172189,6 +172189,7 @@
           "tags": [
             "constructive algorithms",
             "dp",
+            "graphs",
             "greedy",
             "math",
             "number theory"
@@ -172203,6 +172204,7 @@
           "tags": [
             "brute force",
             "dp",
+            "graphs",
             "greedy",
             "math",
             "number theory"
