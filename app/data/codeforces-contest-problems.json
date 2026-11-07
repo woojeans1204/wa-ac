@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07T12:59:52.064Z",
+  "updatedAt": "2026-11-07T15:54:08.615Z",
   "problemsetFetchedAt": "2026-11-07T12:59:51.990Z",
   "ratingDisagreements": [
     {
@@ -185272,6 +185272,12 @@
       "startTimeSeconds": 1795271700,
       "durationSeconds": 7200
     },
+    "2290": {
+      "id": 2290,
+      "name": "Codeforces Round 1134 (Div. 4)",
+      "startTimeSeconds": 1794494100,
+      "durationSeconds": 8100
+    },
     "100001": {
       "id": 100001,
       "name": "2010 Codeforces Beta Round #1 (training)",
@@ -201346,6 +201352,12 @@
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
+    "106802": {
+      "id": 106802,
+      "name": "2026-2027 ICPC NERC, Kyrgyzstan Regional Contest",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
     "106803": {
       "id": 106803,
       "name": "2026 Fall UT CS104c Midterm #2",
@@ -201381,6 +201393,18 @@
       "name": "CSP-S 2026 自测（官方数据）",
       "startTimeSeconds": 1793428200,
       "durationSeconds": 1440000
+    },
+    "106815": {
+      "id": 106815,
+      "name": "Final round of the 11th Regional Olympiad for the Governor’s Prize 2026, grades 7-8, Vologda Region",
+      "startTimeSeconds": null,
+      "durationSeconds": 9000
+    },
+    "106816": {
+      "id": 106816,
+      "name": "Final round of the 11th Regional Olympiad for the Governor’s Prize 2026, grades 9-10, Vologda Region",
+      "startTimeSeconds": null,
+      "durationSeconds": 10800
     }
   }
 }
