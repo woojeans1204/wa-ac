@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07T15:54:08.615Z",
+  "updatedAt": "2026-11-07T20:11:18.242Z",
   "problemsetFetchedAt": "2026-11-07T12:59:51.990Z",
   "ratingDisagreements": [
     {
@@ -172052,6 +172052,134 @@
         }
       ]
     },
+    "2279": {
+      "name": "Codeforces Round 1133 (Div. 1)",
+      "fetchedAt": "2026-11-07T20:11:18.198Z",
+      "problems": [
+        {
+          "contestId": 2279,
+          "index": "A",
+          "name": "Reverse and Double",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2279,
+          "index": "B",
+          "name": "Balanced Subsets",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "dp"
+          ]
+        },
+        {
+          "contestId": 2279,
+          "index": "C",
+          "name": "Anti-Productive",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2279,
+          "index": "D",
+          "name": "Meta Graph",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "constructive algorithms",
+            "graphs"
+          ]
+        },
+        {
+          "contestId": 2279,
+          "index": "E",
+          "name": "Save Me!",
+          "rating": null,
+          "standingsRating": null,
+          "tags": []
+        },
+        {
+          "contestId": 2279,
+          "index": "F",
+          "name": "The Stones of Nim",
+          "rating": null,
+          "standingsRating": null,
+          "tags": []
+        }
+      ]
+    },
+    "2280": {
+      "name": "Codeforces Round 1133 (Div. 2)",
+      "fetchedAt": "2026-11-07T20:11:15.874Z",
+      "problems": [
+        {
+          "contestId": 2280,
+          "index": "A",
+          "name": "Are They the Same?",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2280,
+          "index": "B",
+          "name": "Secret String Patterns",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "interactive"
+          ]
+        },
+        {
+          "contestId": 2280,
+          "index": "C",
+          "name": "Reverse and Double",
+          "rating": null,
+          "standingsRating": null,
+          "tags": []
+        },
+        {
+          "contestId": 2280,
+          "index": "D",
+          "name": "Balanced Subsets",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp"
+          ]
+        },
+        {
+          "contestId": 2280,
+          "index": "E",
+          "name": "Anti-Productive",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2280,
+          "index": "F",
+          "name": "Meta Graph",
+          "rating": null,
+          "standingsRating": null,
+          "tags": []
+        }
+      ]
+    },
     "2283": {
       "name": "Educational Codeforces Round 196 (Rated for Div. 2)",
       "fetchedAt": "2026-11-04T18:51:18.893Z",
@@ -201405,6 +201533,12 @@
       "name": "Final round of the 11th Regional Olympiad for the Governor’s Prize 2026, grades 9-10, Vologda Region",
       "startTimeSeconds": null,
       "durationSeconds": 10800
+    },
+    "106817": {
+      "id": 106817,
+      "name": "Интернет-олимпиады, Сезон 2026-2027, Третья командная олимпиада",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
