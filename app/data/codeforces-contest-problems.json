@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07T20:11:18.242Z",
-  "problemsetFetchedAt": "2026-11-07T12:59:51.990Z",
+  "updatedAt": "2026-11-08T05:59:49.301Z",
+  "problemsetFetchedAt": "2026-11-08T05:59:49.251Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172063,6 +172063,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "binary search",
             "implementation"
           ]
         },
@@ -172074,6 +172075,7 @@
           "standingsRating": null,
           "tags": [
             "bitmasks",
+            "combinatorics",
             "dp"
           ]
         },
@@ -172096,7 +172098,8 @@
           "tags": [
             "brute force",
             "constructive algorithms",
-            "graphs"
+            "graphs",
+            "shortest paths"
           ]
         },
         {
@@ -172105,7 +172108,10 @@
           "name": "Save Me!",
           "rating": null,
           "standingsRating": null,
-          "tags": []
+          "tags": [
+            "brute force",
+            "meet-in-the-middle"
+          ]
         },
         {
           "contestId": 2279,
@@ -172113,7 +172119,11 @@
           "name": "The Stones of Nim",
           "rating": null,
           "standingsRating": null,
-          "tags": []
+          "tags": [
+            "bitmasks",
+            "graphs",
+            "greedy"
+          ]
         }
       ]
     },
