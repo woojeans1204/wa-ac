@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-08T05:59:49.301Z",
-  "problemsetFetchedAt": "2026-11-08T05:59:49.251Z",
+  "updatedAt": "2026-11-08T13:24:17.044Z",
+  "problemsetFetchedAt": "2026-11-08T13:24:16.980Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172064,6 +172064,7 @@
           "standingsRating": null,
           "tags": [
             "binary search",
+            "brute force",
             "implementation"
           ]
         },
@@ -172086,6 +172087,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "brute force",
             "greedy"
           ]
         },
@@ -172098,6 +172100,7 @@
           "tags": [
             "brute force",
             "constructive algorithms",
+            "dp",
             "graphs",
             "shortest paths"
           ]
