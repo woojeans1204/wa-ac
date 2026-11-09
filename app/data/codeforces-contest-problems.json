@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-08T13:24:17.044Z",
-  "problemsetFetchedAt": "2026-11-08T13:24:16.980Z",
+  "updatedAt": "2026-11-09T06:27:33.333Z",
+  "problemsetFetchedAt": "2026-11-09T06:27:33.259Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172088,7 +172088,9 @@
           "standingsRating": null,
           "tags": [
             "brute force",
-            "greedy"
+            "greedy",
+            "math",
+            "sortings"
           ]
         },
         {
@@ -172141,6 +172143,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "brute force",
             "implementation"
           ]
         },
