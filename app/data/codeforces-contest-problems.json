@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T06:27:33.333Z",
-  "problemsetFetchedAt": "2026-11-09T06:27:33.259Z",
+  "updatedAt": "2026-11-09T22:21:10.823Z",
+  "problemsetFetchedAt": "2026-11-09T22:21:10.748Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172065,6 +172065,7 @@
           "tags": [
             "binary search",
             "brute force",
+            "data structures",
             "implementation"
           ]
         },
@@ -172115,6 +172116,7 @@
           "standingsRating": null,
           "tags": [
             "brute force",
+            "dfs and similar",
             "meet-in-the-middle"
           ]
         },
