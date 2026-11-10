@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T22:21:10.823Z",
+  "updatedAt": "2026-11-10T11:43:38.604Z",
   "problemsetFetchedAt": "2026-11-09T22:21:10.748Z",
   "ratingDisagreements": [
     {
@@ -201557,6 +201557,12 @@
       "name": "Интернет-олимпиады, Сезон 2026-2027, Третья командная олимпиада",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106821": {
+      "id": 106821,
+      "name": "UTPC x WiCS Contest 11-11-2026",
+      "startTimeSeconds": 1794443400,
+      "durationSeconds": 7200
     }
   }
 }
