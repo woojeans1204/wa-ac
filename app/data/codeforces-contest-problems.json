@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T03:19:48.253Z",
+  "updatedAt": "2026-11-12T19:50:56.220Z",
   "problemsetFetchedAt": "2026-11-09T22:21:10.748Z",
   "ratingDisagreements": [
     {
@@ -172401,6 +172401,117 @@
           ]
         }
       ]
+    },
+    "2290": {
+      "name": "Codeforces Round 1134 (Div. 4)",
+      "fetchedAt": "2026-11-12T19:50:56.175Z",
+      "problems": [
+        {
+          "contestId": 2290,
+          "index": "A",
+          "name": "Three Piles",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "B",
+          "name": "Stubborn Pen",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "implementation",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "C",
+          "name": "Books on a Shelf",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "D",
+          "name": "Letters Down",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "greedy",
+            "implementation",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "E",
+          "name": "Avalanche",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "games",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "F",
+          "name": "Value Counters",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "G1",
+          "name": "Lakeside Trail (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "brute force",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "G2",
+          "name": "Lakeside Trail (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2290,
+          "index": "H",
+          "name": "Extra Road",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dfs and similar",
+            "greedy",
+            "trees"
+          ]
+        }
+      ]
     }
   },
   "contestMetadata": {
@@ -185396,7 +185507,7 @@
     },
     "2285": {
       "id": 2285,
-      "name": "Codeforces Round (Div. 2)",
+      "name": "Codeforces Round 1135 (Div. 2)",
       "startTimeSeconds": 1794753300,
       "durationSeconds": 7200
     },
