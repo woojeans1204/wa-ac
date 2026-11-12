@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T11:43:38.604Z",
+  "updatedAt": "2026-11-12T03:19:48.253Z",
   "problemsetFetchedAt": "2026-11-09T22:21:10.748Z",
   "ratingDisagreements": [
     {
@@ -201560,7 +201560,7 @@
     },
     "106821": {
       "id": 106821,
-      "name": "UTPC x WiCS Contest 11-11-2026",
+      "name": "UTPC x WiCS Contest 11-11-2026 (Unofficial)",
       "startTimeSeconds": 1794443400,
       "durationSeconds": 7200
     }
