@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T19:50:56.220Z",
-  "problemsetFetchedAt": "2026-11-09T22:21:10.748Z",
+  "updatedAt": "2026-11-12T19:53:38.995Z",
+  "problemsetFetchedAt": "2026-11-12T19:53:38.909Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172117,6 +172117,7 @@
           "tags": [
             "brute force",
             "dfs and similar",
+            "matrices",
             "meet-in-the-middle"
           ]
         },
