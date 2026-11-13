@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T07:51:37.055Z",
-  "problemsetFetchedAt": "2026-11-13T06:44:31.767Z",
+  "updatedAt": "2026-11-13T19:41:16.977Z",
+  "problemsetFetchedAt": "2026-11-13T19:41:16.906Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172497,6 +172497,7 @@
           "standingsRating": null,
           "tags": [
             "binary search",
+            "dp",
             "greedy",
             "math"
           ]
