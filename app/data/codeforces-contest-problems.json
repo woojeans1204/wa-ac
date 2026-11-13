@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T19:53:38.995Z",
-  "problemsetFetchedAt": "2026-11-12T19:53:38.909Z",
+  "updatedAt": "2026-11-13T06:44:31.841Z",
+  "problemsetFetchedAt": "2026-11-13T06:44:31.767Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172101,7 +172101,6 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "brute force",
             "constructive algorithms",
             "dp",
             "graphs",
@@ -172461,6 +172460,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "dp",
             "games",
             "math"
           ]
@@ -172472,6 +172472,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "binary search",
             "constructive algorithms",
             "math"
           ]
@@ -172507,6 +172508,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "binary search",
             "dfs and similar",
             "greedy",
             "trees"
