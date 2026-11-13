@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T06:44:31.841Z",
+  "updatedAt": "2026-11-13T07:51:37.055Z",
   "problemsetFetchedAt": "2026-11-13T06:44:31.767Z",
   "ratingDisagreements": [
     {
@@ -201646,13 +201646,13 @@
       "id": 106813,
       "name": "CSP-J 2026 自测（官方数据）",
       "startTimeSeconds": 1793404800,
-      "durationSeconds": 1260000
+      "durationSeconds": 1158600
     },
     "106814": {
       "id": 106814,
       "name": "CSP-S 2026 自测（官方数据）",
       "startTimeSeconds": 1793428200,
-      "durationSeconds": 1440000
+      "durationSeconds": 1135200
     },
     "106815": {
       "id": 106815,
