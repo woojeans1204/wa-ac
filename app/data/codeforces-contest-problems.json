@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14T18:01:06.189Z",
+  "updatedAt": "2026-11-14T21:24:40.248Z",
   "problemsetFetchedAt": "2026-11-14T18:01:06.113Z",
   "ratingDisagreements": [
     {
@@ -201684,6 +201684,12 @@
       "name": "UTPC x WiCS Contest 11-11-2026 (Unofficial)",
       "startTimeSeconds": 1794443400,
       "durationSeconds": 7200
+    },
+    "106826": {
+      "id": 106826,
+      "name": "2026-2027 ICPC NERC (NEERC), North-Western Russia Regional Contest (Northern Subregionals)",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
