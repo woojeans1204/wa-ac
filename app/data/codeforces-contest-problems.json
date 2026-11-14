@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14T16:42:51.433Z",
-  "problemsetFetchedAt": "2026-11-13T19:41:16.906Z",
+  "updatedAt": "2026-11-14T18:01:06.189Z",
+  "problemsetFetchedAt": "2026-11-14T18:01:06.113Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172448,6 +172448,7 @@
           "standingsRating": null,
           "tags": [
             "data structures",
+            "dsu",
             "greedy",
             "implementation",
             "strings"
@@ -172509,7 +172510,6 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "binary search",
             "dfs and similar",
             "greedy",
             "trees"
