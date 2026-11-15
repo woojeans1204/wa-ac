@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-15T18:51:19.344Z",
+  "updatedAt": "2026-11-15T21:00:04.548Z",
   "problemsetFetchedAt": "2026-11-15T18:51:19.272Z",
   "ratingDisagreements": [
     {
@@ -172402,6 +172402,82 @@
         }
       ]
     },
+    "2285": {
+      "name": "Codeforces Round 1135 (Div. 2)",
+      "fetchedAt": "2026-11-15T21:00:04.461Z",
+      "problems": [
+        {
+          "contestId": 2285,
+          "index": "A",
+          "name": "Composite Permutation",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2285,
+          "index": "B",
+          "name": "Diverse String",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2285,
+          "index": "C",
+          "name": "Max Substitution",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "math",
+            "sortings",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2285,
+          "index": "D",
+          "name": "Reverse Partition",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "combinatorics",
+            "data structures"
+          ]
+        },
+        {
+          "contestId": 2285,
+          "index": "E",
+          "name": "Arithmetic Subarray",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "greedy",
+            "implementation",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2285,
+          "index": "F",
+          "name": "Mooclear Reactor 3",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "graphs"
+          ]
+        }
+      ]
+    },
     "2290": {
       "name": "Codeforces Round 1134 (Div. 4)",
       "fetchedAt": "2026-11-12T19:50:56.175Z",
@@ -201695,6 +201771,12 @@
     "106826": {
       "id": 106826,
       "name": "2026-2027 ICPC NERC (NEERC), North-Western Russia Regional Contest (Northern Subregionals)",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106829": {
+      "id": 106829,
+      "name": "Moscow team school olympiad (MKOSHP) 2025",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     }
