@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T18:24:47.693Z",
-  "problemsetFetchedAt": "2026-11-16T06:29:05.165Z",
+  "updatedAt": "2026-11-16T22:01:17.086Z",
+  "problemsetFetchedAt": "2026-11-16T22:01:17.025Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172462,8 +172462,7 @@
           "tags": [
             "data structures",
             "greedy",
-            "implementation",
-            "two pointers"
+            "implementation"
           ]
         },
         {
@@ -172475,6 +172474,7 @@
           "tags": [
             "data structures",
             "divide and conquer",
+            "dsu",
             "graphs"
           ]
         }
