@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-15T21:00:04.548Z",
-  "problemsetFetchedAt": "2026-11-15T18:51:19.272Z",
+  "updatedAt": "2026-11-16T06:29:05.221Z",
+  "problemsetFetchedAt": "2026-11-16T06:29:05.165Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172435,6 +172435,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "combinatorics",
             "data structures",
             "math",
             "sortings",
@@ -172473,6 +172474,7 @@
           "standingsRating": null,
           "tags": [
             "data structures",
+            "divide and conquer",
             "graphs"
           ]
         }
