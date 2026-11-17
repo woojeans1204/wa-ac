@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T19:47:25.785Z",
-  "problemsetFetchedAt": "2026-11-17T07:54:41.407Z",
+  "updatedAt": "2026-11-17T20:54:48.047Z",
+  "problemsetFetchedAt": "2026-11-17T20:54:48.000Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172450,6 +172450,7 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
+            "binary search",
             "combinatorics",
             "data structures"
           ]
