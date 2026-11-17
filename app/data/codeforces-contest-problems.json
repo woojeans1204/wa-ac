@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T07:54:41.457Z",
+  "updatedAt": "2026-11-17T19:47:25.785Z",
   "problemsetFetchedAt": "2026-11-17T07:54:41.407Z",
   "ratingDisagreements": [
     {
@@ -201781,6 +201781,30 @@
     "106829": {
       "id": 106829,
       "name": "Moscow team school olympiad (MKOSHP) 2025",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106833": {
+      "id": 106833,
+      "name": "2026-2027 Saint-Petersburg Open High School Programming Contest (SpbKOSHP 26)",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106834": {
+      "id": 106834,
+      "name": "Уральская командная олимпиада по программированию 2026",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106835": {
+      "id": 106835,
+      "name": "Муниципальный этап ВсОШ по информатике в Самаре 2024-2025 (9-11 классы)",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106836": {
+      "id": 106836,
+      "name": "Муниципальный этап ВсОШ по информатике в Самаре 2025-2026 (9-11 классы)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     }
