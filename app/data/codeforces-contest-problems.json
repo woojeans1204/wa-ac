@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T20:54:48.047Z",
+  "updatedAt": "2026-11-18T19:22:32.699Z",
   "problemsetFetchedAt": "2026-11-17T20:54:48.000Z",
   "ratingDisagreements": [
     {
@@ -185605,19 +185605,19 @@
     },
     "2287": {
       "id": 2287,
-      "name": "Codeforces Round (Div. 1)",
+      "name": "Codeforces Round 1136 (Div. 1)",
       "startTimeSeconds": 1795271700,
       "durationSeconds": 7200
     },
     "2288": {
       "id": 2288,
-      "name": "Codeforces Round (Div. 2)",
+      "name": "Codeforces Round 1136 (Div. 2)",
       "startTimeSeconds": 1795271700,
       "durationSeconds": 7200
     },
     "2289": {
       "id": 2289,
-      "name": "Codeforces Round (Div. 2)",
+      "name": "Codeforces Round 1137 (Div. 2)",
       "startTimeSeconds": 1795338300,
       "durationSeconds": 7200
     },
@@ -201782,6 +201782,18 @@
     "106829": {
       "id": 106829,
       "name": "Moscow team school olympiad (MKOSHP) 2025",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106831": {
+      "id": 106831,
+      "name": "2024-2025 Saint-Petersburg Open High School Programming Contest (SpbKOSHP 24)",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106832": {
+      "id": 106832,
+      "name": "2025-2026 Saint-Petersburg Open High School Programming Contest (SpbKOSHP 25)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     },
