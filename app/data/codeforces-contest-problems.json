@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-19T20:36:36.847Z",
+  "updatedAt": "2026-11-20T01:13:29.807Z",
   "problemsetFetchedAt": "2026-11-19T20:36:36.787Z",
   "ratingDisagreements": [
     {
@@ -201821,6 +201821,12 @@
       "name": "Муниципальный этап ВсОШ по информатике в Самаре 2025-2026 (9-11 классы)",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106838": {
+      "id": 106838,
+      "name": "Municipal Stage of ROI 2026, Grades 9–11, Vologda Region and Krasnodar Krai",
+      "startTimeSeconds": null,
+      "durationSeconds": 14100
     }
   }
 }
