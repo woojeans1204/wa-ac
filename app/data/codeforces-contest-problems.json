@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21T07:06:42.403Z",
+  "updatedAt": "2026-11-21T15:17:06.281Z",
   "problemsetFetchedAt": "2026-11-21T07:06:42.346Z",
   "ratingDisagreements": [
     {
@@ -185629,6 +185629,12 @@
       "startTimeSeconds": 1794494100,
       "durationSeconds": 8100
     },
+    "2291": {
+      "id": 2291,
+      "name": "ICPC 2026 Online Challenge 2 powered by Huawei",
+      "startTimeSeconds": 1796727600,
+      "durationSeconds": 1209600
+    },
     "100001": {
       "id": 100001,
       "name": "2010 Codeforces Beta Round #1 (training)",
@@ -201828,6 +201834,18 @@
       "name": "Municipal Stage of ROI 2026, Grades 9–11, Vologda Region and Krasnodar Krai",
       "startTimeSeconds": null,
       "durationSeconds": 14100
+    },
+    "106839": {
+      "id": 106839,
+      "name": "The 2026 ICPC Belarus Qualification",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106840": {
+      "id": 106840,
+      "name": "The 2026 ICPC Belarus Regional Contest",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
