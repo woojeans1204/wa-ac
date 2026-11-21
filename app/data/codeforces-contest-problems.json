@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T01:13:29.807Z",
-  "problemsetFetchedAt": "2026-11-19T20:36:36.787Z",
+  "updatedAt": "2026-11-21T07:06:42.403Z",
+  "problemsetFetchedAt": "2026-11-21T07:06:42.346Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172466,6 +172466,7 @@
             "data structures",
             "greedy",
             "implementation",
+            "sortings",
             "two pointers"
           ]
         },
