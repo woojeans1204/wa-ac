@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21T15:17:06.281Z",
+  "updatedAt": "2026-11-21T21:05:49.515Z",
   "problemsetFetchedAt": "2026-11-21T07:06:42.346Z",
   "ratingDisagreements": [
     {
@@ -172481,6 +172481,166 @@
             "divide and conquer",
             "dsu",
             "graphs"
+          ]
+        }
+      ]
+    },
+    "2287": {
+      "name": "Codeforces Round 1136 (Div. 1)",
+      "fetchedAt": "2026-11-21T21:05:49.452Z",
+      "problems": [
+        {
+          "contestId": 2287,
+          "index": "A1",
+          "name": "Yukari Yakumo and the Boundary Stones (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2287,
+          "index": "A2",
+          "name": "Yukari Yakumo and the Boundary Stones (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "interactive"
+          ]
+        },
+        {
+          "contestId": 2287,
+          "index": "B",
+          "name": "Satori Komeiji and the Metro",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2287,
+          "index": "C",
+          "name": "Cirno and the Math Problem",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "bitmasks",
+            "brute force",
+            "dp",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "contestId": 2287,
+          "index": "D",
+          "name": "Patchouli Knowledge and the String",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "fft",
+            "hashing",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2287,
+          "index": "E1",
+          "name": "Marisa Kirisame and the Game (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "games"
+          ]
+        },
+        {
+          "contestId": 2287,
+          "index": "E2",
+          "name": "Marisa Kirisame and the Game (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "games"
+          ]
+        }
+      ]
+    },
+    "2288": {
+      "name": "Codeforces Round 1136 (Div. 2)",
+      "fetchedAt": "2026-11-21T21:05:47.136Z",
+      "problems": [
+        {
+          "contestId": 2288,
+          "index": "A",
+          "name": "Youmu Konpaku and the Duel",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2288,
+          "index": "B1",
+          "name": "Yukari Yakumo and the Boundary Stones (Easy Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2288,
+          "index": "B2",
+          "name": "Yukari Yakumo and the Boundary Stones (Hard Version)",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "interactive"
+          ]
+        },
+        {
+          "contestId": 2288,
+          "index": "C",
+          "name": "Reimu Hakurei and the Youkai",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2288,
+          "index": "D",
+          "name": "Satori Komeiji and the Metro",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "greedy"
+          ]
+        },
+        {
+          "contestId": 2288,
+          "index": "E",
+          "name": "Cirno and the Math Problem",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "math"
           ]
         }
       ]
