@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21T21:05:49.515Z",
-  "problemsetFetchedAt": "2026-11-21T07:06:42.346Z",
+  "updatedAt": "2026-11-22T06:47:08.629Z",
+  "problemsetFetchedAt": "2026-11-22T06:47:08.575Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172519,7 +172519,8 @@
           "standingsRating": null,
           "tags": [
             "binary search",
-            "greedy"
+            "greedy",
+            "two pointers"
           ]
         },
         {
@@ -172618,7 +172619,8 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "greedy"
+            "greedy",
+            "sortings"
           ]
         },
         {
