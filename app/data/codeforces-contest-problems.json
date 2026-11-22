@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T06:47:08.629Z",
+  "updatedAt": "2026-11-22T17:05:10.241Z",
   "problemsetFetchedAt": "2026-11-22T06:47:08.575Z",
   "ratingDisagreements": [
     {
@@ -172647,6 +172647,86 @@
         }
       ]
     },
+    "2289": {
+      "name": "Codeforces Round 1137 (Div. 2)",
+      "fetchedAt": "2026-11-22T17:05:10.187Z",
+      "problems": [
+        {
+          "contestId": 2289,
+          "index": "A",
+          "name": "Problem from Dolgoderevenskoye",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "math"
+          ]
+        },
+        {
+          "contestId": 2289,
+          "index": "B",
+          "name": "Problem from Chebarkul",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "implementation"
+          ]
+        },
+        {
+          "contestId": 2289,
+          "index": "C",
+          "name": "Problem from Ust-Katav",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "data structures",
+            "divide and conquer"
+          ]
+        },
+        {
+          "contestId": 2289,
+          "index": "D",
+          "name": "Problem from Yuzhnouralsk",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "data structures",
+            "greedy",
+            "meet-in-the-middle",
+            "sortings",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2289,
+          "index": "E",
+          "name": "The Problem from Silach",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "data structures",
+            "dp",
+            "trees",
+            "two pointers"
+          ]
+        },
+        {
+          "contestId": 2289,
+          "index": "F",
+          "name": "Problem from Malinovka",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "brute force",
+            "implementation",
+            "math",
+            "number theory"
+          ]
+        }
+      ]
+    },
     "2290": {
       "name": "Codeforces Round 1134 (Div. 4)",
       "fetchedAt": "2026-11-12T19:50:56.175Z",
@@ -202008,6 +202088,12 @@
       "name": "The 2026 ICPC Belarus Regional Contest",
       "startTimeSeconds": null,
       "durationSeconds": 18000
+    },
+    "106841": {
+      "id": 106841,
+      "name": "SanSi Cup 2026 Qualification round",
+      "startTimeSeconds": null,
+      "durationSeconds": 7200
     }
   }
 }
