@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T17:05:10.241Z",
+  "updatedAt": "2026-11-22T22:26:49.744Z",
   "problemsetFetchedAt": "2026-11-22T06:47:08.575Z",
   "ratingDisagreements": [
     {
@@ -202094,6 +202094,12 @@
       "name": "SanSi Cup 2026 Qualification round",
       "startTimeSeconds": null,
       "durationSeconds": 7200
+    },
+    "106843": {
+      "id": 106843,
+      "name": "Bangladesh Olympiad in Informatics Practice Round 4",
+      "startTimeSeconds": null,
+      "durationSeconds": 10800
     }
   }
 }
