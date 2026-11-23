@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T22:26:49.744Z",
-  "problemsetFetchedAt": "2026-11-22T06:47:08.575Z",
+  "updatedAt": "2026-11-23T07:37:46.858Z",
+  "problemsetFetchedAt": "2026-11-23T07:37:46.786Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172545,8 +172545,10 @@
           "standingsRating": null,
           "tags": [
             "binary search",
+            "brute force",
             "fft",
             "hashing",
+            "probabilities",
             "strings"
           ]
         },
@@ -172708,6 +172710,7 @@
             "brute force",
             "data structures",
             "dp",
+            "dsu",
             "trees",
             "two pointers"
           ]
