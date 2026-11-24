@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T07:37:46.858Z",
+  "updatedAt": "2026-11-24T00:19:15.309Z",
   "problemsetFetchedAt": "2026-11-23T07:37:46.786Z",
   "ratingDisagreements": [
     {
@@ -185879,6 +185879,12 @@
       "name": "ICPC 2026 Online Challenge 2 powered by Huawei",
       "startTimeSeconds": 1796727600,
       "durationSeconds": 1209600
+    },
+    "2292": {
+      "id": 2292,
+      "name": "Codeforces Round (Div. 3)",
+      "startTimeSeconds": 1795790100,
+      "durationSeconds": 8100
     },
     "100001": {
       "id": 100001,
