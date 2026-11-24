@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T09:53:48.488Z",
+  "updatedAt": "2026-11-24T10:23:29.635Z",
   "problemsetFetchedAt": "2026-11-24T09:53:48.433Z",
   "ratingDisagreements": [
     {
@@ -185880,9 +185880,15 @@
     },
     "2292": {
       "id": 2292,
-      "name": "Codeforces Round (Div. 3)",
+      "name": "Codeforces Round 1138 (Div. 3)",
       "startTimeSeconds": 1795790100,
       "durationSeconds": 8100
+    },
+    "2293": {
+      "id": 2293,
+      "name": "Educational Codeforces Round 197 (Rated for Div. 2)",
+      "startTimeSeconds": 1797258900,
+      "durationSeconds": 7200
     },
     "100001": {
       "id": 100001,
