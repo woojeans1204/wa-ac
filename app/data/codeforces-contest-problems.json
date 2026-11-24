@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T00:19:15.309Z",
-  "problemsetFetchedAt": "2026-11-23T07:37:46.786Z",
+  "updatedAt": "2026-11-24T09:53:48.488Z",
+  "problemsetFetchedAt": "2026-11-24T09:53:48.433Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172682,8 +172682,7 @@
           "standingsRating": null,
           "tags": [
             "binary search",
-            "data structures",
-            "divide and conquer"
+            "data structures"
           ]
         },
         {
@@ -172695,7 +172694,6 @@
           "tags": [
             "data structures",
             "greedy",
-            "meet-in-the-middle",
             "sortings",
             "two pointers"
           ]
