@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T10:23:29.635Z",
-  "problemsetFetchedAt": "2026-11-24T09:53:48.433Z",
+  "updatedAt": "2026-11-24T22:26:23.176Z",
+  "problemsetFetchedAt": "2026-11-24T22:26:23.105Z",
   "ratingDisagreements": [
     {
       "contestId": 2152,
@@ -172660,7 +172660,8 @@
           "rating": null,
           "standingsRating": null,
           "tags": [
-            "math"
+            "math",
+            "number theory"
           ]
         },
         {
