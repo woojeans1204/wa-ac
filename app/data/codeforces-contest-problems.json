@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T22:26:23.176Z",
+  "updatedAt": "2026-11-26T15:44:19.997Z",
   "problemsetFetchedAt": "2026-11-24T22:26:23.105Z",
   "ratingDisagreements": [
     {
@@ -202114,6 +202114,12 @@
       "name": "Bangladesh Olympiad in Informatics Practice Round 4",
       "startTimeSeconds": null,
       "durationSeconds": 10800
+    },
+    "106851": {
+      "id": 106851,
+      "name": "Innopolis Open 2026-2027. Qualification round 2",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
     }
   }
 }
