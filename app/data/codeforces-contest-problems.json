@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-26T15:44:19.997Z",
+  "updatedAt": "2026-11-27T18:53:18.772Z",
   "problemsetFetchedAt": "2026-11-24T22:26:23.105Z",
   "ratingDisagreements": [
     {
@@ -172840,6 +172840,103 @@
             "binary search",
             "dfs and similar",
             "greedy",
+            "trees"
+          ]
+        }
+      ]
+    },
+    "2292": {
+      "name": "Codeforces Round 1138 (Div. 3)",
+      "fetchedAt": "2026-11-27T18:53:18.715Z",
+      "problems": [
+        {
+          "contestId": 2292,
+          "index": "A",
+          "name": "Picnic for Two",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2292,
+          "index": "B",
+          "name": "Grapefruit Juice",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2292,
+          "index": "C",
+          "name": "Finding Shapes in the Clouds",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "constructive algorithms",
+            "strings"
+          ]
+        },
+        {
+          "contestId": 2292,
+          "index": "D",
+          "name": "Unexpected Precipitation",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "games"
+          ]
+        },
+        {
+          "contestId": 2292,
+          "index": "E",
+          "name": "Blush",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "binary search",
+            "bitmasks",
+            "math"
+          ]
+        },
+        {
+          "contestId": 2292,
+          "index": "F",
+          "name": "Pink-Black",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dfs and similar",
+            "dsu",
+            "graphs"
+          ]
+        },
+        {
+          "contestId": 2292,
+          "index": "G",
+          "name": "Soft Memories",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "contestId": 2292,
+          "index": "H",
+          "name": "Missed Call",
+          "rating": null,
+          "standingsRating": null,
+          "tags": [
+            "dp",
+            "graphs",
             "trees"
           ]
         }
