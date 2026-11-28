@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T18:53:18.772Z",
+  "updatedAt": "2026-11-28T01:55:22.969Z",
   "problemsetFetchedAt": "2026-11-24T22:26:23.105Z",
   "ratingDisagreements": [
     {
@@ -202212,9 +202212,45 @@
       "startTimeSeconds": null,
       "durationSeconds": 10800
     },
+    "106849": {
+      "id": 106849,
+      "name": "2026-2027 ICPC Latin American Regional Programming Contest",
+      "startTimeSeconds": 1794070800,
+      "durationSeconds": 18000
+    },
     "106851": {
       "id": 106851,
       "name": "Innopolis Open 2026-2027. Qualification round 2",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106855": {
+      "id": 106855,
+      "name": "OCPC 2025 Summer, Day 8: Chromate Sent This to Dominater in His DMs and Dominater Said :---) Contest",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106856": {
+      "id": 106856,
+      "name": "OCPC 2025 Summer, Day 2: KIT Contest",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106857": {
+      "id": 106857,
+      "name": "OCPC 2024 Winter, Day 2: Portuguese Contest",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106858": {
+      "id": 106858,
+      "name": "OCPC 2023 Fall, Day 5: Jatin Yadav Contest",
+      "startTimeSeconds": null,
+      "durationSeconds": 18000
+    },
+    "106859": {
+      "id": 106859,
+      "name": "OCPC 2023 Winter, Day 4: Jatin Garg Contest 1",
       "startTimeSeconds": null,
       "durationSeconds": 18000
     }
